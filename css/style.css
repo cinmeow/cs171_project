@@ -1,0 +1,23 @@
+
+.title-container{
+    padding-top: 45vh;
+    text-align: center;
+}
+
+
+#landing_page {
+    /*background-color: powderblue;*/
+    background-image: url("/img/temp_background.jpeg");
+    background-size: cover;
+}
+
+#webtitle {
+    background-color: #27285C;
+    display: inline-block;
+    padding: 30px;
+    font-family: 'Codystar', sans-serif;
+    font-weight: bold;
+    color: gainsboro;
+    font-size: xxx-large;
+}
+
