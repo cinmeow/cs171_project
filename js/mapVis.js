@@ -34,17 +34,56 @@ class MapVis {
             .attr('text-anchor', 'middle');
 
         const baseHeight = 650; // Example base height - adjust this as needed
-        const zoom = vis.height / baseHeight;
+        // const zoom = vis.height / baseHeight;
 
         // Initialize projection and path for the map
         vis.projection = d3.geoOrthographic()
             .translate([vis.width / 2, vis.height / 2])
-            .scale(249.5 * zoom)
+            // .scale(249.5 * zoom)
+            .scale(245)  // Adjust scale to fit the SVG area
+            .clipAngle(90);  // Clip at the hemisphere
 
         vis.path = d3.geoPath()
             .projection(vis.projection);
 
         vis.world = topojson.feature(vis.geoData, vis.geoData.objects.countries).features
+
+        vis.zoom = d3.zoom()
+            .scaleExtent([1, 8])  // Set the scale extent for zooming
+            .on('zoom', (event) => {
+                vis.svg.attr('transform', event.transform);
+            });
+
+
+        let m0,
+            o0;
+
+        vis.svg.call(
+            d3.drag()
+                .on("start", function (event) {
+
+                    let lastRotationParams = vis.projection.rotate();
+                    m0 = [event.x, event.y];
+                    o0 = [-lastRotationParams[0], -lastRotationParams[1]];
+                })
+                .on("drag", function (event) {
+                    if (m0) {
+                        let m1 = [event.x, event.y],
+                            o1 = [o0[0] + (m0[0] - m1[0]) / 4, o0[1] + (m1[1] - m0[1]) / 4];
+                        vis.projection.rotate([-o1[0], -o1[1]]);
+                    }
+
+                    // Update the map
+                    vis.path = d3.geoPath().projection(vis.projection);
+                    d3.selectAll(".country").attr("d", vis.path)
+                    d3.selectAll(".graticule").attr("d", vis.path)
+                })
+
+        )
+            .call(vis.zoom);
+
+        // Apply the zoom behavior to the SVG
+        // vis.svg.call(vis.zoom);
 
         vis.svg.append("path")
             .datum({type: "Sphere"})
@@ -68,33 +107,7 @@ class MapVis {
             .style("padding", "10px")
             .style("border-radius", "5px")
             .style("text-align", "left");
-
-
-        let m0,
-            o0;
-
-
-        vis.svg.call(
-            d3.drag()
-                .on("start", function (event) {
-
-                    let lastRotationParams = vis.projection.rotate();
-                    m0 = [event.x, event.y];
-                    o0 = [-lastRotationParams[0], -lastRotationParams[1]];
-                })
-                .on("drag", function (event) {
-                    if (m0) {
-                        let m1 = [event.x, event.y],
-                            o1 = [o0[0] + (m0[0] - m1[0]) / 4, o0[1] + (m1[1] - m0[1]) / 4];
-                        vis.projection.rotate([-o1[0], -o1[1]]);
-                    }
-
-                    // Update the map
-                    vis.path = d3.geoPath().projection(vis.projection);
-                    d3.selectAll(".country").attr("d", vis.path)
-                    d3.selectAll(".graticule").attr("d", vis.path)
-                })
-        )
+        
 
 
         // Wrangle the data
