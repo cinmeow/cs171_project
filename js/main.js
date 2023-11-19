@@ -21,7 +21,7 @@ let promises = [
         return row
     }),
     d3.csv("data/michelin.csv", (row) => {
-        row.Price =+ row.Prince;
+        row.Price =+ row.Price;
         return row
     }),
     d3.json(geoDataURL),
@@ -66,9 +66,10 @@ function initMainPage(dataArray) {
 
     // TRAVEL PURPOSE + MICHELIN GUIDE VISUALIZATION
     // filter out data with Michelin countries
+    console.log("michelin unique names", michelinCountry)
     let michelinTravelData = dataArray[0].filter((d) => michelinCountry.has(d.Country));
     console.log("michelin travel data", michelinTravelData)
     // initialize travel purpose visualization
     travelPurpose = new TravelPurposeVis("tourism_vis_1", michelinTravelData, dataArray[1])
 }
-console.log("meow", michelinCountry)
+
