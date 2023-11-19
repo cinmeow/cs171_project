@@ -1,117 +1,108 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Wanderlust & Michelin Stars</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wanderlust & Michelin Stars</title>
 
-		<!-- Load CSS libraries -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-		<link rel="stylesheet" href="css/style.css">
+    <!-- Load CSS libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
 
-		<!-- GOOGLE FONTS -->
-		<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic' rel='stylesheet' type='text/css'>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Codystar&family=Sacramento&display=swap" rel="stylesheet">
-	</head>
+    <!-- GOOGLE FONTS -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Codystar&family=Sacramento&display=swap" rel="stylesheet">
 
-	<body>
+</head>
+<body>
+<!-- LANDING PAGE -->
+<div class="container-fluid vh-100" id="landing_page">
+    <div class="title-container">
+        <h1 id="webtitle"> Wanderlust & Michelin Stars </h1>
+    </div>
+</div>
 
-		<!-- LANDING PAGE -->
-		<div class="container-fluid vh-100" id="landing_page">
-			<div class="title-container">
-				<h1 id="webtitle"> Wanderlust & Michelin Stars </h1>
-			</div>
-		</div>
+<!-- PROJECT INTRO INFO -->
+<div class="container-fluid vh-100" id="proj_intro">
+    <h1> PROJECT INTRO INFO </h1>
+    <h3> ** Potential idea here is to have a box in the middle of the screen. As you SCROLL, the textual information will change to reflect the below</h3>
+    <p>
+        You are an ambitious entrepeneur looking to open a Michelin-rated restaurant... but how do you decide where and what kind of food you want to serve?
+    </p>
+    <p>
+        We consider two factors that may influence our success: the location of the restaurant and the type of restaurant (cuisine, price range, etc.) we want to open.
+        The question thus becomes, what kind of insights can we draw from tourism trends and the characteristics of current Michelin-ranked restaurants to select the best location and restaurant type to open?
+    </p>
+    <p>
+        Considering tourism data is crucial!
+        Tourist hotspots often experience higher foot traffic, which translates into more frequent dining customers, especially if the cuisine aligns with tourist preferences or offers a unique local experience.
+        Knowledge of tourists' budgets and purpose of travelling can guide menu customization, catering to diverse palates and potentially attracting a broader customer base.
+        Integrating tourism data into business planning can significantly enhance a restaurant's likelihood of success by aligning its offerings with the dynamic influx of potential customers.
 
-		<!-- PROJECT INTRO INFO -->
-		<div class="container-fluid vh-100" id="proj_intro">
-			<h1> PROJECT INTRO INFO </h1>
-			<h3> ** Potential idea here is to have a box in the middle of the screen. As you SCROLL, the textual information will change to reflect the below</h3>
-			<p>
-				You are an ambitious entrepeneur looking to open a Michelin-rated restaurant... but how do you decide where and what kind of food you want to serve?
-			</p>
-			<p>
-				We consider two factors that may influence our success: the location of the restaurant and the type of restaurant (cuisine, price range, etc.) we want to open.
-				The question thus becomes, what kind of insights can we draw from tourism trends and the characteristics of current Michelin-ranked restaurants to select the best location and restaurant type to open?
-			</p>
-			<p>
-				Considering tourism data is crucial!
-				Tourist hotspots often experience higher foot traffic, which translates into more frequent dining customers, especially if the cuisine aligns with tourist preferences or offers a unique local experience.
-				Knowledge of tourists' budgets and purpose of travelling can guide menu customization, catering to diverse palates and potentially attracting a broader customer base.
-				Integrating tourism data into business planning can significantly enhance a restaurant's likelihood of success by aligning its offerings with the dynamic influx of potential customers.
+    </p>
+</div>
 
-			</p>
-		</div>
+<!-- THE MICHELIN GUIDE, INTRODUCTION -->
+<div class="container-fluid vh-100" id="michelin_intro">
+    <h1> MICHELIN GUIDE INTRO  </h1>
+</div>
 
-		<!-- THE MICHELIN GUIDE, INTRODUCTION -->
-		<div class="container-fluid vh-100" id="michelin_intro">
-			<h1> MICHELIN GUIDE INTRO  </h1>
-		</div>
+<!-- GLOBAL VIZ 1: DESTINATIONS AND EXPENDITURES / SWITCH / MICHELIN GLOBAL DIST -->
+<div class="container-fluid vh-100" id="global_vis_1">
+    <h1>  DESTINATIONS AND EXPENDITURES / SWITCH / MICHELIN GLOBAL DIST </h1>
+    <div class="row">
+        <div class="col-7" id="globe">
+            <div id="map-container"></div>
+        </div>
+        <div class="col-5" id="globe-linked">
+            <div id="line-chart"></div>
+        </div>
+    </div>
+</div>
 
-		<!-- GLOBAL VIZ 1: DESTINATIONS AND EXPENDITURES / SWITCH / MICHELIN GLOBAL DIST -->
-		<div class="container-fluid vh-100" id="global_vis_1">
-			<h1>  DESTINATIONS AND EXPENDITURES / SWITCH / MICHELIN GLOBAL DIST </h1>
-			<div class="row">
-				<div class="col-8" id="globe">
-					Globe goes here
-				</div>
-				<div class="col-4" id="globe-linked">
-					Linked charts goes here
-				</div>
-			</div>
-		</div>
+<!-- SELECTION PANEL: SELECT 5 COUNTRIES OF INTEREST -->
+<div class="container-fluid vh-100" id="selection_panel">
+    <h1> SELECTION PANEL: Users will select 5 countries of interest </h1>
+    <div class="row">
+        <div class="col-8">
+            Comparison Viz
+        </div>
+        <div class="col-4">
+            Selection panel
+        </div>
+    </div>
+</div>
 
-		<!-- SELECTION PANEL: SELECT 5 COUNTRIES OF INTEREST -->
-		<div class="container-fluid vh-100" id="selection_panel">
-			<h1> SELECTION PANEL: Users will select 5 countries of interest </h1>
-			<div class="row">
-				<div class="col-8" id="globe">
-					Comparison Viz
-				</div>
-				<div class="col-4" id="globe-linked">
-					Selection panel
-				</div>
-			</div>
-		</div>
+<!-- TOURISM VIZ 1: PURPOSE OF TRAVEL -->
+<div class="container-fluid vh-100" id="tourism_vis_1">
+    <h1> PURPOSE OF TRAVEL  </h1>
+</div>
 
-		<!-- TOURISM VIZ 1: PURPOSE OF TRAVEL -->
-		<div class="container-fluid vh-100" id="tourism_vis_1">
-			<h1> PURPOSE OF TRAVEL  </h1>
-		</div>
-
-		<!--MICHELIN VIS 1 -->
-		<div class="container-fluid vh-100" id="michelin_vis_1">
-			<h1> BUBBLE GRAPH: INNOVATIVE VIZ GOES HERE </h1>
-		</div>
-
-
-		<!--CREDITS AND ABOUT THE TEAM -->
-		<div class="container-fluid vh-100" id="team_outro">
-			<h1> CREDITS AND ABOUT THE TEAM </h1>
-			<p> Cassie Dai, Cindy Lin, Erica Ma </p>
-		</div>
+<!--MICHELIN VIS 1 -->
+<div class="container-fluid vh-100" id="michelin_vis_1">
+    <h1> BUBBLE GRAPH: INNOVATIVE VIZ GOES HERE </h1>
+</div>
 
 
+<!--CREDITS AND ABOUT THE TEAM -->
+<div class="container-fluid vh-100" id="team_outro">
+    <h1> CREDITS AND ABOUT THE TEAM </h1>
+    <p> Cassie Dai, Cindy Lin, Erica Ma </p>
+</div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
+<!-- d3 -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
 
-
-
-
-
-
-
-		<!-- embedding JS libraries -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-
-	<!-- d3 -->
-	<script src="https://d3js.org/d3.v7.min.js"></script>
-
-	<!-- own js files -->
-	<script src="js/main.js"></script>
-	<script src="js/travelpurposeVis.js"></script>
-	</body>
+<script src="js/mapVis.js"></script>
+<script src="js/lineVis.js"></script>
+<script src="js/travelpurposeVis.js"></script>
+<script src="js/main.js"></script>
+</body>
 </html>
