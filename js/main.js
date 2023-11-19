@@ -9,10 +9,21 @@ let mapVis, lineVis;
 let promises = [
     d3.csv("data/Travel_data.csv", (row) => {
         row.Year = parseInt(row.Year);
-        row.avgLengthStay =+ row.avgLengthStay
+        row.avgLengthStay =+ row.avgLengthStay;
+        row.businessPurpose =+ row.businessPurpose;
+        row.numBedPlaces =+ row.numBedPlaces;
+        row.numEstablishments =+ row.numEstablishments;
+        row.numRooms =+ row.numRooms;
+        row.occupancyBeds =+ row.occupancyBeds;
+        row.occupancyRooms =+ row.occupancyRooms;
+        row.personalPurpose =+ row.personalPurpose;
+        row.totalArrivals =+ row.totalArrivals;
         return row
     }),
-    d3.csv("data/michelin.csv"),
+    d3.csv("data/michelin.csv", (row) => {
+        row.Price =+ row.Prince;
+        return row
+    }),
     d3.json(geoDataURL),
     d3.csv(tourismDataURL)
 ];
@@ -27,24 +38,23 @@ Promise.all(promises)
 // initMainPage
 function initMainPage(dataArray) {
     // check if all data carried over
-    console.log(dataArray[0]);
-    console.log(dataArray[1]);
-    console.log(dataArray[2]);
-    console.log(dataArray[3]);
+    console.log("travel data", dataArray[0]);
+    console.log("michelin data", dataArray[1]);
+    console.log("geo data", dataArray[2]);
+    console.log("tourism data", dataArray[3]);
 
     // create Set with all unique names from Michelin Guide
     dataArray[1].forEach((d) => {
       michelinCountry.add(d.Country)
     })
 
-    // check
-    console.log(dataArray[0].map((d) => {return d.avgLengthStay}))
-
     // initialize visualizations
+    // MAP VISUALIZATION
     mapVis = new MapVis("map-container", dataArray[3], dataArray[2]);
 
     let france = dataArray[3].filter(d => d['Country Name'] === "France");
 
+    // LINE GRAPH 1 VISUALIZATION
     // Prepare data for LineVis
     let lineData = france.map(d => ({
         year: +d['Year'],
@@ -53,5 +63,12 @@ function initMainPage(dataArray) {
 
     // Initialize LineVis with empty data
     lineVis = new LineVis("line-chart", lineData);
+
+    // TRAVEL PURPOSE + MICHELIN GUIDE VISUALIZATION
+    // filter out data with Michelin countries
+    let michelinTravelData = dataArray[0].filter((d) => michelinCountry.has(d.Country));
+    console.log("michelin travel data", michelinTravelData)
+    // initialize travel purpose visualization
+    travelPurpose = new TravelPurposeVis("tourism_vis_1", michelinTravelData, dataArray[1])
 }
 console.log("meow", michelinCountry)

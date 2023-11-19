@@ -12,6 +12,7 @@ class TravelPurposeVis {
         this.filteredtravelDataset = [];
 
         console.log("Constructor: travel data", this.travelData);
+        console.log("Constructor: michelin data", this.michelinData); 
 
         this.initVis()
     }
