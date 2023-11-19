@@ -21,3 +21,10 @@
     font-size: xxx-large;
 }
 
+#proj_intro {
+    padding-top: 10vh;
+    display: inline-block;
+    background-color: #D5E2F2;
+    text-align: center;
+}
+
