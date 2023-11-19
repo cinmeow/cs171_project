@@ -1,4 +1,4 @@
-"index","Country","Year","avgLengthStay","businessPurpose","bumBedPlaces","numEstablishments","numRooms","occupancyBeds","occupancyRooms","personalPurpose","Total.Arrivals"
+"index","Country","Year","avgLengthStay","businessPurpose","numBedPlaces","numEstablishments","numRooms","occupancyBeds","occupancyRooms","personalPurpose","totalArrivals"
 1,"Albania","2010",,47,25110,,14328,,,2370,2417
 2,"Albania","2011",,43,24301,,12428,,,2889,2932
 3,"Albania","2012",,42,32004,,14652,,,3472,3514
