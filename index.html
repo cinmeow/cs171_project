@@ -56,11 +56,15 @@
 <div class="container-fluid vh-100" id="global_vis_1">
     <h1>  DESTINATIONS AND EXPENDITURES / SWITCH / MICHELIN GLOBAL DIST </h1>
     <div class="row">
-        <div class="col-7" id="globe">
-            <div id="map-container"></div>
+        <div class="col-6" id="globe">
         </div>
-        <div class="col-5" id="globe-linked">
-            <div id="line-chart"></div>
+        <div class="col-6" id="globe-linked">
+            <div class="row justify-content-center" style="height:40%">
+                <div class='align-self-center' id="line-chart" style="height: 100%; width:100%"></div>
+            </div>
+            <div class="row justify-content-center" style="height:40%">
+                <div class="align-self-center" id="bar-chart" style="height: 100%; width:100%"></div>
+            </div>
         </div>
     </div>
 </div>
@@ -108,6 +112,7 @@
 <script src="js/travelpurposeVis.js"></script>
 <script src="js/selectVis.js"></script>
 <script src="js/countryFlags.js"></script>
+<script src="js/global_michelin.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

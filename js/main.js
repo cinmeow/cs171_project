@@ -51,7 +51,7 @@ function initMainPage(dataArray) {
 
     // initialize visualizations
     // MAP VISUALIZATION
-    mapVis = new MapVis("map-container", dataArray[3], dataArray[2]);
+    mapVis = new MapVis("globe", dataArray[3], dataArray[2]);
 
     let france = dataArray[3].filter(d => d['Country Name'] === "France");
 
@@ -67,11 +67,15 @@ function initMainPage(dataArray) {
     selectVis = new SelectVis("#flag-container", countries);
 
 
+    // Initialize BarChart
+    barChart = new BarChart("bar-chart", dataArray[1]);
+
     // TRAVEL PURPOSE + MICHELIN GUIDE VISUALIZATION
     // filter out data with Michelin countries
     console.log("michelin unique names", michelinCountry)
     let michelinTravelData = dataArray[0].filter((d) => michelinCountry.has(d.Country));
     console.log("michelin travel data", michelinTravelData)
+
     // initialize travel purpose visualization
     travelPurpose = new TravelPurposeVis("tourism_vis_1", michelinTravelData, dataArray[1])
 }
