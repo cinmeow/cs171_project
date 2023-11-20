@@ -10,7 +10,6 @@
 
 
 #landing_page {
-    /*background-color: powderblue;*/
     background-image: url("/img/temp_background.jpeg");
     background-size: cover;
 }
@@ -30,6 +29,7 @@
     padding-top: 10vh;
     display: inline-block;
     text-align: center;
+    font-family: sans-serif;
 }
 
 
@@ -37,6 +37,7 @@
     height: 300px;      /* 2/3 of the parent div's height */
     width: auto;         /* To maintain the aspect ratio of the image */
 }
+
 body{
     background-color: white;
 }
@@ -46,6 +47,7 @@ body{
     border-radius: 50px;
     margin-right: 50px;
 }
+
 #hook{
     margin: 100px;
     font-size: 30px;
@@ -60,6 +62,7 @@ body{
     border: 2px solid black;
     margin: 20px;
     padding: 10px;
+    font-family: sans-serif;
 }
 
 #box2{
@@ -68,6 +71,7 @@ body{
     border: 2px solid black;
     margin: 20px;
     padding: 25px;
+    font-family: sans-serif;
 }
 
 #fork-spoon{
@@ -90,14 +94,25 @@ body{
     padding-top: 35px;
     text-align: center;
     align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 h3 {
     padding-top: 20px;
     font-size: 25px;
+    font-family: sans-serif;
 }
 
 h4 {
     font-size: 20px;
+    font-family: sans-serif;
+}
+
+#michelin-blurb {
+    font-family: sans-serif;
+    font-size: 18px;
+    padding-left: 130px;
+    padding-right: 130px;
 }
 
