@@ -67,8 +67,40 @@
 </div>
 
 <!-- THE MICHELIN GUIDE, INTRODUCTION -->
-<div class="container-fluid vh-100" id="michelin_intro">
-    <h1> MICHELIN GUIDE INTRO  </h1>
+<div class="container-fluid vh-100 intro-container" id="michelin_intro">
+    <div class="row justify-content-center intro-title" id="michelin-intro-title">
+        <h1> About the MICHELIN Guide </h1>
+    </div>
+    <div class="row justify-content-center info" id="michelin-info">
+        <div class="col" id="one_star">
+            <img src="img/michelin/one_star.png" style="height:50px"/>
+            <h3> 1 Star MICHELIN </h3>
+            <h4> High-quality cooking, worth a stop </h4>
+        </div>
+        <div class="col" id="two_star">
+            <img src="img/michelin/two_star.png" style="height:50px"/>
+            <h3> 2 Star MICHELIN </h3>
+            <h4> Excellent cooking, worth a detour </h4>
+
+        </div>
+        <div class="col" id="three_star">
+            <img src="img/michelin/three_star.png" style="height:50px"/>
+            <h3> 3 Star MICHELIN </h3>
+            <h4> Exceptional cuisine, worth a special journey </h4>
+
+        </div>
+        <div class="col" id="bib_gourmand">
+            <img src="img/michelin/bib_gourmand.jpeg" style="height:50px"/>
+            <h3> Bib Gourmand </h3>
+            <h4> Exceptionally good food at moderate prices </h4>
+        </div>
+        <div class="col" id="green_star">
+            <img src="img/michelin/green_star.jpeg" style="height:70px"/>
+            <h3> MICHELIN Green Star </h3>
+            <h4> Culinary excellence with outstanding eco-friendly commitments </h4>
+        </div>
+    </div>
+
 </div>
 
 <!-- GLOBAL VIZ 1: DESTINATIONS AND EXPENDITURES / SWITCH / MICHELIN GLOBAL DIST -->
@@ -90,11 +122,10 @@
 
 <!-- SELECTION PANEL: SELECT 5 COUNTRIES OF INTEREST -->
 <div class="container-fluid vh-100" id="selection_panel">
-    <h1> SELECTION PANEL: Users will select 5 countries of interest </h1>
+    <h1> SELECTION PANEL: Users will select 5 countries of interest to explore further </h1>
     <div class="row">
         <div class="col-6">
-            <img src="img/selectVis1.png" alt="Comparison Visualization" />
-            Comparison Viz
+            <img src="img/selectVis1.png" alt="Comparison Visualization" style="height:60%"/>
         </div>
         <div class="col-6">
             Selection panel
@@ -118,13 +149,33 @@
 <!--MICHELIN VIS 1 -->
 <div class="container-fluid vh-100" id="michelin_vis_1">
     <h1> BUBBLE GRAPH: INNOVATIVE VIZ GOES HERE </h1>
+    <img src="img/bubble.jpeg" alt="Comparison Visualization" style="height:90%"/>
 </div>
 
 
 <!--CREDITS AND ABOUT THE TEAM -->
-<div class="container-fluid vh-100" id="team_outro">
-    <h1> CREDITS AND ABOUT THE TEAM </h1>
-    <p> Cassie Dai, Cindy Lin, Erica Ma </p>
+<div class="container-fluid vh-100 intro-container" id="team_outro">
+    <div class="row justify-content-center intro-title" id="team-intro">
+        <h1> About the Team </h1>
+        <h2> Data Visualization @ Harvard University </h2>
+    </div>
+    <div class="row justify-content-center info" id="team-info">
+        <div class="col" id="cassie">
+            <img src="img/michelin/bib_gourmand.jpeg" style="height:50px"/>
+            <h3> Cassie Dai </h3>
+            <h4> MS Something </h4>
+        </div>
+        <div class="col" id="cindy">
+            <img src="img/michelin/bib_gourmand.jpeg" style="height:50px"/>
+            <h3> Cindy Lin </h3>
+            <h4> MS Health Data Science </h4>
+        </div>
+        <div class="col" id="erica">
+            <img src="img/michelin/bib_gourmand.jpeg" style="height:50px"/>
+            <h3> Erica Ma </h3>
+            <h4> MS Biostatistics </h4>
+        </div>
+    </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>

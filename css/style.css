@@ -73,3 +73,31 @@ body{
 #fork-spoon{
     max-height: 50px;
 }
+
+.intro-container {
+    /*background-color: #D5E2F2;*/
+    display: inline-block;
+}
+
+.intro-title{
+    font-family: sans-serif;
+    padding-top: 25vh;
+    text-align: center;
+}
+
+.info {
+    font-family: sans-serif;
+    padding-top: 35px;
+    text-align: center;
+    align-items: center;
+}
+
+h3 {
+    padding-top: 20px;
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
