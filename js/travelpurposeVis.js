@@ -22,13 +22,15 @@ class TravelPurposeVis {
         console.log("travel data filter", travelDataFilter)
 
         // average the price for michelin restaurants by country
-        let averagePrice = Array.from(d3.rollup(
+        let numRestaurants = Array.from(d3.rollup(
             michelinFilteredData,
-            (leaves) => d3.mean(leaves, (d) => d.Price),
+            // (leaves) => d3.mean(leaves, (d) => d.Price),
+            (leaves) => leaves.length,
             (d) => d.Country
         ));
 
-        let newMichelinData = averagePrice.map(([Country, AvgPrice]) => ({Country, AvgPrice}));
+        console.log(numRestaurants)
+        let newMichelinData = numRestaurants.map(([Country, numRestaurants]) => ({Country, numRestaurants}));
         // console.log(newMichelinData);
 
         // filter michelin data for only those in the five countries above
@@ -46,7 +48,7 @@ class TravelPurposeVis {
                 Country: d1.Country,
                 businessPurpose: d1.businessPurpose,
                 personalPurpose: d1.personalPurpose,
-                avgPrice: matchingItem.AvgPrice,
+                numRestaurants: matchingItem.numRestaurants,
             };
 
         });
@@ -77,7 +79,7 @@ class TravelPurposeVis {
             .domain(["USA", "France", "Italy", "Taiwan", "Thailand"])
             .range([ "#440154ff", "#21908dff", "#fde725ff", "#ff7900", "#81be50"])
 
-        vis.dimensions = ["personalPurpose", "businessPurpose", "avgPrice"]
+        vis.dimensions = ["personalPurpose", "businessPurpose", "numRestaurants"]
 
         // build linear scale for each dimension
 
@@ -93,7 +95,7 @@ class TravelPurposeVis {
                     .range([vis.height, 0]);
             } else{
                 vis.y[name] = d3.scaleLinear()
-                    .domain([0, d3.max(vis.filteredData, (d) => d.avgPrice)]) // Use 'return' to return the result
+                    .domain([0, d3.max(vis.filteredData, (d) => d.numRestaurants)]) // Use 'return' to return the result
                     .range([vis.height, 0]);
             }
 
