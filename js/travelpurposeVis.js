@@ -60,7 +60,7 @@ class TravelPurposeVis {
         console.log("INIT VIS");
 
         // set up margin and width
-        vis.margin = {top: 50, right: 50, bottom: 50, left: 50};
+        vis.margin = {top: 200, right: 300, bottom: 200, left: 300};
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.right - vis.margin.left ;
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.bottom - vis.margin.top;
         console.log(vis.width, vis.height)
@@ -80,22 +80,6 @@ class TravelPurposeVis {
         vis.dimensions = ["personalPurpose", "businessPurpose", "avgPrice"]
 
         // build linear scale for each dimension
-        // vis.y = []
-        //
-        // console.log("filtered data MOO", vis.filteredData)
-        // for(let i of Object.keys(vis.dimensions)){
-        //     name = vis.dimensions[i];
-        //     vis.y[name] = d3.scaleLinear()
-        //         .domain([d3.extent(vis.filteredData, (d) => {
-        //             +d[name];
-        //         })])
-        //         .range([vis.height, 0])
-        // };
-        //
-        // // Build the X scale -> it find the best position for each Y axis
-        // vis.x = d3.scalePoint()
-        //     .range([0, vis.width])
-        //     .domain(vis.dimensions);
 
         vis.y = {}; // Change to an object
 
@@ -113,9 +97,7 @@ class TravelPurposeVis {
                     .range([vis.height, 0]);
             }
 
-        }
-
-        console.log(vis.y)
+        };
 
         // Build the X scale -> it finds the best position for each Y axis
         vis.x = d3.scalePoint()
