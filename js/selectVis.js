@@ -10,11 +10,18 @@ class SelectVis {
 
     initVis() {
         let vis = this;
+        // Set up dimensions and margins
+        vis.margin = { top: 80, right: 80, bottom: 80, left: 80 };
+        vis.width = 800 - vis.margin.left - vis.margin.right;
+        vis.height = 600 - vis.margin.top - vis.margin.bottom;
 
-        vis.svg = d3.select(vis.parentElement)
-            .append("svg")
-            .attr("width", 800)
-            .attr("height", 600);
+        // Initialize drawing area
+        vis.svg = d3.select(vis.parentElement).append("svg")
+            .attr("width", vis.width + vis.margin.left + vis.margin.right)
+            .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${vis.margin.left}, ${vis.margin.top})`);
+
 
         // Patterns for flags
         vis.patterns = vis.svg.append("defs").selectAll("pattern")
