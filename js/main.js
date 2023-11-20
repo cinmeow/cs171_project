@@ -3,7 +3,8 @@ let geoDataURL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"
 let tourismDataURL = "data/tourism_worldbank1.csv"; // Replace with the actual path to your CSV file
 // initiate global variables
 let michelinCountry = new Set()
-let mapVis, lineVis;
+let mapVis, lineVis, selectVis;
+
 
 // load data with promises
 let promises = [
@@ -63,6 +64,8 @@ function initMainPage(dataArray) {
 
     // Initialize LineVis with empty data
     lineVis = new LineVis("line-chart", lineData);
+    selectVis = new SelectVis("#flag-container", countries);
+
 
     // TRAVEL PURPOSE + MICHELIN GUIDE VISUALIZATION
     // filter out data with Michelin countries
@@ -70,5 +73,10 @@ function initMainPage(dataArray) {
     console.log("michelin travel data", michelinTravelData)
     // initialize travel purpose visualization
     travelPurpose = new TravelPurposeVis("tourism_vis_1", michelinTravelData, dataArray[1])
+}
+
+function handleSelectedCountries(selectedCountries) {
+    console.log("Selected Countries:", selectedCountries);
+    // Additional handling for selected countries
 }
 console.log("meow", michelinCountry)

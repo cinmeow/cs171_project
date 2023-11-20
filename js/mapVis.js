@@ -107,7 +107,7 @@ class MapVis {
             .style("padding", "10px")
             .style("border-radius", "5px")
             .style("text-align", "left");
-        
+
 
 
         // Wrangle the data
