@@ -71,7 +71,7 @@ function initMainPage(dataArray) {
     barChart = new BarChart("bar-chart", dataArray[1]);
 
     // TRAVEL PURPOSE + MICHELIN GUIDE VISUALIZATION
-    travelPurpose = new TravelPurposeVis("purpose-vis", dataArray[0], dataArray[1]); 
+    travelPurpose = new TravelPurposeVis("purpose-vis", dataArray[0], dataArray[1]);
 
     // filter out data with Michelin countries
     console.log("michelin unique names", michelinCountry);
