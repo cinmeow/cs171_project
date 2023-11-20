@@ -65,11 +65,6 @@ function initMainPage(dataArray) {
     lineVis = new LineVis("line-chart", lineData);
 
     // TRAVEL PURPOSE + MICHELIN GUIDE VISUALIZATION
-    // filter out data with Michelin countries
-    console.log("michelin unique names", michelinCountry)
-    let michelinTravelData = dataArray[0].filter((d) => michelinCountry.has(d.Country));
-    console.log("michelin travel data", michelinTravelData)
-    // initialize travel purpose visualization
-    travelPurpose = new TravelPurposeVis("tourism_vis_1", michelinTravelData, dataArray[1])
+    travelPurpose = new TravelPurposeVis("purpose-vis", dataArray[0], dataArray[1])
 }
 
