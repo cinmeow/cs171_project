@@ -11,16 +11,21 @@ class SelectVis {
     initVis() {
         let vis = this;
         // Set up dimensions and margins
-        vis.margin = { top: 80, right: 80, bottom: 80, left: 80 };
+        vis.margin = { top: 80, right: 20, bottom: 80, left: 20 };
         vis.width = 800 - vis.margin.left - vis.margin.right;
         vis.height = 600 - vis.margin.top - vis.margin.bottom;
+
 
         // Initialize drawing area
         vis.svg = d3.select(vis.parentElement).append("svg")
             .attr("width", vis.width + vis.margin.left + vis.margin.right)
             .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
             .append("g")
-            .attr("transform", `translate(${vis.margin.left}, ${vis.margin.top})`);
+            .attr("transform", "translate(0, 50)");
+
+
+        console.log("COUNTRIES")
+        console.log(vis.countries)
 
 
         // Patterns for flags
@@ -28,8 +33,8 @@ class SelectVis {
             .data(vis.countries)
             .enter().append("pattern")
             .attr("id", d => `flag-${d.name}`)
-            .attr("width", 60)
-            .attr("height", 40)
+            .attr("width", 20)
+            .attr("height", 10)
             .attr("patternContentUnits", "objectBoundingBox")
             .append("image")
             .attr("xlink:href", d => d.flag)
@@ -42,8 +47,8 @@ class SelectVis {
             .data(vis.countries)
             .enter().append("circle")
             .attr("class", "country-circle")
-            .attr("cx", (d, i) => (i % 10) * 80 + 40)
-            .attr("cy", (d, i) => Math.floor(i / 10) * 80 + 40)
+            .attr("cx", (d, i) => (i % 7) * 80 + 50)
+            .attr("cy", (d, i) => Math.floor(i / 7) * 80 + 30)
             .attr("r", 30)
             .attr("fill", d => `url(#flag-${d.name})`)
             .attr("stroke", "black")
@@ -52,6 +57,7 @@ class SelectVis {
         // Submit button behavior
         d3.select("#submit-button").on("click", () => vis.submitSelection());
         d3.select("#clear-button").on("click", () => vis.clearSelection());
+
     }
 
     selectCountry(event, d) {

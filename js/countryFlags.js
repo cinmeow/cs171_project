@@ -40,8 +40,8 @@ const countries = [
         "flag": "./img/flag/Czechia.png"
     },
     {
-        "name": "South Korea",
-        "flag": "./img/flag/South Korea.png"
+        "name": "South_Korea",
+        "flag": "./img/flag/South_Korea.png"
     },
     {
         "name": "Sweden",
