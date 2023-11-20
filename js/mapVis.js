@@ -29,8 +29,8 @@ class MapVis {
             .attr('class', 'title')
             .attr('id', 'map-title')
             .append('text')
-            .text('Map')
-            .attr('transform', `translate(${vis.width / 2.5}, 10)`)
+            .text('Select Country to View Data')
+            .attr('transform', `translate(${vis.width / 2.7}, -40)`)
             .attr('text-anchor', 'middle');
 
         const baseHeight = 650; // Example base height - adjust this as needed
@@ -38,7 +38,7 @@ class MapVis {
 
         // Initialize projection and path for the map
         vis.projection = d3.geoOrthographic()
-            .translate([vis.width / 2.5, vis.height / 2.5])
+            .translate([vis.width / 2.7, vis.height / 3])
             // .scale(249.5 * zoom)
             .scale(230)  // Adjust scale to fit the SVG area
             .clipAngle(90);  // Clip at the hemisphere
@@ -95,7 +95,7 @@ class MapVis {
             .attr("d", vis.path);
 
         // Set up legend dimensions and position
-        vis.legendDimensions = { width: 100, height: 20, position: { x: 100, y: vis.height - 100 } };
+        vis.legendDimensions = { width: 100, height: 20, position: { x: 100, y: vis.height - 160 } };
 
 
         vis.tooltip = d3.select("body").append("div")

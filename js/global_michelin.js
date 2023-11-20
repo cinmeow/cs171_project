@@ -17,7 +17,7 @@ class BarChart{
         console.log(vis.data)
 
         // dynamic svg canvas
-        vis.margin = {top: 30, right: 60, bottom: 20, left: 40};
+        vis.margin = {top: 80, right: 60, bottom: 20, left: 40};
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
@@ -29,6 +29,14 @@ class BarChart{
             .append('g')
             .attr('transform', `translate (${vis.margin.right + vis.margin.left}, ${vis.margin.top})`);
 
+
+        // add title
+        vis.title = vis.svg.append("text")
+            .attr("x", vis.width / 2)
+            .attr("y", 0 - vis.margin.top / 3)
+            .attr("text-anchor", "middle")
+            .style("font-size", "20px")
+            .text("Distribution of Michelin Star Ratings");
 
         // create scales and axes
         vis.x = d3.scaleLinear().range([0, vis.width - vis.margin.right]);
