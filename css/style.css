@@ -1,4 +1,8 @@
 
+.container {
+    padding-top: 50px;
+}
+
 .title-container{
     padding-top: 45vh;
     text-align: center;
@@ -26,5 +30,11 @@
     display: inline-block;
     background-color: #D5E2F2;
     text-align: center;
+}
+
+
+.col-8 img {
+    height: 300px;      /* 2/3 of the parent div's height */
+    width: auto;         /* To maintain the aspect ratio of the image */
 }
 

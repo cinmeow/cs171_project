@@ -14,7 +14,7 @@ class MapVis {
         let vis = this;
 
         // Set up dimensions and margins
-        vis.margin = { top: 80, right: 80, bottom: 80, left: 80 };
+        vis.margin = { top: 80, right: 10, bottom: 80, left: 20 };
         vis.width = 1000 - vis.margin.left - vis.margin.right;
         vis.height = 800 - vis.margin.top - vis.margin.bottom;
 
@@ -30,7 +30,7 @@ class MapVis {
             .attr('id', 'map-title')
             .append('text')
             .text('Map')
-            .attr('transform', `translate(${vis.width / 2}, 20)`)
+            .attr('transform', `translate(${vis.width / 2.5}, 10)`)
             .attr('text-anchor', 'middle');
 
         const baseHeight = 650; // Example base height - adjust this as needed
@@ -38,9 +38,9 @@ class MapVis {
 
         // Initialize projection and path for the map
         vis.projection = d3.geoOrthographic()
-            .translate([vis.width / 2, vis.height / 2])
+            .translate([vis.width / 2.5, vis.height / 2.5])
             // .scale(249.5 * zoom)
-            .scale(245)  // Adjust scale to fit the SVG area
+            .scale(230)  // Adjust scale to fit the SVG area
             .clipAngle(90);  // Clip at the hemisphere
 
         vis.path = d3.geoPath()
@@ -80,7 +80,9 @@ class MapVis {
                 })
 
         )
-            .call(vis.zoom);
+
+        // remove zoom for now
+            // .call(vis.zoom);
 
         // Apply the zoom behavior to the SVG
         // vis.svg.call(vis.zoom);
@@ -93,8 +95,7 @@ class MapVis {
             .attr("d", vis.path);
 
         // Set up legend dimensions and position
-        vis.legendDimensions = { width: 100, height: 20, position: { x: 100, y: vis.height - 30 } };
-
+        vis.legendDimensions = { width: 100, height: 20, position: { x: 100, y: vis.height - 100 } };
 
 
         vis.tooltip = d3.select("body").append("div")
@@ -107,7 +108,7 @@ class MapVis {
             .style("padding", "10px")
             .style("border-radius", "5px")
             .style("text-align", "left");
-        
+
 
 
         // Wrangle the data
@@ -158,9 +159,6 @@ class MapVis {
         });
 
         console.log(vis.countryInfoByYear);
-
-
-
 
         vis.updateVis();
     }

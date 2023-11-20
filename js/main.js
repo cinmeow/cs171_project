@@ -3,7 +3,8 @@ let geoDataURL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"
 let tourismDataURL = "data/tourism_worldbank1.csv"; // Replace with the actual path to your CSV file
 // initiate global variables
 let michelinCountry = new Set()
-let mapVis, lineVis;
+let mapVis, lineVis, selectVis;
+
 
 // load data with promises
 let promises = [
@@ -50,7 +51,7 @@ function initMainPage(dataArray) {
 
     // initialize visualizations
     // MAP VISUALIZATION
-    mapVis = new MapVis("map-container", dataArray[3], dataArray[2]);
+    mapVis = new MapVis("globe", dataArray[3], dataArray[2]);
 
     let france = dataArray[3].filter(d => d['Country Name'] === "France");
 
@@ -63,8 +64,26 @@ function initMainPage(dataArray) {
 
     // Initialize LineVis with empty data
     lineVis = new LineVis("line-chart", lineData);
+    selectVis = new SelectVis("#flag-container", countries);
+
+
+    // Initialize BarChart
+    barChart = new BarChart("bar-chart", dataArray[1]);
 
     // TRAVEL PURPOSE + MICHELIN GUIDE VISUALIZATION
-    travelPurpose = new TravelPurposeVis("purpose-vis", dataArray[0], dataArray[1])
+    travelPurpose = new TravelPurposeVis("purpose-vis", dataArray[0], dataArray[1]); 
+
+    // filter out data with Michelin countries
+    console.log("michelin unique names", michelinCountry);
+    let michelinTravelData = dataArray[0].filter((d) => michelinCountry.has(d.Country));
+    console.log("michelin travel data", michelinTravelData);
 }
+
+
+function handleSelectedCountries(selectedCountries) {
+    console.log("Selected Countries:", selectedCountries);
+    // Additional handling for selected countries
+}
+console.log("meow", michelinCountry)
+
 
