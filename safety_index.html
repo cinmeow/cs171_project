@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wanderlust & Michelin Stars</title>
+
+    <!-- Load CSS libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+
+    <!-- GOOGLE FONTS -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Codystar&family=Sacramento&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<!-- LANDING PAGE -->
+<div class="container-fluid vh-100" id="landing_page">
+    <div class="title-container">
+        <div id = "header-title">
+            <h1 id="webtitle"> Wanderlust & Michelin Stars </h1>
+        </div>
+    </div>
+</div>
+
+<!-- PROJECT INTRO INFO -->
+<div class="container-fluid vh-100" id="proj_intro">
+    <h1> Project Introduction </h1>
+    <h3> NOTE: Potential idea here is to have a box in the middle of the screen.
+        As you SCROLL, the textual information will change to convey the information below.</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col" id = "big-question">
+                <p id = "hook">You are an ambitious entrepeneur looking to open a Michelin-rated restaurant... but how do you decide where and what kind of food you want to serve? </p>
+            </div>
+            <div class="col">
+                <h3>We consider two factors that may influence our decision to opening a restaurant: </h3>
+                <div class = "row">
+                    <div class = "col" id = "box1">
+                        <h4>Location of the Restaurant</h4>
+                    </div>
+                    <div class = "col" id = "box2">
+                        <h4>Type of Restaurant</h4>
+                    </div>
+                </div>
+                <img src = "css/fork-spoon.png" id = "fork-spoon">
+                <div>
+                    <h4> What kind of insights can we draw from tourism trends and the characteristics of current Michelin-ranked restaurants to select the best location and restaurant type to open?
+                    </h4>
+                </div>
+                <h5>Considering tourism data is crucial!</h5>
+                <p>
+                    Tourist hotspots often experience higher foot traffic, which translates into more frequent dining customers, especially if the cuisine aligns with tourist preferences or offers a unique local experience.
+                    Knowledge of tourists' budgets and purpose of travelling can guide menu customization, catering to diverse palates and potentially attracting a broader customer base.
+                    Integrating tourism data into business planning can significantly enhance a restaurant's likelihood of success by aligning its offerings with the dynamic influx of potential customers.
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- THE MICHELIN GUIDE, INTRODUCTION -->
+<div class="container-fluid vh-100 intro-container" id="michelin_intro">
+    <div class="row justify-content-center intro-title" id="michelin-intro-title">
+        <h1> About the MICHELIN Guide </h1>
+        <p id="michelin-blurb"> The MICHELIN Guide is an annual publication created by the French tire company, MICHELIN, that dates back to the early 20th century.
+            Each year, the MICHELIN Guide anonymously reviews restaurants around the globe and awards prestigious MICHELIN Star recognition for
+            culinary excellence. The MICHELIN Guide covers over 40 countries and 5000+ restaurants and is one of the most renowned and trusted
+            source of culinary expertise. In addition to the stars, the MICHELIN Guide also awards Bib Gourmand and MICHELIN Green Stars to restaurants.
+        </p>
+    </div>
+    <div class="row justify-content-center info" id="michelin-info">
+        <div class="col" id="one_star">
+            <img src="img/michelin/one_star.png" style="height:50px"/>
+            <h3> 1 Star MICHELIN </h3>
+            <h4> High-quality cooking, worth a stop </h4>
+        </div>
+        <div class="col" id="two_star">
+            <img src="img/michelin/two_star.png" style="height:50px"/>
+            <h3> 2 Star MICHELIN </h3>
+            <h4> Excellent cooking, worth a detour </h4>
+
+        </div>
+        <div class="col" id="three_star">
+            <img src="img/michelin/three_star.png" style="height:50px"/>
+            <h3> 3 Star MICHELIN </h3>
+            <h4> Exceptional cuisine, worth a special journey </h4>
+
+        </div>
+        <div class="col" id="bib_gourmand">
+            <img src="img/michelin/bib_gourmand.jpeg" style="height:50px"/>
+            <h3> Bib Gourmand </h3>
+            <h4> Exceptionally good food at moderate prices </h4>
+        </div>
+        <div class="col" id="green_star">
+            <img src="img/michelin/green_star.jpeg" style="height:70px"/>
+            <h3> MICHELIN Green Star </h3>
+            <h4> Culinary excellence with outstanding eco-friendly commitments </h4>
+        </div>
+    </div>
+
+</div>
+
+<!-- GLOBAL VIZ 1: DESTINATIONS AND EXPENDITURES / SWITCH / MICHELIN GLOBAL DIST -->
+<div class="container-fluid vh-100" id="global_vis_1">
+    <h1> Global Tourism Data + Michelin Restaurant Distribution </h1>
+    <p> Prototype Note: The two graphs on the right show examples of country-specific data
+        that will be showed alongside the globe. In prototype 2, there will be a SWITCH button
+        to switch views between tourism data and Michelin data. The current layout is not final.
+    </p>
+    <div class="row">
+        <div class="col-6" id="globe">
+        </div>
+        <div class="col-6" id="globe-linked">
+            <div class="row justify-content-center" style="height:35%">
+                <div class='align-self-center' id="line-chart" style="height: 100%; width:100%"></div>
+            </div>
+            <div class="row justify-content-center" style="height:35%">
+                <div class="align-self-center" id="bar-chart" style="height: 100%; width:100%"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SELECTION PANEL: SELECT 5 COUNTRIES OF INTEREST -->
+<div class="container-fluid vh-100" id="selection_panel">
+    <h1> Selection Panel: Users will select 5 countries of interest to explore further </h1>
+    <div class="row">
+        <div class="col-6">
+            This is a comparison visualization that we will create in the future to compare the 5 countries
+            selected on some initial metrics: inbound travelers, accomodations, # michelin restaurant, etc.
+            <img src="img/selectVis1.png" alt="Comparison Visualization" style="height:60%"/>
+        </div>
+        <div class="col-6">
+            Not fully functional selection panel - theoretically, users should be able to select
+            5 countries they are interested in, and the visualizations following will only reflect
+            comparisons for the five countries.
+            <div id="flag-container"></div>
+            <button id="submit-button">Submit</button>
+            <button id="clear-button">Clear</button>
+        </div>
+    </div>
+</div>
+
+<!-- TOURISM VIZ 1: PURPOSE OF TRAVEL -->
+<div class="container-fluid vh-100" id="tourism_vis_1">
+    <h1> Purpose of Travel  </h1>
+    <div id = "purpose-vis" style = "height: 80vh"></div>
+    <p>This graph above is a parallel axis graph that shows how travel purpose and number of michelin restaurants relates to each other.
+    In the future, there will be a sliding scale that allows the graph to change by the year (only the first two lines will change since
+        Michelin average price should not change per year —no yearly data). The different colors represent different countries, a tool
+        tip will appear upon hovering to show more detailed information, such as the total business travelers, personal travelers, avg prices,
+        etc. We are also thinking of rescaling the y-axis for the first two axis to make it "per 1000 people."
+    </p>
+</div>
+
+<!--MICHELIN VIS 1 -->
+<div class="container-fluid vh-100" id="michelin_vis_1">
+    <h1> Bubble Graph: Innovative Visualization  </h1>
+    <p> This graph is our innovative visualization comparing cuisine types, price, and star ratings in our
+    5 countries of interest.
+    </p>
+    <img src="img/bubble.jpeg" alt="Comparison Visualization" style="height:90%"/>
+</div>
+
+
+<!--CREDITS AND ABOUT THE TEAM -->
+<div class="container-fluid vh-100 intro-container" id="team_outro">
+    <div class="row justify-content-center intro-title" id="team-intro">
+        <h1> About the Team </h1>
+        <h2> Data Visualization @ Harvard University </h2>
+    </div>
+    <div class="row justify-content-center info" id="team-info">
+        <div class="col" id="cassie">
+            <img src="img/michelin/bib_gourmand.jpeg" style="height:50px"/>
+            <h3> Cassie Dai </h3>
+            <h4> MS Data Science </h4>
+        </div>
+        <div class="col" id="cindy">
+            <img src="img/michelin/bib_gourmand.jpeg" style="height:50px"/>
+            <h3> Cindy Lin </h3>
+            <h4> MS Health Data Science </h4>
+        </div>
+        <div class="col" id="erica">
+            <img src="img/michelin/bib_gourmand.jpeg" style="height:50px"/>
+            <h3> Erica Ma </h3>
+            <h4> MS Biostatistics </h4>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+<!-- d3 -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<script src="js/mapVis.js"></script>
+<script src="js/lineVis.js"></script>
+<script src="js/travelpurposeVis.js"></script>
+<script src="js/selectVis.js"></script>
+<script src="js/countryFlags.js"></script>
+<script src="js/global_michelin.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

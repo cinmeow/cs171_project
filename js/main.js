@@ -6,6 +6,31 @@ let michelinCountry = new Set()
 let mapVis, lineVis, selectVis;
 
 
+// set up fullpage scrolling
+new fullpage('#fullpage', {
+    // license key
+    licenseKey: 'gplv3-license',
+
+    // fullpage setup
+    autoScrolling:true,
+    scrollHorizontally: true,
+    fitToSection: true,
+
+    // dot nav on right
+    anchors: ['landing', 'intro', 'michelin_guide', 'global', 'select_countries', 'purpose', 'bubble', 'credits'],
+
+    // Navigation
+    menu: '#menu',
+    navigation: true,
+    navigationPosition: 'right',
+    navigationTooltips: ['Welcome', 'Intro', 'Michelin Guide', 'Global', 'Select', 'Purpose', 'Cuisine', 'Credits'],
+    showActiveTooltip: false,
+    slidesNavigation: false,
+    slidesNavPosition: 'bottom',
+
+});
+
+
 // load data with promises
 let promises = [
     d3.csv("data/Travel_data.csv", (row) => {
