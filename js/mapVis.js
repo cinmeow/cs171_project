@@ -311,12 +311,12 @@ class MapVis {
         let selectedDatabyM =vis.michelinData.filter(d => d.Country === countryName);
 
         if(selectedData) {
+            console.log(selectedData)
             // Assuming LineVis has a global variable named 'lineVis'
             lineVis.setData(selectedData.arrivals, countryName);
         }
 
-        if  (selectedDatabyM) {
-            console.log(selectedDatabyM)
+        if  (selectedDatabyM && selectedDatabyM.length > 0) {
             barChart.setData(selectedDatabyM, countryName);
         }
     }

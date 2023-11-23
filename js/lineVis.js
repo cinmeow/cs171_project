@@ -96,8 +96,6 @@ class LineVis {
             .attr("stroke", "darkblue")
             .attr("stroke-width", "2px");
 
-        // ... existing styling for the line
-
         // Draw dots on each data point
         vis.svg.selectAll(".dot")
             .data(vis.data)
@@ -137,7 +135,6 @@ class LineVis {
             .style("fill", "black");
     }
 
-        // Add more styling and features as needed
 
 
     setData(newData, countryName) {

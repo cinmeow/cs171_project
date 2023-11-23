@@ -88,12 +88,9 @@ function initMainPage(dataArray) {
     }));
 
     // Initialize LineVis with empty data
-    lineVis = new LineVis("line-chart", lineData);
+    lineVis = new LineVis("chart1", lineData);
     selectVis = new SelectVis("#flag-container", countries);
 
-
-    // // Initialize BarChart
-    barChart = new BarChart("bar-chart", dataArray[1]);
 
     // TRAVEL PURPOSE + MICHELIN GUIDE VISUALIZATION
     travelPurpose = new TravelPurposeVis("purpose-vis", dataArray[0], dataArray[1]);
@@ -107,21 +104,21 @@ function initMainPage(dataArray) {
         // Get the current value of the dropdown
         let selectedValue = d3.select(this).property("value");
 
+        // Clear the contents of the chart1 div
+        d3.select("#chart1").html("");
+
         // Update the map visualization
         mapVis.updateColorScale(selectedValue);
 
-        // // Update the chart based on the selection
-        // if (selectedValue === "arrivals") {
-        //     // Show line chart and hide bar chart
-        //     lineVis.setData(/* appropriate data for lineVis */);
-        //     d3.select("#line-chart").style("display", "block");
-        //     d3.select("#bar-chart").style("display", "none");
-        // } else if (selectedValue === "michelin") {
-        //     // Show bar chart and hide line chart
-        //     barChart.setData(/* appropriate data for barChart */);
-        //     d3.select("#bar-chart").style("display", "block");
-        //     d3.select("#line-chart").style("display", "none");
-        // }
+        // Update the chart based on the selection
+        if (selectedValue === "arrivals") {
+            // Create and display the line chart in chart1
+            lineVis = new LineVis("chart1", lineData);
+        } else if (selectedValue === "michelin") {
+            // Create and display the bar chart in chart1
+            barChart = new BarChart("chart1", dataArray[1]);
+
+        }
     });
 }
 
