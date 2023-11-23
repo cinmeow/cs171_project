@@ -82,7 +82,7 @@ class MapVis {
         )
         //
         // remove zoom for now
-            .call(vis.zoom);
+        //     .call(vis.zoom);
 
         // Apply the zoom behavior to the SVG
         // vis.svg.call(vis.zoom);
@@ -317,9 +317,8 @@ class MapVis {
                 lineVis.setData(selectedData.arrivals, countryName);
                 lineVis2.setData(selectedData.expenditures, countryName);
                 }
-        }
 
-        if  (selectedDatabyM && selectedDatabyM.length > 0) {
+
             if (barchart && barchart2) {
                 barchart.setData(selectedDatabyM, countryName);
                 barchart2.setData(selectedDatabyM, countryName);
