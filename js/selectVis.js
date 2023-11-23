@@ -83,7 +83,10 @@ class SelectVis {
 
         vis.circles.each(function(d) {
             if (vis.selectedCountries.has(d.name)) {
-                // Set the fill to gray with reduced opacity
+                // If selected, keep the original flag
+                d3.select(this).attr("fill", `url(#flag-${d.name})`);
+            } else {
+                // If not selected, set the fill to gray with reduced opacity
                 d3.select(this).attr("fill", "rgba(128, 128, 128, 0.2)");
             }
         });
