@@ -12,7 +12,6 @@ html {
     text-align: center;
 }
 
-
 #landing_page {
     background-image: url("/img/temp_background.jpeg");
     background-size: cover;
@@ -46,18 +45,29 @@ body{
     background-color: white;
 }
 
+.slide-content {
+    display: inline-flex;
+    height: 45vh;
+    background-color: rgba(39, 40, 92, 0.8);
+    border-radius: 30px;
+    color: gainsboro;
+    font-family: sans-serif;
+    font-size: 28px;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 90px;
+    margin-top: 10vh;
+
+}
+
+#extra-text {
+    font-size: 23px;
+}
+
 #big-question{
     background-color: #27285c;
     border-radius: 50px;
     margin-right: 50px;
-}
-
-#hook{
-    margin: 100px;
-    font-size: 30px;
-    font-family: 'Codystar', sans-serif;
-    font-weight: bold;
-    color: lightblue;
 }
 
 #box1{
@@ -120,3 +130,11 @@ h4 {
     padding-right: 130px;
 }
 
+
+/*#hook{*/
+/*    margin: 100px;*/
+/*    font-size: 30px;*/
+/*    font-family: 'Codystar', sans-serif;*/
+/*    font-weight: bold;*/
+/*    color: lightblue;*/
+/*}*/
