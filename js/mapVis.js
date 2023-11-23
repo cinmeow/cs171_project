@@ -1,11 +1,11 @@
 class MapVis {
-    constructor(parentElement, tourismData, geoData) {
+    constructor(parentElement, tourismData, michelinData, geoData) {
         this.parentElement = parentElement;
         this.geoData = geoData;
         this.tourismData = tourismData;
+        this.michelinData = michelinData;
+        // console.log("mich data:",michelinData);
 
-        // Define color scale - you can adjust the range as per your needs
-        this.colorScale = d3.scaleSequential(d3.interpolateReds);
 
         this.initVis();
     }
@@ -34,7 +34,7 @@ class MapVis {
             .attr('text-anchor', 'middle');
 
         const baseHeight = 650; // Example base height - adjust this as needed
-        // const zoom = vis.height / baseHeight;
+        const zoom = vis.height / baseHeight;
 
         // Initialize projection and path for the map
         vis.projection = d3.geoOrthographic()
@@ -80,9 +80,9 @@ class MapVis {
                 })
 
         )
-
+        //
         // remove zoom for now
-            // .call(vis.zoom);
+            .call(vis.zoom);
 
         // Apply the zoom behavior to the SVG
         // vis.svg.call(vis.zoom);
@@ -110,6 +110,9 @@ class MapVis {
             .style("text-align", "left");
 
 
+        vis.colorScale = d3.scaleSequential(d3.interpolateReds)
+
+
 
         // Wrangle the data
         vis.wrangleData();
@@ -118,13 +121,20 @@ class MapVis {
     wrangleData() {
         let vis = this;
 
-        // // Aggregate data: calculate average number of arrivals per country
+        // Aggregate data: calculate average number of arrivals per country
         vis.arrivalDataByCountry = d3.rollup(vis.tourismData,
             v => d3.mean(v, d => d['Number of Arrivals']),
             d => d['Country Name']);
 
         // Set the domain for the color scale based on data
         vis.colorScale.domain(d3.extent(Array.from(vis.arrivalDataByCountry.values())));
+
+        // Aggregate data: calculate average number of restaurants per country
+        vis.michelinDataByCountry = d3.rollup(vis.michelinData,
+            v => v.length,
+            d => d['Country']);
+
+        // console.log("m:",vis.michelinDataByCountry);
 
         // Create a scale for the legend
         vis.legendScale = d3.scaleLinear()
@@ -142,7 +152,7 @@ class MapVis {
             };
 
         });
-        console.log(vis.countryInfo);
+        // console.log(vis.countryInfo);
 
         let groupedByCountry = d3.group(vis.tourismData, d => d['Country Name']);
 
@@ -158,7 +168,12 @@ class MapVis {
             };
         });
 
-        console.log(vis.countryInfoByYear);
+        // console.log(vis.countryInfoByYear);
+
+        vis.legendTitles = {
+            'arrivals': 'Average Number of Arrivals',
+            'michelin': 'Number of Michelin Restaurants'
+        };
 
         vis.updateVis();
     }
@@ -179,40 +194,54 @@ class MapVis {
                 let arrivals = vis.arrivalDataByCountry.get(countryName);
                 return arrivals ? vis.colorScale(arrivals) : '#ccc'; // Color based on average arrivals
             })
-            .on("mouseover", (event, d) => {
-                d3.select(event.currentTarget)
-                    .attr("fill", "pink"); // Change color to purple on mouseover
+            .on("mouseover", function(event, d) {
+                let originalColor = d3.select(this).attr("fill");
+                d3.select(this).attr("fill", "pink")
+                    .classed("original-color", true)
+                    .attr("data-original-color", originalColor);
 
                 let countryData = vis.countryInfo.find(c => c.name === d.properties.name);
+                let michelinRestaurants = vis.michelinDataByCountry.get(d.properties.name) || 0;
 
                 vis.tooltip.transition()
                     .duration(200)
                     .style("opacity", .9);
 
                 if (countryData && countryData.mean_arrivals) {
-                    vis.tooltip.html(
-                        `<strong>Country:</strong> ${countryData.name}<br>
-                        <strong>Avg Arrivals:</strong> ${countryData.mean_arrivals}<br>
-                        <strong>Avg Expenditures:</strong> ${countryData.mean_expenditure || 'N/A'}`
-                    );
-                } else {
+                    // console.log(countryData)
+                    // console.log(michelinRestaurants)
                     vis.tooltip.html(
                         `<strong>Country:</strong> ${d.properties.name}<br>
-                        <strong>Data Not Available</strong>`
+                        <strong>Avg Arrivals:</strong> ${countryData.mean_arrivals || 'N/A'}<br>
+                        <strong>Avg Expenditures:</strong> ${countryData.mean_expenditure || 'N/A'}<br>
+                        <strong>Michelin Restaurants:</strong> ${michelinRestaurants}`
+                        
                     );
+                } else {
+                    if  (michelinRestaurants) {
+                        vis.tooltip.html(
+                            `<strong>Country:</strong> ${d.properties.name}<br>
+                        <strong>Michelin Restaurants:</strong> ${michelinRestaurants}`
+
+                        );
+
+                    } else {
+                        vis.tooltip.html(
+                            `<strong>Country:</strong> ${d.properties.name}<br>
+                            <strong>Data Not Available</strong>`
+                        );
+                    }
                 }
 
                 vis.tooltip
                     .style("left", (event.pageX) + "px")
                     .style("top", (event.pageY - 28) + "px");
             })
-            .on("mouseout", (event, d) => {
-                d3.select(event.currentTarget)
-                    .attr("fill", d => { // Reset color on mouseout
-                        let countryName = d.properties.name;
-                        let arrivals = vis.arrivalDataByCountry.get(countryName);
-                        return arrivals ? vis.colorScale(arrivals) : '#ccc';
-                    });
+            .on("mouseout", function(event, d) {
+                if (d3.select(this).classed("original-color")) {
+                    d3.select(this).attr("fill", d3.select(this).attr("data-original-color"))
+                        .classed("original-color", false);
+                }
 
                 vis.tooltip.transition()
                     .duration(500)
@@ -230,11 +259,11 @@ class MapVis {
 
         // Create a gradient for the legend
         vis.defs = vis.svg.append("defs");
-        const linearGradient = vis.defs.append("linearGradient")
+        let linearGradient = vis.defs.append("linearGradient")
             .attr("id", "linear-gradient");
 
-        const numStops = 10;
-        const stopColors = d3.range(numStops).map(d => vis.colorScale(d / (numStops - 1) * vis.colorScale.domain()[1]));
+        let numStops = 10;
+        let stopColors = d3.range(numStops).map(d => vis.colorScale(d / (numStops - 1) * vis.colorScale.domain()[1]));
 
         linearGradient.selectAll("stop")
             .data(stopColors)
@@ -249,8 +278,8 @@ class MapVis {
             .style("fill", "url(#linear-gradient)");
 
         // Calculate tick values
-        const domain = vis.colorScale.domain();
-        const numTicks = 4;
+        let domain = vis.colorScale.domain();
+        let numTicks = 4;
         let tickValues = d3.range(domain[0], domain[1], (domain[1] - domain[0]) / (numTicks - 1));
         tickValues.push(domain[1]); // Ensure the last value is included
 
@@ -275,15 +304,20 @@ class MapVis {
 
 
 
-        // Add more features (like tooltips, etc.) as needed
     }
     handleCountryClick(countryName) {
         let vis = this;
         let selectedData = vis.countryInfoByYear.find(d => d.name === countryName);
+        let selectedDatabyM =vis.michelinData.filter(d => d.Country === countryName);
 
         if(selectedData) {
             // Assuming LineVis has a global variable named 'lineVis'
-            lineVis.setData(selectedData.arrivals, countryName); // or expenditures, based on your requirement
+            lineVis.setData(selectedData.arrivals, countryName);
+        }
+
+        if  (selectedDatabyM) {
+            console.log(selectedDatabyM)
+            barChart.setData(selectedDatabyM, countryName);
         }
     }
 
@@ -302,6 +336,31 @@ class MapVis {
             // Redraw the countries with the new projection
             vis.svg.selectAll(".country").attr("d", vis.path);
         });
+    }
+
+    updateColorScale(dataType) {
+        let vis = this;
+
+        if (dataType === 'arrivals') {
+            // Update color scale for arrivals
+            vis.colorScale.domain(d3.extent(Array.from(vis.arrivalDataByCountry.values())));
+        } else if (dataType === 'michelin') {
+            // Update color scale for Michelin data
+            vis.colorScale.domain(d3.extent(Array.from(vis.michelinDataByCountry.values())));
+        }
+
+        // Redraw the map with the new color scale
+        vis.countries.transition()
+            .duration(500)
+            .attr("fill", d => {
+                let countryName = d.properties.name;
+                const value = dataType === 'arrivals' ?
+                    vis.arrivalDataByCountry.get(countryName) :
+                    vis.michelinDataByCountry.get(countryName);
+                return value ? vis.colorScale(value) : '#ccc';
+            });
+
+        vis.svg.select(".legend-label").text(vis.legendTitles[dataType]);
     }
 
 }

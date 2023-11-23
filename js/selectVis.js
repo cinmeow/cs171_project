@@ -81,6 +81,7 @@ class SelectVis {
     submitSelection() {
         let vis = this;
 
+
         vis.circles.each(function(d) {
             if (vis.selectedCountries.has(d.name)) {
                 // If selected, keep the original flag

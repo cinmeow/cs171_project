@@ -16,7 +16,6 @@ def main():
 
     # Print the result or write it to a file
     print(json.dumps(countries_data, indent=4))
-    # Optionally, write it to a JS file
     with open('countryFlags.js', 'w') as f:
         f.write('const countries = ')
         json.dump(countries_data, f, indent=4)

@@ -87,9 +87,16 @@ class BarChart{
         let bar = vis.svg.selectAll(".barChart-" + vis.barname)
             .data(vis.displayData)
 
+        bar.exit().remove();
+
+        bar.attr("x", 10)
+            .attr("y", d => vis.y(d.category))
+            .attr("height", vis.y.bandwidth() - 5)
+            .attr("width", d => vis.x(d.value))
+            .attr("fill", "#7CB8DB");
+
         bar.enter()
             .append("rect")
-            .merge(bar)
             .attr("x", 10)
             .attr("y", (d) => vis.y(d.category))
             .attr("height", vis.y.bandwidth() - 5)
@@ -100,19 +107,25 @@ class BarChart{
         // add axes
         // vis.svg.selectAll(".axis").remove();
 
-        vis.svg.append("g")
-            .attr("class", "axis x-axis")
-            .attr("id", "barx")
-            .attr("transform", "translate(10," + (vis.height) + ")")
+        vis.svg.select(".x-axis")
+            .attr("transform", "translate(10," + vis.height + ")")
             .call(vis.xAxis);
 
-        vis.svg.append("g")
-            .attr("class", "axis y-axis")
-            .attr("id", "bary")
+        vis.svg.select(".y-axis")
             .attr("transform", "translate(8,0)")
-            .call(vis.yAxis)
+            .call(vis.yAxis);
 
 
+    }
+
+    setData(newData, countryName) {
+        let vis = this;
+
+        // Filter the data for the selected country
+        vis.data = newData.filter(d => d.Country === countryName);
+
+        // Update the display data
+        vis.wrangleData();
     }
 
 }

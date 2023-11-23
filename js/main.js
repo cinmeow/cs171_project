@@ -33,7 +33,7 @@ new fullpage('#fullpage', {
 
 // load data with promises
 let promises = [
-    d3.csv("data/Travel_data.csv", (row) => {
+    d3.csv("data/Travel_data2.csv", (row) => {
         row.Year = parseInt(row.Year);
         row.avgLengthStay =+ row.avgLengthStay;
         row.businessPurpose =+ row.businessPurpose;
@@ -46,7 +46,7 @@ let promises = [
         row.totalArrivals =+ row.totalArrivals;
         return row
     }),
-    d3.csv("data/michelin.csv", (row) => {
+    d3.csv("data/michelin2.csv", (row) => {
         row.Price =+ row.Price;
         return row
     }),
@@ -76,7 +76,7 @@ function initMainPage(dataArray) {
 
     // initialize visualizations
     // MAP VISUALIZATION
-    mapVis = new MapVis("globe", dataArray[3], dataArray[2]);
+    mapVis = new MapVis("globe", dataArray[3],dataArray[1], dataArray[2]);
 
     let france = dataArray[3].filter(d => d['Country Name'] === "France");
 
@@ -92,7 +92,7 @@ function initMainPage(dataArray) {
     selectVis = new SelectVis("#flag-container", countries);
 
 
-    // Initialize BarChart
+    // // Initialize BarChart
     barChart = new BarChart("bar-chart", dataArray[1]);
 
     // TRAVEL PURPOSE + MICHELIN GUIDE VISUALIZATION
@@ -102,7 +102,29 @@ function initMainPage(dataArray) {
     console.log("michelin unique names", michelinCountry);
     let michelinTravelData = dataArray[0].filter((d) => michelinCountry.has(d.Country));
     console.log("michelin travel data", michelinTravelData);
+
+    d3.select("#data-selection").on("change", function(event) {
+        // Get the current value of the dropdown
+        let selectedValue = d3.select(this).property("value");
+
+        // Update the map visualization
+        mapVis.updateColorScale(selectedValue);
+
+        // // Update the chart based on the selection
+        // if (selectedValue === "arrivals") {
+        //     // Show line chart and hide bar chart
+        //     lineVis.setData(/* appropriate data for lineVis */);
+        //     d3.select("#line-chart").style("display", "block");
+        //     d3.select("#bar-chart").style("display", "none");
+        // } else if (selectedValue === "michelin") {
+        //     // Show bar chart and hide line chart
+        //     barChart.setData(/* appropriate data for barChart */);
+        //     d3.select("#bar-chart").style("display", "block");
+        //     d3.select("#line-chart").style("display", "none");
+        // }
+    });
 }
+
 
 
 function handleSelectedCountries(selectedCountries) {
