@@ -5,6 +5,17 @@ class SelectVis {
         this.countries = countries;
         this.selectedCountries = new Set();
 
+        this.tooltip = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0)
+            .style("position", "absolute")
+            .style("pointer-events", "none")
+            .style("background-color", "white")
+            .style("border", "solid 1px #ccc")
+            .style("padding", "10px")
+            .style("border-radius", "5px")
+            .style("text-align", "left");
+
         this.initVis();
     }
 
@@ -42,6 +53,19 @@ class SelectVis {
             .attr("height", 1)
             .attr("preserveAspectRatio", "xMidYMid slice");
 
+        // pattern for non-selected image
+        vis.svg.select("defs")
+            .append("pattern")
+            .attr("id", "non-selected-pattern")
+            .attr("width", 1)
+            .attr("height", 1)
+            .attr("patternContentUnits", "objectBoundingBox")
+            .append("image")
+            .attr("xlink:href", "img/non_select.png")
+            .attr("width", 1)
+            .attr("height", 1)
+            .attr("preserveAspectRatio", "xMidYMid slice");
+
         // Creating circles
         vis.circles = vis.svg.selectAll(".country-circle")
             .data(vis.countries)
@@ -52,7 +76,17 @@ class SelectVis {
             .attr("r", 30)
             .attr("fill", d => `url(#flag-${d.name})`)
             .attr("stroke", "black")
-            .on("click", function(event, d) { vis.selectCountry(event, d); });
+            .attr("stroke-width", 1)
+            .on("click", function(event, d) { vis.selectCountry(event, d); })
+            .on("mouseover", function(event, d) {
+                vis.tooltip.transition().duration(200).style("opacity", 1);
+                vis.tooltip.html(d.name)
+                    .style("left", (event.pageX) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mouseout", function() {
+                vis.tooltip.transition().duration(500).style("opacity", 0);
+            });
 
         // Submit button behavior
         d3.select("#submit-button").on("click", () => vis.submitSelection());
@@ -63,12 +97,11 @@ class SelectVis {
     selectCountry(event, d) {
         let vis = this;
 
-        if (vis.selectedCountries.has(d.name)) {
-            vis.selectedCountries.delete(d.name);
-            d3.select(event.currentTarget).attr("stroke", "black");
-        } else if (vis.selectedCountries.size < 5) {
+         if (vis.selectedCountries.size < 5) {
             vis.selectedCountries.add(d.name);
-            d3.select(event.currentTarget).attr("stroke", "red");
+            d3.select(event.currentTarget)
+                .attr("stroke", "pink")
+                .attr("stroke-width", 5);
         }
     }
 
@@ -82,17 +115,27 @@ class SelectVis {
         let vis = this;
 
 
-        vis.circles.each(function(d) {
-            if (vis.selectedCountries.has(d.name)) {
-                // If selected, keep the original flag
-                d3.select(this).attr("fill", `url(#flag-${d.name})`);
-            } else {
-                // If not selected, set the fill to gray with reduced opacity
-                d3.select(this).attr("fill", "rgba(128, 128, 128, 0.2)");
-            }
-        });
+        if (vis.selectedCountries.size === 5) {
+            vis.circles.each(function(d) {
+                let flag = d3.select(this);
+                if (vis.selectedCountries.has(d.name)) {
 
-        handleSelectedCountries(vis.getSelectedCountries());
+                    // If selected, keep the original flag
+                    flag.transition().duration(500)
+                        .attr("fill", `url(#flag-${d.name})`);
+                } else {
+                    // If not selected, set the fill to gray with reduced opacity
+                    flag.transition().duration(500)
+                        .attr("fill", "url(#non-selected-pattern)");
+                }
+            });
+
+            // Handle the selected countries (e.g., trigger an update in another component)
+            handleSelectedCountries(vis.getSelectedCountries());
+        } else {
+            // Optionally, you can provide feedback to the user (e.g., alert or message on the page)
+            alert("Please select exactly 5 countries before submitting.");
+        }
     }
 
     clearSelection() {
@@ -102,6 +145,8 @@ class SelectVis {
         vis.selectedCountries.clear();
 
         // Reset the appearance of all circles
-        vis.circles.attr("stroke", "black").attr("fill", d => `url(#flag-${d.name})`);
+        vis.circles.attr("stroke", "black")
+            .attr("stroke-width", 1)
+            .attr("fill", d => `url(#flag-${d.name})`);
     }
 }

@@ -3,7 +3,7 @@ let geoDataURL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"
 let tourismDataURL = "data/tourism_worldbank1.csv"; // Replace with the actual path to your CSV file
 // initiate global variables
 let michelinCountry = new Set()
-let mapVis, lineVis, selectVis;
+let mapVis, lineVis, lineVis2, selectVis, barchart, barchart2;
 
 
 // set up fullpage scrolling
@@ -82,13 +82,20 @@ function initMainPage(dataArray) {
 
     // LINE GRAPH 1 VISUALIZATION
     // Prepare data for LineVis
-    let lineData = france.map(d => ({
+    let lineData1 = france.map(d => ({
         year: +d['Year'],
         arrivals: +d['Number of Arrivals']
     }));
 
+    let lineData2 = france.map(d => ({
+        year: +d['Year'],
+        expenditures: +d['Expenditures (current US$)']
+    }));
+
+
     // Initialize LineVis with empty data
-    lineVis = new LineVis("chart1", lineData);
+    lineVis = new LineVis("chart1", lineData1, 'arrivals');
+    lineVis2 = new LineVis("chart1", lineData2, 'expenditures');
     selectVis = new SelectVis("#flag-container", countries);
 
 
@@ -106,6 +113,7 @@ function initMainPage(dataArray) {
 
         // Clear the contents of the chart1 div
         d3.select("#chart1").html("");
+        d3.select("#chart2").html("");
 
         // Update the map visualization
         mapVis.updateColorScale(selectedValue);
@@ -113,10 +121,13 @@ function initMainPage(dataArray) {
         // Update the chart based on the selection
         if (selectedValue === "arrivals") {
             // Create and display the line chart in chart1
-            lineVis = new LineVis("chart1", lineData);
+            lineVis = new LineVis("chart1", lineData1, 'arrivals');
+            lineVis2 = new LineVis("chart1", lineData2, 'expenditures');
         } else if (selectedValue === "michelin") {
             // Create and display the bar chart in chart1
-            barChart = new BarChart("chart1", dataArray[1]);
+            barchart = new BarChart("chart1", dataArray[1], "restaurants");
+            barchart2 = new BarChart("chart2", dataArray[1], "cuisine");
+
 
         }
     });

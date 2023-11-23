@@ -1,7 +1,9 @@
 class LineVis {
-    constructor(parentElement, data) {
+    constructor(parentElement, data, datatype) {
         this.parentElement = parentElement;
-        this.data = data; // Data will be an array of { year, arrivals }
+        this.data = data;
+
+        this.dataType = datatype;
 
         this.initVis();
     }
@@ -56,8 +58,7 @@ class LineVis {
             .attr("x", 0 - (vis.height / 2))
             .attr("dy", "1em")
             .attr("text-anchor", "middle")
-            .style("font-size", "16px")
-            .text("Number of Arrivals");
+            .style("font-size", "16px");
 
         vis.updateVis();
     }
@@ -67,34 +68,59 @@ class LineVis {
 
         // Update scales
         vis.x.domain(d3.extent(vis.data, d => +d.year));
-        vis.y.domain([0, d3.max(vis.data, d => +d.arrivals)]);
+        vis.y.domain([0, d3.max(vis.data, d => +d[vis.dataType])]);
 
-        let titleText = vis.currentCountry ? `${vis.currentCountry}: Tourism Arrivals Over Time` : "France: Tourism Arrivals Over Time";
-        vis.title.text(titleText);
 
         let format = d3.format(".2s");
         function customYAxisFormatTick(d) {
             return format(d).replace('G', 'B'); // Replace G (Giga) with B (Billion) if needed
         }
 
+        function formatLabel(value) {
+            return value <= 0 ? "NaN" : format(value);
+        }
+
         // Update axes
         vis.xAxis.call(d3.axisBottom(vis.x));
         vis.yAxis.transition().duration(1000).call(d3.axisLeft(vis.y).tickFormat(customYAxisFormatTick));
 
+        // Update chart title
+        let titleText = vis.currentCountry ? `${vis.currentCountry}: ${vis.formatDataType(vis.dataType)} Over Time` : `France: ${vis.formatDataType(vis.dataType)} Over Time`;
+        vis.title.text(titleText);
+
+        // Update y-axis label
+        vis.svg.select(".y-axis-label")
+            .text(vis.formatDataType(vis.dataType));
+
+
         // Draw line
         let line = d3.line()
             .x(d => vis.x(d.year))
-            .y(d => vis.y(d.arrivals))
-            .curve(d3.curveMonotoneX); // Smooth the line
+            .y(d => vis.y(d[vis.dataType]))
+            .curve(d3.curveMonotoneX);
 
-        vis.svg.selectAll(".line")
-            .data([vis.data])
-            .join("path")
+        let path = vis.svg.selectAll(".line")
+            .data([vis.data]);
+
+        // Enter + update
+        path.enter()
+            .append("path")
+            .merge(path)
             .attr("class", "line")
-            .attr("d", line)
             .attr("fill", "none")
             .attr("stroke", "darkblue")
-            .attr("stroke-width", "2px");
+            .attr("stroke-width", "2px")
+            .attr("d", line)
+            .attr("stroke-dasharray", function() {
+                const length = this.getTotalLength();
+                return `${length} ${length}`;
+            })
+            .attr("stroke-dashoffset", function() {
+                return this.getTotalLength();
+            })
+            .transition()
+            .duration(1000)
+            .attr("stroke-dashoffset", 0);
 
         // Draw dots on each data point
         vis.svg.selectAll(".dot")
@@ -102,25 +128,9 @@ class LineVis {
             .join("circle")
             .attr("class", "dot")
             .attr("cx", d => vis.x(d.year))
-            .attr("cy", d => vis.y(d.arrivals))
+            .attr("cy", d => vis.y(d[vis.dataType]))
             .attr("r", 5)
-            .attr("fill", "steelblue")
-            .on("mouseover", (event, d) => {
-                vis.tooltip.transition()
-                    .duration(200)
-                    .style("opacity", .9);
-                vis.tooltip.html(
-                    `<strong>Year:</strong> ${d.year}<br>
-                    <strong>Arrivals:</strong> ${d.arrivals}`
-                )
-                    .style("left", (event.pageX) + "px")
-                    .style("top", (event.pageY - 28) + "px");
-            })
-            .on("mouseout", d => {
-                vis.tooltip.transition()
-                    .duration(500)
-                    .style("opacity", 0);
-            });
+            .attr("fill", "steelblue");
 
         // Labels for the dots
         vis.svg.selectAll(".dot-label")
@@ -128,8 +138,8 @@ class LineVis {
             .join("text")
             .attr("class", "dot-label")
             .attr("x", d => vis.x(d.year) + 15)
-            .attr("y", d => vis.y(d.arrivals) - 10) // Adjust label position above the dot
-            .text(d => format(d.arrivals))
+            .attr("y", d => vis.y(d[vis.dataType]) - 10) // Adjust label position above the dot
+            .text(d => formatLabel(d[vis.dataType]))
             .attr("text-anchor", "middle")
             .style("font-size", "12px")
             .style("fill", "black");
@@ -143,5 +153,9 @@ class LineVis {
         console.log(countryName)
         this.currentCountry = countryName;
         this.updateVis();
+    }
+
+    formatDataType(dataType) {
+        return dataType.charAt(0).toUpperCase() + dataType.slice(1);
     }
 }

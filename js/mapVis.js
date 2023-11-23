@@ -147,7 +147,7 @@ class MapVis {
             return {
                 name: name,
                 mean_arrivals: d3.mean(values, d => d['Number of Arrivals']),
-                mean_expenditure: d3.mean(values, d => d['Inbound Visitor Expenditures (current US$)'])
+                mean_expenditure: d3.mean(values, d => d['Expenditures (current US$)'])
 
             };
 
@@ -159,7 +159,7 @@ class MapVis {
         // Process each country
         vis.countryInfoByYear = Array.from(groupedByCountry, ([countryName, values]) => {
             let arrivals = values.map(d => ({ year: d['Year'], arrivals: d['Number of Arrivals'] }));
-            let expenditures = values.map(d => ({ year: d['Year'], expenditures: d['Inbound Visitor Expenditures (current US$)'] }));
+            let expenditures = values.map(d => ({ year: d['Year'], expenditures: d['Expenditures (current US$)'] }));
 
             return {
                 name: countryName,
@@ -311,13 +311,19 @@ class MapVis {
         let selectedDatabyM =vis.michelinData.filter(d => d.Country === countryName);
 
         if(selectedData) {
-            console.log(selectedData)
+            console.log("selected data", selectedData);
             // Assuming LineVis has a global variable named 'lineVis'
-            lineVis.setData(selectedData.arrivals, countryName);
+            if (lineVis && lineVis2) {
+                lineVis.setData(selectedData.arrivals, countryName);
+                lineVis2.setData(selectedData.expenditures, countryName);
+                }
         }
 
         if  (selectedDatabyM && selectedDatabyM.length > 0) {
-            barChart.setData(selectedDatabyM, countryName);
+            if (barchart && barchart2) {
+                barchart.setData(selectedDatabyM, countryName);
+                barchart2.setData(selectedDatabyM, countryName);
+            }
         }
     }
 

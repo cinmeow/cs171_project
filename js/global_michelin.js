@@ -2,9 +2,10 @@
 
 class BarChart{
 
-    constructor(parentElement, data) {
+    constructor(parentElement, data, datatype) {
         this.parentElement = parentElement;
         this.data = data;
+        this.dataType = datatype;
 
         this.displayData = [];
 
@@ -36,7 +37,10 @@ class BarChart{
             .attr("y", 0 - vis.margin.top / 3)
             .attr("text-anchor", "middle")
             .style("font-size", "20px")
-            .text("Distribution of Michelin Star Ratings");
+
+        let title = vis.dataType === "restaurants" ? "Distribution of Michelin Star Ratings" : "Top 10 Cuisine Types";
+        vis.title.text(title);
+
 
         // create scales and axes
         vis.x = d3.scaleLinear().range([0, vis.width - vis.margin.right]);
@@ -58,13 +62,20 @@ class BarChart{
     wrangleData() {
         let vis = this;
 
-        // group by michelin stars OR group by cuisine
-        vis.displayData = Array.from(d3.rollup(vis.data, leaves => leaves.length, d => d['Award']),
-            ([key, value]) => ({category: key, value: value}))
+        if (vis.dataType === "restaurants") {
+            // Group by Michelin stars
+            vis.displayData = Array.from(d3.rollup(vis.data, leaves => leaves.length, d => d['Award']),
+                ([key, value]) => ({category: key, value: value}));
+        } else if (vis.dataType === "cuisine") {
+            // Group by cuisine and take top 10
+            let cuisineData = Array.from(d3.rollup(vis.data, leaves => leaves.length, d => d['Cuisine']),
+                ([key, value]) => ({category: key, value: value}));
+            cuisineData.sort((a, b) => b.value - a.value);
+            vis.displayData = cuisineData.slice(0, 10);
+        }
 
-        // sort based on selection if cuisine type, else, sort based on restaurant count
-        // for now, we are only working with the michelin star ratings
-        vis.displayData = vis.displayData.sort((a, b) => b.value - a.value);
+        vis.displayData.sort((a, b) => b.value - a.value);
+
 
         console.log(vis.displayData)
 
@@ -87,9 +98,14 @@ class BarChart{
         let bar = vis.svg.selectAll(".barChart-" + vis.barname)
             .data(vis.displayData)
 
-        bar.exit().remove();
+        bar.exit().transition()
+            .duration(750)
+            .attr("width", 0)
+            .remove();
 
-        bar.attr("x", 10)
+        bar.transition()
+            .duration(750)
+            .attr("x", 10)
             .attr("y", d => vis.y(d.category))
             .attr("height", vis.y.bandwidth() - 5)
             .attr("width", d => vis.x(d.value))
@@ -100,6 +116,9 @@ class BarChart{
             .attr("x", 10)
             .attr("y", (d) => vis.y(d.category))
             .attr("height", vis.y.bandwidth() - 5)
+            .attr("width", 0) // Start with 0 width and transition to final width
+            .transition()
+            .duration(750)
             .attr("width", (d) => vis.x(d.value))
             .attr("fill", "#7CB8DB")
             .attr("class", "barChart-" + vis.barname)
@@ -112,6 +131,8 @@ class BarChart{
             .call(vis.xAxis);
 
         vis.svg.select(".y-axis")
+            .transition()
+            .duration(750)
             .attr("transform", "translate(8,0)")
             .call(vis.yAxis);
 
