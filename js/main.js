@@ -127,17 +127,19 @@ function initMainPage(dataArray) {
             // Create and display the bar chart in chart1
             barchart = new BarChart("chart1", dataArray[1], "restaurants");
             barchart2 = new BarChart("chart2", dataArray[1], "cuisine");
-
-
+        } else{
+            // create area chart for accomodations data
+            // areachart = new AreaChart('something', dataArray[0],)
         }
     });
 }
 
 
-
+// This is for the selection panel (select 5)
 function handleSelectedCountries(selectedCountries) {
     console.log("Selected Countries:", selectedCountries);
     // Additional handling for selected countries
+    //circularVis.wrangleData()
 }
 console.log("meow", michelinCountry)
 
