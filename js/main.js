@@ -132,14 +132,21 @@ function initMainPage(dataArray) {
             // areachart = new AreaChart('something', dataArray[0],)
         }
     });
+
+    // Initialize bubble chart
+    bubbleChart = new BubbleChart("michelin_bubble", dataArray[1]);
+
 }
 
 
 // This is for the selection panel (select 5)
+var globalSelected;
 function handleSelectedCountries(selectedCountries) {
     console.log("Selected Countries:", selectedCountries);
+    globalSelected = selectedCountries;
     // Additional handling for selected countries
     //circularVis.wrangleData()
+    bubbleChart.wrangleData();
 }
 console.log("meow", michelinCountry)
 
