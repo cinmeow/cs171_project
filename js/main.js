@@ -103,9 +103,9 @@ function initMainPage(dataArray) {
     travelPurpose = new TravelPurposeVis("purpose-vis", dataArray[0], dataArray[1]);
 
     // filter out data with Michelin countries
-    console.log("michelin unique names", michelinCountry);
+    // console.log("michelin unique names", michelinCountry);
     let michelinTravelData = dataArray[0].filter((d) => michelinCountry.has(d.Country));
-    console.log("michelin travel data", michelinTravelData);
+    // console.log("michelin travel data", michelinTravelData);
 
     d3.select("#data-selection").on("change", function(event) {
         // Get the current value of the dropdown
@@ -133,8 +133,8 @@ function initMainPage(dataArray) {
         }
     });
 
-    // Initialize spyder chart
-    // spyderChart = new SpyderChart("spyder-chart", dataArray)
+    // Initialize spider chart
+    spiderChart = new SpiderVis("spider-chart", dataArray[0], dataArray[3])
 
     // Initialize bubble chart
     bubbleChart = new BubbleChart("michelin_bubble", dataArray[1]);
@@ -149,7 +149,7 @@ function handleSelectedCountries(selectedCountries) {
     globalSelected = selectedCountries;
     // Additional handling for selected countries
     //circularVis.wrangleData()
-
+    spiderChart.selectedCountries(selectedCountries);
     bubbleChart.createSelector();
 }
 console.log("meow", michelinCountry)

@@ -8,52 +8,8 @@ class TravelPurposeVis {
 
         console.log("Constructor: travel data", this.travelData);
         console.log("Constructor: michelin data", this.michelinData);
-        let vis = this;
+
         // filter out data with Michelin countries
-        let michelinFilteredData = vis.michelinData.filter((d) => michelinCountry.has(d.Country));
-
-        // LATER: filter for selected countries but for now, will use a curated set of countries/year (2019)
-        let countryFilter = new Set(["USA", "France", "Italy", "Taiwan", "Thailand"]);
-        let travelDataFilter = vis.travelData.filter((d) => {
-            let cond1 = countryFilter.has(d.Country);
-            let cond2 = d.Year === 2019;
-            return cond1 && cond2
-        });
-        console.log("travel data filter", travelDataFilter)
-
-        // average the price for michelin restaurants by country
-        let numRestaurants = Array.from(d3.rollup(
-            michelinFilteredData,
-            // (leaves) => d3.mean(leaves, (d) => d.Price),
-            (leaves) => leaves.length,
-            (d) => d.Country
-        ));
-
-        console.log(numRestaurants)
-        let newMichelinData = numRestaurants.map(([Country, numRestaurants]) => ({Country, numRestaurants}));
-        // console.log(newMichelinData);
-
-        // filter michelin data for only those in the five countries above
-        let newMichelinFilteredData = newMichelinData.filter((d) => {
-            return countryFilter.has(d.Country);
-        });
-        // console.log("michelin 5 countries", newMichelinFilteredData)
-
-        // combine travel and michelin datasets
-        vis.filteredData = travelDataFilter.map((d1) => {
-            // Find the matching item in array2 based on the Country
-            let matchingItem = newMichelinFilteredData.find((d2) => d2.Country === d1.Country);
-            // Combine the properties from both arrays into a new object
-            return{
-                Country: d1.Country,
-                businessPurpose: d1.businessPurpose,
-                personalPurpose: d1.personalPurpose,
-                numRestaurants: matchingItem.numRestaurants,
-            };
-
-        });
-        // console.log(vis.filteredData)
-
         this.initVis()
     }
 
@@ -84,8 +40,6 @@ class TravelPurposeVis {
         // build linear scale for each dimension
 
         vis.y = {}; // Change to an object
-
-        console.log("filtered data MOO", vis.filteredData);
 
         for (let i of Object.keys(vis.dimensions)) {
             const name = vis.dimensions[i];
@@ -161,6 +115,12 @@ class TravelPurposeVis {
     updateVis(){
         let vis = this;
         console.log("UPDATE VIS")
+
+    }
+
+    // obtain countries selected
+    selectedCountries(){
+        let vis = this;
 
     }
 
