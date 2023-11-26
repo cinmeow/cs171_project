@@ -311,7 +311,6 @@ class MapVis {
         let selectedData = vis.countryInfoByYear.find(d => d.name === countryName);
         let selectedDatabyM =vis.michelinData.filter(d => d.Country === countryName);
         let selectedDataAcc = vis.travelData.filter(d => d.Country === countryName);
-        console.log("selected data ERICA", selectedDataAcc)
 
         if(selectedData) {
             console.log("selected data", selectedData);
@@ -328,7 +327,7 @@ class MapVis {
             }
 
             if (areachart){
-                // areachart.setData(, countryName);
+                areachart.setData(selectedDataAcc, countryName);
             }
         }
     }
@@ -337,7 +336,7 @@ class MapVis {
         let vis = this;
 
         // Define the rotation step
-        let rotationStep = 0.25;
+        let rotationStep = 0;
 
         d3.timer(() => {
             // Increment the rotation

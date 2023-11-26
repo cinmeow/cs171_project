@@ -4,7 +4,7 @@ let tourismDataURL = "data/tourism_worldbank1.csv"; // Replace with the actual p
 // initiate global variables
 let michelinCountry = new Set()
 let mapVis, lineVis, lineVis2, selectVis, barchart, barchart2;
-
+let parseYear = d3.timeParse("%Y");
 
 // set up fullpage scrolling
 new fullpage('#fullpage', {
@@ -34,7 +34,7 @@ new fullpage('#fullpage', {
 // load data with promises
 let promises = [
     d3.csv("data/Travel_data2.csv", (row) => {
-        row.Year = parseInt(row.Year);
+        row.Year = parseYear(row.Year);
         row.avgLengthStay =+ row.avgLengthStay;
         row.businessPurpose =+ row.businessPurpose;
         row.numBedPlaces =+ row.numBedPlaces;
