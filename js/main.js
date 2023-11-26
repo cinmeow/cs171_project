@@ -146,7 +146,8 @@ function handleSelectedCountries(selectedCountries) {
     globalSelected = selectedCountries;
     // Additional handling for selected countries
     //circularVis.wrangleData()
-    bubbleChart.wrangleData();
+
+    bubbleChart.createSelector();
 }
 console.log("meow", michelinCountry)
 
