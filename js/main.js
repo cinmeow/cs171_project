@@ -134,7 +134,7 @@ function initMainPage(dataArray) {
     });
 
     // Initialize spyder chart
-    spyderChart = new SpyderChart("spyder-chart", dataArray)
+    // spyderChart = new SpyderChart("spyder-chart", dataArray)
 
     // Initialize bubble chart
     bubbleChart = new BubbleChart("michelin_bubble", dataArray[1]);
