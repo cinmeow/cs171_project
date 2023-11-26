@@ -1,9 +1,10 @@
 class MapVis {
-    constructor(parentElement, tourismData, michelinData, geoData) {
+    constructor(parentElement, tourismData, michelinData, travelData, geoData) {
         this.parentElement = parentElement;
         this.geoData = geoData;
         this.tourismData = tourismData;
         this.michelinData = michelinData;
+        this.travelData = travelData;
         // console.log("mich data:",michelinData);
 
 
@@ -309,6 +310,8 @@ class MapVis {
         let vis = this;
         let selectedData = vis.countryInfoByYear.find(d => d.name === countryName);
         let selectedDatabyM =vis.michelinData.filter(d => d.Country === countryName);
+        let selectedDataAcc = vis.travelData.filter(d => d.Country === countryName);
+        console.log("selected data ERICA", selectedDataAcc)
 
         if(selectedData) {
             console.log("selected data", selectedData);
@@ -322,6 +325,10 @@ class MapVis {
             if (barchart && barchart2) {
                 barchart.setData(selectedDatabyM, countryName);
                 barchart2.setData(selectedDatabyM, countryName);
+            }
+
+            if (areachart){
+                // areachart.setData(, countryName);
             }
         }
     }

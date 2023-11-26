@@ -76,7 +76,7 @@ function initMainPage(dataArray) {
 
     // initialize visualizations
     // MAP VISUALIZATION
-    mapVis = new MapVis("globe", dataArray[3],dataArray[1], dataArray[2]);
+    mapVis = new MapVis("globe", dataArray[3],dataArray[1], dataArray[0], dataArray[2]);
 
     let france = dataArray[3].filter(d => d['Country Name'] === "France");
 
@@ -129,7 +129,7 @@ function initMainPage(dataArray) {
             barchart2 = new BarChart("chart2", dataArray[1], "cuisine");
         } else{
             // create area chart for accomodations data
-            // areachart = new AreaChart('something', dataArray[0],)
+            areachart = new AreaChart('chart1', dataArray[0])
         }
     });
 }
