@@ -135,6 +135,10 @@ class MapVis {
             v => v.length,
             d => d['Country']);
 
+        vis.bedPlacesDataByCountry = d3.rollup(vis.travelData,
+                v => d3.mean(v, d => d['numBedPlaces']),
+                d => d['Country']);
+
         // console.log("m:",vis.michelinDataByCountry);
 
         // Create a scale for the legend
@@ -173,7 +177,8 @@ class MapVis {
 
         vis.legendTitles = {
             'arrivals': 'Average Number of Arrivals',
-            'michelin': 'Number of Michelin Restaurants'
+            'michelin': 'Number of Michelin Restaurants',
+            'accommodations': 'Average Number of Bed Places'
         };
 
         vis.updateVis();
@@ -203,6 +208,7 @@ class MapVis {
 
                 let countryData = vis.countryInfo.find(c => c.name === d.properties.name);
                 let michelinRestaurants = vis.michelinDataByCountry.get(d.properties.name) || 0;
+                let avgbedplaces = vis.bedPlacesDataByCountry.get(d.properties.name) || 0;
 
                 vis.tooltip.transition()
                     .duration(200)
@@ -215,6 +221,7 @@ class MapVis {
                         `<strong>Country:</strong> ${d.properties.name}<br>
                         <strong>Avg Arrivals:</strong> ${countryData.mean_arrivals || 'N/A'}<br>
                         <strong>Avg Expenditures:</strong> ${countryData.mean_expenditure || 'N/A'}<br>
+                         <strong>Avg Number of Bed Places:</strong> ${avgbedplaces || 'N/A'}<br>
                         <strong>Michelin Restaurants:</strong> ${michelinRestaurants}`
                         
                     );
@@ -358,18 +365,28 @@ class MapVis {
         } else if (dataType === 'michelin') {
             // Update color scale for Michelin data
             vis.colorScale.domain(d3.extent(Array.from(vis.michelinDataByCountry.values())));
+        } else if (dataType === 'accommodations') {
+            // update color scale for acc data
+            vis.colorScale.domain(d3.extent(Array.from(vis.bedPlacesDataByCountry.values())));
         }
+    
+
 
         // Redraw the map with the new color scale
         vis.countries.transition()
             .duration(500)
             .attr("fill", d => {
                 let countryName = d.properties.name;
-                const value = dataType === 'arrivals' ?
-                    vis.arrivalDataByCountry.get(countryName) :
-                    vis.michelinDataByCountry.get(countryName);
-                return value ? vis.colorScale(value) : '#ccc';
-            });
+                let value;
+            if (dataType === 'arrivals') {
+                value = vis.arrivalDataByCountry.get(countryName);
+            } else if (dataType === 'michelin') {
+                value = vis.michelinDataByCountry.get(countryName);
+            } else if (dataType === 'accommodations') {
+                value = vis.bedPlacesDataByCountry.get(countryName);
+            }
+            return value ? vis.colorScale(value) : '#ccc';
+        });
 
         vis.svg.select(".legend-label").text(vis.legendTitles[dataType]);
     }
