@@ -343,7 +343,7 @@ class MapVis {
         let vis = this;
 
         // Define the rotation step
-        let rotationStep = 0;
+        let rotationStep = 0.3;
 
         d3.timer(() => {
             // Increment the rotation

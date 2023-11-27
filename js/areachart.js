@@ -1,5 +1,5 @@
-class AreaChart{
-    constructor(parentElement, data){
+class AreaChart {
+    constructor(parentElement, data) {
         this.parentElement = parentElement;
         this.data = data;
         this.displayData = data;
@@ -7,7 +7,7 @@ class AreaChart{
         this.initVis();
     }
 
-    initVis(){
+    initVis() {
         let vis = this;
 
         vis.margin = {top: 40, right: 40, bottom: 70, left: 60};
@@ -64,7 +64,7 @@ class AreaChart{
         // Add legend
         const legend = vis.svg.append("g")
             .attr("class", "legend")
-            .attr("transform", "translate(" + (vis.width-500) + ",220)");
+            .attr("transform", "translate(" + (vis.width - 500) + ",220)");
 
         // Legend for total beds
         legend.append("rect")
@@ -102,7 +102,7 @@ class AreaChart{
 
     }
 
-    wrangleData(){
+    wrangleData() {
         let vis = this;
         console.log("data in (Area Chart - Wrangle Data)", vis.displayData);
 
@@ -117,7 +117,7 @@ class AreaChart{
         vis.occupancyData = Array.from(
             d3.rollup(
                 vis.displayData,
-                (leaves) => d3.sum(leaves, (d) => (d.numRooms*d.occupancyRooms)/100),
+                (leaves) => d3.sum(leaves, (d) => (d.numRooms * d.occupancyRooms) / 100),
                 (d) => d.Year
             ),
             ([key, value]) => ({Year: key, numOccupied: value})
@@ -125,7 +125,7 @@ class AreaChart{
 
         vis.newData = vis.numRoomData.map((d1) => {
             let matchingItem = vis.occupancyData.find((d2) => d2.Year === d1.Year);
-            return{
+            return {
                 Year: d1.Year,
                 numRooms: d1.numRooms,
                 numOccupied: matchingItem.numOccupied
@@ -136,78 +136,146 @@ class AreaChart{
         vis.updateVis();
     }
 
-    updateVis(){
+    updateVis() {
         let vis = this;
 
-        // Update domain
-        vis.x.domain(d3.extent(vis.newData, function (d) {
-            return d.Year;
-        }));
-        vis.y.domain([0, d3.max(vis.newData, function (d) {
-            return Math.max(d.numRooms, d.numOccupied);
-        })]);
+        // Update domains
+        vis.x.domain(d3.extent(vis.newData, d => d.Year));
+        vis.y.domain([0, d3.max(vis.newData, d => Math.max(d.numRooms, d.numOccupied))]);
 
-        // D3 area path generator
+        // Define the area for total beds
         vis.areaTotal = d3.area()
             .curve(d3.curveLinear)
-            .x(function (d) {
-                return vis.x(d.Year);
-            })
+            .x(d => vis.x(d.Year))
             .y0(vis.height)
-            .y1(function (d) {
-                return vis.y(d.numRooms);
-            });
+            .y1(d => vis.y(d.numRooms));
 
+        // Define the area for occupied beds
         vis.areaOccupied = d3.area()
             .curve(d3.curveLinear)
-            .x(function (d) {
-                return vis.x(d.Year);
-            })
+            .x(d => vis.x(d.Year))
             .y0(vis.height)
-            .y1(function (d) {
-                return vis.y(d.numOccupied);
-            });
+            .y1(d => vis.y(d.numOccupied));
 
-        vis.svg.selectAll(".area").remove();
+        // Update the total beds area path
+        let totalBeds = vis.svg.selectAll(".total-beds")
+            .data([vis.newData]);
 
-        vis.svg
+        totalBeds.enter()
             .append("path")
-            .datum(vis.newData)
-            .attr("class", "area")
-            .attr("d", vis.areaTotal)
+            .attr("class", "area total-beds")
             .attr("fill", "#3f408c")
-            .attr("stroke", "#3d5064");
-        vis.svg
+            .merge(totalBeds)
+            .transition().duration(1000)
+            .attr("d", vis.areaTotal);
+
+        // Update the occupied beds area path
+        let occupiedBeds = vis.svg.selectAll(".occupied-beds")
+            .data([vis.newData]);
+
+        occupiedBeds.enter()
             .append("path")
-            .datum(vis.newData)
-            .attr("class", "area")
-            .attr("d", vis.areaOccupied)
+            .attr("class", "area occupied-beds")
             .attr("fill", "#bdc9fb")
-            .attr("stroke", "#3d5064");
+            .merge(occupiedBeds)
+            .transition().duration(1000)
+            .attr("d", vis.areaOccupied);
 
+        // Update axes with transition
+        vis.svg.select(".y-axis")
+            .transition().duration(1000)
+            .call(vis.yAxis);
+
+        vis.svg.select(".x-axis")
+            .transition().duration(1000)
+            .call(vis.xAxis);
+
+        // Update chart title
         vis.svg.selectAll(".areachart-title")
-            .text(`Accommodations and Occupancy Over Time - ${vis.countryName}`)
-
-        // Call the area function and update the path
-        // D3 uses each data point and passes it to the area function. The area function translates the data into positions on the path in the SVG.
-        vis.timePath
-            .datum(vis.newData)
-            .attr("d", vis.area);
-
-
-        // Update axes
-        vis.svg.select(".y-axis").call(vis.yAxis);
-        vis.svg.select(".x-axis").call(vis.xAxis);
+            .text(`Accommodations and Occupancy Over Time - ${vis.countryName}`);
     }
 
     setData(newData, countryName) {
         let vis = this;
-        vis.displayData = newData
-        vis.countryName = countryName
-        console.log(vis.displayData)
-        // Update the display data
+        vis.displayData = newData;
+        vis.countryName = countryName;
         vis.wrangleData();
     }
+
 }
+
+//     updateVis(){
+//         let vis = this;
+//
+//         // Update domain
+//         vis.x.domain(d3.extent(vis.newData, function (d) {
+//             return d.Year;
+//         }));
+//         vis.y.domain([0, d3.max(vis.newData, function (d) {
+//             return Math.max(d.numRooms, d.numOccupied);
+//         })]);
+//
+//         // D3 area path generator
+//         vis.areaTotal = d3.area()
+//             .curve(d3.curveLinear)
+//             .x(function (d) {
+//                 return vis.x(d.Year);
+//             })
+//             .y0(vis.height)
+//             .y1(function (d) {
+//                 return vis.y(d.numRooms);
+//             });
+//
+//         vis.areaOccupied = d3.area()
+//             .curve(d3.curveLinear)
+//             .x(function (d) {
+//                 return vis.x(d.Year);
+//             })
+//             .y0(vis.height)
+//             .y1(function (d) {
+//                 return vis.y(d.numOccupied);
+//             });
+//
+//         vis.svg.selectAll(".area").remove();
+//
+//         vis.svg
+//             .append("path")
+//             .datum(vis.newData)
+//             .attr("class", "area")
+//             .attr("d", vis.areaTotal)
+//             .attr("fill", "#3f408c")
+//             .attr("stroke", "#3d5064");
+//         vis.svg
+//             .append("path")
+//             .datum(vis.newData)
+//             .attr("class", "area")
+//             .attr("d", vis.areaOccupied)
+//             .attr("fill", "#bdc9fb")
+//             .attr("stroke", "#3d5064");
+//
+//         vis.svg.selectAll(".areachart-title")
+//             .text(`Accommodations and Occupancy Over Time - ${vis.countryName}`)
+//
+//         // Call the area function and update the path
+//         // D3 uses each data point and passes it to the area function. The area function translates the data into positions on the path in the SVG.
+//         vis.timePath
+//             .datum(vis.newData)
+//             .attr("d", vis.area);
+//
+//
+//         // Update axes
+//         vis.svg.select(".y-axis").call(vis.yAxis);
+//         vis.svg.select(".x-axis").call(vis.xAxis);
+//     }
+//
+//     setData(newData, countryName) {
+//         let vis = this;
+//         vis.displayData = newData
+//         vis.countryName = countryName
+//         console.log(vis.displayData)
+//         // Update the display data
+//         vis.wrangleData();
+//     }
+// }
 
 
