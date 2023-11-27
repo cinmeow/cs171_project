@@ -17,13 +17,13 @@ new fullpage('#fullpage', {
     fitToSection: true,
 
     // dot nav on right
-    anchors: ['landing', 'intro', 'michelin_guide', 'global', 'select_countries', 'purpose', 'bubble', 'credits'],
+    anchors: ['landing', 'intro', 'michelin_guide', 'global', 'select_countries', 'bubble', 'credits'],
 
     // Navigation
     menu: '#menu',
     navigation: true,
     navigationPosition: 'right',
-    navigationTooltips: ['Welcome', 'Intro', 'Michelin Guide', 'Global', 'Select', 'Purpose', 'Cuisine', 'Credits'],
+    navigationTooltips: ['Welcome', 'Intro', 'Michelin Guide', 'Global', 'Select', 'Cuisine', 'Credits'],
     showActiveTooltip: false,
     slidesNavigation: false,
     slidesNavPosition: 'bottom',
@@ -100,7 +100,7 @@ function initMainPage(dataArray) {
 
 
     // TRAVEL PURPOSE + MICHELIN GUIDE VISUALIZATION
-    travelPurpose = new TravelPurposeVis("purpose-vis", dataArray[0], dataArray[1]);
+    // travelPurpose = new TravelPurposeVis("purpose-vis", dataArray[0], dataArray[1]);
 
     // filter out data with Michelin countries
     // console.log("michelin unique names", michelinCountry);

@@ -122,12 +122,11 @@
     <div class="section" data-anchor="global">
         <!-- GLOBAL VIZ 1: DESTINATIONS AND EXPENDITURES / SWITCH / MICHELIN GLOBAL DIST -->
         <div class="container-fluid vh-100" id="global_vis_1">
-            <h1> Global Tourism Data + Michelin Restaurant Distribution </h1>
             <div class="row">
+                <h1> Global Overview </h1>
                 <div class="col-6" id="globe">
-                    <p> The globe is accessible by dragging and turning. Once you select a country, the right side will automatically
-                    update to show that country's arrival, accommodation, and michelin restaurant information. You can choose which view
-                    to look at using the select box on the top right. Also, it is important to note that not all countries have michelin restaurants. </p>
+                    <p> We will start by exploring global information regarding tourism, tourism expenditures, accommodations and Michelin restaurants. Drag and turn the globe to select country of interest.
+                        Select the category of interest in the selection box. Note: not all countries have Michelin restaurants. </p>
                 </div>
                 <div class="col-6" id="globe-linked">
                     <div class="row justify-content-center">
@@ -153,24 +152,22 @@
     <div class="section" data-anchor="select_countries">
         <!-- SELECTION PANEL: SELECT 5 COUNTRIES OF INTEREST -->
         <div class="container-fluid vh-100" id="selection_panel">
-            <h1> Comparing Countries </h1>
+            <h1> Comparing and Selecting Countries of Interest </h1>
+            <div class="row" class="instructions">
+                Now that you've seen some overall information regarding different countries for your potential restaurants, you narrow down your choices and are interested in learning more about 5 countries.
+                Please select 5 countries you are interested in via the selection panel on the right and assess and compare the countries with the Spyder graph on the left.
+            </div>
             <div class="row">
                 <div class="col-6">
                     <div>
-                        <h4 id = "year-display">Ranking the 5 Countries in 5 Attributes </h4>
+                        <h4 class = "year-display">Ranking the 5 Countries in 5 Attributes </h4>
                     </div>
                     <div id = "spider-chart" style = "height: 70vh"></div>
-<!--                    <img src="img/selectVis1.png" alt="Comparison Visualization" style="height:60%"/>-->
-                    This is a comparison visualization that we created to compare the 5 countries
-                    selected on some initial metrics: inbound travelers, accommodations, # personal travelers, # business travelers, etc.
-                    These are based on ranking as a way to compare the 5 countries, with the country holding the largest area having the
-                    highest rank in the 5 attributes. After some EDA, we saw that there is little change in rankings between the years 2010-2019,
-                    so this data will solely be based off of 2019 data, which is the most recent year in our dataset. 
+                    <p id="spyder_instruction">We compare the 5 countries selected on some initial metrics: inbound travelers, accommodations, # personal travelers, # business travelers, etc.
+                    These are based on ranking as a way to compare the 5 countries, with the country holding the largest area having the highest rank in the 5 attributes.</p>
                 </div>
                 <div class="col-6">
-                    Users should be able to select 5 countries they are interested in, and the visualizations following will only reflect
-                    comparisons for the five countries.The visualizations that will use this selection will be the spider chart to the left and the
-                    bubble chart on the bottom.
+                    <h4 class = "year-display"> Select 5 Countries </h4>
                     <div id="flag-container"></div>
                     <button id="submit-button">Submit</button>
                     <button id="clear-button">Clear</button>
@@ -179,24 +176,33 @@
         </div>
     </div>
 
-    <div class="section" data-anchor="purpose">
-        <!-- TOURISM VIZ 1: PURPOSE OF TRAVEL -->
-        <div class="container-fluid vh-100" id="tourism_vis_1">
-            <h1> Purpose of Travel  </h1>
-            <div id = "purpose-vis" style = "height: 70vh"></div>
-            <p>This graph above is a parallel axis graph that shows how travel purpose and number of michelin restaurants relates to each other.
-                In the future, there will be a sliding scale that allows the graph to change by the year (only the first two lines will change since
-                Michelin average price should not change per year —no yearly data). The different colors represent different countries, a tool
-                tip will appear upon hovering to show more detailed information, such as the total business travelers, personal travelers, avg prices,
-                etc. We are also thinking of rescaling the y-axis for the first two axis to make it "per 1000 people."
-            </p>
-        </div>
-    </div>
+<!--    <div class="section" data-anchor="purpose">-->
+<!--        &lt;!&ndash; TOURISM VIZ 1: PURPOSE OF TRAVEL &ndash;&gt;-->
+<!--        <div class="container-fluid vh-100" id="tourism_vis_1">-->
+<!--            <h1> Purpose of Travel  </h1>-->
+<!--            <div id = "purpose-vis" style = "height: 70vh"></div>-->
+<!--            <p>This graph above is a parallel axis graph that shows how travel purpose and number of michelin restaurants relates to each other.-->
+<!--                In the future, there will be a sliding scale that allows the graph to change by the year (only the first two lines will change since-->
+<!--                Michelin average price should not change per year —no yearly data). The different colors represent different countries, a tool-->
+<!--                tip will appear upon hovering to show more detailed information, such as the total business travelers, personal travelers, avg prices,-->
+<!--                etc. We are also thinking of rescaling the y-axis for the first two axis to make it "per 1000 people."-->
+<!--            </p>-->
+<!--        </div>-->
+<!--    </div>-->
 
     <div class="section" data-anchor="bubble">
         <!--MICHELIN VIS 1 -->
-        <div class="container-fluid vh-100" id="michelin_bubble">
-            <select id='bubbleSelector' class="custom-select align-self-center" style="width: 200px"></select>
+        <div class="container-fluid vh-100">
+            <div class="row">
+                <h1> Popular Cuisines in Select Countries of Interest and their Price and Star Rating</h1>
+                <p class="instructions">
+                    Let's explore the cuisines that are the most popular in your selected countries! What is the distribution of
+                    star ratings for this cuisine? What are the overall prices?
+                </p>
+            </div>
+            <div class="row" id="michelin_bubble" style="height: 80%">
+                <select id='bubbleSelector' class="custom-select align-self-center" style="width: 200px"></select>
+            </div>
         </div>
     </div>
 

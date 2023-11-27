@@ -147,3 +147,21 @@ h4 {
     margin-left: 50px;
     margin-top: 50px;
 }
+
+.instructions {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+#spyder_instruction {
+    margin-left: 20px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+.year-display {
+    margin-left: 20px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
