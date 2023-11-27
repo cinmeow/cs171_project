@@ -6,14 +6,16 @@ class SpiderVis {
         this.tourismData = tourismData;
 
         this.selection = new Set()
-        this.features = ["arrivals", "accommodations", "expenditures", "business", "personal"];
+        this.features = ["Arrivals", "Accommodations", "Expenditures", "Business", "Personal"];
+        this.currentYear = 2010;
+        console.log("year NOW", this.currentYear)
 
         this.initVis()
     }
     initVis(){
         let vis = this;
 
-        vis.margin = {top: 40, right: 40, bottom: 40, left: 60};
+        vis.margin = {top: 40, right: 40, bottom: 40, left: 100};
 
         // TODO: #9 - Change hardcoded width to reference the width of the parent element
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
@@ -26,11 +28,14 @@ class SpiderVis {
 
         vis.radialScale = d3.scaleLinear()
             .domain([0, 5])
-            .range([0, vis.width-350])
+            .range([0, vis.width-400])
 
         vis.ticks = [1, 2, 3, 4, 5];
 
-        vis.svg.selectAll("circle")
+        vis.tickGroup = vis.svg.append("g")
+            .attr("transform", `translate(${vis.width/15}, ${vis.height/15})`);
+
+        vis.tickGroup.selectAll("circle")
             .data(vis.ticks)
             .join(
                 enter => enter.append("circle")
@@ -41,21 +46,79 @@ class SpiderVis {
                     .attr("r", d => vis.radialScale(d))
             );
 
-        vis.svg.selectAll(".ticklabel")
+        vis.tickGroup.selectAll(".ticklabel")
             .data(vis.ticks)
             .join(
                 enter => enter.append("text")
                     .attr("class", "ticklabel")
                     .attr("x", vis.width / 2 + 5)
-                    .attr("y", d => vis.height / 2 - vis.radialScale(d)-5)
+                    .attr("y", d => vis.height / 2 + vis.radialScale(d)-(vis.height/2)+15)
                     .attr("font-size", "10px")
                     .text(d => d.toString())
             );
 
+        vis.wrangleData()
+    }
+
+    wrangleData(){
+        let vis = this;
+        console.log("passing vis.selection in wrangle data", vis.selection)
+        let parseYear = d3.timeParse("%Y");
+        let filteredTourismData = vis.tourismData.filter((d) => {
+            let c1 = vis.selection.has(d["Country Name"]);
+            let c2 = parseYear(d.Year).getFullYear() === 2019;
+            return  c1 && c2;
+        });
+
+        let filteredTravelData = vis.travelData.filter((d) => {
+            let c1 = vis.selection.has(d["Country"]);
+            let c2 = d.Year.getFullYear() === vis.currentYear;
+            return  c1 && c2;
+        });
+
+        let combinedData = filteredTourismData.map((d1) => {
+            let matchingItem = filteredTravelData.find((d2) => d2["Country"] === d1["Country Name"])
+            return{
+                Country: d1["Country Name"],
+                Arrivals: d1["Number of Arrivals"],
+                Expenditures: d1["Expenditures (current US$)"],
+                Accommodations: matchingItem["numRooms"],
+                Business: matchingItem["businessPurpose"],
+                Personal: matchingItem["personalPurpose"]
+            }
+        })
+
+        let arrivalsRank = combinedData.slice().sort((a, b) => a.Arrivals - b.Arrivals).map((country, index) => ({ Country: country.Country, Arrivals: index + 1 }));
+        let expendituresRank = combinedData.slice().sort((a, b) => a.Expenditures - b.Expenditures).map((country, index) => ({ Country: country.Country, Expenditures: index + 1 }));
+        let accommodationsRank = combinedData.slice().sort((a, b) => a.Accommodations - b.Accommodations).map((country, index) => ({ Country: country.Country, Accommodations: index + 1 }));
+        let businessRank = combinedData.slice().sort((a, b) => a.Business - b.Business).map((country, index) => ({ Country: country.Country, Business: index + 1 }));
+        let personalRank = combinedData.slice().sort((a, b) => a.Personal - b.Personal).map((country, index) => ({ Country: country.Country, Personal: index + 1 }));
+
+        console.log(personalRank)
+        // Combine the rankings into the final result
+        vis.rankingArray = combinedData.map(country => ({
+            Country: country.Country,
+            Arrivals: arrivalsRank.find(rank => rank.Country === country.Country).Arrivals,
+            Expenditures: expendituresRank.find(rank => rank.Country === country.Country).Expenditures,
+            Accommodations: accommodationsRank.find(rank => rank.Country === country.Country).Accommodations,
+            Business: businessRank.find(rank => rank.Country === country.Country).Business,
+            Personal: personalRank.find(rank => rank.Country === country.Country).Personal
+        }));
+
+        console.log("combined data", vis.rankingArray)
+
+        let interval = d3.interval(vis.updateYear().bind(this), 5000);
+
+        vis.updateData()
+    }
+
+    updateData(){
+        let vis = this;
+
         function angleToCoordinate(angle, value){
-            let x = Math.cos(angle) * vis.radialScale(value);
-            let y = Math.sin(angle) * vis.radialScale(value);
-            return {"x": vis.width / 2 + x, "y": vis.height / 2 - y};
+            let x = vis.width/2 + Math.cos(angle) * vis.radialScale(value);
+            let y = vis.height/2 - Math.sin(angle) * vis.radialScale(value);
+            return {"x": x, "y": y};
         }
 
         vis.featureData = vis.features.map((f, i) => {
@@ -63,13 +126,13 @@ class SpiderVis {
             return {
                 "name": f,
                 "angle": angle,
-                "line_coord": angleToCoordinate(angle, 5.5),
+                "line_coord": angleToCoordinate(angle, 5.05),
                 "label_coord": angleToCoordinate(angle, 6)
             };
         });
 
         // draw axis line
-        vis.svg.selectAll("line")
+        vis.tickGroup.selectAll("line")
             .data(vis.featureData)
             .join(
                 enter => enter.append("line")
@@ -81,7 +144,7 @@ class SpiderVis {
             );
 
         // draw axis label
-        vis.svg.selectAll(".axislabel")
+        vis.tickGroup.selectAll(".axislabel")
             .data(vis.featureData)
             .join(
                 enter => enter.append("text")
@@ -91,19 +154,54 @@ class SpiderVis {
                     .text(d => d.name)
             );
 
-        vis.wrangleData()
+        // draw data lines
+        vis.line = d3.line()
+            .x(d => d.x)
+            .y(d => d.y);
+
+        function getPathCoordinates(data_point){
+            let coordinates = [];
+            for (var i = 0; i < vis.features.length; i++){
+                let ft_name = vis.features[i];
+                let angle = (Math.PI / 2) + (2 * Math.PI * i / vis.features.length);
+                coordinates.push(angleToCoordinate(angle, data_point[ft_name]));
+            };
+            return coordinates;
+        };
+
+        vis.colors = ["darkorange", "gray", "navy", "red", "purple"];
+
+        console.log(vis.line)
+        // draw the path element
+        vis.area = vis.tickGroup.selectAll("path")
+            .data(vis.rankingArray)
+            .join(
+                enter => enter.append("path")
+                    .attr("d", d => vis.line(getPathCoordinates(d)))
+                    .attr("stroke-width", 3)
+                    .attr("stroke", (d, i) => vis.colors[i])
+                    .attr("fill", (d, i) => vis.colors[i])
+                    .attr("stroke-opacity", 1)
+                    .attr("opacity", 0.2)
+            );
+
+        vis.area.exit().remove();
     }
 
-    wrangleData(){
-        let vis = this;
-        console.log("passing vis.selection in wrangle data", vis.selection)
-
-        vis.updateData()
-    }
-
-    updateData(){
+    updateYear(){
         let vis = this;
 
+        console.log("Updating year:", vis.currentYear);
+
+        d3.select("#year-display").text(vis.currentYear);
+
+        vis.wrangleData();
+
+        vis.currentYear++;
+
+        if (vis.currentYear > 2019) {
+            vis.currentYear = 2010;
+        };
 
     }
 
@@ -116,5 +214,7 @@ class SpiderVis {
         // call wrangle data to pass the data on
         vis.wrangleData()
     }
+
+
 }
 
