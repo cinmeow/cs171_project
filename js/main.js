@@ -3,7 +3,7 @@ let geoDataURL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"
 let tourismDataURL = "data/tourism_worldbank1.csv"; // Replace with the actual path to your CSV file
 // initiate global variables
 let michelinCountry = new Set()
-let mapVis, lineVis, lineVis2, selectVis, barchart, barchart2;
+let mapVis, lineVis, lineVis2, selectVis, barchart, barchart2, areachart;
 let parseYear = d3.timeParse("%Y");
 
 // set up fullpage scrolling
