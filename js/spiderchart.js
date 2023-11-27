@@ -93,11 +93,11 @@ class SpiderVis {
             }
         })
 
-        let arrivalsRank = combinedData.slice().sort((a, b) => a.Arrivals - b.Arrivals).map((country, index) => ({ Country: country.Country, Arrivals: index + 1 }));
-        let expendituresRank = combinedData.slice().sort((a, b) => a.Expenditures - b.Expenditures).map((country, index) => ({ Country: country.Country, Expenditures: index + 1 }));
-        let accommodationsRank = combinedData.slice().sort((a, b) => a.Accommodations - b.Accommodations).map((country, index) => ({ Country: country.Country, Accommodations: index + 1 }));
-        let businessRank = combinedData.slice().sort((a, b) => a.Business - b.Business).map((country, index) => ({ Country: country.Country, Business: index + 1 }));
-        let personalRank = combinedData.slice().sort((a, b) => a.Personal - b.Personal).map((country, index) => ({ Country: country.Country, Personal: index + 1 }));
+        let arrivalsRank = combinedData.slice().sort((a, b) => b.Arrivals - a.Arrivals).map((country, index) => ({ Country: country.Country, Arrivals: -index + 5 }));
+        let expendituresRank = combinedData.slice().sort((a, b) => b.Expenditures - a.Expenditures).map((country, index) => ({ Country: country.Country, Expenditures: -index + 5 }));
+        let accommodationsRank = combinedData.slice().sort((a, b) => b.Accommodations - a.Accommodations).map((country, index) => ({ Country: country.Country, Accommodations: -index + 5 }));
+        let businessRank = combinedData.slice().sort((a, b) => b.Business - a.Business).map((country, index) => ({ Country: country.Country, Business: -index + 5 }));
+        let personalRank = combinedData.slice().sort((a, b) => b.Personal - a.Personal).map((country, index) => ({ Country: country.Country, Personal: -index + 5 }));
 
         console.log(personalRank)
         // Combine the rankings into the final result
