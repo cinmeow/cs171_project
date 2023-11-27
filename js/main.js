@@ -3,7 +3,11 @@ let geoDataURL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"
 let tourismDataURL = "data/tourism_worldbank1.csv"; // Replace with the actual path to your CSV file
 // initiate global variables
 let michelinCountry = new Set()
+<<<<<<< Updated upstream
 let mapVis, lineVis, lineVis2, selectVis, barchart, barchart2, areachart;
+=======
+let mapVis, lineVis, lineVis2, selectVis, barchart, barchart2, travelPurpose, bubbleChart;
+>>>>>>> Stashed changes
 let parseYear = d3.timeParse("%Y");
 
 // set up fullpage scrolling
@@ -147,6 +151,7 @@ var globalSelected;
 function handleSelectedCountries(selectedCountries) {
     console.log("Selected Countries:", selectedCountries);
     globalSelected = selectedCountries;
+
     // Additional handling for selected countries
     //circularVis.wrangleData()
     spiderChart.selectedCountries(selectedCountries);

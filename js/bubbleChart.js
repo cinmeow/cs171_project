@@ -22,7 +22,7 @@ class BubbleChart {
         console.log(vis.data);
 
         // dynamic svg canvas
-        vis.margin = {top: 80, right: 60, bottom: 20, left: 40};
+        vis.margin = {top: 80, right: 40, bottom: 20, left: 40};
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
@@ -64,9 +64,24 @@ class BubbleChart {
 
         // selected countries
         if (globalSelected != null) {
-            vis.countries = globalSelected;
+
+            // check for south korea as edge case
+            if (globalSelected.includes("South_Korea")) {
+                vis.countries = globalSelected.filter((d) => d !== 'South_Korea')
+                vis.countries.push("South Korea")
+            } else {
+                vis.countries = globalSelected;
+            }
+
+            if (globalSelected.includes("Hong_Kong")) {
+                vis.countries = globalSelected.filter((d) => d !== 'Hong_Kong')
+                vis.countries.push("Hong Kong")
+            } else {
+                vis.countries = globalSelected;
+            }
+
             vis.countryData = vis.data.filter(function(d) {
-                return globalSelected.includes(d.Country)
+                return vis.countries.includes(d.Country)
             })
         } else {
             vis.countries = vis.data.map((d) => d.Country)
