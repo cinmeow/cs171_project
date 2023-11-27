@@ -94,6 +94,12 @@ class AreaChart{
             .style("text-anchor", "start")
             .text("Occupied Beds");
 
+        vis.svg2 = d3.select("#chart2")
+            .append("p")
+            .text("Upon selecting a country, the area chart will be filtered to the Country's year-by-year data for the number " +
+                "of available accommodations (in this case number of bed space). The lighter part of the area chart is the number" +
+                "of occupied bed space by year. There is quite a bit of missing data, so anything that is 0 is missing. ")
+
     }
 
     wrangleData(){

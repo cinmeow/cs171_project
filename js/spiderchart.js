@@ -7,7 +7,7 @@ class SpiderVis {
 
         this.selection = new Set()
         this.features = ["Arrivals", "Accommodations", "Expenditures", "Business", "Personal"];
-        this.currentYear = 2010;
+        this.currentYear = 2019;
         console.log("year NOW", this.currentYear)
 
         this.initVis()
@@ -56,6 +56,11 @@ class SpiderVis {
                     .attr("font-size", "10px")
                     .text(d => d.toString())
             );
+
+        vis.tooltip = d3.select(`#${vis.parentElement}`)
+            .append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0);
 
         vis.wrangleData()
     }
@@ -107,7 +112,7 @@ class SpiderVis {
 
         console.log("combined data", vis.rankingArray)
 
-        let interval = d3.interval(vis.updateYear().bind(this), 5000);
+        // setTimeout(() => vis.updateYear(), 10000);
 
         vis.updateData()
     }
@@ -130,6 +135,23 @@ class SpiderVis {
                 "label_coord": angleToCoordinate(angle, 6)
             };
         });
+
+
+        vis.rankingArray.forEach((element) => {
+            element.total = Object.values(element).reduce((acc, value) => {
+                // Skip the "Country" property from the sum
+                if (typeof value === "number") {
+                    return acc + value;
+                }
+                return acc;
+            }, 0);
+        });
+
+        // Sort the array based on the "total" column in descending order
+        vis.rankingArray.sort((a, b) => b.total - a.total);
+
+
+        console.log("check", vis.rankingArray)
 
         // draw axis line
         vis.tickGroup.selectAll("line")
@@ -166,6 +188,10 @@ class SpiderVis {
                 let angle = (Math.PI / 2) + (2 * Math.PI * i / vis.features.length);
                 coordinates.push(angleToCoordinate(angle, data_point[ft_name]));
             };
+
+            // Add the starting point to close the path
+            coordinates.push(coordinates[0]);
+
             return coordinates;
         };
 
@@ -178,32 +204,32 @@ class SpiderVis {
             .join(
                 enter => enter.append("path")
                     .attr("d", d => vis.line(getPathCoordinates(d)))
-                    .attr("stroke-width", 3)
+                    .attr("stroke-width", 2) // Adjust the stroke-width as needed
                     .attr("stroke", (d, i) => vis.colors[i])
-                    .attr("fill", (d, i) => vis.colors[i])
+                    .attr("fill", (d, i) => vis.colors[i])  // Ensure that the area is not filled
+                    .attr("fill-opacity", 0.2)  // Adjust fill-opacity as needed
                     .attr("stroke-opacity", 1)
-                    .attr("opacity", 0.2)
+                    .on("mouseover", function (event, d) {
+                        d3.select(this)
+                            .attr("fill-opacity", 0.6);
+
+                        // Show tooltip
+                        vis.tooltip
+                            .style("opacity", 1);
+                        vis.tooltip.html(`<strong>${d.Country}<br/></strong>`)
+                            .style("left", (event.pageX + 5) + "px")
+                            .style("top", (event.pageY - 28) + "px");
+                    })
+                    .on("mouseout", function (event, d) {
+                        d3.select(this)
+                            .attr("fill-opacity", 0.2);
+
+                        // Hide tooltip
+                        vis.tooltip.html("")
+                    })
             );
-
-        vis.area.exit().remove();
     }
 
-    updateYear(){
-        let vis = this;
-
-        console.log("Updating year:", vis.currentYear);
-
-        d3.select("#year-display").text(vis.currentYear);
-
-        vis.wrangleData();
-
-        vis.currentYear++;
-
-        if (vis.currentYear > 2019) {
-            vis.currentYear = 2010;
-        };
-
-    }
 
     selectedCountries(selection){
         let vis = this;

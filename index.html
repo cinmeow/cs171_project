@@ -124,6 +124,9 @@
             <h1> Global Tourism Data + Michelin Restaurant Distribution </h1>
             <div class="row">
                 <div class="col-6" id="globe">
+                    <p> The globe is accessible by dragging and turning. Once you select a country, the right side will automatically
+                    update to show that country's arrival, accommodation, and michelin restaurant information. You can choose which view
+                    to look at using the select box on the top right. Also, it is important to note that not all countries have michelin restaurants. </p>
                 </div>
                 <div class="col-6" id="globe-linked">
                     <div class="row justify-content-center">
@@ -149,21 +152,24 @@
     <div class="section" data-anchor="select_countries">
         <!-- SELECTION PANEL: SELECT 5 COUNTRIES OF INTEREST -->
         <div class="container-fluid vh-100" id="selection_panel">
-            <h1> Selection Panel: Users will select 5 countries of interest to explore further </h1>
+            <h1> Comparing Countries </h1>
             <div class="row">
                 <div class="col-6">
                     <div>
-                        <h4 id = "year-display">2010</h4>
+                        <h4 id = "year-display">Ranking the 5 Countries in 5 Attributes </h4>
                     </div>
                     <div id = "spider-chart" style = "height: 70vh"></div>
 <!--                    <img src="img/selectVis1.png" alt="Comparison Visualization" style="height:60%"/>-->
-                    This is a comparison visualization that we will create in the future to compare the 5 countries
-                    selected on some initial metrics: inbound travelers, accomodations, # michelin restaurant, etc.
+                    This is a comparison visualization that we created to compare the 5 countries
+                    selected on some initial metrics: inbound travelers, accommodations, # personal travelers, # business travelers, etc.
+                    These are based on ranking as a way to compare the 5 countries, with the country holding the largest area having the
+                    highest rank in the 5 attributes. After some EDA, we saw that there is little change in rankings between the years 2010-2019,
+                    so this data will solely be based off of 2019 data, which is the most recent year in our dataset. 
                 </div>
                 <div class="col-6">
-                    Not fully functional selection panel - theoretically, users should be able to select
-                    5 countries they are interested in, and the visualizations following will only reflect
-                    comparisons for the five countries.
+                    Users should be able to select 5 countries they are interested in, and the visualizations following will only reflect
+                    comparisons for the five countries.The visualizations that will use this selection will be the spider chart to the left and the
+                    bubble chart on the bottom.
                     <div id="flag-container"></div>
                     <button id="submit-button">Submit</button>
                     <button id="clear-button">Clear</button>
