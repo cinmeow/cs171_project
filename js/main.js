@@ -17,7 +17,7 @@ new fullpage('#fullpage', {
     fitToSection: true,
 
     // dot nav on right
-    anchors: ['landing', 'intro', 'michelin_guide', 'global', 'select_countries', 'bubble', 'credits'],
+    anchors: ['landing', 'intro', 'michelin_guide', 'global', 'select_countries', 'treemap', 'bubble', 'call2action', 'credits'],
 
     // Navigation
     menu: '#menu',

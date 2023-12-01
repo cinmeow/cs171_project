@@ -80,13 +80,8 @@ class MapVis {
                     d3.selectAll(".graticule").attr("d", vis.path)
                 })
 
-        )
-        //
-        // remove zoom for now
-        //     .call(vis.zoom);
+        ).call(vis.zoom);
 
-        // Apply the zoom behavior to the SVG
-        // vis.svg.call(vis.zoom);
 
         vis.svg.append("path")
             .datum({type: "Sphere"})
@@ -343,7 +338,7 @@ class MapVis {
         let vis = this;
 
         // Define the rotation step
-        let rotationStep = 0.3;
+        let rotationStep = 0;
 
         d3.timer(() => {
             // Increment the rotation
