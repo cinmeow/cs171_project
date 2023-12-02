@@ -35,19 +35,25 @@ class BubbleChart {
             .attr('transform', `translate (${vis.margin.right + vis.margin.left}, ${vis.margin.top})`);
 
 
-        // // add title
-        // vis.title = vis.svg.append("text")
-        //     .attr("x", vis.width / 2)
-        //     .attr("y", 0 - vis.margin.top / 3)
-        //     .attr("text-anchor", "middle")
-        //     .style("font-size", "20px")
-        //     .text("bubble chart title")
 
+        // // set scale for bubble radius
+        // vis.circleRad = d3.scaleLinear()
+        //     .domain([0, 4])
+        //     .range([2, 14])
 
-        // set scale for bubble radius
-        vis.circleRad = d3.scaleSqrt()
-            .domain([0, 4])
-            .range([5, 15])
+        // append info to cuisine selection
+        vis.cuisineInfo = d3.select("#cuisineExplained")
+        vis.cuisineInfo.append("text").text("Select a cuisine to learn more!")
+
+        // append info in left column
+        vis.michelinInfo = d3.select("#michelinreminder")
+
+        vis.michelinInfo.append("text")
+            .text("The Michelin Guide has five different culinary distinction awards: " +
+                "Bib Gourmand, MICHELIN Green Star, 1 Star MICHELIN, 2 Star MICHELIN and 3 Star MICHELIN. " +
+                "Hover over bubbles in a category to review what each award means.")
+            .attr("class", "reminderText")
+
 
         // append tooltip
         vis.tooltip = d3.select("body").append('div')
@@ -155,22 +161,43 @@ class BubbleChart {
 
         // create groups and their centers
         vis.stars = {
-            "one": {x: vis.width/6.5, y: vis.height/2, title: "1 Star MICHELIN"},
-            "two": {x: vis.width/6.5*2, y: vis.height/2, title: "2 Stars MICHELIN"},
-            "three": {x: vis.width/6.5*3, y: vis.height/2, title: "3 Stars MICHELIN"},
-            "bib": {x: vis.width/6.5*4, y: vis.height/2, title:"Bib Gourmand"},
-            "green": {x: vis.width/6.5*5, y: vis.height/2, title:"MICHELIN Green Star"},
+            "bib": {x: 80 + vis.width/5.5, y: vis.height/4, title:"Bib Gourmand"},
+            "green": {x: 80 + vis.width/5.5*2, y: vis.height/4, title:"MICHELIN Green Star"},
+            "one": {x: 80 + vis.width/5.5, y: vis.height/1.5, title: "1 Star MICHELIN"},
+            "two": {x: 80 + vis.width/5.5*2, y: vis.height/1.5, title: "2 Stars MICHELIN"},
+            "three": {x: 80 + vis.width/5.5*3, y: vis.height/1.5, title: "3 Stars MICHELIN"},
         }
 
         vis.svg.selectAll("circle").remove();
+
+        console.log("DEBUG CIRCLES")
+
+        let circleSizes = {
+            0: 2,
+            1: 5,
+            2: 8,
+            3: 10,
+            4: 18
+        }
 
         // draw circles
         let circles = vis.svg.selectAll("circle")
             .data(vis.displayData)
             .enter()
             .append("circle")
-            .attr("r", (d) => vis.circleRad(d['Price']))
+            .attr("r", (d) => circleSizes[d.Price]) // vis.circleRad(d['Price'])
+            .attr("stroke", "black")  // Set the outline color to black
+            .attr("stroke-width", 1)
             .on('mouseover', function(event, d) {
+                // set hover color
+                let myCircle = d3.select(this);
+                myCircle.attr("stroke", "red");
+                myCircle.attr("stroke-width", 5)
+
+                // change michelin info text
+                replaceText(d);
+
+                // display tool tip
                 vis.tooltip
                     .style("opacity", 1)
                     .style("left", event.pageX + 15 + "px")
@@ -185,19 +212,41 @@ class BubbleChart {
              </div>`)
                 return vis.tooltip.style("visibility", "visible");
         }).on('mouseout', function() {
+
+            // revert stroke
+            let myCircle = d3.select(this);
+            myCircle.attr("stroke", "black");
+            myCircle.attr("stroke-width", 1)
+
+            // revert text
+            vis.michelinInfo.text("The Michelin Guide has five different culinary distinction awards: " +
+                "Bib Gourmand, MICHELIN Green Star, 1 Star MICHELIN, 2 Star MICHELIN and 3 Star MICHELIN. " +
+                "Hover over bubbles in a category to review what each award means.")
+
             return vis.tooltip.style("visibility", "hidden")
             })
 
+
         // force simulations to space out the circles
         let forces = d3.forceSimulation(vis.displayData)
-            .force("charge", d3.forceManyBody().strength([-30]))
+            .force("charge", d3.forceManyBody().strength([-18]))
             .force("center", (d) => d3.forceCenter(groupForceX(d), groupForceY(d)))
             .force("x", d3.forceX(groupForceX))
             .force("y", d3.forceY(groupForceY))
+            .force("collide", d3.forceCollide().radius(function (d) {
+                return d.radius;
+            }))
             .on("tick", function() {
-                circles.attr("cx", function(d) { return d.x})
-                    .attr("cy", function(d) { return d.y})
+                circles.attr("cx", function(d) {
+                    return d.x
+                }).attr("cy", function(d) {
+
+                    return d.y
+                })
+
+                vis.addTitle();
             })
+
 
         // set appropriate force X
         function groupForceX(d) {
@@ -231,22 +280,6 @@ class BubbleChart {
             }
         }
 
-        // set title for separate bubbles clusters
-        var index = 0;
-        for (var rating in vis.stars) {
-            let group = vis.stars[rating]
-
-            vis.svg.append("text")
-                .attr("x", (index * vis.width / 5) + 150)
-                .attr("y", 80)
-                .attr("text-anchor", "middle")
-                .style("font-size", "20px")
-                .attr("class", "bubbleTitle")
-                .text(group.title)
-
-            index++;
-        }
-
 
         // set colour scale for bubbles
         vis.circleColour = d3.scaleOrdinal(d3.schemePastel1)
@@ -255,9 +288,72 @@ class BubbleChart {
         // colour circle by country
         circles.attr("fill", (d) => vis.circleColour(d.Country));
 
+        // replaceText
+        let replaceText = function(d) {
+            let newText;
+            switch (d.Award) {
+                case '1 Star MICHELIN':
+                    newText = "1 Star MICHELIN: High-quality cooking, worth a stop";
+                    break;
+                case '2 Stars MICHELIN':
+                    newText = "2 Stars MICHELIN: Excellent cooking, worth a detour";
+                    break;
+                case '3 Stars MICHELIN':
+                    newText = "3 Stars MICHELIN: Exceptional cuisine, worth a special journey";
+                    break;
+                case 'Bib Gourmand':
+                    newText = "Bib Gourmand: Exceptionally good food at moderate prices";
+                    break;
+                case 'MICHELIN Green Star':
+                    newText = "MICHELIN Green Star: Culinary excellence with outstanding eco-friendly commitments"
+            }
+
+            vis.michelinInfo.text(newText);
+        }
+
+    }
+
+    addTitle(){
+        let vis = this;
+
+        // set title for separate bubbles clusters
+
+        vis.groupXCoord = Array.from(d3.group(vis.displayData, (d) => d.Award), ([key, value]) => {
+            return {
+                category: key,
+                meanValue: d3.mean(value, d => d.x)
+            };
+        });
+
+        vis.groupYCoord = Array.from(d3.group(vis.displayData, (d) => d.Award), ([key, value]) => {
+            return {
+                category: key,
+                meanValue: d3.mean(value, d => d.y)
+            };
+        });
 
 
+        vis.svg.selectAll("text").remove();
+        var index = 0;
 
+        let availableAwards = new Set(vis.groupXCoord.map(d => d.category));
+        availableAwards = Array.from(availableAwards)
+
+
+        for (let rating of availableAwards) {
+            let xcoord = vis.groupXCoord.find((d) => d.category === rating).meanValue;
+            let ycoord = vis.groupYCoord.find((d) => d.category === rating).meanValue;
+
+            vis.svg.append("text")
+                .attr("x", xcoord)
+                .attr("y", ycoord)
+                .attr("text-anchor", "middle")
+                .style("font-size", "20px")
+                .attr("class", "bubbleTitle")
+                .text(rating)
+
+            index++;
+        }
     }
 }
 

@@ -15,6 +15,7 @@ new fullpage('#fullpage', {
     autoScrolling:true,
     scrollHorizontally: true,
     fitToSection: true,
+    parallax: true,
 
     // dot nav on right
     anchors: ['landing', 'intro', 'michelin_guide', 'global', 'select_countries', 'treemap', 'bubble', 'call2action', 'credits'],
@@ -27,6 +28,11 @@ new fullpage('#fullpage', {
     showActiveTooltip: false,
     slidesNavigation: false,
     slidesNavPosition: 'bottom',
+
+    // other settings
+    touchSensitivity: 205,
+    scrollOverflow: true,
+    scrollingSpeed: 1000,
 
 });
 

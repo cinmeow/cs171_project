@@ -185,15 +185,18 @@
     <div class="section" data-anchor="bubble">
         <!--MICHELIN VIS 1 -->
         <div class="container-fluid vh-100">
-            <div class="row">
-                <h1> Popular Cuisines in Select Countries of Interest and their Price and Star Rating</h1>
-                <p class="instructions">
-                    Let's explore the cuisines that are the most popular in your selected countries! What is the distribution of
-                    star ratings for this cuisine? What are the overall prices?
-                </p>
-            </div>
-            <div class="row" id="michelin_bubble" style="height: 80%">
-                <select id='bubbleSelector' class="custom-select align-self-center" style="width: 200px"></select>
+            <div class="row" style="height: 100%">
+                <div class="col-4" id="cuisineSelect">
+                    <div class="row" id="cuisineSelector" style="height:70%">
+                        <h3> Let's get to know more about the top cuisines in the countries you've selected! </h3>
+                        <select id='bubbleSelector' class="custom-select align-self-start" style="width: 200px"></select>
+                        <p id="cuisineExplained"></p>
+                    </div>
+                    <div class="row" id="michelinreminder" style="height:30%">
+                        <h3> The MICHELIN Guide </h3>
+                    </div>
+                </div>
+                <div class="col-8" id="michelin_bubble"></div>
             </div>
         </div>
     </div>
