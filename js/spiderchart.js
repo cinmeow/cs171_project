@@ -11,6 +11,16 @@ class SpiderVis {
         this.currentYear = 2019;
         this.n = spiderSelect.size;
 
+        // description about each feature
+        this.description = {
+            "Arrivals": "Number of Arrivals <br> into country in 2019",
+            "Accommodations": "Number of beds <br> available in country in 2019",
+            "Expenditures": "Amount expended by tourists <br> in country in 2019",
+            "Business": "Number traveling for <br> business purposes in 2019",
+            "Personal": "Number traveling for <br> personal purposes in 2019",
+            "Michelin": "Number of Restaurants <br> on the Michelin Guide"
+        };
+
         this.initVis();
     }
     initVis(){
@@ -62,11 +72,6 @@ class SpiderVis {
                     )
             );
 
-        // Add legend
-        vis.legend = vis.svg.append("g")
-            .attr("class", "spider-legend")
-            .attr("transform", "translate(" + (vis.width) + "," + (0.8*vis.height) + ")");
-
         // initialize tooltip for later use
         vis.tooltip = d3.select(`#${vis.parentElement}`)
             .append("div")
@@ -82,10 +87,13 @@ class SpiderVis {
 
         // filter tourism data to obtain only data from countries we selected and from the year 2019
         let filteredTourismData = vis.tourismData.filter((d) => {
+            // if(vis.selection.has(d["Country Name"])){
+            // }
             let c1 = vis.selection.has(d["Country Name"]);
             let c2 = parseYear(d.Year).getFullYear() === 2019;
-            return  c1 && c2;
+            return c1 && c2;
         });
+
 
         // filter travel data to obtain only data from countries we selected and from year 2019
         let filteredTravelData = vis.travelData.filter((d) => {
@@ -107,21 +115,42 @@ class SpiderVis {
                 (d) => d.Country
             ),
             ([key, value]) => ({Country: key, numRestaurants: value})
-        )
+        );
 
         // combine the data from tourism, travel and michelin guide into one array
-        let combinedData = filteredTourismData.map((d1) => {
-            let matchingItem = filteredTravelData.find((d2) => d2["Country"] === d1["Country Name"]);
-            let matchingItem2 = rollupMichelinData.find((d2) => d2["Country"] === d1["Country Name"]);
-            return{
-                Country: d1["Country Name"],
-                Arrivals: d1["Number of Arrivals"],
-                Expenditures: d1["Expenditures (current US$)"],
-                Accommodations: matchingItem["numRooms"],
-                Business: matchingItem["businessPurpose"],
-                Personal: matchingItem["personalPurpose"],
-                Michelin: matchingItem2["numRestaurants"]
+        let combinedData = rollupMichelinData.map((d1) => {
+            let matchingItem = filteredTravelData.find((d2) => d2["Country"] === d1["Country"]);
+            let matchingItem2 = filteredTourismData.find((d2) => d2["Country Name"] === d1["Country"]);
+
+            let businessPurpose, personalPurpose, numRooms, arrivals, expenditures;
+
+            if (matchingItem) {
+                businessPurpose = matchingItem["businessPurpose"];
+                personalPurpose = matchingItem["personalPurpose"];
+                numRooms = matchingItem["numRooms"];
+            } else {
+                businessPurpose = 0;
+                personalPurpose = 0;
+                numRooms = 0;
             }
+
+            if (matchingItem2) {
+                arrivals = matchingItem2["Number of Arrivals"];
+                expenditures = matchingItem2["Expenditures (current US$)"];
+            } else {
+                arrivals = 0;
+                expenditures = 0;
+            }
+
+            return {
+                Country: d1["Country"],
+                Arrivals: arrivals,
+                Expenditures: expenditures,
+                Accommodations: numRooms,
+                Business: businessPurpose,
+                Personal: personalPurpose,
+                Michelin: d1["numRestaurants"]
+            };
         })
 
         // sort the different categories and rank countries
@@ -151,6 +180,7 @@ class SpiderVis {
     updateVis(){
         let vis = this;
 
+        console.log(vis.rankingArray)
         // turn angles into coordinates to later draw path
         function angleToCoordinate(angle, value){
             let x = vis.width/2 + Math.cos(angle) * vis.radialScale(value);
@@ -165,7 +195,7 @@ class SpiderVis {
                 "name": f,
                 "angle": angle,
                 "line_coord": angleToCoordinate(angle, 5.05),
-                "label_coord": angleToCoordinate(angle, 6)
+                "label_coord": angleToCoordinate(angle, 6.5)
             };
         });
 
@@ -200,10 +230,33 @@ class SpiderVis {
             .data(vis.featureData)
             .join(
                 enter => enter.append("text")
-                    .attr("x", d => d.label_coord.x-10)
+                    .attr("x", d => d.label_coord.x -30)
                     .attr("y", d => d.label_coord.y)
                     .attr("font-size", "12px")
+                    .attr("text-anchor", "right")
                     .text(d => d.name)
+                    .on("mouseover", (event, d) => {
+                        vis.tooltip
+                            .style("opacity", 1)
+                            .style("position", "absolute")
+                            .style("pointer-events", "none")
+                            .style("background-color", "white")
+                            .style("border", "solid 1px #ccc")
+                            .style("padding", "10px")
+                            .style("border-radius", "5px")
+                            .style("text-align", "left")
+                            .style("font-family", "Arial")
+                            .style("font-weight", "normal");
+                        vis.tooltip.html(`${vis.description[d.name]}`)
+                            .style("left", (event.pageX + 25) + "px")
+                            .style("top", (event.pageY - 28) + "px");
+                        console.log("mouseover", vis.description[d.name])
+                    })
+                    .on("mouseout", function () {
+                        // Hide tooltip
+                        vis.tooltip.html("")
+                            .style("opacity", 0);
+                    })
             );
 
         // draw data lines
@@ -262,6 +315,7 @@ class SpiderVis {
 
                         // Hide tooltip
                         vis.tooltip.html("")
+                            .style("opacity", "0")
                     })
                     .transition() // Add a transition
                     .duration(500), // Set the duration
@@ -279,31 +333,42 @@ class SpiderVis {
                 exit => exit.remove().transition().duration(500) // Add a transition for exits
             );
 
-        // Update legend with selection
-        let legendItems = vis.legend
-            .selectAll(".legend-box")
-            .data(vis.selection);
+        vis.updateLegend()
+    }
 
-        // Enter selection
-        legendItems
+    updateLegend(){
+        let vis = this;
+        // Get the selected countries
+        const selectedCountries = Array.from(vis.selection);
+
+        // Remove existing legend items
+        vis.svg.selectAll(".legend-item").remove();
+
+        // Create legend items for each selected country
+        const legendItems = vis.svg.selectAll(".legend-item")
+            .data(selectedCountries)
             .enter()
-            .append("rect")
-            .attr("class", "legend-box")
-            .attr("width", 18)
-            .attr("height", 18)
-            .attr("x", 10)
-            .attr("y", (d, i) => 10 + i * 20)
-            .attr("fill", (d) => {
-                const color = getColor(d, countryColorArray);
-                console.log(color);
-                return color;
-            })
-            .attr("fill-opacity", 1);
+            .append("g")
+            .attr("class", "legend-item")
+            .attr("transform", (d, i) => `translate(${vis.width * 0.25}, ${(i * 20) + vis.height*0.1})`); // Adjust the spacing as needed
 
-        // Exit selection
-        legendItems.exit().remove();
+        // Add colored rectangles to represent countries in the legend
+        legendItems.append("rect")
+            .attr("width", 10)
+            .attr("height", 10)
+            .attr("fill", country => getColor(country, countryColorArray));
 
+        // Add country labels to the legend
+        legendItems.append("text")
+            .attr("x", 15) // Adjust the position as needed
+            .attr("y", 8)  // Adjust the position as needed
+            .text(country => country);
 
+        // Adjust the legend position based on the size of the spider chart
+        const legendWidth = 100; // Adjust the width as needed
+        const legendHeight = selectedCountries.length * 20; // Adjust the height based on the number of items
+        const legendX = vis.width - vis.margin.right - legendWidth;
+        const legendY = vis.margin.top;
 
     }
 
@@ -318,8 +383,17 @@ class SpiderVis {
         vis.wrangleData()
     }
 
-}
+    // clear all area paths upon clear button pressed
+    emptyAll(selection){
+        let vis = this;
+        if(selection === 1){
+            vis.area.remove().exit()
+            vis.svg.selectAll(".legend-item").remove();
+        }
+    }
 
+}
+// get color for country
 function getColor(country_name, countryColorArray) {
     const colorObject = countryColorArray.find(entry => entry.hasOwnProperty(country_name));
     return colorObject ? colorObject[country_name] : "defaultColor";

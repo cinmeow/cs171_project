@@ -166,7 +166,9 @@ class SelectVis {
 
         // Clear the selected countries
         spiderSelect.clear();
-        console.log(spiderSelect)
+        if(spiderSelect.size === 0){
+            addTo_spiderSelect("empty")
+        }
         // Reset the appearance of all circles
         vis.circles.attr("stroke", "black")
             .attr("stroke-width", 1)

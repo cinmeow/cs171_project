@@ -306,7 +306,6 @@ class MapVis {
 
 
 
-
     }
     handleCountryClick(countryName) {
         let vis = this;

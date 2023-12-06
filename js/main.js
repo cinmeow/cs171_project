@@ -72,10 +72,10 @@ Promise.all(promises)
 // initMainPage
 function initMainPage(dataArray) {
     // check if all data carried over
-    console.log("travel data", dataArray[0]);
-    console.log("michelin data", dataArray[1]);
-    console.log("geo data", dataArray[2]);
-    console.log("tourism data", dataArray[3]);
+    // console.log("travel data", dataArray[0]);
+    // console.log("michelin data", dataArray[1]);
+    // console.log("geo data", dataArray[2]);
+    // console.log("tourism data", dataArray[3]);
 
     // create Set with all unique names from Michelin Guide
     dataArray[1].forEach((d) => {
@@ -159,7 +159,11 @@ function handleSelectedCountries(selectedCountries) {
 
 // Connect selectVis to spider chart
 function addTo_spiderSelect(selectedCountry){
-    if(spiderSelect.has(selectedCountry)){
+    // if clear button pressed, then selectedCouontry == empty
+    if(selectedCountry === "empty"){
+        // call new function
+        spiderChart.emptyAll(1);
+    }else if(spiderSelect.has(selectedCountry)){
         spiderSelect.delete(selectedCountry);
     }else{
         spiderSelect.add(selectedCountry);
