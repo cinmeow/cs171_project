@@ -156,9 +156,21 @@ function handleSelectedCountries(selectedCountries) {
 
     // Additional handling for selected countries
     //circularVis.wrangleData()
-    spiderChart.selectedCountries(selectedCountries);
     bubbleChart.createSelector();
 }
 console.log("meow", michelinCountry)
 
 
+let spiderSelect = new Set();
+function addTo_spiderSelect(selectedCountry){
+    console.log("Spider Select", selectedCountry);
+    if(spiderSelect.has(selectedCountry)){
+        console.log("remove", selectedCountry);
+        spiderSelect.delete(selectedCountry);
+    }else{
+        console.log("add", selectedCountry);
+        spiderSelect.add(selectedCountry);
+    }
+    spiderChart.selectedCountries(spiderSelect);
+    console.log(spiderSelect)
+}

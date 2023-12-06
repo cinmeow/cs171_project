@@ -1,4 +1,5 @@
 // selectVis.js
+
 class SelectVis {
     constructor(parentElement, countries) {
         this.parentElement = parentElement;
@@ -16,6 +17,8 @@ class SelectVis {
             .style("border-radius", "5px")
             .style("text-align", "left");
 
+        // choose how many select want to select
+        this.num_selection = 8
         this.initVis();
     }
 
@@ -77,7 +80,41 @@ class SelectVis {
             .attr("fill", d => `url(#flag-${d.name})`)
             .attr("stroke", "black")
             .attr("stroke-width", 1)
-            .on("click", function(event, d) { vis.selectCountry(event, d); })
+            .on("click",
+                function(event, d) {
+                    // create if-else statement for selecting # of countries
+                    // if > threshold, then you can only remove selections, but less can continue to add until threshold
+                    if(spiderSelect.size > (vis.num_selection-1)){
+                        // if the global variable spiderSelect has the country name, then remove, else "too many selections"
+                        if(spiderSelect.has(d.name)){
+                            console.log("unclick", d.name);
+                            d3.select(event.currentTarget)
+                                .attr("stroke", "black")
+                                .attr("stroke-width", 1);
+                            addTo_spiderSelect(d.name)
+                        }else{
+                            console.log("Too many selections")
+                        }
+                    }else{
+                        // if threshold has not been met, and name of country is in spiderSelect, then clicking it again
+                        // will turn the country borders back to black (unselected)
+                        if(spiderSelect.has(d.name)){
+                            console.log("unclick", d.name);
+                            d3.select(event.currentTarget)
+                                .attr("stroke", "black")
+                                .attr("stroke-width", 1);
+                        }else{
+                            // if name of country is not in spiderSelect, then the flag will be highlighted (pink)
+                            console.log("click", d.name);
+                            d3.select(event.currentTarget)
+                                .attr("stroke", "pink")
+                                .attr("stroke-width", 5);
+                        };
+                        // if threshold has not been met, clicking country that is already in set will remove the country from set
+                        // clicking country that is not in set will add country into set
+                        addTo_spiderSelect(d.name);
+                    };
+            })
             .on("mouseover", function(event, d) {
                 vis.tooltip.transition().duration(200).style("opacity", 1);
                 vis.tooltip.html(d.name)
@@ -94,28 +131,14 @@ class SelectVis {
 
     }
 
-    selectCountry(event, d) {
-        let vis = this;
-
-         if (vis.selectedCountries.size < 5) {
-            vis.selectedCountries.add(d.name);
-            d3.select(event.currentTarget)
-                .attr("stroke", "pink")
-                .attr("stroke-width", 5);
-        }
-    }
-
-    getSelectedCountries() {
-        let vis = this;
-        // Return an array of names of the selected countries
-        return Array.from(vis.selectedCountries);
-    }
-
     submitSelection() {
         let vis = this;
 
+        // set vis.selectedCountries to global variable spiderSelect
+        vis.selectedCountries = spiderSelect
 
-        if (vis.selectedCountries.size === 5) {
+
+        if (vis.selectedCountries.size <= vis.num_selection) {
             vis.circles.each(function(d) {
                 let flag = d3.select(this);
                 if (vis.selectedCountries.has(d.name)) {
@@ -131,19 +154,19 @@ class SelectVis {
             });
 
             // Handle the selected countries (e.g., trigger an update in another component)
-            handleSelectedCountries(vis.getSelectedCountries());
+            handleSelectedCountries(Array.from(vis.selectedCountries));
         } else {
             // Optionally, you can provide feedback to the user (e.g., alert or message on the page)
-            alert("Please select exactly 5 countries before submitting.");
+            alert(`Please select up to ${vis.num_selection} countries before submitting.`);
         }
     }
-
+    //
     clearSelection() {
         let vis = this;
 
         // Clear the selected countries
-        vis.selectedCountries.clear();
-
+        spiderSelect.clear();
+        console.log(spiderSelect)
         // Reset the appearance of all circles
         vis.circles.attr("stroke", "black")
             .attr("stroke-width", 1)

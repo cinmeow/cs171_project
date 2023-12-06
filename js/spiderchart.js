@@ -9,6 +9,7 @@ class SpiderVis {
         this.features = ["Arrivals", "Accommodations", "Expenditures", "Business", "Personal"];
         this.currentYear = 2019;
         console.log("year NOW", this.currentYear)
+        this.n = spiderSelect.size
 
         this.initVis()
     }
@@ -25,12 +26,14 @@ class SpiderVis {
             .append("svg")
             .attr("width", vis.width)
             .attr("height", vis.height);
+        console.log("width svg", vis.width)
 
         vis.radialScale = d3.scaleLinear()
             .domain([0, 5])
-            .range([0, vis.width-400])
+            .range([0, vis.width-(0.60 * vis.width)])
 
-        vis.ticks = [1, 2, 3, 4, 5];
+        vis.ticks = Array.from({length: vis.n}, (_, index) => index + 1);
+        console.log("ticks check", vis.ticks)
 
         vis.tickGroup = vis.svg.append("g")
             .attr("transform", `translate(${vis.width/15}, ${vis.height/15})`);
@@ -235,12 +238,12 @@ class SpiderVis {
         let vis = this;
 
         // attach selection to a this. variable so that it can be accessed throughout the class construction
-        vis.selection = new Set(selection);
+        vis.selection = spiderSelect
+        vis.n = spiderSelect.size
 
         // call wrangle data to pass the data on
         vis.wrangleData()
     }
-
 
 }
 
