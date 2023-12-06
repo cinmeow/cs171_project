@@ -18,7 +18,7 @@ class SelectVis {
             .style("text-align", "left");
 
         // choose how many select want to select
-        this.num_selection = 8
+        this.num_selection = 5
         this.initVis();
     }
 

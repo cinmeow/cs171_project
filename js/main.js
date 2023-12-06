@@ -3,6 +3,8 @@ let geoDataURL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"
 let tourismDataURL = "data/tourism_worldbank1.csv"; // Replace with the actual path to your CSV file
 // initiate global variables
 let michelinCountry = new Set()
+let spiderSelect = new Set();
+let countryColorArray = []
 let mapVis, lineVis, lineVis2, selectVis, barchart, barchart2, travelPurpose, bubbleChart;
 let parseYear = d3.timeParse("%Y");
 
@@ -104,14 +106,8 @@ function initMainPage(dataArray) {
     lineVis2 = new LineVis("chart1", lineData2, 'expenditures');
     selectVis = new SelectVis("#flag-container", countries);
 
-
-    // TRAVEL PURPOSE + MICHELIN GUIDE VISUALIZATION
-    // travelPurpose = new TravelPurposeVis("purpose-vis", dataArray[0], dataArray[1]);
-
     // filter out data with Michelin countries
-    // console.log("michelin unique names", michelinCountry);
     let michelinTravelData = dataArray[0].filter((d) => michelinCountry.has(d.Country));
-    // console.log("michelin travel data", michelinTravelData);
 
     d3.select("#data-selection").on("change", function(event) {
         // Get the current value of the dropdown
@@ -140,10 +136,13 @@ function initMainPage(dataArray) {
     });
 
     // Initialize spider chart
-    spiderChart = new SpiderVis("spider-chart", dataArray[0], dataArray[3])
+    spiderChart = new SpiderVis("spider-chart", dataArray[0], dataArray[1], dataArray[3])
 
     // Initialize bubble chart
     bubbleChart = new BubbleChart("michelin_bubble", dataArray[1]);
+
+    // create colors per michelin country (coded)
+    countryColorAssignment(michelinCountry);
 
 }
 
@@ -155,22 +154,30 @@ function handleSelectedCountries(selectedCountries) {
     globalSelected = selectedCountries;
 
     // Additional handling for selected countries
-    //circularVis.wrangleData()
     bubbleChart.createSelector();
 }
-console.log("meow", michelinCountry)
 
-
-let spiderSelect = new Set();
+// Connect selectVis to spider chart
 function addTo_spiderSelect(selectedCountry){
-    console.log("Spider Select", selectedCountry);
     if(spiderSelect.has(selectedCountry)){
-        console.log("remove", selectedCountry);
         spiderSelect.delete(selectedCountry);
     }else{
-        console.log("add", selectedCountry);
         spiderSelect.add(selectedCountry);
     }
     spiderChart.selectedCountries(spiderSelect);
-    console.log(spiderSelect)
 }
+
+// function to assign color to each country directly
+function countryColorAssignment(michelin_data){
+    // variables
+    const numColors = michelin_data.size
+    const michelinCountryName = Array.from(michelin_data).sort()
+
+    // Generate random colors
+    for (let i = 0; i < numColors; i++) {
+        const color = "#" + Math.floor(Math.random() * 16777215).toString(16);
+        const country = michelinCountryName[i];
+        countryColorArray.push({[country]: color});
+    }
+}
+
