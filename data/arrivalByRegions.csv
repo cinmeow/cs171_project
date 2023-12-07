@@ -1,0 +1,2285 @@
+country,Arrival_Regions,year,numArrivals
+Andorra,Europe,2012,"2,202"
+Andorra,Europe,2013,"2,283"
+Andorra,Europe,2014,"2,330"
+Andorra,Europe,2015,"2,597"
+Andorra,Europe,2016,"2,741"
+Andorra,Europe,2017,"2,922"
+Andorra,Europe,2018,"2,959"
+Andorra,Europe,2019,"3,006"
+Andorra,Other not classified,2012,36
+Andorra,Other not classified,2013,45
+Andorra,Other not classified,2014,33
+Andorra,Other not classified,2015,67
+Andorra,Other not classified,2016,78
+Andorra,Other not classified,2017,81
+Andorra,Other not classified,2018,83
+Andorra,Other not classified,2019,84
+Austria,Africa,2010,45
+Austria,Africa,2011,52
+Austria,Africa,2012,58
+Austria,Africa,2013,61
+Austria,Africa,2014,63
+Austria,Africa,2015,72
+Austria,Africa,2016,78
+Austria,Africa,2017,77
+Austria,Africa,2018,82
+Austria,Africa,2019,80
+Austria,Americas,2010,708
+Austria,Americas,2011,743
+Austria,Americas,2012,806
+Austria,Americas,2013,860
+Austria,Americas,2014,919
+Austria,Americas,2015,"1,020"
+Austria,Americas,2016,"1,013"
+Austria,Americas,2017,"1,085"
+Austria,Americas,2018,"1,158"
+Austria,Americas,2019,"1,209"
+Austria,East Asia and the Pacific,2010,741
+Austria,East Asia and the Pacific,2011,915
+Austria,East Asia and the Pacific,2012,"1,105"
+Austria,East Asia and the Pacific,2013,"1,227"
+Austria,East Asia and the Pacific,2014,"1,381"
+Austria,East Asia and the Pacific,2015,"1,740"
+Austria,East Asia and the Pacific,2016,"1,733"
+Austria,East Asia and the Pacific,2017,"2,047"
+Austria,East Asia and the Pacific,2018,"2,188"
+Austria,East Asia and the Pacific,2019,"2,314"
+Austria,Europe,2010,"20,043"
+Austria,Europe,2011,"20,819"
+Austria,Europe,2012,"21,599"
+Austria,Europe,2013,"22,043"
+Austria,Europe,2014,"22,242"
+Austria,Europe,2015,"23,051"
+Austria,Europe,2016,"24,427"
+Austria,Europe,2017,"25,362"
+Austria,Europe,2018,"26,489"
+Austria,Europe,2019,"27,356"
+Austria,Middle East,2010,120
+Austria,Middle East,2011,160
+Austria,Middle East,2012,218
+Austria,Middle East,2013,268
+Austria,Middle East,2014,303
+Austria,Middle East,2015,419
+Austria,Middle East,2016,382
+Austria,Middle East,2017,384
+Austria,Middle East,2018,393
+Austria,Middle East,2019,384
+Austria,South Asia,2010,60
+Austria,South Asia,2011,84
+Austria,South Asia,2012,89
+Austria,South Asia,2013,88
+Austria,South Asia,2014,84
+Austria,South Asia,2015,118
+Austria,South Asia,2016,147
+Austria,South Asia,2017,178
+Austria,South Asia,2018,193
+Austria,South Asia,2019,193
+Austria,Other not classified,2010,287
+Austria,Other not classified,2011,239
+Austria,Other not classified,2012,276
+Austria,Other not classified,2013,265
+Austria,Other not classified,2014,300
+Austria,Other not classified,2015,307
+Austria,Other not classified,2016,341
+Austria,Other not classified,2017,328
+Austria,Other not classified,2018,313
+Austria,Other not classified,2019,347
+Belgium,Africa,2010,61
+Belgium,Africa,2011,62
+Belgium,Africa,2012,61
+Belgium,Africa,2013,64
+Belgium,Africa,2014,66
+Belgium,Africa,2015,65
+Belgium,Africa,2016,64
+Belgium,Africa,2017,70
+Belgium,Africa,2018,75
+Belgium,Africa,2019,75
+Belgium,Americas,2010,429
+Belgium,Americas,2011,489
+Belgium,Americas,2012,505
+Belgium,Americas,2013,517
+Belgium,Americas,2014,566
+Belgium,Americas,2015,603
+Belgium,Americas,2016,493
+Belgium,Americas,2017,621
+Belgium,Americas,2018,704
+Belgium,Americas,2019,742
+Belgium,East Asia and the Pacific,2010,256
+Belgium,East Asia and the Pacific,2011,307
+Belgium,East Asia and the Pacific,2012,367
+Belgium,East Asia and the Pacific,2013,398
+Belgium,East Asia and the Pacific,2014,437
+Belgium,East Asia and the Pacific,2015,498
+Belgium,East Asia and the Pacific,2016,343
+Belgium,East Asia and the Pacific,2017,429
+Belgium,East Asia and the Pacific,2018,487
+Belgium,East Asia and the Pacific,2019,504
+Belgium,Europe,2010,"6,310"
+Belgium,Europe,2011,"6,523"
+Belgium,Europe,2012,"6,508"
+Belgium,Europe,2013,"6,560"
+Belgium,Europe,2014,"6,658"
+Belgium,Europe,2015,"7,018"
+Belgium,Europe,2016,"6,400"
+Belgium,Europe,2017,"6,978"
+Belgium,Europe,2018,"7,527"
+Belgium,Europe,2019,"7,677"
+Belgium,Middle East,2010,26
+Belgium,Middle East,2011,31
+Belgium,Middle East,2012,36
+Belgium,Middle East,2013,40
+Belgium,Middle East,2014,48
+Belgium,Middle East,2015,59
+Belgium,Middle East,2016,45
+Belgium,Middle East,2017,57
+Belgium,Middle East,2018,73
+Belgium,Middle East,2019,74
+Belgium,South Asia,2010,52
+Belgium,South Asia,2011,55
+Belgium,South Asia,2012,53
+Belgium,South Asia,2013,56
+Belgium,South Asia,2014,67
+Belgium,South Asia,2015,78
+Belgium,South Asia,2016,62
+Belgium,South Asia,2017,67
+Belgium,South Asia,2018,77
+Belgium,South Asia,2019,70
+Belgium,Other not classified,2010,52
+Belgium,Other not classified,2011,27
+Belgium,Other not classified,2012,31
+Belgium,Other not classified,2013,49
+Belgium,Other not classified,2014,45
+Belgium,Other not classified,2015,34
+Belgium,Other not classified,2016,74
+Belgium,Other not classified,2017,163
+Belgium,Other not classified,2018,177
+Belgium,Other not classified,2019,201
+Brazil,Africa,2010,84
+Brazil,Africa,2011,86
+Brazil,Africa,2012,92
+Brazil,Africa,2013,95
+Brazil,Africa,2014,128
+Brazil,Africa,2015,108
+Brazil,Africa,2016,78
+Brazil,Africa,2017,68
+Brazil,Africa,2018,63
+Brazil,Africa,2019,68
+Brazil,Americas,2010,"3,196"
+Brazil,Americas,2011,"3,402"
+Brazil,Americas,2012,"3,582"
+Brazil,Americas,2013,"3,726"
+Brazil,Americas,2014,"4,041"
+Brazil,Americas,2015,"4,209"
+Brazil,Americas,2016,"4,488"
+Brazil,Americas,2017,"4,768"
+Brazil,Americas,2018,"4,786"
+Brazil,Americas,2019,"4,392"
+Brazil,East Asia and the Pacific,2010,210
+Brazil,East Asia and the Pacific,2011,261
+Brazil,East Asia and the Pacific,2012,294
+Brazil,East Asia and the Pacific,2013,299
+Brazil,East Asia and the Pacific,2014,344
+Brazil,East Asia and the Pacific,2015,279
+Brazil,East Asia and the Pacific,2016,299
+Brazil,East Asia and the Pacific,2017,242
+Brazil,East Asia and the Pacific,2018,250
+Brazil,East Asia and the Pacific,2019,296
+Brazil,Europe,2010,"1,652"
+Brazil,Europe,2011,"1,663"
+Brazil,Europe,2012,"1,686"
+Brazil,Europe,2013,"1,670"
+Brazil,Europe,2014,"1,891"
+Brazil,Europe,2015,"1,667"
+Brazil,Europe,2016,"1,642"
+Brazil,Europe,2017,"1,481"
+Brazil,Europe,2018,"1,494"
+Brazil,Europe,2019,"1,570"
+Brazil,Middle East,2015,12
+Brazil,Middle East,2016,10
+Brazil,Middle East,2017,8
+Brazil,Middle East,2018,7
+Brazil,Middle East,2019,8
+Brazil,South Asia,2010,19
+Brazil,South Asia,2011,21
+Brazil,South Asia,2012,22
+Brazil,South Asia,2013,23
+Brazil,South Asia,2014,26
+Brazil,South Asia,2015,31
+Brazil,South Asia,2016,30
+Brazil,South Asia,2017,22
+Brazil,South Asia,2018,21
+Brazil,South Asia,2019,20
+Canada,Africa,2010,81
+Canada,Africa,2011,86
+Canada,Africa,2012,92
+Canada,Africa,2013,98
+Canada,Africa,2014,104
+Canada,Africa,2015,111
+Canada,Africa,2016,124
+Canada,Africa,2017,133
+Canada,Africa,2018,143
+Canada,Africa,2019,166
+Canada,Americas,2010,"12,336"
+Canada,Americas,2011,"12,081"
+Canada,Americas,2012,"12,395"
+Canada,Americas,2013,"12,002"
+Canada,Americas,2014,"12,082"
+Canada,Americas,2015,"13,290"
+Canada,Americas,2016,"14,588"
+Canada,Americas,2017,"15,150"
+Canada,Americas,2018,"15,405"
+Canada,Americas,2019,"16,085"
+Canada,East Asia and the Pacific,2010,"1,170"
+Canada,East Asia and the Pacific,2011,"1,223"
+Canada,East Asia and the Pacific,2012,"1,286"
+Canada,East Asia and the Pacific,2013,"1,389"
+Canada,East Asia and the Pacific,2014,"1,590"
+Canada,East Asia and the Pacific,2015,"1,691"
+Canada,East Asia and the Pacific,2016,"1,994"
+Canada,East Asia and the Pacific,2017,"2,183"
+Canada,East Asia and the Pacific,2018,"2,149"
+Canada,East Asia and the Pacific,2019,"2,176"
+Canada,Europe,2010,"2,376"
+Canada,Europe,2011,"2,356"
+Canada,Europe,2012,"2,299"
+Canada,Europe,2013,"2,286"
+Canada,Europe,2014,"2,437"
+Canada,Europe,2015,"2,541"
+Canada,Europe,2016,"2,876"
+Canada,Europe,2017,"2,975"
+Canada,Europe,2018,"2,944"
+Canada,Europe,2019,"3,150"
+Canada,Middle East,2010,84
+Canada,Middle East,2011,85
+Canada,Middle East,2012,86
+Canada,Middle East,2013,91
+Canada,Middle East,2014,103
+Canada,Middle East,2015,107
+Canada,Middle East,2016,116
+Canada,Middle East,2017,116
+Canada,Middle East,2018,110
+Canada,Middle East,2019,121
+Canada,South Asia,2010,172
+Canada,South Asia,2011,185
+Canada,South Asia,2012,187
+Canada,South Asia,2013,192
+Canada,South Asia,2014,221
+Canada,South Asia,2015,239
+Canada,South Asia,2016,274
+Canada,South Asia,2017,327
+Canada,South Asia,2018,381
+Canada,South Asia,2019,447
+Canada,Other not classified,2018,1
+Canada,Other not classified,2019,1
+China,Africa,2010,391
+China,Africa,2011,424
+China,Africa,2012,440
+China,Africa,2013,461
+China,Africa,2014,497
+China,Africa,2015,488
+China,Africa,2016,502
+China,Africa,2017,542
+China,Africa,2018,585
+China,Africa,2019,599
+China,Americas,2010,"2,995"
+China,Americas,2011,"3,201"
+China,Americas,2012,"3,179"
+China,Americas,2013,"3,124"
+China,Americas,2014,"3,107"
+China,Americas,2015,"3,115"
+China,Americas,2016,"3,379"
+China,Americas,2017,"3,540"
+China,Americas,2018,"3,787"
+China,Americas,2019,"3,645"
+China,East Asia and the Pacific,2010,"122,889"
+China,East Asia and the Pacific,2011,"123,828"
+China,East Asia and the Pacific,2012,"120,802"
+China,East Asia and the Pacific,2013,"117,744"
+China,East Asia and the Pacific,2014,"117,276"
+China,East Asia and the Pacific,2015,"123,308"
+China,East Asia and the Pacific,2016,"130,357"
+China,East Asia and the Pacific,2017,"141,127"
+China,East Asia and the Pacific,2018,"146,013"
+China,East Asia and the Pacific,2019,"149,698"
+China,Europe,2010,"6,366"
+China,Europe,2011,"6,772"
+China,Europe,2012,"6,770"
+China,Europe,2013,"6,422"
+China,Europe,2014,"6,209"
+China,Europe,2015,"5,475"
+China,Europe,2016,"5,988"
+China,Europe,2017,"6,402"
+China,Europe,2018,"6,531"
+China,Europe,2019,"6,854"
+China,Middle East,2010,247
+China,Middle East,2011,239
+China,Middle East,2012,264
+China,Middle East,2013,269
+China,Middle East,2014,278
+China,Middle East,2015,267
+China,Middle East,2016,253
+China,Middle East,2017,255
+China,Middle East,2018,252
+China,Middle East,2019,258
+China,South Asia,2010,871
+China,South Asia,2011,957
+China,South Asia,2012,948
+China,South Asia,2013,"1,055"
+China,South Asia,2014,"1,125"
+China,South Asia,2015,"1,164"
+China,South Asia,2016,"1,296"
+China,South Asia,2017,"1,391"
+China,South Asia,2018,"1,280"
+China,South Asia,2019,"1,481"
+China,Other not classified,2010,2
+China,Other not classified,2011,2
+China,Other not classified,2012,2
+China,Other not classified,2013,2
+China,Other not classified,2014,7
+China,Other not classified,2015,3
+China,Other not classified,2017,3
+China,Other not classified,2018,158
+China,Other not classified,2019,2
+Croatia,Africa,2010,11
+Croatia,Africa,2011,13
+Croatia,Africa,2012,17
+Croatia,Africa,2013,20
+Croatia,Africa,2014,23
+Croatia,Africa,2015,25
+Croatia,Africa,2016,32
+Croatia,Africa,2017,36
+Croatia,Africa,2018,40
+Croatia,Africa,2019,43
+Croatia,Americas,2010,208
+Croatia,Americas,2011,251
+Croatia,Americas,2012,292
+Croatia,Americas,2013,381
+Croatia,Americas,2014,435
+Croatia,Americas,2015,531
+Croatia,Americas,2016,574
+Croatia,Americas,2017,747
+Croatia,Americas,2018,915
+Croatia,Americas,2019,"1,026"
+Croatia,East Asia and the Pacific,2010,299
+Croatia,East Asia and the Pacific,2011,360
+Croatia,East Asia and the Pacific,2012,469
+Croatia,East Asia and the Pacific,2013,545
+Croatia,East Asia and the Pacific,2014,823
+Croatia,East Asia and the Pacific,2015,979
+Croatia,East Asia and the Pacific,2016,"1,042"
+Croatia,East Asia and the Pacific,2017,"1,356"
+Croatia,East Asia and the Pacific,2018,"1,499"
+Croatia,East Asia and the Pacific,2019,"1,599"
+Croatia,Europe,2010,"8,593"
+Croatia,Europe,2011,"9,303"
+Croatia,Europe,2012,"9,591"
+Croatia,Europe,2013,"10,003"
+Croatia,Europe,2014,"10,342"
+Croatia,Europe,2015,"11,149"
+Croatia,Europe,2016,"12,160"
+Croatia,Europe,2017,"13,454"
+Croatia,Europe,2018,"14,192"
+Croatia,Europe,2019,"14,686"
+Czechia,Africa,2010,26
+Czechia,Africa,2011,30
+Czechia,Africa,2012,37
+Czechia,Africa,2013,39
+Czechia,Africa,2014,44
+Czechia,Africa,2015,44
+Czechia,Africa,2016,45
+Czechia,Africa,2017,48
+Czechia,Africa,2018,46
+Czechia,Africa,2019,50
+Czechia,Americas,2010,460
+Czechia,Americas,2011,480
+Czechia,Americas,2012,613
+Czechia,Americas,2013,650
+Czechia,Americas,2014,690
+Czechia,Americas,2015,770
+Czechia,Americas,2016,790
+Czechia,Americas,2017,842
+Czechia,Americas,2018,842
+Czechia,Americas,2019,880
+Czechia,East Asia and the Pacific,2010,587
+Czechia,East Asia and the Pacific,2011,674
+Czechia,East Asia and the Pacific,2012,781
+Czechia,East Asia and the Pacific,2013,837
+Czechia,East Asia and the Pacific,2014,934
+Czechia,East Asia and the Pacific,2015,"1,118"
+Czechia,East Asia and the Pacific,2016,"1,267"
+Czechia,East Asia and the Pacific,2017,"1,552"
+Czechia,East Asia and the Pacific,2018,"1,713"
+Czechia,East Asia and the Pacific,2019,"1,744"
+Czechia,Europe,2010,"5,261"
+Czechia,Europe,2011,"5,531"
+Czechia,Europe,2012,"6,190"
+Czechia,Europe,2013,"6,297"
+Czechia,Europe,2014,"6,391"
+Czechia,Europe,2015,"6,687"
+Czechia,Europe,2016,"7,109"
+Czechia,Europe,2017,"7,581"
+Czechia,Europe,2018,"7,853"
+Czechia,Europe,2019,"8,060"
+Czechia,Middle East,2015,32
+Czechia,Middle East,2016,42
+Czechia,Middle East,2017,51
+Czechia,Middle East,2018,62
+Czechia,Middle East,2019,58
+Czechia,South Asia,2012,25
+Czechia,South Asia,2013,29
+Czechia,South Asia,2014,38
+Czechia,South Asia,2015,56
+Czechia,South Asia,2016,68
+Czechia,South Asia,2017,86
+Czechia,South Asia,2018,96
+Czechia,South Asia,2019,98
+Denmark,Africa,2019,122
+Denmark,Americas,2010,646
+Denmark,Americas,2011,684
+Denmark,Americas,2012,589
+Denmark,Americas,2013,599
+Denmark,Americas,2014,672
+Denmark,Americas,2015,689
+Denmark,Americas,2016,693
+Denmark,Americas,2017,956
+Denmark,Americas,2018,"1,002"
+Denmark,Americas,2019,"1,468"
+Denmark,East Asia and the Pacific,2010,190
+Denmark,East Asia and the Pacific,2011,166
+Denmark,East Asia and the Pacific,2012,231
+Denmark,East Asia and the Pacific,2013,249
+Denmark,East Asia and the Pacific,2014,278
+Denmark,East Asia and the Pacific,2015,292
+Denmark,East Asia and the Pacific,2016,319
+Denmark,East Asia and the Pacific,2017,467
+Denmark,East Asia and the Pacific,2018,462
+Denmark,East Asia and the Pacific,2019,858
+Denmark,Europe,2010,"8,128"
+Denmark,Europe,2011,"7,174"
+Denmark,Europe,2012,"7,250"
+Denmark,Europe,2013,"7,292"
+Denmark,Europe,2014,"8,834"
+Denmark,Europe,2015,"9,023"
+Denmark,Europe,2016,"9,360"
+Denmark,Europe,2017,"10,382"
+Denmark,Europe,2018,"10,633"
+Denmark,Europe,2019,"11,837"
+Denmark,South Asia,2019,75
+Denmark,Other not classified,2010,461
+Denmark,Other not classified,2011,447
+Denmark,Other not classified,2012,373
+Denmark,Other not classified,2013,418
+Denmark,Other not classified,2014,483
+Denmark,Other not classified,2015,420
+Denmark,Other not classified,2016,409
+Denmark,Other not classified,2017,622
+Denmark,Other not classified,2018,651
+Denmark,Other not classified,2019,365
+Estonia,Africa,2010,1
+Estonia,Africa,2011,2
+Estonia,Africa,2012,2
+Estonia,Africa,2013,2
+Estonia,Africa,2014,2
+Estonia,Africa,2015,2
+Estonia,Africa,2016,2
+Estonia,Africa,2017,3
+Estonia,Africa,2018,3
+Estonia,Africa,2019,4
+Estonia,Americas,2010,27
+Estonia,Americas,2011,32
+Estonia,Americas,2012,40
+Estonia,Americas,2013,37
+Estonia,Americas,2014,44
+Estonia,Americas,2015,56
+Estonia,Americas,2016,50
+Estonia,Americas,2017,52
+Estonia,Americas,2018,62
+Estonia,Americas,2019,67
+Estonia,East Asia and the Pacific,2010,22
+Estonia,East Asia and the Pacific,2011,29
+Estonia,East Asia and the Pacific,2012,36
+Estonia,East Asia and the Pacific,2013,44
+Estonia,East Asia and the Pacific,2014,59
+Estonia,East Asia and the Pacific,2015,70
+Estonia,East Asia and the Pacific,2016,82
+Estonia,East Asia and the Pacific,2017,96
+Estonia,East Asia and the Pacific,2018,100
+Estonia,East Asia and the Pacific,2019,114
+Estonia,Europe,2010,"1,502"
+Estonia,Europe,2011,"1,731"
+Estonia,Europe,2012,"1,782"
+Estonia,Europe,2013,"1,850"
+Estonia,Europe,2014,"1,872"
+Estonia,Europe,2015,"1,780"
+Estonia,Europe,2016,"1,901"
+Estonia,Europe,2017,"1,972"
+Estonia,Europe,2018,"1,934"
+Estonia,Europe,2019,"2,022"
+Estonia,Other not classified,2010,12
+Estonia,Other not classified,2011,14
+Estonia,Other not classified,2012,14
+Estonia,Other not classified,2013,8
+Estonia,Other not classified,2014,6
+Estonia,Other not classified,2015,21
+Estonia,Other not classified,2016,21
+Estonia,Other not classified,2017,34
+Estonia,Other not classified,2018,43
+Estonia,Other not classified,2019,47
+Finland,Africa,2010,14
+Finland,Africa,2011,11
+Finland,Africa,2012,16
+Finland,Africa,2013,7
+Finland,Africa,2014,8
+Finland,Africa,2015,9
+Finland,Africa,2016,9
+Finland,Africa,2017,11
+Finland,Africa,2018,12
+Finland,Africa,2019,12
+Finland,Americas,2010,150
+Finland,Americas,2011,181
+Finland,Americas,2012,223
+Finland,Americas,2013,121
+Finland,Americas,2014,128
+Finland,Americas,2015,135
+Finland,Americas,2016,149
+Finland,Americas,2017,174
+Finland,Americas,2018,190
+Finland,Americas,2019,196
+Finland,East Asia and the Pacific,2010,347
+Finland,East Asia and the Pacific,2011,427
+Finland,East Asia and the Pacific,2012,474
+Finland,East Asia and the Pacific,2013,273
+Finland,East Asia and the Pacific,2014,287
+Finland,East Asia and the Pacific,2015,349
+Finland,East Asia and the Pacific,2016,429
+Finland,East Asia and the Pacific,2017,533
+Finland,East Asia and the Pacific,2018,534
+Finland,East Asia and the Pacific,2019,578
+Finland,Europe,2010,"5,646"
+Finland,Europe,2011,"6,641"
+Finland,Europe,2012,"6,923"
+Finland,Europe,2013,"2,218"
+Finland,Europe,2014,"2,112"
+Finland,Europe,2015,"1,934"
+Finland,Europe,2016,"1,947"
+Finland,Europe,2017,"2,203"
+Finland,Europe,2018,"2,217"
+Finland,Europe,2019,"2,287"
+Finland,Middle East,2013,5
+Finland,Middle East,2014,6
+Finland,Middle East,2015,8
+Finland,Middle East,2016,9
+Finland,Middle East,2017,12
+Finland,Middle East,2018,15
+Finland,Middle East,2019,21
+Finland,South Asia,2010,25
+Finland,South Asia,2013,19
+Finland,South Asia,2014,19
+Finland,South Asia,2015,25
+Finland,South Asia,2016,29
+Finland,South Asia,2017,34
+Finland,South Asia,2018,38
+Finland,South Asia,2019,46
+Finland,Other not classified,2013,154
+Finland,Other not classified,2014,171
+Finland,Other not classified,2015,163
+Finland,Other not classified,2016,217
+Finland,Other not classified,2017,213
+Finland,Other not classified,2018,220
+Finland,Other not classified,2019,152
+France,Africa,2010,"1,877"
+France,Africa,2011,"2,311"
+France,Africa,2012,"2,276"
+France,Africa,2013,"2,350"
+France,Africa,2014,"2,483"
+France,Africa,2015,"2,774"
+France,Africa,2016,"2,927"
+France,Africa,2017,"2,799"
+France,Africa,2018,"2,920"
+France,Africa,2019,"3,249"
+France,Americas,2010,"5,380"
+France,Americas,2011,"6,339"
+France,Americas,2012,"6,133"
+France,Americas,2013,"6,225"
+France,Americas,2014,"6,620"
+France,Americas,2015,"7,091"
+France,Americas,2016,"8,131"
+France,Americas,2017,"8,632"
+France,Americas,2018,"8,956"
+France,Americas,2019,"8,269"
+France,East Asia and the Pacific,2010,"3,400"
+France,East Asia and the Pacific,2011,"3,905"
+France,East Asia and the Pacific,2012,"4,159"
+France,East Asia and the Pacific,2013,"4,661"
+France,East Asia and the Pacific,2014,"5,175"
+France,East Asia and the Pacific,2015,"6,198"
+France,East Asia and the Pacific,2016,"5,641"
+France,East Asia and the Pacific,2017,"5,683"
+France,East Asia and the Pacific,2018,"6,042"
+France,East Asia and the Pacific,2019,"5,283"
+France,Europe,2010,"65,040"
+France,Europe,2011,"67,123"
+France,Europe,2012,"68,554"
+France,Europe,2013,"69,388"
+France,Europe,2014,"68,323"
+France,Europe,2015,"67,037"
+France,Europe,2016,"64,728"
+France,Europe,2017,"68,293"
+France,Europe,2018,"69,955"
+France,Europe,2019,"72,767"
+France,Middle East,2010,950
+France,Middle East,2011,821
+France,Middle East,2012,859
+France,Middle East,2013,"1,011"
+France,Middle East,2014,"1,099"
+France,Middle East,2015,"1,352"
+France,Middle East,2016,"1,255"
+France,Middle East,2017,"1,351"
+France,Middle East,2018,"1,449"
+France,Middle East,2019,"1,347"
+Germany,Africa,2010,193
+Germany,Africa,2011,193
+Germany,Africa,2012,227
+Germany,Africa,2013,246
+Germany,Africa,2014,254
+Germany,Africa,2015,274
+Germany,Africa,2016,263
+Germany,Africa,2017,271
+Germany,Africa,2018,273
+Germany,Africa,2019,284
+Germany,Americas,2010,"2,883"
+Germany,Americas,2011,"2,914"
+Germany,Americas,2012,"3,155"
+Germany,Americas,2013,"3,192"
+Germany,Americas,2014,"3,272"
+Germany,Americas,2015,"3,487"
+Germany,Americas,2016,"3,509"
+Germany,Americas,2017,"3,890"
+Germany,Americas,2018,"4,085"
+Germany,Americas,2019,"4,142"
+Germany,East Asia and the Pacific,2010,"2,046"
+Germany,East Asia and the Pacific,2011,"2,297"
+Germany,East Asia and the Pacific,2012,"2,666"
+Germany,East Asia and the Pacific,2013,"2,805"
+Germany,East Asia and the Pacific,2014,"3,024"
+Germany,East Asia and the Pacific,2015,"3,556"
+Germany,East Asia and the Pacific,2016,"3,489"
+Germany,East Asia and the Pacific,2017,"3,889"
+Germany,East Asia and the Pacific,2018,"3,965"
+Germany,East Asia and the Pacific,2019,"3,963"
+Germany,Europe,2010,"20,610"
+Germany,Europe,2011,"21,861"
+Germany,Europe,2012,"23,121"
+Germany,Europe,2013,"23,899"
+Germany,Europe,2014,"24,915"
+Germany,Europe,2015,"25,951"
+Germany,Europe,2016,"26,568"
+Germany,Europe,2017,"27,635"
+Germany,Europe,2018,"28,681"
+Germany,Europe,2019,"29,489"
+Germany,Middle East,2010,336
+Germany,Middle East,2011,343
+Germany,Middle East,2012,449
+Germany,Middle East,2013,517
+Germany,Middle East,2014,587
+Germany,Middle East,2015,698
+Germany,Middle East,2016,673
+Germany,Middle East,2017,661
+Germany,Middle East,2018,636
+Germany,Middle East,2019,604
+Germany,South Asia,2010,142
+Germany,South Asia,2011,161
+Germany,South Asia,2012,172
+Germany,South Asia,2013,190
+Germany,South Asia,2014,194
+Germany,South Asia,2015,213
+Germany,South Asia,2016,231
+Germany,South Asia,2017,269
+Germany,South Asia,2018,290
+Germany,South Asia,2019,307
+Germany,Other not classified,2010,665
+Germany,Other not classified,2011,605
+Germany,Other not classified,2012,621
+Germany,Other not classified,2013,696
+Germany,Other not classified,2014,753
+Germany,Other not classified,2015,791
+Germany,Other not classified,2016,823
+Germany,Other not classified,2017,837
+Germany,Other not classified,2018,952
+Germany,Other not classified,2019,774
+Greece,Africa,2010,28
+Greece,Africa,2011,34
+Greece,Africa,2012,33
+Greece,Africa,2013,27
+Greece,Africa,2014,40
+Greece,Africa,2015,36
+Greece,Africa,2016,63
+Greece,Africa,2017,82
+Greece,Africa,2018,115
+Greece,Africa,2019,127
+Greece,Americas,2010,691
+Greece,Americas,2011,719
+Greece,Americas,2012,559
+Greece,Americas,2013,754
+Greece,Americas,2014,890
+Greece,Americas,2015,"1,095"
+Greece,Americas,2016,"1,100"
+Greece,Americas,2017,"1,272"
+Greece,Americas,2018,"1,681"
+Greece,Americas,2019,"1,818"
+Greece,East Asia and the Pacific,2010,199
+Greece,East Asia and the Pacific,2011,207
+Greece,East Asia and the Pacific,2012,216
+Greece,East Asia and the Pacific,2013,238
+Greece,East Asia and the Pacific,2014,365
+Greece,East Asia and the Pacific,2015,362
+Greece,East Asia and the Pacific,2016,738
+Greece,East Asia and the Pacific,2017,982
+Greece,East Asia and the Pacific,2018,"1,101"
+Greece,East Asia and the Pacific,2019,"1,196"
+Greece,Europe,2010,"14,034"
+Greece,Europe,2011,"15,430"
+Greece,Europe,2012,"14,661"
+Greece,Europe,2013,"16,822"
+Greece,Europe,2014,"20,651"
+Greece,Europe,2015,"21,985"
+Greece,Europe,2016,"22,898"
+Greece,Europe,2017,"24,859"
+Greece,Europe,2018,"27,226"
+Greece,Europe,2019,"28,207"
+Greece,Middle East,2010,45
+Greece,Middle East,2011,28
+Greece,Middle East,2012,36
+Greece,Middle East,2013,73
+Greece,Middle East,2014,86
+Greece,Middle East,2015,112
+Greece,South Asia,2010,9
+Greece,South Asia,2011,9
+Greece,South Asia,2012,13
+Greece,South Asia,2013,5
+Greece,South Asia,2014,1
+Greece,South Asia,2015,11
+Hong Kong,Africa,2010,204
+Hong Kong,Africa,2011,193
+Hong Kong,Africa,2012,173
+Hong Kong,Africa,2013,168
+Hong Kong,Africa,2014,166
+Hong Kong,Africa,2015,156
+Hong Kong,Africa,2016,144
+Hong Kong,Africa,2017,130
+Hong Kong,Africa,2018,128
+Hong Kong,Africa,2019,115
+Hong Kong,Americas,2010,"1,750"
+Hong Kong,Americas,2011,"1,821"
+Hong Kong,Americas,2012,"1,778"
+Hong Kong,Americas,2013,"1,666"
+Hong Kong,Americas,2014,"1,679"
+Hong Kong,Americas,2015,"1,728"
+Hong Kong,Americas,2016,"1,773"
+Hong Kong,Americas,2017,"1,782"
+Hong Kong,Americas,2018,"1,873"
+Hong Kong,Americas,2019,"1,601"
+Hong Kong,East Asia and the Pacific,2010,"31,548"
+Hong Kong,East Asia and the Pacific,2011,"37,378"
+Hong Kong,East Asia and the Pacific,2012,"44,165"
+Hong Kong,East Asia and the Pacific,2013,"49,915"
+Hong Kong,East Asia and the Pacific,2014,"56,393"
+Hong Kong,East Asia and the Pacific,2015,"54,847"
+Hong Kong,East Asia and the Pacific,2016,"52,146"
+Hong Kong,East Asia and the Pacific,2017,"54,071"
+Hong Kong,East Asia and the Pacific,2018,"60,632"
+Hong Kong,East Asia and the Pacific,2019,"51,967"
+Hong Kong,Europe,2010,"1,876"
+Hong Kong,Europe,2011,"1,913"
+Hong Kong,Europe,2012,"1,973"
+Hong Kong,Europe,2013,"1,999"
+Hong Kong,Europe,2014,"1,965"
+Hong Kong,Europe,2015,"1,927"
+Hong Kong,Europe,2016,"1,998"
+Hong Kong,Europe,2017,"2,004"
+Hong Kong,Europe,2018,"2,039"
+Hong Kong,Europe,2019,"1,817"
+Hong Kong,Middle East,2010,91
+Hong Kong,Middle East,2011,85
+Hong Kong,Middle East,2012,78
+Hong Kong,Middle East,2013,84
+Hong Kong,Middle East,2014,83
+Hong Kong,Middle East,2015,80
+Hong Kong,Middle East,2016,80
+Hong Kong,Middle East,2017,65
+Hong Kong,Middle East,2018,62
+Hong Kong,Middle East,2019,52
+Hong Kong,South Asia,2010,561
+Hong Kong,South Asia,2011,531
+Hong Kong,South Asia,2012,447
+Hong Kong,South Asia,2013,468
+Hong Kong,South Asia,2014,553
+Hong Kong,South Asia,2015,570
+Hong Kong,South Asia,2016,514
+Hong Kong,South Asia,2017,422
+Hong Kong,South Asia,2018,414
+Hong Kong,South Asia,2019,361
+Hungary,Africa,2010,23
+Hungary,Africa,2011,26
+Hungary,Africa,2012,26
+Hungary,Africa,2013,28
+Hungary,Africa,2014,29
+Hungary,Africa,2015,32
+Hungary,Africa,2016,35
+Hungary,Africa,2017,38
+Hungary,Africa,2018,40
+Hungary,Africa,2019,45
+Hungary,Americas,2010,547
+Hungary,Americas,2011,615
+Hungary,Americas,2012,577
+Hungary,Americas,2013,635
+Hungary,Americas,2014,723
+Hungary,Americas,2015,811
+Hungary,Americas,2016,864
+Hungary,Americas,2017,944
+Hungary,Americas,2018,"1,014"
+Hungary,Americas,2019,"1,074"
+Hungary,East Asia and the Pacific,2010,448
+Hungary,East Asia and the Pacific,2011,515
+Hungary,East Asia and the Pacific,2012,459
+Hungary,East Asia and the Pacific,2013,591
+Hungary,East Asia and the Pacific,2014,650
+Hungary,East Asia and the Pacific,2015,730
+Hungary,East Asia and the Pacific,2016,855
+Hungary,East Asia and the Pacific,2017,"1,025"
+Hungary,East Asia and the Pacific,2018,"1,108"
+Hungary,East Asia and the Pacific,2019,"1,238"
+Hungary,Europe,2010,"38,887"
+Hungary,Europe,2011,"40,148"
+Hungary,Europe,2012,"42,503"
+Hungary,Europe,2013,"42,357"
+Hungary,Europe,2014,"44,582"
+Hungary,Europe,2015,"46,772"
+Hungary,Europe,2016,"51,137"
+Hungary,Europe,2017,"52,954"
+Hungary,Europe,2018,"55,506"
+Hungary,Europe,2019,"59,041"
+Iceland,Americas,2010,65
+Iceland,Americas,2011,95
+Iceland,Americas,2012,114
+Iceland,Americas,2013,144
+Iceland,Americas,2014,191
+Iceland,Americas,2015,290
+Iceland,Americas,2016,498
+Iceland,Americas,2017,679
+Iceland,Americas,2018,795
+Iceland,Americas,2019,534
+Iceland,East Asia and the Pacific,2010,11
+Iceland,East Asia and the Pacific,2011,16
+Iceland,East Asia and the Pacific,2012,24
+Iceland,East Asia and the Pacific,2013,30
+Iceland,East Asia and the Pacific,2014,39
+Iceland,East Asia and the Pacific,2015,64
+Iceland,East Asia and the Pacific,2016,89
+Iceland,East Asia and the Pacific,2017,185
+Iceland,East Asia and the Pacific,2018,218
+Iceland,East Asia and the Pacific,2019,216
+Iceland,Europe,2010,318
+Iceland,Europe,2011,355
+Iceland,Europe,2012,426
+Iceland,Europe,2013,499
+Iceland,Europe,2014,597
+Iceland,Europe,2015,708
+Iceland,Europe,2016,894
+Iceland,Europe,2017,"1,085"
+Iceland,Europe,2018,"1,092"
+Iceland,Europe,2019,"1,024"
+Iceland,South Asia,2017,11
+Iceland,South Asia,2018,20
+Iceland,South Asia,2019,20
+Iceland,Other not classified,2010,95
+Iceland,Other not classified,2011,99
+Iceland,Other not classified,2012,83
+Iceland,Other not classified,2013,108
+Iceland,Other not classified,2014,142
+Iceland,Other not classified,2015,200
+Iceland,Other not classified,2016,286
+Iceland,Other not classified,2017,235
+Iceland,Other not classified,2018,192
+Iceland,Other not classified,2019,192
+Ireland,Africa,2012,40
+Ireland,Africa,2013,38
+Ireland,Africa,2014,42
+Ireland,Africa,2015,40
+Ireland,Africa,2016,47
+Ireland,Africa,2017,54
+Ireland,Africa,2018,56
+Ireland,Africa,2019,59
+Ireland,Americas,2010,864
+Ireland,Americas,2011,917
+Ireland,Americas,2012,988
+Ireland,Americas,2013,"1,092"
+Ireland,Americas,2014,"1,208"
+Ireland,Americas,2015,"1,357"
+Ireland,Americas,2016,"1,539"
+Ireland,Americas,2017,"1,792"
+Ireland,Americas,2018,"2,057"
+Ireland,Americas,2019,"2,000"
+Ireland,East Asia and the Pacific,2012,289
+Ireland,East Asia and the Pacific,2013,341
+Ireland,East Asia and the Pacific,2014,358
+Ireland,East Asia and the Pacific,2015,414
+Ireland,East Asia and the Pacific,2016,422
+Ireland,East Asia and the Pacific,2017,476
+Ireland,East Asia and the Pacific,2018,504
+Ireland,East Asia and the Pacific,2019,519
+Ireland,Europe,2010,"5,959"
+Ireland,Europe,2011,"6,361"
+Ireland,Europe,2012,"6,232"
+Ireland,Europe,2013,"6,790"
+Ireland,Europe,2014,"7,205"
+Ireland,Europe,2015,"7,719"
+Ireland,Europe,2016,"8,092"
+Ireland,Europe,2017,"8,016"
+Ireland,Europe,2018,"8,309"
+Ireland,Europe,2019,"8,373"
+Ireland,Other not classified,2010,311
+Ireland,Other not classified,2011,352
+Italy,Africa,2010,378
+Italy,Africa,2011,364
+Italy,Africa,2012,279
+Italy,Africa,2013,257
+Italy,Africa,2014,262
+Italy,Africa,2015,281
+Italy,Africa,2016,315
+Italy,Africa,2017,273
+Italy,Africa,2018,222
+Italy,Africa,2019,209
+Italy,Americas,2010,"3,969"
+Italy,Americas,2011,"4,829"
+Italy,Americas,2012,"4,757"
+Italy,Americas,2013,"5,405"
+Italy,Americas,2014,"5,618"
+Italy,Americas,2015,"6,099"
+Italy,Americas,2016,"6,052"
+Italy,Americas,2017,"6,533"
+Italy,Americas,2018,"7,172"
+Italy,Americas,2019,"7,755"
+Italy,East Asia and the Pacific,2010,"1,418"
+Italy,East Asia and the Pacific,2011,"1,646"
+Italy,East Asia and the Pacific,2012,"1,657"
+Italy,East Asia and the Pacific,2013,"1,939"
+Italy,East Asia and the Pacific,2014,"1,882"
+Italy,East Asia and the Pacific,2015,"2,040"
+Italy,East Asia and the Pacific,2016,"2,036"
+Italy,East Asia and the Pacific,2017,"2,170"
+Italy,East Asia and the Pacific,2018,"2,192"
+Italy,East Asia and the Pacific,2019,"2,209"
+Italy,Europe,2010,"66,821"
+Italy,Europe,2011,"68,357"
+Italy,Europe,2012,"68,797"
+Italy,Europe,2013,"68,415"
+Italy,Europe,2014,"69,146"
+Italy,Europe,2015,"71,682"
+Italy,Europe,2016,"75,584"
+Italy,Europe,2017,"79,996"
+Italy,Europe,2018,"82,844"
+Italy,Europe,2019,"84,398"
+Italy,Middle East,2010,348
+Italy,Middle East,2011,362
+Italy,Middle East,2012,381
+Italy,Middle East,2013,414
+Italy,Middle East,2014,469
+Italy,Middle East,2015,513
+Italy,Middle East,2016,520
+Italy,Middle East,2017,491
+Italy,Middle East,2018,385
+Italy,Middle East,2019,463
+Italy,South Asia,2010,290
+Italy,South Asia,2011,309
+Italy,South Asia,2012,422
+Italy,South Asia,2013,332
+Italy,South Asia,2014,317
+Italy,South Asia,2015,453
+Italy,South Asia,2016,418
+Italy,South Asia,2017,469
+Italy,South Asia,2018,412
+Italy,South Asia,2019,363
+Italy,Other not classified,2010,2
+Italy,Other not classified,2011,1
+Italy,Other not classified,2013,1.2
+Italy,Other not classified,2014,0.5
+Italy,Other not classified,2015,0.5
+Italy,Other not classified,2016,0.4
+Italy,Other not classified,2017,0.7
+Italy,Other not classified,2018,2
+Italy,Other not classified,2019,1
+Japan,Africa,2010,19
+Japan,Africa,2011,17
+Japan,Africa,2012,21
+Japan,Africa,2013,23
+Japan,Africa,2014,24
+Japan,Africa,2015,27
+Japan,Africa,2016,29
+Japan,Africa,2017,30
+Japan,Africa,2018,33
+Japan,Africa,2019,49
+Japan,Americas,2010,945
+Japan,Americas,2011,717
+Japan,Americas,2012,927
+Japan,Americas,2013,"1,032"
+Japan,Americas,2014,"1,169"
+Japan,Americas,2015,"1,385"
+Japan,Americas,2016,"1,648"
+Japan,Americas,2017,"1,849"
+Japan,Americas,2018,"2,045"
+Japan,Americas,2019,"2,299"
+Japan,East Asia and the Pacific,2010,"6,654"
+Japan,East Asia and the Pacific,2011,"4,796"
+Japan,East Asia and the Pacific,2012,"6,489"
+Japan,East Asia and the Pacific,2013,"8,240"
+Japan,East Asia and the Pacific,2014,"10,962"
+Japan,East Asia and the Pacific,2015,"16,835"
+Japan,East Asia and the Pacific,2016,"20,647"
+Japan,East Asia and the Pacific,2017,"24,962"
+Japan,East Asia and the Pacific,2018,"27,035"
+Japan,East Asia and the Pacific,2019,"27,140"
+Japan,Europe,2010,877
+Japan,Europe,2011,583
+Japan,Europe,2012,797
+Japan,Europe,2013,931
+Japan,Europe,2014,"1,083"
+Japan,Europe,2015,"1,285"
+Japan,Europe,2016,"1,470"
+Japan,Europe,2017,"1,579"
+Japan,Europe,2018,"1,781"
+Japan,Europe,2019,"2,055"
+Japan,Middle East,2010,10
+Japan,Middle East,2011,7
+Japan,Middle East,2012,11
+Japan,Middle East,2013,13
+Japan,Middle East,2014,24
+Japan,Middle East,2015,27
+Japan,Middle East,2016,30
+Japan,Middle East,2017,31
+Japan,Middle East,2018,33
+Japan,Middle East,2019,41
+Japan,South Asia,2010,105
+Japan,South Asia,2011,98
+Japan,South Asia,2012,113
+Japan,South Asia,2013,125
+Japan,South Asia,2014,151
+Japan,South Asia,2015,178
+Japan,South Asia,2016,214
+Japan,South Asia,2017,240
+Japan,South Asia,2018,266
+Japan,South Asia,2019,298
+Japan,Other not classified,2010,1
+Japan,Other not classified,2011,1
+Japan,Other not classified,2014,1
+Japan,Other not classified,2015,1
+Japan,Other not classified,2016,1
+Japan,Other not classified,2017,1
+Japan,Other not classified,2018,1
+Japan,Other not classified,2019,1
+Luxembourg,Africa,2010,3
+Luxembourg,Africa,2011,10
+Luxembourg,Africa,2012,14
+Luxembourg,Africa,2013,5
+Luxembourg,Africa,2014,7
+Luxembourg,Africa,2015,6
+Luxembourg,Africa,2016,5
+Luxembourg,Africa,2017,5
+Luxembourg,Africa,2018,4
+Luxembourg,Africa,2019,4
+Luxembourg,Americas,2010,29
+Luxembourg,Americas,2011,38
+Luxembourg,Americas,2012,39
+Luxembourg,Americas,2013,39
+Luxembourg,Americas,2014,45
+Luxembourg,Americas,2015,52
+Luxembourg,Americas,2016,49
+Luxembourg,Americas,2017,48
+Luxembourg,Americas,2018,46
+Luxembourg,Americas,2019,47
+Luxembourg,East Asia and the Pacific,2010,35
+Luxembourg,East Asia and the Pacific,2011,56
+Luxembourg,East Asia and the Pacific,2012,75
+Luxembourg,East Asia and the Pacific,2013,60
+Luxembourg,East Asia and the Pacific,2014,71
+Luxembourg,East Asia and the Pacific,2015,79
+Luxembourg,East Asia and the Pacific,2016,70
+Luxembourg,East Asia and the Pacific,2017,66
+Luxembourg,East Asia and the Pacific,2018,64
+Luxembourg,East Asia and the Pacific,2019,63
+Luxembourg,Europe,2010,737
+Luxembourg,Europe,2011,771
+Luxembourg,Europe,2012,822
+Luxembourg,Europe,2013,840
+Luxembourg,Europe,2014,915
+Luxembourg,Europe,2015,953
+Luxembourg,Europe,2016,930
+Luxembourg,Europe,2017,928
+Luxembourg,Europe,2018,904
+Luxembourg,Europe,2019,927
+Luxembourg,Other not classified,2010,1
+Macao,Africa,2010,21
+Macao,Africa,2011,23
+Macao,Africa,2012,24
+Macao,Africa,2013,26
+Macao,Africa,2014,32
+Macao,Africa,2015,28
+Macao,Africa,2016,25
+Macao,Africa,2017,24
+Macao,Africa,2018,24
+Macao,Africa,2019,24
+Macao,Americas,2010,297
+Macao,Americas,2011,311
+Macao,Americas,2012,307
+Macao,Americas,2013,289
+Macao,Americas,2014,286
+Macao,Americas,2015,286
+Macao,Americas,2016,300
+Macao,Americas,2017,296
+Macao,Americas,2018,315
+Macao,Americas,2019,315
+Macao,East Asia and the Pacific,2010,"24,192"
+Macao,East Asia and the Pacific,2011,"27,205"
+Macao,East Asia and the Pacific,2012,"27,292"
+Macao,East Asia and the Pacific,2013,"28,530"
+Macao,East Asia and the Pacific,2014,"30,722"
+Macao,East Asia and the Pacific,2015,"29,927"
+Macao,East Asia and the Pacific,2016,"30,146"
+Macao,East Asia and the Pacific,2017,"31,834"
+Macao,East Asia and the Pacific,2018,"34,997"
+Macao,East Asia and the Pacific,2019,"38,622"
+Macao,Europe,2010,267
+Macao,Europe,2011,274
+Macao,Europe,2012,286
+Macao,Europe,2013,296
+Macao,Europe,2014,294
+Macao,Europe,2015,278
+Macao,Europe,2016,292
+Macao,Europe,2017,292
+Macao,Europe,2018,303
+Macao,Europe,2019,301
+Macao,Middle East,2010,10
+Macao,Middle East,2011,12
+Macao,Middle East,2012,14
+Macao,Middle East,2013,15
+Macao,Middle East,2014,14
+Macao,Middle East,2015,15
+Macao,Middle East,2016,11
+Macao,Middle East,2017,9
+Macao,Middle East,2018,9
+Macao,Middle East,2019,8
+Macao,South Asia,2010,179
+Macao,South Asia,2011,177
+Macao,South Asia,2012,159
+Macao,South Asia,2013,169
+Macao,South Asia,2014,178
+Macao,South Asia,2015,179
+Macao,South Asia,2016,176
+Macao,South Asia,2017,156
+Macao,South Asia,2018,156
+Macao,South Asia,2019,135
+Malaysia,Africa,2010,42
+Malaysia,Africa,2011,111
+Malaysia,Africa,2012,99
+Malaysia,Africa,2013,101
+Malaysia,Africa,2014,108
+Malaysia,Africa,2015,96
+Malaysia,Africa,2016,80
+Malaysia,Africa,2017,75
+Malaysia,Africa,2018,119
+Malaysia,Africa,2019,127
+Malaysia,Americas,2010,343
+Malaysia,Americas,2011,340
+Malaysia,Americas,2012,362
+Malaysia,Americas,2013,377
+Malaysia,Americas,2014,400
+Malaysia,Americas,2015,360
+Malaysia,Americas,2016,322
+Malaysia,Americas,2017,309
+Malaysia,Americas,2018,390
+Malaysia,Americas,2019,407
+Malaysia,East Asia and the Pacific,2010,"21,605"
+Malaysia,East Asia and the Pacific,2011,"21,667"
+Malaysia,East Asia and the Pacific,2012,"21,946"
+Malaysia,East Asia and the Pacific,2013,"22,568"
+Malaysia,East Asia and the Pacific,2014,"23,846"
+Malaysia,East Asia and the Pacific,2015,"22,567"
+Malaysia,East Asia and the Pacific,2016,"23,993"
+Malaysia,East Asia and the Pacific,2017,"23,384"
+Malaysia,East Asia and the Pacific,2018,"22,867"
+Malaysia,East Asia and the Pacific,2019,"22,906"
+Malaysia,Europe,2010,"1,133"
+Malaysia,Europe,2011,"1,136"
+Malaysia,Europe,2012,"1,161"
+Malaysia,Europe,2013,"1,227"
+Malaysia,Europe,2014,"1,372"
+Malaysia,Europe,2015,"1,242"
+Malaysia,Europe,2016,"1,130"
+Malaysia,Europe,2017,"1,110"
+Malaysia,Europe,2018,"1,210"
+Malaysia,Europe,2019,"1,218"
+Malaysia,Middle East,2010,167
+Malaysia,Middle East,2011,237
+Malaysia,Middle East,2012,266
+Malaysia,Middle East,2013,274
+Malaysia,Middle East,2014,313
+Malaysia,Middle East,2015,279
+Malaysia,Middle East,2016,271
+Malaysia,Middle East,2017,219
+Malaysia,Middle East,2018,281
+Malaysia,Middle East,2019,298
+Malaysia,South Asia,2010,997
+Malaysia,South Asia,2011,"1,125"
+Malaysia,South Asia,2012,"1,185"
+Malaysia,South Asia,2013,"1,156"
+Malaysia,South Asia,2014,"1,383"
+Malaysia,South Asia,2015,"1,163"
+Malaysia,South Asia,2016,959
+Malaysia,South Asia,2017,850
+Malaysia,South Asia,2018,964
+Malaysia,South Asia,2019,"1,142"
+Malaysia,Other not classified,2010,290
+Malaysia,Other not classified,2011,98
+Malaysia,Other not classified,2012,14
+Malaysia,Other not classified,2013,12
+Malaysia,Other not classified,2014,15
+Malaysia,Other not classified,2015,14
+Malaysia,Other not classified,2016,4
+Malaysia,Other not classified,2017,1
+Malaysia,Other not classified,2018,3
+Malaysia,Other not classified,2019,3
+Malta,Americas,2010,16
+Malta,Americas,2011,16
+Malta,Americas,2012,18
+Malta,Americas,2013,20
+Malta,Americas,2014,22
+Malta,Americas,2015,26
+Malta,Americas,2016,27
+Malta,Americas,2017,36
+Malta,Americas,2018,47
+Malta,Americas,2019,51
+Malta,Europe,2010,"1,221"
+Malta,Europe,2011,"1,304"
+Malta,Europe,2012,"1,325"
+Malta,Europe,2013,"1,432"
+Malta,Europe,2014,"1,527"
+Malta,Europe,2015,"1,623"
+Malta,Europe,2016,"1,780"
+Malta,Europe,2017,"2,054"
+Malta,Europe,2018,"2,315"
+Malta,Europe,2019,"2,421"
+Malta,Middle East,2010,16
+Malta,Middle East,2011,6
+Malta,Middle East,2012,17
+Malta,Middle East,2013,35
+Malta,Middle East,2014,31
+Malta,Middle East,2015,7
+Malta,Middle East,2016,3
+Malta,Middle East,2017,3
+Malta,Middle East,2018,3
+Malta,Middle East,2019,3
+Malta,Other not classified,2010,85
+Malta,Other not classified,2011,88
+Malta,Other not classified,2012,83
+Malta,Other not classified,2013,96
+Malta,Other not classified,2014,110
+Malta,Other not classified,2015,128
+Malta,Other not classified,2016,157
+Malta,Other not classified,2017,181
+Malta,Other not classified,2018,234
+Malta,Other not classified,2019,279
+Netherlands,Africa,2010,103
+Netherlands,Africa,2011,114
+Netherlands,Africa,2012,112
+Netherlands,Africa,2013,121
+Netherlands,Africa,2014,135
+Netherlands,Africa,2015,130
+Netherlands,Africa,2016,137
+Netherlands,Africa,2017,152
+Netherlands,Africa,2018,156
+Netherlands,Africa,2019,187
+Netherlands,Americas,2010,"1,223"
+Netherlands,Americas,2011,"1,320"
+Netherlands,Americas,2012,"1,323"
+Netherlands,Americas,2013,"1,337"
+Netherlands,Americas,2014,"1,431"
+Netherlands,Americas,2015,"1,508"
+Netherlands,Americas,2016,"1,646"
+Netherlands,Americas,2017,"2,013"
+Netherlands,Americas,2018,"2,072"
+Netherlands,Americas,2019,"2,181"
+Netherlands,East Asia and the Pacific,2010,770
+Netherlands,East Asia and the Pacific,2011,850
+Netherlands,East Asia and the Pacific,2012,949
+Netherlands,East Asia and the Pacific,2013,"1,040"
+Netherlands,East Asia and the Pacific,2014,"1,164"
+Netherlands,East Asia and the Pacific,2015,"1,319"
+Netherlands,East Asia and the Pacific,2016,"1,303"
+Netherlands,East Asia and the Pacific,2017,"1,608"
+Netherlands,East Asia and the Pacific,2018,"1,579"
+Netherlands,East Asia and the Pacific,2019,"1,710"
+Netherlands,Europe,2010,"8,787"
+Netherlands,Europe,2011,"9,016"
+Netherlands,Europe,2012,"9,296"
+Netherlands,Europe,2013,"10,286"
+Netherlands,Europe,2014,"11,195"
+Netherlands,Europe,2015,"12,050"
+Netherlands,Europe,2016,"12,742"
+Netherlands,Europe,2017,"14,151"
+Netherlands,Europe,2018,"14,974"
+Netherlands,Europe,2019,"16,052"
+Norway,Africa,2012,22
+Norway,Africa,2013,25
+Norway,Africa,2014,26
+Norway,Africa,2015,29
+Norway,Africa,2016,18
+Norway,Africa,2017,35
+Norway,Africa,2018,35
+Norway,Africa,2019,45
+Norway,Americas,2010,160
+Norway,Americas,2011,164
+Norway,Americas,2012,245
+Norway,Americas,2013,262
+Norway,Americas,2014,326
+Norway,Americas,2015,332
+Norway,Americas,2016,369
+Norway,Americas,2017,527
+Norway,Americas,2018,545
+Norway,Americas,2019,619
+Norway,East Asia and the Pacific,2010,28
+Norway,East Asia and the Pacific,2011,27
+Norway,East Asia and the Pacific,2012,378
+Norway,East Asia and the Pacific,2013,492
+Norway,East Asia and the Pacific,2014,489
+Norway,East Asia and the Pacific,2015,654
+Norway,East Asia and the Pacific,2016,786
+Norway,East Asia and the Pacific,2017,963
+Norway,East Asia and the Pacific,2018,664
+Norway,East Asia and the Pacific,2019,666
+Norway,Europe,2010,"4,313"
+Norway,Europe,2011,"4,471"
+Norway,Europe,2012,"3,894"
+Norway,Europe,2013,"4,000"
+Norway,Europe,2014,"4,013"
+Norway,Europe,2015,"4,346"
+Norway,Europe,2016,"4,787"
+Norway,Europe,2017,"4,728"
+Norway,Europe,2018,"4,372"
+Norway,Europe,2019,"4,462"
+Norway,Middle East,2018,24
+Norway,Middle East,2019,30
+Norway,South Asia,2018,49
+Norway,South Asia,2019,59
+Norway,Other not classified,2010,266
+Norway,Other not classified,2011,301
+Poland,Africa,2010,20
+Poland,Africa,2011,15
+Poland,Africa,2012,15
+Poland,Africa,2013,15
+Poland,Africa,2014,10
+Poland,Africa,2015,10
+Poland,Africa,2016,15
+Poland,Africa,2017,15
+Poland,Africa,2018,15
+Poland,Africa,2019,20
+Poland,Americas,2010,395
+Poland,Americas,2011,400
+Poland,Americas,2012,425
+Poland,Americas,2013,425
+Poland,Americas,2014,648
+Poland,Americas,2015,703
+Poland,Americas,2016,765
+Poland,Americas,2017,784
+Poland,Americas,2018,825
+Poland,Americas,2019,891
+Poland,East Asia and the Pacific,2010,280
+Poland,East Asia and the Pacific,2011,300
+Poland,East Asia and the Pacific,2012,320
+Poland,East Asia and the Pacific,2013,355
+Poland,East Asia and the Pacific,2014,344
+Poland,East Asia and the Pacific,2015,368
+Poland,East Asia and the Pacific,2016,376
+Poland,East Asia and the Pacific,2017,446
+Poland,East Asia and the Pacific,2018,476
+Poland,East Asia and the Pacific,2019,567
+Poland,Europe,2010,"57,540"
+Poland,Europe,2011,"59,950"
+Poland,Europe,2012,"66,545"
+Poland,Europe,2013,"71,430"
+Poland,Europe,2014,"72,661"
+Poland,Europe,2015,"76,579"
+Poland,Europe,2016,"79,225"
+Poland,Europe,2017,"82,470"
+Poland,Europe,2018,"84,543"
+Poland,Europe,2019,"86,923"
+Poland,Middle East,2010,15
+Poland,Middle East,2011,15
+Poland,Middle East,2012,15
+Poland,Middle East,2013,15
+Poland,Middle East,2014,15
+Poland,Middle East,2015,15
+Poland,Middle East,2016,15
+Poland,Middle East,2017,15
+Poland,Middle East,2018,15
+Poland,Middle East,2019,20
+Poland,South Asia,2010,30
+Poland,South Asia,2011,20
+Poland,South Asia,2012,20
+Poland,South Asia,2013,20
+Poland,South Asia,2014,32
+Poland,South Asia,2015,39
+Poland,South Asia,2016,40
+Poland,South Asia,2017,44
+Poland,South Asia,2018,42
+Poland,South Asia,2019,54
+Poland,Other not classified,2010,60
+Poland,Other not classified,2011,45
+Poland,Other not classified,2012,50
+Poland,Other not classified,2013,50
+Poland,Other not classified,2014,40
+Poland,Other not classified,2015,30
+Poland,Other not classified,2016,40
+Poland,Other not classified,2017,30
+Poland,Other not classified,2018,30
+Poland,Other not classified,2019,40
+Portugal,Africa,2010,75
+Portugal,Africa,2011,84
+Portugal,Africa,2012,96
+Portugal,Africa,2013,136
+Portugal,Africa,2014,165
+Portugal,Africa,2015,162
+Portugal,Africa,2016,162
+Portugal,Africa,2017,190
+Portugal,Africa,2018,200
+Portugal,Africa,2019,208
+Portugal,Americas,2010,760
+Portugal,Americas,2011,874
+Portugal,Americas,2012,947
+Portugal,Americas,2013,"1,116"
+Portugal,Americas,2014,"1,282"
+Portugal,Americas,2015,"1,372"
+Portugal,Americas,2016,"1,626"
+Portugal,Americas,2017,"2,271"
+Portugal,Americas,2018,"2,674"
+Portugal,Americas,2019,"3,146"
+Portugal,East Asia and the Pacific,2010,229
+Portugal,East Asia and the Pacific,2011,261
+Portugal,East Asia and the Pacific,2012,301
+Portugal,East Asia and the Pacific,2013,446
+Portugal,East Asia and the Pacific,2014,593
+Portugal,East Asia and the Pacific,2015,698
+Portugal,East Asia and the Pacific,2016,825
+Portugal,East Asia and the Pacific,2017,"1,075"
+Portugal,East Asia and the Pacific,2018,"1,177"
+Portugal,East Asia and the Pacific,2019,"1,082"
+Portugal,Europe,2010,"5,692"
+Portugal,Europe,2011,"6,044"
+Portugal,Europe,2012,"6,159"
+Portugal,Europe,2013,"7,480"
+Portugal,Europe,2014,"8,456"
+Portugal,Europe,2015,"9,492"
+Portugal,Europe,2016,"10,746"
+Portugal,Europe,2017,"11,896"
+Portugal,Europe,2018,"12,135"
+Portugal,Europe,2019,"12,669"
+Portugal,Middle East,2019,54
+Portugal,South Asia,2019,100
+Portugal,Other not classified,2019,22
+Serbia,Africa,2014,11
+Serbia,Africa,2015,11
+Serbia,Africa,2016,9
+Serbia,Africa,2017,11
+Serbia,Africa,2018,13
+Serbia,Africa,2019,13
+Serbia,Americas,2010,19
+Serbia,Americas,2011,19
+Serbia,Americas,2012,22
+Serbia,Americas,2013,24
+Serbia,Americas,2014,31
+Serbia,Americas,2015,37
+Serbia,Americas,2016,41
+Serbia,Americas,2017,50
+Serbia,Americas,2018,59
+Serbia,Americas,2019,64
+Serbia,East Asia and the Pacific,2010,10
+Serbia,East Asia and the Pacific,2011,12
+Serbia,East Asia and the Pacific,2012,15
+Serbia,East Asia and the Pacific,2013,23
+Serbia,East Asia and the Pacific,2014,53
+Serbia,East Asia and the Pacific,2015,73
+Serbia,East Asia and the Pacific,2016,67
+Serbia,East Asia and the Pacific,2017,111
+Serbia,East Asia and the Pacific,2018,159
+Serbia,East Asia and the Pacific,2019,198
+Serbia,Europe,2010,633
+Serbia,Europe,2011,711
+Serbia,Europe,2012,746
+Serbia,Europe,2013,837
+Serbia,Europe,2014,932
+Serbia,Europe,2015,"1,011"
+Serbia,Europe,2016,"1,158"
+Serbia,Europe,2017,"1,320"
+Serbia,Europe,2018,"1,440"
+Serbia,Europe,2019,"1,556"
+Serbia,Middle East,2016,6
+Serbia,Middle East,2017,5
+Serbia,Middle East,2018,6
+Serbia,Middle East,2019,5
+Serbia,South Asia,2018,35
+Serbia,South Asia,2019,10
+Serbia,Other not classified,2010,21
+Serbia,Other not classified,2011,22
+Serbia,Other not classified,2012,27
+Serbia,Other not classified,2013,38
+Serbia,Other not classified,2014,2
+Singapore,Africa,2010,71
+Singapore,Africa,2011,69
+Singapore,Africa,2012,64
+Singapore,Africa,2013,63
+Singapore,Africa,2014,62
+Singapore,Africa,2015,63
+Singapore,Africa,2016,68
+Singapore,Africa,2017,73
+Singapore,Africa,2018,79
+Singapore,Africa,2019,86
+Singapore,Americas,2010,525
+Singapore,Americas,2011,564
+Singapore,Americas,2012,616
+Singapore,Americas,2013,642
+Singapore,Americas,2014,635
+Singapore,Americas,2015,657
+Singapore,Americas,2016,681
+Singapore,Americas,2017,759
+Singapore,Americas,2018,862
+Singapore,Americas,2019,963
+Singapore,East Asia and the Pacific,2010,"8,475"
+Singapore,East Asia and the Pacific,2011,"9,887"
+Singapore,East Asia and the Pacific,2012,"10,988"
+Singapore,East Asia and the Pacific,2013,"11,920"
+Singapore,East Asia and the Pacific,2014,"11,406"
+Singapore,East Asia and the Pacific,2015,"11,427"
+Singapore,East Asia and the Pacific,2016,"12,348"
+Singapore,East Asia and the Pacific,2017,"13,001"
+Singapore,East Asia and the Pacific,2018,"13,590"
+Singapore,East Asia and the Pacific,2019,"14,047"
+Singapore,Europe,2010,"1,386"
+Singapore,Europe,2011,"1,414"
+Singapore,Europe,2012,"1,551"
+Singapore,Europe,2013,"1,606"
+Singapore,Europe,2014,"1,633"
+Singapore,Europe,2015,"1,652"
+Singapore,Europe,2016,"1,762"
+Singapore,Europe,2017,"1,874"
+Singapore,Europe,2018,"2,086"
+Singapore,Europe,2019,"2,157"
+Singapore,Middle East,2010,102
+Singapore,Middle East,2011,113
+Singapore,Middle East,2012,118
+Singapore,Middle East,2013,135
+Singapore,Middle East,2014,147
+Singapore,Middle East,2015,142
+Singapore,Middle East,2016,144
+Singapore,Middle East,2017,134
+Singapore,Middle East,2018,132
+Singapore,Middle East,2019,142
+Singapore,South Asia,2010,"1,083"
+Singapore,South Asia,2011,"1,124"
+Singapore,South Asia,2012,"1,151"
+Singapore,South Asia,2013,"1,201"
+Singapore,South Asia,2014,"1,212"
+Singapore,South Asia,2015,"1,290"
+Singapore,South Asia,2016,"1,402"
+Singapore,South Asia,2017,"1,584"
+Singapore,South Asia,2018,"1,759"
+Singapore,South Asia,2019,"1,722"
+Singapore,Other not classified,2012,8
+Singapore,Other not classified,2013,1
+Slovenia,Africa,2010,4
+Slovenia,Africa,2011,5
+Slovenia,Africa,2012,6
+Slovenia,Africa,2013,7
+Slovenia,Africa,2014,6
+Slovenia,Africa,2015,8
+Slovenia,Africa,2016,9
+Slovenia,Africa,2017,11
+Slovenia,Africa,2018,13
+Slovenia,Africa,2019,13
+Slovenia,Americas,2010,72
+Slovenia,Americas,2011,78
+Slovenia,Americas,2012,88
+Slovenia,Americas,2013,103
+Slovenia,Americas,2014,113
+Slovenia,Americas,2015,134
+Slovenia,Americas,2016,147
+Slovenia,Americas,2017,174
+Slovenia,Americas,2018,208
+Slovenia,Americas,2019,227
+Slovenia,East Asia and the Pacific,2010,107
+Slovenia,East Asia and the Pacific,2011,120
+Slovenia,East Asia and the Pacific,2012,152
+Slovenia,East Asia and the Pacific,2013,168
+Slovenia,East Asia and the Pacific,2014,248
+Slovenia,East Asia and the Pacific,2015,308
+Slovenia,East Asia and the Pacific,2016,344
+Slovenia,East Asia and the Pacific,2017,427
+Slovenia,East Asia and the Pacific,2018,478
+Slovenia,East Asia and the Pacific,2019,513
+Slovenia,Europe,2010,"1,866"
+Slovenia,Europe,2011,"2,033"
+Slovenia,Europe,2012,"2,131"
+Slovenia,Europe,2013,"2,224"
+Slovenia,Europe,2014,"2,308"
+Slovenia,Europe,2015,"2,573"
+Slovenia,Europe,2016,"2,897"
+Slovenia,Europe,2017,"3,379"
+Slovenia,Europe,2018,"3,726"
+Slovenia,Europe,2019,"3,949"
+Spain,Africa,2010,302
+Spain,Africa,2011,509
+Spain,Africa,2012,492
+Spain,Africa,2013,487
+Spain,Africa,2014,552
+Spain,Africa,2015,726
+Spain,Africa,2016,"1,243"
+Spain,Africa,2017,"1,314"
+Spain,Africa,2018,"1,236"
+Spain,Africa,2019,"1,340"
+Spain,Americas,2010,"2,618"
+Spain,Americas,2011,"2,887"
+Spain,Americas,2012,"3,123"
+Spain,Americas,2013,"3,065"
+Spain,Americas,2014,"3,132"
+Spain,Americas,2015,"3,638"
+Spain,Americas,2016,"4,574"
+Spain,Americas,2017,"5,866"
+Spain,Americas,2018,"6,371"
+Spain,Americas,2019,"7,092"
+Spain,East Asia and the Pacific,2010,962
+Spain,East Asia and the Pacific,2011,"1,176"
+Spain,East Asia and the Pacific,2012,"1,345"
+Spain,East Asia and the Pacific,2013,"1,531"
+Spain,East Asia and the Pacific,2014,"1,850"
+Spain,East Asia and the Pacific,2015,"1,805"
+Spain,East Asia and the Pacific,2016,"1,905"
+Spain,East Asia and the Pacific,2017,"2,299"
+Spain,East Asia and the Pacific,2018,"2,561"
+Spain,East Asia and the Pacific,2019,"2,977"
+Spain,Europe,2010,"48,290"
+Spain,Europe,2011,"51,420"
+Spain,Europe,2012,"52,243"
+Spain,Europe,2013,"55,273"
+Spain,Europe,2014,"59,035"
+Spain,Europe,2015,"61,667"
+Spain,Europe,2016,"67,047"
+Spain,Europe,2017,"71,696"
+Spain,Europe,2018,"71,904"
+Spain,Europe,2019,"71,378"
+Spain,Middle East,2010,68
+Spain,Middle East,2011,110
+Spain,Middle East,2012,170
+Spain,Middle East,2013,217
+Spain,Middle East,2014,251
+Spain,Middle East,2015,218
+Spain,Middle East,2016,387
+Spain,Middle East,2017,466
+Spain,Middle East,2018,416
+Spain,Middle East,2019,425
+Spain,South Asia,2010,30
+Spain,South Asia,2011,74
+Spain,South Asia,2012,91
+Spain,South Asia,2013,102
+Spain,South Asia,2014,119
+Spain,South Asia,2015,121
+Spain,South Asia,2016,159
+Spain,South Asia,2017,227
+Spain,South Asia,2018,321
+Spain,South Asia,2019,298
+Spain,Other not classified,2010,407
+Spain,Other not classified,2011,1
+Sweden,Africa,2010,13
+Sweden,Africa,2011,41
+Sweden,Africa,2012,35
+Sweden,Africa,2013,70
+Sweden,Africa,2014,26
+Sweden,Africa,2015,31
+Sweden,Africa,2016,27
+Sweden,Africa,2017,27
+Sweden,Africa,2018,31
+Sweden,Africa,2019,34
+Sweden,Americas,2010,226
+Sweden,Americas,2011,671
+Sweden,Americas,2012,652
+Sweden,Americas,2013,724
+Sweden,Americas,2014,314
+Sweden,Americas,2015,336
+Sweden,Americas,2016,350
+Sweden,Americas,2017,486
+Sweden,Americas,2018,516
+Sweden,Americas,2019,613
+Sweden,East Asia and the Pacific,2010,174
+Sweden,East Asia and the Pacific,2011,356
+Sweden,East Asia and the Pacific,2012,314
+Sweden,East Asia and the Pacific,2013,363
+Sweden,East Asia and the Pacific,2014,281
+Sweden,East Asia and the Pacific,2015,334
+Sweden,East Asia and the Pacific,2016,390
+Sweden,East Asia and the Pacific,2017,430
+Sweden,East Asia and the Pacific,2018,417
+Sweden,East Asia and the Pacific,2019,468
+Sweden,Europe,2010,"4,470"
+Sweden,Europe,2011,"18,249"
+Sweden,Europe,2012,"18,922"
+Sweden,Europe,2013,"17,531"
+Sweden,Europe,2014,"4,410"
+Sweden,Europe,2015,"4,980"
+Sweden,Europe,2016,"5,108"
+Sweden,Europe,2017,"5,143"
+Sweden,Europe,2018,"5,304"
+Sweden,Europe,2019,"5,689"
+Sweden,Middle East,2011,33
+Sweden,Middle East,2012,44
+Sweden,Middle East,2013,39
+Sweden,South Asia,2010,26
+Sweden,South Asia,2011,56
+Sweden,South Asia,2012,45
+Sweden,South Asia,2013,77
+Sweden,South Asia,2014,77
+Sweden,South Asia,2015,92
+Sweden,South Asia,2016,88
+Sweden,South Asia,2017,109
+Sweden,South Asia,2018,110
+Sweden,South Asia,2019,118
+Sweden,Other not classified,2010,274
+Sweden,Other not classified,2014,553
+Sweden,Other not classified,2015,710
+Sweden,Other not classified,2016,820
+Sweden,Other not classified,2017,859
+Sweden,Other not classified,2018,"1,061"
+Sweden,Other not classified,2019,694
+Switzerland,Africa,2010,78
+Switzerland,Africa,2011,74
+Switzerland,Africa,2012,82
+Switzerland,Africa,2013,79
+Switzerland,Africa,2014,75
+Switzerland,Africa,2015,79
+Switzerland,Africa,2016,93
+Switzerland,Africa,2017,94
+Switzerland,Africa,2018,97
+Switzerland,Africa,2019,100
+Switzerland,Americas,2010,916
+Switzerland,Americas,2011,924
+Switzerland,Americas,2012,952
+Switzerland,Americas,2013,"1,004"
+Switzerland,Americas,2014,"1,037"
+Switzerland,Americas,2015,"1,096"
+Switzerland,Americas,2016,"1,202"
+Switzerland,Americas,2017,"1,361"
+Switzerland,Americas,2018,"1,495"
+Switzerland,Americas,2019,"1,616"
+Switzerland,East Asia and the Pacific,2010,"1,074"
+Switzerland,East Asia and the Pacific,2011,"1,300"
+Switzerland,East Asia and the Pacific,2012,"1,491"
+Switzerland,East Asia and the Pacific,2013,"1,696"
+Switzerland,East Asia and the Pacific,2014,"1,847"
+Switzerland,East Asia and the Pacific,2015,"2,242"
+Switzerland,East Asia and the Pacific,2016,"2,908"
+Switzerland,East Asia and the Pacific,2017,"3,270"
+Switzerland,East Asia and the Pacific,2018,"3,414"
+Switzerland,East Asia and the Pacific,2019,"3,408"
+Switzerland,Europe,2010,"6,237"
+Switzerland,Europe,2011,"5,868"
+Switzerland,Europe,2012,"5,612"
+Switzerland,Europe,2013,"5,720"
+Switzerland,Europe,2014,"5,676"
+Switzerland,Europe,2015,"5,250"
+Switzerland,Europe,2016,"6,199"
+Switzerland,Europe,2017,"6,409"
+Switzerland,Europe,2018,"6,709"
+Switzerland,Europe,2019,"6,693"
+Switzerland,Middle East,2010,157
+Switzerland,Middle East,2011,167
+Switzerland,Middle East,2012,211
+Switzerland,Middle East,2013,256
+Switzerland,Middle East,2014,307
+Switzerland,Middle East,2015,372
+Switzerland,South Asia,2010,166
+Switzerland,South Asia,2011,201
+Switzerland,South Asia,2012,218
+Switzerland,South Asia,2013,213
+Switzerland,South Asia,2014,217
+Switzerland,South Asia,2015,266
+Taiwan,Africa,2010,8
+Taiwan,Africa,2011,9
+Taiwan,Africa,2012,9
+Taiwan,Africa,2013,9
+Taiwan,Africa,2014,10
+Taiwan,Africa,2015,10
+Taiwan,Africa,2016,11
+Taiwan,Africa,2017,12
+Taiwan,Africa,2018,12
+Taiwan,Africa,2019,13
+Taiwan,Americas,2010,475
+Taiwan,Americas,2011,495
+Taiwan,Americas,2012,497
+Taiwan,Americas,2013,502
+Taiwan,Americas,2014,565
+Taiwan,Americas,2015,588
+Taiwan,Americas,2016,649
+Taiwan,Americas,2017,702
+Taiwan,Americas,2018,733
+Taiwan,Americas,2019,766
+Taiwan,East Asia and the Pacific,2010,"4,818"
+Taiwan,East Asia and the Pacific,2011,"5,297"
+Taiwan,East Asia and the Pacific,2012,"6,513"
+Taiwan,East Asia and the Pacific,2013,"7,179"
+Taiwan,East Asia and the Pacific,2014,"9,016"
+Taiwan,East Asia and the Pacific,2015,"9,509"
+Taiwan,East Asia and the Pacific,2016,"9,670"
+Taiwan,East Asia and the Pacific,2017,"9,638"
+Taiwan,East Asia and the Pacific,2018,"9,907"
+Taiwan,East Asia and the Pacific,2019,"10,632"
+Taiwan,Europe,2010,203
+Taiwan,Europe,2011,212
+Taiwan,Europe,2012,218
+Taiwan,Europe,2013,223
+Taiwan,Europe,2014,265
+Taiwan,Europe,2015,274
+Taiwan,Europe,2016,300
+Taiwan,Europe,2017,330
+Taiwan,Europe,2018,350
+Taiwan,Europe,2019,387
+Taiwan,Middle East,2010,13
+Taiwan,Middle East,2011,14
+Taiwan,Middle East,2012,13
+Taiwan,Middle East,2013,14
+Taiwan,Middle East,2014,17
+Taiwan,Middle East,2015,19
+Taiwan,Middle East,2016,20
+Taiwan,Middle East,2017,21
+Taiwan,Middle East,2018,22
+Taiwan,Middle East,2019,24
+Taiwan,South Asia,2010,24
+Taiwan,South Asia,2011,24
+Taiwan,South Asia,2012,23
+Taiwan,South Asia,2013,23
+Taiwan,South Asia,2014,30
+Taiwan,South Asia,2015,32
+Taiwan,South Asia,2016,34
+Taiwan,South Asia,2017,35
+Taiwan,South Asia,2018,38
+Taiwan,South Asia,2019,40
+Taiwan,Other not classified,2010,26
+Taiwan,Other not classified,2011,36
+Taiwan,Other not classified,2012,38
+Taiwan,Other not classified,2013,65
+Taiwan,Other not classified,2014,7
+Taiwan,Other not classified,2015,7
+Taiwan,Other not classified,2016,8
+Taiwan,Other not classified,2017,2
+Taiwan,Other not classified,2018,5
+Taiwan,Other not classified,2019,2
+Thailand,Africa,2010,122
+Thailand,Africa,2011,141
+Thailand,Africa,2012,157
+Thailand,Africa,2013,163
+Thailand,Africa,2014,163
+Thailand,Africa,2015,165
+Thailand,Africa,2016,173
+Thailand,Africa,2017,192
+Thailand,Africa,2018,200
+Thailand,Africa,2019,197
+Thailand,Americas,2010,792
+Thailand,Americas,2011,886
+Thailand,Americas,2012,"1,007"
+Thailand,Americas,2013,"1,104"
+Thailand,Americas,2014,"1,049"
+Thailand,Americas,2015,"1,169"
+Thailand,Americas,2016,"1,342"
+Thailand,Americas,2017,"1,449"
+Thailand,Americas,2018,"1,534"
+Thailand,Americas,2019,"1,560"
+Thailand,East Asia and the Pacific,2010,"9,091"
+Thailand,East Asia and the Pacific,2011,"11,481"
+Thailand,East Asia and the Pacific,2012,"13,811"
+Thailand,East Asia and the Pacific,2013,"17,117"
+Thailand,East Asia and the Pacific,2014,"15,712"
+Thailand,East Asia and the Pacific,2015,"21,018"
+Thailand,East Asia and the Pacific,2016,"22,780"
+Thailand,East Asia and the Pacific,2017,"25,114"
+Thailand,East Asia and the Pacific,2018,"27,137"
+Thailand,East Asia and the Pacific,2019,"28,544"
+Thailand,Europe,2010,"4,445"
+Thailand,Europe,2011,"5,059"
+Thailand,Europe,2012,"5,580"
+Thailand,Europe,2013,"6,289"
+Thailand,Europe,2014,"6,166"
+Thailand,Europe,2015,"5,615"
+Thailand,Europe,2016,"6,170"
+Thailand,Europe,2017,"6,497"
+Thailand,Europe,2018,"6,789"
+Thailand,Europe,2019,"6,725"
+Thailand,Middle East,2010,331
+Thailand,Middle East,2011,379
+Thailand,Middle East,2012,538
+Thailand,Middle East,2013,548
+Thailand,Middle East,2014,507
+Thailand,Middle East,2015,582
+Thailand,Middle East,2016,660
+Thailand,Middle East,2017,566
+Thailand,Middle East,2018,582
+Thailand,Middle East,2019,533
+Thailand,South Asia,2010,"1,153"
+Thailand,South Asia,2011,"1,285"
+Thailand,South Asia,2012,"1,260"
+Thailand,South Asia,2013,"1,327"
+Thailand,South Asia,2014,"1,214"
+Thailand,South Asia,2015,"1,374"
+Thailand,South Asia,2016,"1,406"
+Thailand,South Asia,2017,"1,774"
+Thailand,South Asia,2018,"1,936"
+Thailand,South Asia,2019,"2,357"
+Thailand,Other not classified,2010,1
+Turkiye,Africa,2010,247
+Turkiye,Africa,2011,301
+Turkiye,Africa,2012,372
+Turkiye,Africa,2013,420
+Turkiye,Africa,2014,491
+Turkiye,Africa,2015,535
+Turkiye,Africa,2016,493
+Turkiye,Africa,2017,590
+Turkiye,Africa,2018,817
+Turkiye,Africa,2019,998
+Turkiye,Americas,2010,550
+Turkiye,Americas,2011,660
+Turkiye,Americas,2012,714
+Turkiye,Americas,2013,790
+Turkiye,Americas,2014,846
+Turkiye,Americas,2015,936
+Turkiye,Americas,2016,593
+Turkiye,Americas,2017,574
+Turkiye,Americas,2018,827
+Turkiye,Americas,2019,"1,029"
+Turkiye,East Asia and the Pacific,2010,628
+Turkiye,East Asia and the Pacific,2011,721
+Turkiye,East Asia and the Pacific,2012,784
+Turkiye,East Asia and the Pacific,2013,848
+Turkiye,East Asia and the Pacific,2014,"1,032"
+Turkiye,East Asia and the Pacific,2015,"1,074"
+Turkiye,East Asia and the Pacific,2016,620
+Turkiye,East Asia and the Pacific,2017,813
+Turkiye,East Asia and the Pacific,2018,"1,254"
+Turkiye,East Asia and the Pacific,2019,"1,470"
+Turkiye,Europe,2010,"21,666"
+Turkiye,Europe,2011,"23,501"
+Turkiye,Europe,2012,"24,167"
+Turkiye,Europe,2013,"26,157"
+Turkiye,Europe,2014,"27,263"
+Turkiye,Europe,2015,"26,411"
+Turkiye,Europe,2016,"18,761"
+Turkiye,Europe,2017,"23,874"
+Turkiye,Europe,2018,"29,429"
+Turkiye,Europe,2019,"33,517"
+Turkiye,Middle East,2010,"1,896"
+Turkiye,Middle East,2011,"2,133"
+Turkiye,Middle East,2012,"2,377"
+Turkiye,Middle East,2013,"3,244"
+Turkiye,Middle East,2014,"3,554"
+Turkiye,Middle East,2015,"3,663"
+Turkiye,Middle East,2016,"2,374"
+Turkiye,Middle East,2017,"3,406"
+Turkiye,Middle East,2018,"4,391"
+Turkiye,Middle East,2019,"4,854"
+Turkiye,South Asia,2010,"1,982"
+Turkiye,South Asia,2011,"1,992"
+Turkiye,South Asia,2012,"1,319"
+Turkiye,South Asia,2013,"1,348"
+Turkiye,South Asia,2014,"1,787"
+Turkiye,South Asia,2015,"1,931"
+Turkiye,South Asia,2016,"1,852"
+Turkiye,South Asia,2017,"2,727"
+Turkiye,South Asia,2018,"2,345"
+Turkiye,South Asia,2019,"2,551"
+Turkiye,Other not classified,2010,"4,395"
+Turkiye,Other not classified,2011,"5,345"
+Turkiye,Other not classified,2012,"5,965"
+Turkiye,Other not classified,2013,"4,989"
+Turkiye,Other not classified,2014,"4,838"
+Turkiye,Other not classified,2015,"4,929"
+Turkiye,Other not classified,2016,"5,595"
+Turkiye,Other not classified,2017,"5,617"
+Turkiye,Other not classified,2018,"6,705"
+Turkiye,Other not classified,2019,"6,774"
+United Arab Emirates,Africa,2015,901
+United Arab Emirates,Africa,2016,937
+United Arab Emirates,Africa,2017,"1,013"
+United Arab Emirates,Africa,2018,"1,196"
+United Arab Emirates,Africa,2019,"1,370"
+United Arab Emirates,Americas,2014,"3,214"
+United Arab Emirates,Americas,2015,"1,175"
+United Arab Emirates,Americas,2016,"1,135"
+United Arab Emirates,Americas,2017,"1,186"
+United Arab Emirates,Americas,2018,"1,208"
+United Arab Emirates,Americas,2019,"1,245"
+United Arab Emirates,East Asia and the Pacific,2014,"2,097"
+United Arab Emirates,East Asia and the Pacific,2015,"1,766"
+United Arab Emirates,East Asia and the Pacific,2016,"1,882"
+United Arab Emirates,East Asia and the Pacific,2017,"2,203"
+United Arab Emirates,East Asia and the Pacific,2018,"2,263"
+United Arab Emirates,East Asia and the Pacific,2019,"2,474"
+United Arab Emirates,Europe,2014,"2,710"
+United Arab Emirates,Europe,2015,"5,006"
+United Arab Emirates,Europe,2016,"5,209"
+United Arab Emirates,Europe,2017,"5,653"
+United Arab Emirates,Europe,2018,"5,943"
+United Arab Emirates,Europe,2019,"6,256"
+United Arab Emirates,Middle East,2014,"5,391"
+United Arab Emirates,Middle East,2015,"7,102"
+United Arab Emirates,Middle East,2016,"8,049"
+United Arab Emirates,Middle East,2017,"7,598"
+United Arab Emirates,Middle East,2018,"8,056"
+United Arab Emirates,Middle East,2019,"9,368"
+United Arab Emirates,South Asia,2014,"2,407"
+United Arab Emirates,South Asia,2015,"3,364"
+United Arab Emirates,South Asia,2016,"3,683"
+United Arab Emirates,South Asia,2017,"4,152"
+United Arab Emirates,South Asia,2018,"4,425"
+United Arab Emirates,South Asia,2019,"4,568"
+United Arab Emirates,Other not classified,2014,413
+United Arab Emirates,Other not classified,2015,0.3
+United Arab Emirates,Other not classified,2016,0.3
+United Arab Emirates,Other not classified,2017,0.1
+United Arab Emirates,Other not classified,2018,0.1
+United Arab Emirates,Other not classified,2019,0
+United Kingdom,Africa,2010,645
+United Kingdom,Africa,2011,605
+United Kingdom,Africa,2012,638
+United Kingdom,Africa,2013,654
+United Kingdom,Africa,2014,639
+United Kingdom,Africa,2015,674
+United Kingdom,Africa,2016,632
+United Kingdom,Africa,2017,732
+United Kingdom,Africa,2018,730
+United Kingdom,Africa,2019,679
+United Kingdom,Americas,2010,"3,795"
+United Kingdom,Americas,2011,"4,234"
+United Kingdom,Americas,2012,"4,051"
+United Kingdom,Americas,2013,"4,201"
+United Kingdom,Americas,2014,"4,387"
+United Kingdom,Americas,2015,"5,015"
+United Kingdom,Americas,2016,"5,565"
+United Kingdom,Americas,2017,"6,490"
+United Kingdom,Americas,2018,"6,311"
+United Kingdom,Americas,2019,"6,284"
+United Kingdom,East Asia and the Pacific,2010,"2,427"
+United Kingdom,East Asia and the Pacific,2011,"2,653"
+United Kingdom,East Asia and the Pacific,2012,"2,592"
+United Kingdom,East Asia and the Pacific,2013,"2,904"
+United Kingdom,East Asia and the Pacific,2014,"3,046"
+United Kingdom,East Asia and the Pacific,2015,"3,461"
+United Kingdom,East Asia and the Pacific,2016,"3,759"
+United Kingdom,East Asia and the Pacific,2017,"4,348"
+United Kingdom,East Asia and the Pacific,2018,"4,277"
+United Kingdom,East Asia and the Pacific,2019,"4,211"
+United Kingdom,Europe,2010,"22,501"
+United Kingdom,Europe,2011,"23,264"
+United Kingdom,Europe,2012,"23,794"
+United Kingdom,Europe,2013,"24,587"
+United Kingdom,Europe,2014,"25,960"
+United Kingdom,Europe,2015,"26,239"
+United Kingdom,Europe,2016,"27,558"
+United Kingdom,Europe,2017,"27,568"
+United Kingdom,Europe,2018,"26,972"
+United Kingdom,Europe,2019,"27,574"
+United Kingdom,Middle East,2010,550
+United Kingdom,Middle East,2011,641
+United Kingdom,Middle East,2012,681
+United Kingdom,Middle East,2013,744
+United Kingdom,Middle East,2014,802
+United Kingdom,Middle East,2015,887
+United Kingdom,Middle East,2016,"1,066"
+United Kingdom,Middle East,2017,"1,155"
+United Kingdom,Middle East,2018,"1,219"
+United Kingdom,Middle East,2019,"1,328"
+United Kingdom,South Asia,2010,481
+United Kingdom,South Asia,2011,490
+United Kingdom,South Asia,2012,466
+United Kingdom,South Asia,2013,477
+United Kingdom,South Asia,2014,503
+United Kingdom,South Asia,2015,517
+United Kingdom,South Asia,2016,550
+United Kingdom,South Asia,2017,787
+United Kingdom,South Asia,2018,775
+United Kingdom,South Asia,2019,782
+United States of America,Africa,2010,311
+United States of America,Africa,2011,344
+United States of America,Africa,2012,381
+United States of America,Africa,2013,468
+United States of America,Africa,2014,530
+United States of America,Africa,2015,570
+United States of America,Africa,2016,574
+United States of America,Africa,2017,585
+United States of America,Africa,2018,598
+United States of America,Africa,2019,567
+United States of America,Americas,2010,"38,859"
+United States of America,Americas,2011,"40,591"
+United States of America,Americas,2012,"43,168"
+United States of America,Americas,2013,"45,402"
+United States of America,Americas,2014,"47,898"
+United States of America,Americas,2015,"47,329"
+United States of America,Americas,2016,"46,459"
+United States of America,Americas,2017,"46,676"
+United States of America,Americas,2018,"48,966"
+United States of America,Americas,2019,"48,062"
+United States of America,East Asia and the Pacific,2010,"7,369"
+United States of America,East Asia and the Pacific,2011,"7,956"
+United States of America,East Asia and the Pacific,2012,"8,942"
+United States of America,East Asia and the Pacific,2013,"10,037"
+United States of America,East Asia and the Pacific,2014,"10,262"
+United States of America,East Asia and the Pacific,2015,"11,358"
+United States of America,East Asia and the Pacific,2016,"11,765"
+United States of America,East Asia and the Pacific,2017,"12,261"
+United States of America,East Asia and the Pacific,2018,"11,953"
+United States of America,East Asia and the Pacific,2019,"12,184"
+United States of America,Europe,2010,"12,432"
+United States of America,Europe,2011,"13,408"
+United States of America,Europe,2012,"13,138"
+United States of America,Europe,2013,"14,125"
+United States of America,Europe,2014,"14,849"
+United States of America,Europe,2015,"16,439"
+United States of America,Europe,2016,"15,506"
+United States of America,Europe,2017,"15,633"
+United States of America,Europe,2018,"16,083"
+United States of America,Europe,2019,"16,382"
+United States of America,Middle East,2010,296
+United States of America,Middle East,2011,386
+United States of America,Middle East,2012,486
+United States of America,Middle East,2013,572
+United States of America,Middle East,2014,684
+United States of America,Middle East,2015,731
+United States of America,Middle East,2016,681
+United States of America,Middle East,2017,550
+United States of America,Middle East,2018,576
+United States of America,Middle East,2019,577
+United States of America,South Asia,2010,738
+United States of America,South Asia,2011,792
+United States of America,South Asia,2012,852
+United States of America,South Asia,2013,"1,040"
+United States of America,South Asia,2014,"1,156"
+United States of America,South Asia,2015,"1,346"
+United States of America,South Asia,2016,"1,422"
+United States of America,South Asia,2017,"1,481"
+United States of America,South Asia,2018,"1,570"
+United States of America,South Asia,2019,"1,671"
+United States of America,Other not classified,2010,5
+Vietnam,Africa,2016,29
+Vietnam,Africa,2017,36
+Vietnam,Africa,2018,43
+Vietnam,Africa,2019,48
+Vietnam,Americas,2010,533
+Vietnam,Americas,2011,546
+Vietnam,Americas,2012,557
+Vietnam,Americas,2013,537
+Vietnam,Americas,2014,548
+Vietnam,Americas,2015,597
+Vietnam,Americas,2016,735
+Vietnam,Americas,2017,817
+Vietnam,Americas,2018,904
+Vietnam,Americas,2019,974
+Vietnam,East Asia and the Pacific,2010,"3,498"
+Vietnam,East Asia and the Pacific,2011,"4,384"
+Vietnam,East Asia and the Pacific,2012,"4,809"
+Vietnam,East Asia and the Pacific,2013,"5,461"
+Vietnam,East Asia and the Pacific,2014,"5,696"
+Vietnam,East Asia and the Pacific,2015,"5,641"
+Vietnam,East Asia and the Pacific,2016,"7,632"
+Vietnam,East Asia and the Pacific,2017,"10,184"
+Vietnam,East Asia and the Pacific,2018,"12,513"
+Vietnam,East Asia and the Pacific,2019,"14,650"
+Vietnam,Europe,2010,757
+Vietnam,Europe,2011,812
+Vietnam,Europe,2012,927
+Vietnam,Europe,2013,"1,046"
+Vietnam,Europe,2014,"1,198"
+Vietnam,Europe,2015,"1,199"
+Vietnam,Europe,2016,"1,617"
+Vietnam,Europe,2017,"1,886"
+Vietnam,Europe,2018,"2,038"
+Vietnam,Europe,2019,"2,168"
+Vietnam,South Asia,2019,169
+Vietnam,Other not classified,2010,262
+Vietnam,Other not classified,2011,272
+Vietnam,Other not classified,2012,554
+Vietnam,Other not classified,2013,528
+Vietnam,Other not classified,2014,432
+Vietnam,Other not classified,2015,507
+South Korea,Africa,2010,27
+South Korea,Africa,2011,30
+South Korea,Africa,2012,32
+South Korea,Africa,2013,34
+South Korea,Africa,2014,35
+South Korea,Africa,2015,36
+South Korea,Africa,2016,48
+South Korea,Africa,2017,40
+South Korea,Africa,2018,43
+South Korea,Africa,2019,50
+South Korea,Americas,2010,814
+South Korea,Americas,2011,827
+South Korea,Americas,2012,876
+South Korea,Americas,2013,916
+South Korea,Americas,2014,974
+South Korea,Americas,2015,974
+South Korea,Americas,2016,"1,116"
+South Korea,Americas,2017,"1,117"
+South Korea,Americas,2018,"1,243"
+South Korea,Americas,2019,"1,346"
+South Korea,East Asia and the Pacific,2010,"6,769"
+South Korea,East Asia and the Pacific,2011,"7,679"
+South Korea,East Asia and the Pacific,2012,"8,913"
+South Korea,East Asia and the Pacific,2013,"9,826"
+South Korea,East Asia and the Pacific,2014,"11,682"
+South Korea,East Asia and the Pacific,2015,"10,754"
+South Korea,East Asia and the Pacific,2016,"14,389"
+South Korea,East Asia and the Pacific,2017,"10,552"
+South Korea,East Asia and the Pacific,2018,"12,362"
+South Korea,East Asia and the Pacific,2019,"14,335"
+South Korea,Europe,2010,709
+South Korea,Europe,2011,753
+South Korea,Europe,2012,807
+South Korea,Europe,2013,864
+South Korea,Europe,2014,961
+South Korea,Europe,2015,936
+South Korea,Europe,2016,"1,093"
+South Korea,Europe,2017,"1,107"
+South Korea,Europe,2018,"1,196"
+South Korea,Europe,2019,"1,299"
+South Korea,Middle East,2010,25
+South Korea,Middle East,2011,29
+South Korea,Middle East,2012,35
+South Korea,Middle East,2013,40
+South Korea,Middle East,2014,46
+South Korea,Middle East,2015,42
+South Korea,Middle East,2016,45
+South Korea,Middle East,2017,46
+South Korea,Middle East,2018,49
+South Korea,Middle East,2019,56
+South Korea,South Asia,2010,135
+South Korea,South Asia,2011,148
+South Korea,South Asia,2012,147
+South Korea,South Asia,2013,188
+South Korea,South Asia,2014,211
+South Korea,South Asia,2015,219
+South Korea,South Asia,2016,274
+South Korea,South Asia,2017,203
+South Korea,South Asia,2018,202
+South Korea,South Asia,2019,226
+South Korea,Other not classified,2010,320
+South Korea,Other not classified,2011,329
+South Korea,Other not classified,2012,330
+South Korea,Other not classified,2013,310
+South Korea,Other not classified,2014,293
+South Korea,Other not classified,2015,271
+South Korea,Other not classified,2016,277
+South Korea,Other not classified,2017,270
+South Korea,Other not classified,2018,252
+South Korea,Other not classified,2019,193
