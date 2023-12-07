@@ -46,7 +46,7 @@ class SelectVis {
         vis.patterns = vis.svg.append("defs").selectAll("pattern")
             .data(vis.countries)
             .enter().append("pattern")
-            .attr("id", d => `flag-${d.name}`)
+            .attr("id", d => `flag-${d.name.replace(/\s/g, '_')}`)
             .attr("width", 20)
             .attr("height", 10)
             .attr("patternContentUnits", "objectBoundingBox")
@@ -77,7 +77,7 @@ class SelectVis {
             .attr("cx", (d, i) => (i % 7) * 80 + 50)
             .attr("cy", (d, i) => Math.floor(i / 7) * 80 + 30)
             .attr("r", 30)
-            .attr("fill", d => `url(#flag-${d.name})`)
+            .attr("fill", d => `url(#flag-${d.name.replace(/\s/g, '_')})`)
             .attr("stroke", "black")
             .attr("stroke-width", 1)
             .on("click",
@@ -145,7 +145,7 @@ class SelectVis {
 
                     // If selected, keep the original flag
                     flag.transition().duration(500)
-                        .attr("fill", `url(#flag-${d.name})`);
+                        .attr("fill", d => `url(#flag-${d.name.replace(/\s/g, '_')})`)
                 } else {
                     // If not selected, set the fill to gray with reduced opacity
                     flag.transition().duration(500)
@@ -172,6 +172,6 @@ class SelectVis {
         // Reset the appearance of all circles
         vis.circles.attr("stroke", "black")
             .attr("stroke-width", 1)
-            .attr("fill", d => `url(#flag-${d.name})`);
+            .attr("fill", d => `url(#flag-${d.name.replace(/\s/g, '_')})`)
     }
 }

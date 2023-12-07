@@ -1,9 +1,5 @@
 const countries = [
     {
-        "name": "Hong_Kong",
-        "flag": "./img/flag/Hong_Kong.png"
-    },
-    {
         "name": "Hungary",
         "flag": "./img/flag/Hungary.png"
     },
@@ -20,8 +16,8 @@ const countries = [
         "flag": "./img/flag/China.png"
     },
     {
-        "name": "UAE",
-        "flag": "./img/flag/UAE.png"
+        "name": "United States of America",
+        "flag": "./img/flag/United_States_of_America.png"
     },
     {
         "name": "Estonia",
@@ -32,15 +28,15 @@ const countries = [
         "flag": "./img/flag/Taiwan.png"
     },
     {
-        "name": "USA",
-        "flag": "./img/flag/USA.png"
-    },
-    {
         "name": "Czechia",
         "flag": "./img/flag/Czechia.png"
     },
     {
-        "name": "South_Korea",
+        "name": "Hong Kong",
+        "flag": "./img/flag/Hong_Kong.png"
+    },
+    {
+        "name": "South Korea",
         "flag": "./img/flag/South_Korea.png"
     },
     {
@@ -80,6 +76,14 @@ const countries = [
         "flag": "./img/flag/Canada.png"
     },
     {
+        "name": "United Arab Emirates",
+        "flag": "./img/flag/United_Arab_Emirates.png"
+    },
+    {
+        "name": "United Kingdom",
+        "flag": "./img/flag/United_Kingdom.png"
+    },
+    {
         "name": "Germany",
         "flag": "./img/flag/Germany.png"
     },
@@ -116,16 +120,12 @@ const countries = [
         "flag": "./img/flag/Italy.png"
     },
     {
-        "name": "Tu\u0308rkiye",
-        "flag": "./img/flag/Tu\u0308rkiye.png"
+        "name": "Turkiye",
+        "flag": "./img/flag/Turkiye.png"
     },
     {
         "name": "Denmark",
         "flag": "./img/flag/Denmark.png"
-    },
-    {
-        "name": "UK",
-        "flag": "./img/flag/UK.png"
     },
     {
         "name": "Singapore",
