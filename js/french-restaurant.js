@@ -1,6 +1,6 @@
 const numPeople = 500;
 const restaurantWidth = document.getElementById("french-restaurant").getBoundingClientRect().width;
-const restaurantHeight = 450;
+const restaurantHeight = 400;
 const doorPosition = { x: restaurantWidth/2.75, y: restaurantHeight/2.25 };
 let counter = 0
 
@@ -29,7 +29,6 @@ function addPerson() {
         .attr("opacity", 1);
 }
 
-// Function to animate a person walking to the door and disappearing
 // Function to animate a person walking to the door and disappearing
 function animatePerson(person) {
     person.transition()
@@ -69,11 +68,11 @@ setInterval(animatePeople, 83000); // 11000 milliseconds (10s for animation + 1s
 function updateCounter() {
     if(counter < 689){
         counter++;
-        d3.select("#counter-boxFrance").text(counter);
+        d3.select("#counter-boxFrance").text(`⭐ Number of Ratings: ${counter}`);
     }
 }
 
 // Update the counter every second (adjust the interval as needed)
 setTimeout(function () {
-    setInterval(updateCounter, 50);
+    setInterval(updateCounter, 40);
 }, 9000);

@@ -1,6 +1,6 @@
 const numPeopleEstonia = 50;
 const restaurantWidthEstonia = document.getElementById("estonia-restaurant").getBoundingClientRect().width;
-const restaurantHeightEstonia = 450;
+const restaurantHeightEstonia = 400;
 const doorPositionEstonia = { x: restaurantWidthEstonia/2.75, y: restaurantHeightEstonia/2.25 };
 console.log(restaurantWidthEstonia)
 let counterEstonia = 0
@@ -68,7 +68,7 @@ setInterval(animatePeopleEstonia, 55000); // 11000 milliseconds (10s for animati
 function updateCounterEstonia() {
     if(counterEstonia < 51){
         counterEstonia++;
-        d3.select("#counter-boxEstonia").text(counterEstonia);
+        d3.select("#counter-boxEstonia").text(`⭐ Number of Ratings: ${counterEstonia}`);
     }
 }
 

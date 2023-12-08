@@ -212,37 +212,23 @@ h4 {
     border-radius: 50%;
 }
 
-/*.counter-boxFrance {*/
-/*    position: absolute;*/
-/*    top: 410px; !* Adjust the top position as needed *!*/
-/*    left: 80px; !* Adjust the left position as needed *!*/
-/*    width: 80px;*/
-/*    height: 80px;*/
-/*    background-color: gold;*/
-/*    border: 10px black;*/
-/*    text-align: center;*/
-/*    line-height: 30px;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);*/
-/*}*/
+.counter-boxFrance {
+    position: absolute;
+    top: 20%; /* Adjust the top position as needed */
+    left: 5%; /* Adjust the left position as needed */
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+}
 
-/*.counter-boxEstonia {*/
-/*    position: absolute;*/
-/*    top: 410px; !* Adjust the top position as needed *!*/
-/*    left: 1250px; !* Adjust the left position as needed *!*/
-/*    width: 80px;*/
-/*    height: 80px;*/
-/*    background-color: gold;*/
-/*    border: 10px black;*/
-/*    text-align: center;*/
-/*    line-height: 30px;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);*/
-/*}*/
+.counter-boxEstonia {
+    position: absolute;
+    justify-content: center;
+    top: 20%; /* Adjust the top position as needed */
+    left: 5%;
+    width: 130%;
+    text-align: center;
+}
 
 #french-restaurant {
     position: center;
@@ -255,7 +241,7 @@ h4 {
 .destination-infoFrance {
     align-content: center;
     position: absolute;
-    top: 25px; /* Adjust the top position as needed */
+    top: 3%; /* Adjust the top position as needed */
     left: 5%;
     width: 50%;
     text-align: center;
@@ -265,7 +251,7 @@ h4 {
 
 .destination-infoEstonia {
     position: absolute;
-    top: 25px; /* Adjust the top position as needed */
+    top: 3%; /* Adjust the top position as needed */
     right: 5%;
     width: 50%;
     text-align: center;
