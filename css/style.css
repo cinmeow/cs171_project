@@ -281,3 +281,8 @@ h4 {
 #boxtitle {
     padding-top: 50%;
 }
+
+.selected-country {
+    stroke: #6495ED; /* Red color for the border */
+    stroke-width: 4px; /* Width of the border */
+}

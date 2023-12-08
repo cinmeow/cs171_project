@@ -252,6 +252,21 @@ class MapVis {
             })
             .on("click", function(event, d) {
                 let selectedCountryName = d.properties.name;
+                // Check if the country is already selected
+                if (vis.selectedCountry === selectedCountryName) {
+                    // Clear the selection
+                    vis.selectedCountry = null;
+                    d3.selectAll(".country").classed("selected-country", false);
+                } else {
+                    // Update the selected country
+                    vis.selectedCountry = selectedCountryName;
+                    // Clear previous selections
+                    d3.selectAll(".country").classed("selected-country", false);
+                    // Highlight the clicked country
+                    d3.select(this).classed("selected-country", true);
+                }
+
+                // Handle the click event for the selected country
                 vis.handleCountryClick(selectedCountryName);
             });
 
@@ -381,6 +396,20 @@ class MapVis {
             }
             return value ? vis.colorScale(value) : '#ccc';
         });
+
+        // Update the legend scale domain
+        vis.legendScale.domain(vis.colorScale.domain());
+
+        // Update the legend axis
+        let numTicks = 4;
+        let tickValues = d3.range(vis.legendScale.domain()[0], vis.legendScale.domain()[1], (vis.legendScale.domain()[1] - vis.legendScale.domain()[0]) / (numTicks - 1));
+        tickValues.push(vis.legendScale.domain()[1]); // Ensure the last value is included
+
+        vis.legend.select(".legend-axis")
+            .transition().duration(500)
+            .call(d3.axisBottom(vis.legendScale)
+                .tickValues(tickValues)
+                .tickFormat(d3.format(".2s")));
 
         vis.svg.select(".legend-label").text(vis.legendTitles[dataType]);
     }
