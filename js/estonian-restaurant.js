@@ -1,6 +1,6 @@
 const numPeopleEstonia = 50;
 const restaurantWidthEstonia = document.getElementById("estonia-restaurant").getBoundingClientRect().width;
-const restaurantHeightEstonia = 500;
+const restaurantHeightEstonia = 450;
 const doorPositionEstonia = { x: restaurantWidthEstonia/2.75, y: restaurantHeightEstonia/2.25 };
 console.log(restaurantWidthEstonia)
 let counterEstonia = 0

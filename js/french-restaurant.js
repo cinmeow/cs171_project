@@ -1,6 +1,6 @@
 const numPeople = 500;
 const restaurantWidth = document.getElementById("french-restaurant").getBoundingClientRect().width;
-const restaurantHeight = 500;
+const restaurantHeight = 450;
 const doorPosition = { x: restaurantWidth/2.75, y: restaurantHeight/2.25 };
 let counter = 0
 
