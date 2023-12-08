@@ -201,13 +201,25 @@
         <div class="container-fluid vh-100">
             <div class="row" style="height: 100%">
                 <div class="col-4" id="cuisineSelect">
-                    <div class="row" id="cuisineSelector" style="height:70%">
-                        <h3> Let's get to know more about the top cuisines in the countries you've selected! </h3>
-                        <select id='bubbleSelector' class="custom-select align-self-start" style="width: 200px"></select>
-                        <p id="cuisineExplained"></p>
+                    <div class="row justify-content-center" id="cuisineSelector">
+                        <p id="cuisinetitle"> Let's get to know more about the top cuisines in the countries you've selected! </p>
                     </div>
-                    <div class="row" id="michelinreminder" style="height:30%">
-                        <h3> The MICHELIN Guide </h3>
+                    <div class="row justify-content-center">
+                        <p id="cuisineExplained">
+                            Select a cuisine to learn more! Hover over bubbles to view more information about MICHELIN
+                            restaurants at different MICHELIN award ratings.
+                        </p>
+                    </div>
+                    <div class="row">
+                        <select id='bubbleSelector' class="form-control" style="width: 90%"></select>
+                    </div>
+                    <div class="row justify-content-center">
+                        <h3 id="boxtitle"> MICHELIN Restaurants </h3>
+                        <div id="michelinreminder">
+                            <p>The Michelin Guide has five different culinary distinction awards:
+                                Bib Gourmand, MICHELIN Green Star, 1 Star MICHELIN, 2 Star MICHELIN and 3 Star MICHELIN.
+                                Hover over bubbles in a category to review what each award means.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-8" id="michelin_bubble"></div>
