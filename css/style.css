@@ -195,10 +195,15 @@ body{
     text-align: center;
     font-size: 30px;
     width: 110vh;
-    height: 20vh;
+    height: 15vh;
     margin-left: 20vh;
     font-family: 'Montserrat', sans-serif;
-    font-size: 4vh;
+    font-size: 3vh;
+}
+
+#scroll-label{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vh;
 }
 
 /*Michelin Guide Explanation Page*/
