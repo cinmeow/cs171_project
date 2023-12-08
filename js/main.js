@@ -6,7 +6,7 @@ let arrivalRegionData = "data/arrivalByRegions2.csv";
 let michelinCountry = new Set()
 let spiderSelect = new Set();
 let countryColorArray = []
-let mapVis, lineVis, lineVis2, selectVis, barchart, barchart2, travelPurpose, bubbleChart, treemapVis;
+let mapVis, lineVis, lineVis2, selectVis, barchart, barchart2, travelPurpose, bubbleChart, treemapVis, areachart;
 let parseYear = d3.timeParse("%Y");
 
 // set up fullpage scrolling
