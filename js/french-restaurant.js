@@ -1,7 +1,7 @@
 const numPeople = 500;
 const restaurantWidth = document.getElementById("french-restaurant").getBoundingClientRect().width;
 const restaurantHeight = 500;
-const doorPosition = { x: 180, y: 175 };
+const doorPosition = { x: restaurantWidth/2.75, y: restaurantHeight/2.25 };
 let counter = 0
 
 // Create the SVG container using D3
@@ -14,8 +14,8 @@ svg.append("image")
     .attr("xlink:href", "img/French-rest.png") // Replace with the actual path or URL
     .attr("width", restaurantWidth)
     .attr("height", restaurantHeight)
-    .attr("x", -60)
-    .attr("y", -50);
+    .attr("x", 0)
+    .attr("y", 0);
 
 // Function to add a person to the SVG
 function addPerson() {

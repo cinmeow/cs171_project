@@ -1,7 +1,8 @@
 const numPeopleEstonia = 50;
 const restaurantWidthEstonia = document.getElementById("estonia-restaurant").getBoundingClientRect().width;
 const restaurantHeightEstonia = 500;
-const doorPositionEstonia = { x: 250, y: 175 };
+const doorPositionEstonia = { x: restaurantWidthEstonia/2.75, y: restaurantHeightEstonia/2.25 };
+console.log(restaurantWidthEstonia)
 let counterEstonia = 0
 // Create the SVG container using D3
 const svgEstonia = d3.select("#estonia-restaurant")
@@ -13,8 +14,8 @@ svgEstonia.append("image")
     .attr("xlink:href", "img/Est-rest 2.png") // Replace with the actual path or URL
     .attr("width", restaurantWidthEstonia)
     .attr("height", restaurantHeightEstonia)
-    .attr("x", 50)
-    .attr("y", -50);
+    .attr("x", 0)
+    .attr("y", 0);
 
 // Function to add a person to the SVG
 function addPerson_Estonia() {
@@ -23,12 +24,11 @@ function addPerson_Estonia() {
         .attr("xlink:href", "img/walking_estonia.png")
         .attr("width", restaurantWidthEstonia)
         .attr("height", restaurantHeightEstonia)
-        .attr("x", -50) // Initial x position outside the restaurant
+        .attr("x", 0) // Initial x position outside the restaurant
         .attr("y", restaurantHeightEstonia) // Initial y position (center of the restaurant)
         .attr("opacity", 1);
 }
 
-// Function to animate a person walking to the door and disappearing
 // Function to animate a person walking to the door and disappearing
 function animatePersonEstonia(person) {
     person.transition()
