@@ -148,7 +148,6 @@ h4 {
 
 #michelin-blurb {
     font-family: sans-serif;
-    color: #5C5555;
     font-size: 18px;
     padding-left: 130px;
     padding-right: 130px;
@@ -226,8 +225,6 @@ h4 {
     width: 50%;
     text-align: center;
     justify-content: center;
-    color: #332C2B;
-    font-family: Georgia;
 }
 
 .counter-boxEstonia {
@@ -237,8 +234,6 @@ h4 {
     left: 5%;
     width: 130%;
     text-align: center;
-    color: #332C2B;
-    font-family: Georgia;
 }
 
 #french-restaurant {
@@ -273,13 +268,11 @@ h4 {
 #restaurant-name{
     font-family: "Papyrus";
     font-size: 60px;
-    color: #61433E;
 }
 
 #destination-name{
     font-family: "Georgia";
     font-size: 20px;
-    color: #332C2B;
 }
 
 #michelinreminder {
