@@ -329,6 +329,10 @@ h4 {
     font-family: Georgia;
     font-size: 2.2vh;
 }
+.selected-country {
+    stroke: #6495ED; /* Red color for the border */
+    stroke-width: 4px; /* Width of the border */
+}
 
 #subtitle{
     text-align: right;
@@ -340,7 +344,3 @@ h4 {
 .carousel-control-prev /*, .carousel-indicators */ {
     filter: invert(100%);
 
-.selected-country {
-    stroke: #6495ED; /* Red color for the border */
-    stroke-width: 4px; /* Width of the border */
-}
