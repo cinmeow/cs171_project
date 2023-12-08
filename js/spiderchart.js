@@ -360,15 +360,16 @@ class SpiderVis {
         legendItems.append("rect")
             .attr("width", 10)
             .attr("height", 10)
-            .attr("x", -30)
-            .attr("y", -10)
+            .attr("x", -100)
+            .attr("y", -40)
             .attr("stroke", "black")
             .attr("stroke-width", "0.5px")
             .attr("fill", country => getColor(country, countryColorArray));
 
         // Add country labels to the legend
         legendItems.append("text")
-            .attr("x", -15) // Adjust the position as needed
+            .attr("x", -85) // Adjust the position as needed
+            .attr("y", -30)
             .attr("font-family", "'Montserrat', sans-serif")
             .text(country => country);
 

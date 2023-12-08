@@ -44,7 +44,7 @@ function animatePerson(person) {
             d3.select(this).transition().duration(300).attr("opacity", 0);
 
             // Remove the person from the DOM after the animation ends
-            d3.select(this).transition().delay(500).remove();
+            d3.select(this).transition().delay(300).remove();
         });
 }
 
@@ -54,7 +54,7 @@ function animatePeople() {
     for (let i = 0; i < numPeople; i++) {
         const person = addPerson();
         // Stagger the start times using setTimeout
-        setTimeout(() => animatePerson(person), i * 1000);
+        setTimeout(() => animatePerson(person), i * 2000);
     }
 }
 
@@ -62,7 +62,7 @@ function animatePeople() {
 animatePeople();
 
 // Call the animatePeople function at regular intervals to create a continuous loop
-setInterval(animatePeople, 83000); // 11000 milliseconds (10s for animation + 1s delay before starting the next animation)
+setInterval(animatePeople, 32000); // 11000 milliseconds (10s for animation + 1s delay before starting the next animation)
 
 // Function to update the counter
 function updateCounter() {
@@ -75,4 +75,4 @@ function updateCounter() {
 // Update the counter every second (adjust the interval as needed)
 setTimeout(function () {
     setInterval(updateCounter, 40);
-}, 9000);
+}, 8000);

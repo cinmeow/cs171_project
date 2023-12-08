@@ -169,34 +169,34 @@ body{
 }
 
 #description1{
-    padding: 5%;
+    padding: 1.5%;
     color: #5C5555;
     text-align: center;
     width: 110vh;
-    height: 25vh;
-    margin: 0;
+    height: 20vh;
+    margin-left: 20vh;
+    margin-top: 3vh;
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 4.2vh;
 }
 #description2{
-    padding: 1%;
     color: #5C5555;
     text-align: left;
     width: 110vh;
-    height: 22vh;
-    margin:0;
+    height: 18vh;
+    margin-left: 20vh;
     font-family: 'Montserrat', sans-serif;
     font-size: 2.2vh;
 }
 #description3{
-    padding: 3%;
+    padding: 1.5%;
     color: #5C5555;
     text-align: center;
     font-size: 30px;
     width: 110vh;
-    height: 25vh;
-    margin: 0;
+    height: 20vh;
+    margin-left: 20vh;
     font-family: 'Montserrat', sans-serif;
     font-size: 4vh;
 }
