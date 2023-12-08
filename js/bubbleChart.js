@@ -42,18 +42,11 @@ class BubbleChart {
         //     .range([2, 14])
 
         // append info to cuisine selection
-        vis.cuisineInfo = d3.select("#cuisineExplained")
-        vis.cuisineInfo.append("text").text("Select a cuisine to learn more!")
+        // vis.cuisineInfo = d3.select("#cuisineExplained")
+        // vis.cuisineInfo.append("text").text("Select a cuisine to learn more!")
 
         // append info in left column
         vis.michelinInfo = d3.select("#michelinreminder")
-
-        vis.michelinInfo.append("text")
-            .text("The Michelin Guide has five different culinary distinction awards: " +
-                "Bib Gourmand, MICHELIN Green Star, 1 Star MICHELIN, 2 Star MICHELIN and 3 Star MICHELIN. " +
-                "Hover over bubbles in a category to review what each award means.")
-            .attr("class", "reminderText")
-
 
         // append tooltip
         vis.tooltip = d3.select("body").append('div')
@@ -197,6 +190,10 @@ class BubbleChart {
                 // change michelin info text
                 replaceText(d);
 
+                // drop and rewrite title
+                vis.moveTitle(d.Award);
+
+
                 // display tool tip
                 vis.tooltip
                     .style("opacity", 1)
@@ -216,7 +213,10 @@ class BubbleChart {
             // revert stroke
             let myCircle = d3.select(this);
             myCircle.attr("stroke", "black");
-            myCircle.attr("stroke-width", 1)
+            myCircle.attr("stroke-width", 1);
+
+            // revert title
+            vis.addTitle();
 
             // revert text
             vis.michelinInfo.text("The Michelin Guide has five different culinary distinction awards: " +
@@ -313,6 +313,28 @@ class BubbleChart {
 
     }
 
+    ratingSwitcher(rating){
+        let newTitle;
+        switch (rating) {
+            case '1 Star MICHELIN':
+                newTitle = "one";
+                break;
+            case '2 Stars MICHELIN':
+                newTitle = "two";
+                break;
+            case '3 Stars MICHELIN':
+                newTitle = "three";
+                break;
+            case 'Bib Gourmand':
+                newTitle = "bib";
+                break;
+            case 'MICHELIN Green Star':
+                newTitle = "green"
+        }
+
+        return newTitle;
+    }
+
     addTitle(){
         let vis = this;
 
@@ -328,12 +350,13 @@ class BubbleChart {
         vis.groupYCoord = Array.from(d3.group(vis.displayData, (d) => d.Award), ([key, value]) => {
             return {
                 category: key,
-                meanValue: d3.mean(value, d => d.y)
+                meanValue: d3.mean(value, d => d.y),
+                maxValue: d3.max(value, d => d.y)
             };
         });
 
 
-        vis.svg.selectAll("text").remove();
+        vis.svg.selectAll('text').remove();
         var index = 0;
 
         let availableAwards = new Set(vis.groupXCoord.map(d => d.category));
@@ -344,16 +367,43 @@ class BubbleChart {
             let xcoord = vis.groupXCoord.find((d) => d.category === rating).meanValue;
             let ycoord = vis.groupYCoord.find((d) => d.category === rating).meanValue;
 
+            let switched = vis.ratingSwitcher(rating)
+
             vis.svg.append("text")
                 .attr("x", xcoord)
                 .attr("y", ycoord)
                 .attr("text-anchor", "middle")
                 .style("font-size", "20px")
-                .attr("class", "bubbleTitle")
+                .attr("class", "bubbleTitle" + switched)
                 .text(rating)
 
             index++;
         }
     }
+
+    moveTitle(rating){
+        let vis = this;
+
+        // get new rating name
+        let switched = vis.ratingSwitcher(rating);
+
+        // set title for separate bubbles clusters
+        vis.svg.select(".bubbleTitle" + switched).remove();
+
+        let xcoord = vis.groupXCoord.find((d) => d.category === rating).meanValue;
+        let ycoord = vis.groupYCoord.find((d) => d.category === rating).maxValue;
+
+        console.log("MOVE TITLE")
+        console.log(ycoord)
+
+        vis.svg.append("text")
+                .attr("x", xcoord)
+                .attr("y", ycoord + 50)
+                .attr("text-anchor", "middle")
+                .style("font-size", "20px")
+                .attr("class", "bubbleTitle" + switched)
+                .text(rating)
+
+        }
 }
 

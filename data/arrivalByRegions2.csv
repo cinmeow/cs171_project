@@ -1,0 +1,2285 @@
+country,Arrival_Regions,year,numArrivals
+Andorra,Europe,2012,2202.0
+Andorra,Europe,2013,2283.0
+Andorra,Europe,2014,2330.0
+Andorra,Europe,2015,2597.0
+Andorra,Europe,2016,2741.0
+Andorra,Europe,2017,2922.0
+Andorra,Europe,2018,2959.0
+Andorra,Europe,2019,3006.0
+Andorra,Others,2012,36.0
+Andorra,Others,2013,45.0
+Andorra,Others,2014,33.0
+Andorra,Others,2015,67.0
+Andorra,Others,2016,78.0
+Andorra,Others,2017,81.0
+Andorra,Others,2018,83.0
+Andorra,Others,2019,84.0
+Austria,Africa,2010,45.0
+Austria,Africa,2011,52.0
+Austria,Africa,2012,58.0
+Austria,Africa,2013,61.0
+Austria,Africa,2014,63.0
+Austria,Africa,2015,72.0
+Austria,Africa,2016,78.0
+Austria,Africa,2017,77.0
+Austria,Africa,2018,82.0
+Austria,Africa,2019,80.0
+Austria,Americas,2010,708.0
+Austria,Americas,2011,743.0
+Austria,Americas,2012,806.0
+Austria,Americas,2013,860.0
+Austria,Americas,2014,919.0
+Austria,Americas,2015,1020.0
+Austria,Americas,2016,1013.0
+Austria,Americas,2017,1085.0
+Austria,Americas,2018,1158.0
+Austria,Americas,2019,1209.0
+Austria,East Asia/Pacific,2010,741.0
+Austria,East Asia/Pacific,2011,915.0
+Austria,East Asia/Pacific,2012,1105.0
+Austria,East Asia/Pacific,2013,1227.0
+Austria,East Asia/Pacific,2014,1381.0
+Austria,East Asia/Pacific,2015,1740.0
+Austria,East Asia/Pacific,2016,1733.0
+Austria,East Asia/Pacific,2017,2047.0
+Austria,East Asia/Pacific,2018,2188.0
+Austria,East Asia/Pacific,2019,2314.0
+Austria,Europe,2010,20043.0
+Austria,Europe,2011,20819.0
+Austria,Europe,2012,21599.0
+Austria,Europe,2013,22043.0
+Austria,Europe,2014,22242.0
+Austria,Europe,2015,23051.0
+Austria,Europe,2016,24427.0
+Austria,Europe,2017,25362.0
+Austria,Europe,2018,26489.0
+Austria,Europe,2019,27356.0
+Austria,Middle East,2010,120.0
+Austria,Middle East,2011,160.0
+Austria,Middle East,2012,218.0
+Austria,Middle East,2013,268.0
+Austria,Middle East,2014,303.0
+Austria,Middle East,2015,419.0
+Austria,Middle East,2016,382.0
+Austria,Middle East,2017,384.0
+Austria,Middle East,2018,393.0
+Austria,Middle East,2019,384.0
+Austria,South Asia,2010,60.0
+Austria,South Asia,2011,84.0
+Austria,South Asia,2012,89.0
+Austria,South Asia,2013,88.0
+Austria,South Asia,2014,84.0
+Austria,South Asia,2015,118.0
+Austria,South Asia,2016,147.0
+Austria,South Asia,2017,178.0
+Austria,South Asia,2018,193.0
+Austria,South Asia,2019,193.0
+Austria,Others,2010,287.0
+Austria,Others,2011,239.0
+Austria,Others,2012,276.0
+Austria,Others,2013,265.0
+Austria,Others,2014,300.0
+Austria,Others,2015,307.0
+Austria,Others,2016,341.0
+Austria,Others,2017,328.0
+Austria,Others,2018,313.0
+Austria,Others,2019,347.0
+Belgium,Africa,2010,61.0
+Belgium,Africa,2011,62.0
+Belgium,Africa,2012,61.0
+Belgium,Africa,2013,64.0
+Belgium,Africa,2014,66.0
+Belgium,Africa,2015,65.0
+Belgium,Africa,2016,64.0
+Belgium,Africa,2017,70.0
+Belgium,Africa,2018,75.0
+Belgium,Africa,2019,75.0
+Belgium,Americas,2010,429.0
+Belgium,Americas,2011,489.0
+Belgium,Americas,2012,505.0
+Belgium,Americas,2013,517.0
+Belgium,Americas,2014,566.0
+Belgium,Americas,2015,603.0
+Belgium,Americas,2016,493.0
+Belgium,Americas,2017,621.0
+Belgium,Americas,2018,704.0
+Belgium,Americas,2019,742.0
+Belgium,East Asia/Pacific,2010,256.0
+Belgium,East Asia/Pacific,2011,307.0
+Belgium,East Asia/Pacific,2012,367.0
+Belgium,East Asia/Pacific,2013,398.0
+Belgium,East Asia/Pacific,2014,437.0
+Belgium,East Asia/Pacific,2015,498.0
+Belgium,East Asia/Pacific,2016,343.0
+Belgium,East Asia/Pacific,2017,429.0
+Belgium,East Asia/Pacific,2018,487.0
+Belgium,East Asia/Pacific,2019,504.0
+Belgium,Europe,2010,6310.0
+Belgium,Europe,2011,6523.0
+Belgium,Europe,2012,6508.0
+Belgium,Europe,2013,6560.0
+Belgium,Europe,2014,6658.0
+Belgium,Europe,2015,7018.0
+Belgium,Europe,2016,6400.0
+Belgium,Europe,2017,6978.0
+Belgium,Europe,2018,7527.0
+Belgium,Europe,2019,7677.0
+Belgium,Middle East,2010,26.0
+Belgium,Middle East,2011,31.0
+Belgium,Middle East,2012,36.0
+Belgium,Middle East,2013,40.0
+Belgium,Middle East,2014,48.0
+Belgium,Middle East,2015,59.0
+Belgium,Middle East,2016,45.0
+Belgium,Middle East,2017,57.0
+Belgium,Middle East,2018,73.0
+Belgium,Middle East,2019,74.0
+Belgium,South Asia,2010,52.0
+Belgium,South Asia,2011,55.0
+Belgium,South Asia,2012,53.0
+Belgium,South Asia,2013,56.0
+Belgium,South Asia,2014,67.0
+Belgium,South Asia,2015,78.0
+Belgium,South Asia,2016,62.0
+Belgium,South Asia,2017,67.0
+Belgium,South Asia,2018,77.0
+Belgium,South Asia,2019,70.0
+Belgium,Others,2010,52.0
+Belgium,Others,2011,27.0
+Belgium,Others,2012,31.0
+Belgium,Others,2013,49.0
+Belgium,Others,2014,45.0
+Belgium,Others,2015,34.0
+Belgium,Others,2016,74.0
+Belgium,Others,2017,163.0
+Belgium,Others,2018,177.0
+Belgium,Others,2019,201.0
+Brazil,Africa,2010,84.0
+Brazil,Africa,2011,86.0
+Brazil,Africa,2012,92.0
+Brazil,Africa,2013,95.0
+Brazil,Africa,2014,128.0
+Brazil,Africa,2015,108.0
+Brazil,Africa,2016,78.0
+Brazil,Africa,2017,68.0
+Brazil,Africa,2018,63.0
+Brazil,Africa,2019,68.0
+Brazil,Americas,2010,3196.0
+Brazil,Americas,2011,3402.0
+Brazil,Americas,2012,3582.0
+Brazil,Americas,2013,3726.0
+Brazil,Americas,2014,4041.0
+Brazil,Americas,2015,4209.0
+Brazil,Americas,2016,4488.0
+Brazil,Americas,2017,4768.0
+Brazil,Americas,2018,4786.0
+Brazil,Americas,2019,4392.0
+Brazil,East Asia/Pacific,2010,210.0
+Brazil,East Asia/Pacific,2011,261.0
+Brazil,East Asia/Pacific,2012,294.0
+Brazil,East Asia/Pacific,2013,299.0
+Brazil,East Asia/Pacific,2014,344.0
+Brazil,East Asia/Pacific,2015,279.0
+Brazil,East Asia/Pacific,2016,299.0
+Brazil,East Asia/Pacific,2017,242.0
+Brazil,East Asia/Pacific,2018,250.0
+Brazil,East Asia/Pacific,2019,296.0
+Brazil,Europe,2010,1652.0
+Brazil,Europe,2011,1663.0
+Brazil,Europe,2012,1686.0
+Brazil,Europe,2013,1670.0
+Brazil,Europe,2014,1891.0
+Brazil,Europe,2015,1667.0
+Brazil,Europe,2016,1642.0
+Brazil,Europe,2017,1481.0
+Brazil,Europe,2018,1494.0
+Brazil,Europe,2019,1570.0
+Brazil,Middle East,2015,12.0
+Brazil,Middle East,2016,10.0
+Brazil,Middle East,2017,8.0
+Brazil,Middle East,2018,7.0
+Brazil,Middle East,2019,8.0
+Brazil,South Asia,2010,19.0
+Brazil,South Asia,2011,21.0
+Brazil,South Asia,2012,22.0
+Brazil,South Asia,2013,23.0
+Brazil,South Asia,2014,26.0
+Brazil,South Asia,2015,31.0
+Brazil,South Asia,2016,30.0
+Brazil,South Asia,2017,22.0
+Brazil,South Asia,2018,21.0
+Brazil,South Asia,2019,20.0
+Canada,Africa,2010,81.0
+Canada,Africa,2011,86.0
+Canada,Africa,2012,92.0
+Canada,Africa,2013,98.0
+Canada,Africa,2014,104.0
+Canada,Africa,2015,111.0
+Canada,Africa,2016,124.0
+Canada,Africa,2017,133.0
+Canada,Africa,2018,143.0
+Canada,Africa,2019,166.0
+Canada,Americas,2010,12336.0
+Canada,Americas,2011,12081.0
+Canada,Americas,2012,12395.0
+Canada,Americas,2013,12002.0
+Canada,Americas,2014,12082.0
+Canada,Americas,2015,13290.0
+Canada,Americas,2016,14588.0
+Canada,Americas,2017,15150.0
+Canada,Americas,2018,15405.0
+Canada,Americas,2019,16085.0
+Canada,East Asia/Pacific,2010,1170.0
+Canada,East Asia/Pacific,2011,1223.0
+Canada,East Asia/Pacific,2012,1286.0
+Canada,East Asia/Pacific,2013,1389.0
+Canada,East Asia/Pacific,2014,1590.0
+Canada,East Asia/Pacific,2015,1691.0
+Canada,East Asia/Pacific,2016,1994.0
+Canada,East Asia/Pacific,2017,2183.0
+Canada,East Asia/Pacific,2018,2149.0
+Canada,East Asia/Pacific,2019,2176.0
+Canada,Europe,2010,2376.0
+Canada,Europe,2011,2356.0
+Canada,Europe,2012,2299.0
+Canada,Europe,2013,2286.0
+Canada,Europe,2014,2437.0
+Canada,Europe,2015,2541.0
+Canada,Europe,2016,2876.0
+Canada,Europe,2017,2975.0
+Canada,Europe,2018,2944.0
+Canada,Europe,2019,3150.0
+Canada,Middle East,2010,84.0
+Canada,Middle East,2011,85.0
+Canada,Middle East,2012,86.0
+Canada,Middle East,2013,91.0
+Canada,Middle East,2014,103.0
+Canada,Middle East,2015,107.0
+Canada,Middle East,2016,116.0
+Canada,Middle East,2017,116.0
+Canada,Middle East,2018,110.0
+Canada,Middle East,2019,121.0
+Canada,South Asia,2010,172.0
+Canada,South Asia,2011,185.0
+Canada,South Asia,2012,187.0
+Canada,South Asia,2013,192.0
+Canada,South Asia,2014,221.0
+Canada,South Asia,2015,239.0
+Canada,South Asia,2016,274.0
+Canada,South Asia,2017,327.0
+Canada,South Asia,2018,381.0
+Canada,South Asia,2019,447.0
+Canada,Others,2018,1.0
+Canada,Others,2019,1.0
+China,Africa,2010,391.0
+China,Africa,2011,424.0
+China,Africa,2012,440.0
+China,Africa,2013,461.0
+China,Africa,2014,497.0
+China,Africa,2015,488.0
+China,Africa,2016,502.0
+China,Africa,2017,542.0
+China,Africa,2018,585.0
+China,Africa,2019,599.0
+China,Americas,2010,2995.0
+China,Americas,2011,3201.0
+China,Americas,2012,3179.0
+China,Americas,2013,3124.0
+China,Americas,2014,3107.0
+China,Americas,2015,3115.0
+China,Americas,2016,3379.0
+China,Americas,2017,3540.0
+China,Americas,2018,3787.0
+China,Americas,2019,3645.0
+China,East Asia/Pacific,2010,122889.0
+China,East Asia/Pacific,2011,123828.0
+China,East Asia/Pacific,2012,120802.0
+China,East Asia/Pacific,2013,117744.0
+China,East Asia/Pacific,2014,117276.0
+China,East Asia/Pacific,2015,123308.0
+China,East Asia/Pacific,2016,130357.0
+China,East Asia/Pacific,2017,141127.0
+China,East Asia/Pacific,2018,146013.0
+China,East Asia/Pacific,2019,149698.0
+China,Europe,2010,6366.0
+China,Europe,2011,6772.0
+China,Europe,2012,6770.0
+China,Europe,2013,6422.0
+China,Europe,2014,6209.0
+China,Europe,2015,5475.0
+China,Europe,2016,5988.0
+China,Europe,2017,6402.0
+China,Europe,2018,6531.0
+China,Europe,2019,6854.0
+China,Middle East,2010,247.0
+China,Middle East,2011,239.0
+China,Middle East,2012,264.0
+China,Middle East,2013,269.0
+China,Middle East,2014,278.0
+China,Middle East,2015,267.0
+China,Middle East,2016,253.0
+China,Middle East,2017,255.0
+China,Middle East,2018,252.0
+China,Middle East,2019,258.0
+China,South Asia,2010,871.0
+China,South Asia,2011,957.0
+China,South Asia,2012,948.0
+China,South Asia,2013,1055.0
+China,South Asia,2014,1125.0
+China,South Asia,2015,1164.0
+China,South Asia,2016,1296.0
+China,South Asia,2017,1391.0
+China,South Asia,2018,1280.0
+China,South Asia,2019,1481.0
+China,Others,2010,2.0
+China,Others,2011,2.0
+China,Others,2012,2.0
+China,Others,2013,2.0
+China,Others,2014,7.0
+China,Others,2015,3.0
+China,Others,2017,3.0
+China,Others,2018,158.0
+China,Others,2019,2.0
+Croatia,Africa,2010,11.0
+Croatia,Africa,2011,13.0
+Croatia,Africa,2012,17.0
+Croatia,Africa,2013,20.0
+Croatia,Africa,2014,23.0
+Croatia,Africa,2015,25.0
+Croatia,Africa,2016,32.0
+Croatia,Africa,2017,36.0
+Croatia,Africa,2018,40.0
+Croatia,Africa,2019,43.0
+Croatia,Americas,2010,208.0
+Croatia,Americas,2011,251.0
+Croatia,Americas,2012,292.0
+Croatia,Americas,2013,381.0
+Croatia,Americas,2014,435.0
+Croatia,Americas,2015,531.0
+Croatia,Americas,2016,574.0
+Croatia,Americas,2017,747.0
+Croatia,Americas,2018,915.0
+Croatia,Americas,2019,1026.0
+Croatia,East Asia/Pacific,2010,299.0
+Croatia,East Asia/Pacific,2011,360.0
+Croatia,East Asia/Pacific,2012,469.0
+Croatia,East Asia/Pacific,2013,545.0
+Croatia,East Asia/Pacific,2014,823.0
+Croatia,East Asia/Pacific,2015,979.0
+Croatia,East Asia/Pacific,2016,1042.0
+Croatia,East Asia/Pacific,2017,1356.0
+Croatia,East Asia/Pacific,2018,1499.0
+Croatia,East Asia/Pacific,2019,1599.0
+Croatia,Europe,2010,8593.0
+Croatia,Europe,2011,9303.0
+Croatia,Europe,2012,9591.0
+Croatia,Europe,2013,10003.0
+Croatia,Europe,2014,10342.0
+Croatia,Europe,2015,11149.0
+Croatia,Europe,2016,12160.0
+Croatia,Europe,2017,13454.0
+Croatia,Europe,2018,14192.0
+Croatia,Europe,2019,14686.0
+Czechia,Africa,2010,26.0
+Czechia,Africa,2011,30.0
+Czechia,Africa,2012,37.0
+Czechia,Africa,2013,39.0
+Czechia,Africa,2014,44.0
+Czechia,Africa,2015,44.0
+Czechia,Africa,2016,45.0
+Czechia,Africa,2017,48.0
+Czechia,Africa,2018,46.0
+Czechia,Africa,2019,50.0
+Czechia,Americas,2010,460.0
+Czechia,Americas,2011,480.0
+Czechia,Americas,2012,613.0
+Czechia,Americas,2013,650.0
+Czechia,Americas,2014,690.0
+Czechia,Americas,2015,770.0
+Czechia,Americas,2016,790.0
+Czechia,Americas,2017,842.0
+Czechia,Americas,2018,842.0
+Czechia,Americas,2019,880.0
+Czechia,East Asia/Pacific,2010,587.0
+Czechia,East Asia/Pacific,2011,674.0
+Czechia,East Asia/Pacific,2012,781.0
+Czechia,East Asia/Pacific,2013,837.0
+Czechia,East Asia/Pacific,2014,934.0
+Czechia,East Asia/Pacific,2015,1118.0
+Czechia,East Asia/Pacific,2016,1267.0
+Czechia,East Asia/Pacific,2017,1552.0
+Czechia,East Asia/Pacific,2018,1713.0
+Czechia,East Asia/Pacific,2019,1744.0
+Czechia,Europe,2010,5261.0
+Czechia,Europe,2011,5531.0
+Czechia,Europe,2012,6190.0
+Czechia,Europe,2013,6297.0
+Czechia,Europe,2014,6391.0
+Czechia,Europe,2015,6687.0
+Czechia,Europe,2016,7109.0
+Czechia,Europe,2017,7581.0
+Czechia,Europe,2018,7853.0
+Czechia,Europe,2019,8060.0
+Czechia,Middle East,2015,32.0
+Czechia,Middle East,2016,42.0
+Czechia,Middle East,2017,51.0
+Czechia,Middle East,2018,62.0
+Czechia,Middle East,2019,58.0
+Czechia,South Asia,2012,25.0
+Czechia,South Asia,2013,29.0
+Czechia,South Asia,2014,38.0
+Czechia,South Asia,2015,56.0
+Czechia,South Asia,2016,68.0
+Czechia,South Asia,2017,86.0
+Czechia,South Asia,2018,96.0
+Czechia,South Asia,2019,98.0
+Denmark,Africa,2019,122.0
+Denmark,Americas,2010,646.0
+Denmark,Americas,2011,684.0
+Denmark,Americas,2012,589.0
+Denmark,Americas,2013,599.0
+Denmark,Americas,2014,672.0
+Denmark,Americas,2015,689.0
+Denmark,Americas,2016,693.0
+Denmark,Americas,2017,956.0
+Denmark,Americas,2018,1002.0
+Denmark,Americas,2019,1468.0
+Denmark,East Asia/Pacific,2010,190.0
+Denmark,East Asia/Pacific,2011,166.0
+Denmark,East Asia/Pacific,2012,231.0
+Denmark,East Asia/Pacific,2013,249.0
+Denmark,East Asia/Pacific,2014,278.0
+Denmark,East Asia/Pacific,2015,292.0
+Denmark,East Asia/Pacific,2016,319.0
+Denmark,East Asia/Pacific,2017,467.0
+Denmark,East Asia/Pacific,2018,462.0
+Denmark,East Asia/Pacific,2019,858.0
+Denmark,Europe,2010,8128.0
+Denmark,Europe,2011,7174.0
+Denmark,Europe,2012,7250.0
+Denmark,Europe,2013,7292.0
+Denmark,Europe,2014,8834.0
+Denmark,Europe,2015,9023.0
+Denmark,Europe,2016,9360.0
+Denmark,Europe,2017,10382.0
+Denmark,Europe,2018,10633.0
+Denmark,Europe,2019,11837.0
+Denmark,South Asia,2019,75.0
+Denmark,Others,2010,461.0
+Denmark,Others,2011,447.0
+Denmark,Others,2012,373.0
+Denmark,Others,2013,418.0
+Denmark,Others,2014,483.0
+Denmark,Others,2015,420.0
+Denmark,Others,2016,409.0
+Denmark,Others,2017,622.0
+Denmark,Others,2018,651.0
+Denmark,Others,2019,365.0
+Estonia,Africa,2010,1.0
+Estonia,Africa,2011,2.0
+Estonia,Africa,2012,2.0
+Estonia,Africa,2013,2.0
+Estonia,Africa,2014,2.0
+Estonia,Africa,2015,2.0
+Estonia,Africa,2016,2.0
+Estonia,Africa,2017,3.0
+Estonia,Africa,2018,3.0
+Estonia,Africa,2019,4.0
+Estonia,Americas,2010,27.0
+Estonia,Americas,2011,32.0
+Estonia,Americas,2012,40.0
+Estonia,Americas,2013,37.0
+Estonia,Americas,2014,44.0
+Estonia,Americas,2015,56.0
+Estonia,Americas,2016,50.0
+Estonia,Americas,2017,52.0
+Estonia,Americas,2018,62.0
+Estonia,Americas,2019,67.0
+Estonia,East Asia/Pacific,2010,22.0
+Estonia,East Asia/Pacific,2011,29.0
+Estonia,East Asia/Pacific,2012,36.0
+Estonia,East Asia/Pacific,2013,44.0
+Estonia,East Asia/Pacific,2014,59.0
+Estonia,East Asia/Pacific,2015,70.0
+Estonia,East Asia/Pacific,2016,82.0
+Estonia,East Asia/Pacific,2017,96.0
+Estonia,East Asia/Pacific,2018,100.0
+Estonia,East Asia/Pacific,2019,114.0
+Estonia,Europe,2010,1502.0
+Estonia,Europe,2011,1731.0
+Estonia,Europe,2012,1782.0
+Estonia,Europe,2013,1850.0
+Estonia,Europe,2014,1872.0
+Estonia,Europe,2015,1780.0
+Estonia,Europe,2016,1901.0
+Estonia,Europe,2017,1972.0
+Estonia,Europe,2018,1934.0
+Estonia,Europe,2019,2022.0
+Estonia,Others,2010,12.0
+Estonia,Others,2011,14.0
+Estonia,Others,2012,14.0
+Estonia,Others,2013,8.0
+Estonia,Others,2014,6.0
+Estonia,Others,2015,21.0
+Estonia,Others,2016,21.0
+Estonia,Others,2017,34.0
+Estonia,Others,2018,43.0
+Estonia,Others,2019,47.0
+Finland,Africa,2010,14.0
+Finland,Africa,2011,11.0
+Finland,Africa,2012,16.0
+Finland,Africa,2013,7.0
+Finland,Africa,2014,8.0
+Finland,Africa,2015,9.0
+Finland,Africa,2016,9.0
+Finland,Africa,2017,11.0
+Finland,Africa,2018,12.0
+Finland,Africa,2019,12.0
+Finland,Americas,2010,150.0
+Finland,Americas,2011,181.0
+Finland,Americas,2012,223.0
+Finland,Americas,2013,121.0
+Finland,Americas,2014,128.0
+Finland,Americas,2015,135.0
+Finland,Americas,2016,149.0
+Finland,Americas,2017,174.0
+Finland,Americas,2018,190.0
+Finland,Americas,2019,196.0
+Finland,East Asia/Pacific,2010,347.0
+Finland,East Asia/Pacific,2011,427.0
+Finland,East Asia/Pacific,2012,474.0
+Finland,East Asia/Pacific,2013,273.0
+Finland,East Asia/Pacific,2014,287.0
+Finland,East Asia/Pacific,2015,349.0
+Finland,East Asia/Pacific,2016,429.0
+Finland,East Asia/Pacific,2017,533.0
+Finland,East Asia/Pacific,2018,534.0
+Finland,East Asia/Pacific,2019,578.0
+Finland,Europe,2010,5646.0
+Finland,Europe,2011,6641.0
+Finland,Europe,2012,6923.0
+Finland,Europe,2013,2218.0
+Finland,Europe,2014,2112.0
+Finland,Europe,2015,1934.0
+Finland,Europe,2016,1947.0
+Finland,Europe,2017,2203.0
+Finland,Europe,2018,2217.0
+Finland,Europe,2019,2287.0
+Finland,Middle East,2013,5.0
+Finland,Middle East,2014,6.0
+Finland,Middle East,2015,8.0
+Finland,Middle East,2016,9.0
+Finland,Middle East,2017,12.0
+Finland,Middle East,2018,15.0
+Finland,Middle East,2019,21.0
+Finland,South Asia,2010,25.0
+Finland,South Asia,2013,19.0
+Finland,South Asia,2014,19.0
+Finland,South Asia,2015,25.0
+Finland,South Asia,2016,29.0
+Finland,South Asia,2017,34.0
+Finland,South Asia,2018,38.0
+Finland,South Asia,2019,46.0
+Finland,Others,2013,154.0
+Finland,Others,2014,171.0
+Finland,Others,2015,163.0
+Finland,Others,2016,217.0
+Finland,Others,2017,213.0
+Finland,Others,2018,220.0
+Finland,Others,2019,152.0
+France,Africa,2010,1877.0
+France,Africa,2011,2311.0
+France,Africa,2012,2276.0
+France,Africa,2013,2350.0
+France,Africa,2014,2483.0
+France,Africa,2015,2774.0
+France,Africa,2016,2927.0
+France,Africa,2017,2799.0
+France,Africa,2018,2920.0
+France,Africa,2019,3249.0
+France,Americas,2010,5380.0
+France,Americas,2011,6339.0
+France,Americas,2012,6133.0
+France,Americas,2013,6225.0
+France,Americas,2014,6620.0
+France,Americas,2015,7091.0
+France,Americas,2016,8131.0
+France,Americas,2017,8632.0
+France,Americas,2018,8956.0
+France,Americas,2019,8269.0
+France,East Asia/Pacific,2010,3400.0
+France,East Asia/Pacific,2011,3905.0
+France,East Asia/Pacific,2012,4159.0
+France,East Asia/Pacific,2013,4661.0
+France,East Asia/Pacific,2014,5175.0
+France,East Asia/Pacific,2015,6198.0
+France,East Asia/Pacific,2016,5641.0
+France,East Asia/Pacific,2017,5683.0
+France,East Asia/Pacific,2018,6042.0
+France,East Asia/Pacific,2019,5283.0
+France,Europe,2010,65040.0
+France,Europe,2011,67123.0
+France,Europe,2012,68554.0
+France,Europe,2013,69388.0
+France,Europe,2014,68323.0
+France,Europe,2015,67037.0
+France,Europe,2016,64728.0
+France,Europe,2017,68293.0
+France,Europe,2018,69955.0
+France,Europe,2019,72767.0
+France,Middle East,2010,950.0
+France,Middle East,2011,821.0
+France,Middle East,2012,859.0
+France,Middle East,2013,1011.0
+France,Middle East,2014,1099.0
+France,Middle East,2015,1352.0
+France,Middle East,2016,1255.0
+France,Middle East,2017,1351.0
+France,Middle East,2018,1449.0
+France,Middle East,2019,1347.0
+Germany,Africa,2010,193.0
+Germany,Africa,2011,193.0
+Germany,Africa,2012,227.0
+Germany,Africa,2013,246.0
+Germany,Africa,2014,254.0
+Germany,Africa,2015,274.0
+Germany,Africa,2016,263.0
+Germany,Africa,2017,271.0
+Germany,Africa,2018,273.0
+Germany,Africa,2019,284.0
+Germany,Americas,2010,2883.0
+Germany,Americas,2011,2914.0
+Germany,Americas,2012,3155.0
+Germany,Americas,2013,3192.0
+Germany,Americas,2014,3272.0
+Germany,Americas,2015,3487.0
+Germany,Americas,2016,3509.0
+Germany,Americas,2017,3890.0
+Germany,Americas,2018,4085.0
+Germany,Americas,2019,4142.0
+Germany,East Asia/Pacific,2010,2046.0
+Germany,East Asia/Pacific,2011,2297.0
+Germany,East Asia/Pacific,2012,2666.0
+Germany,East Asia/Pacific,2013,2805.0
+Germany,East Asia/Pacific,2014,3024.0
+Germany,East Asia/Pacific,2015,3556.0
+Germany,East Asia/Pacific,2016,3489.0
+Germany,East Asia/Pacific,2017,3889.0
+Germany,East Asia/Pacific,2018,3965.0
+Germany,East Asia/Pacific,2019,3963.0
+Germany,Europe,2010,20610.0
+Germany,Europe,2011,21861.0
+Germany,Europe,2012,23121.0
+Germany,Europe,2013,23899.0
+Germany,Europe,2014,24915.0
+Germany,Europe,2015,25951.0
+Germany,Europe,2016,26568.0
+Germany,Europe,2017,27635.0
+Germany,Europe,2018,28681.0
+Germany,Europe,2019,29489.0
+Germany,Middle East,2010,336.0
+Germany,Middle East,2011,343.0
+Germany,Middle East,2012,449.0
+Germany,Middle East,2013,517.0
+Germany,Middle East,2014,587.0
+Germany,Middle East,2015,698.0
+Germany,Middle East,2016,673.0
+Germany,Middle East,2017,661.0
+Germany,Middle East,2018,636.0
+Germany,Middle East,2019,604.0
+Germany,South Asia,2010,142.0
+Germany,South Asia,2011,161.0
+Germany,South Asia,2012,172.0
+Germany,South Asia,2013,190.0
+Germany,South Asia,2014,194.0
+Germany,South Asia,2015,213.0
+Germany,South Asia,2016,231.0
+Germany,South Asia,2017,269.0
+Germany,South Asia,2018,290.0
+Germany,South Asia,2019,307.0
+Germany,Others,2010,665.0
+Germany,Others,2011,605.0
+Germany,Others,2012,621.0
+Germany,Others,2013,696.0
+Germany,Others,2014,753.0
+Germany,Others,2015,791.0
+Germany,Others,2016,823.0
+Germany,Others,2017,837.0
+Germany,Others,2018,952.0
+Germany,Others,2019,774.0
+Greece,Africa,2010,28.0
+Greece,Africa,2011,34.0
+Greece,Africa,2012,33.0
+Greece,Africa,2013,27.0
+Greece,Africa,2014,40.0
+Greece,Africa,2015,36.0
+Greece,Africa,2016,63.0
+Greece,Africa,2017,82.0
+Greece,Africa,2018,115.0
+Greece,Africa,2019,127.0
+Greece,Americas,2010,691.0
+Greece,Americas,2011,719.0
+Greece,Americas,2012,559.0
+Greece,Americas,2013,754.0
+Greece,Americas,2014,890.0
+Greece,Americas,2015,1095.0
+Greece,Americas,2016,1100.0
+Greece,Americas,2017,1272.0
+Greece,Americas,2018,1681.0
+Greece,Americas,2019,1818.0
+Greece,East Asia/Pacific,2010,199.0
+Greece,East Asia/Pacific,2011,207.0
+Greece,East Asia/Pacific,2012,216.0
+Greece,East Asia/Pacific,2013,238.0
+Greece,East Asia/Pacific,2014,365.0
+Greece,East Asia/Pacific,2015,362.0
+Greece,East Asia/Pacific,2016,738.0
+Greece,East Asia/Pacific,2017,982.0
+Greece,East Asia/Pacific,2018,1101.0
+Greece,East Asia/Pacific,2019,1196.0
+Greece,Europe,2010,14034.0
+Greece,Europe,2011,15430.0
+Greece,Europe,2012,14661.0
+Greece,Europe,2013,16822.0
+Greece,Europe,2014,20651.0
+Greece,Europe,2015,21985.0
+Greece,Europe,2016,22898.0
+Greece,Europe,2017,24859.0
+Greece,Europe,2018,27226.0
+Greece,Europe,2019,28207.0
+Greece,Middle East,2010,45.0
+Greece,Middle East,2011,28.0
+Greece,Middle East,2012,36.0
+Greece,Middle East,2013,73.0
+Greece,Middle East,2014,86.0
+Greece,Middle East,2015,112.0
+Greece,South Asia,2010,9.0
+Greece,South Asia,2011,9.0
+Greece,South Asia,2012,13.0
+Greece,South Asia,2013,5.0
+Greece,South Asia,2014,1.0
+Greece,South Asia,2015,11.0
+Hong Kong,Africa,2010,204.0
+Hong Kong,Africa,2011,193.0
+Hong Kong,Africa,2012,173.0
+Hong Kong,Africa,2013,168.0
+Hong Kong,Africa,2014,166.0
+Hong Kong,Africa,2015,156.0
+Hong Kong,Africa,2016,144.0
+Hong Kong,Africa,2017,130.0
+Hong Kong,Africa,2018,128.0
+Hong Kong,Africa,2019,115.0
+Hong Kong,Americas,2010,1750.0
+Hong Kong,Americas,2011,1821.0
+Hong Kong,Americas,2012,1778.0
+Hong Kong,Americas,2013,1666.0
+Hong Kong,Americas,2014,1679.0
+Hong Kong,Americas,2015,1728.0
+Hong Kong,Americas,2016,1773.0
+Hong Kong,Americas,2017,1782.0
+Hong Kong,Americas,2018,1873.0
+Hong Kong,Americas,2019,1601.0
+Hong Kong,East Asia/Pacific,2010,31548.0
+Hong Kong,East Asia/Pacific,2011,37378.0
+Hong Kong,East Asia/Pacific,2012,44165.0
+Hong Kong,East Asia/Pacific,2013,49915.0
+Hong Kong,East Asia/Pacific,2014,56393.0
+Hong Kong,East Asia/Pacific,2015,54847.0
+Hong Kong,East Asia/Pacific,2016,52146.0
+Hong Kong,East Asia/Pacific,2017,54071.0
+Hong Kong,East Asia/Pacific,2018,60632.0
+Hong Kong,East Asia/Pacific,2019,51967.0
+Hong Kong,Europe,2010,1876.0
+Hong Kong,Europe,2011,1913.0
+Hong Kong,Europe,2012,1973.0
+Hong Kong,Europe,2013,1999.0
+Hong Kong,Europe,2014,1965.0
+Hong Kong,Europe,2015,1927.0
+Hong Kong,Europe,2016,1998.0
+Hong Kong,Europe,2017,2004.0
+Hong Kong,Europe,2018,2039.0
+Hong Kong,Europe,2019,1817.0
+Hong Kong,Middle East,2010,91.0
+Hong Kong,Middle East,2011,85.0
+Hong Kong,Middle East,2012,78.0
+Hong Kong,Middle East,2013,84.0
+Hong Kong,Middle East,2014,83.0
+Hong Kong,Middle East,2015,80.0
+Hong Kong,Middle East,2016,80.0
+Hong Kong,Middle East,2017,65.0
+Hong Kong,Middle East,2018,62.0
+Hong Kong,Middle East,2019,52.0
+Hong Kong,South Asia,2010,561.0
+Hong Kong,South Asia,2011,531.0
+Hong Kong,South Asia,2012,447.0
+Hong Kong,South Asia,2013,468.0
+Hong Kong,South Asia,2014,553.0
+Hong Kong,South Asia,2015,570.0
+Hong Kong,South Asia,2016,514.0
+Hong Kong,South Asia,2017,422.0
+Hong Kong,South Asia,2018,414.0
+Hong Kong,South Asia,2019,361.0
+Hungary,Africa,2010,23.0
+Hungary,Africa,2011,26.0
+Hungary,Africa,2012,26.0
+Hungary,Africa,2013,28.0
+Hungary,Africa,2014,29.0
+Hungary,Africa,2015,32.0
+Hungary,Africa,2016,35.0
+Hungary,Africa,2017,38.0
+Hungary,Africa,2018,40.0
+Hungary,Africa,2019,45.0
+Hungary,Americas,2010,547.0
+Hungary,Americas,2011,615.0
+Hungary,Americas,2012,577.0
+Hungary,Americas,2013,635.0
+Hungary,Americas,2014,723.0
+Hungary,Americas,2015,811.0
+Hungary,Americas,2016,864.0
+Hungary,Americas,2017,944.0
+Hungary,Americas,2018,1014.0
+Hungary,Americas,2019,1074.0
+Hungary,East Asia/Pacific,2010,448.0
+Hungary,East Asia/Pacific,2011,515.0
+Hungary,East Asia/Pacific,2012,459.0
+Hungary,East Asia/Pacific,2013,591.0
+Hungary,East Asia/Pacific,2014,650.0
+Hungary,East Asia/Pacific,2015,730.0
+Hungary,East Asia/Pacific,2016,855.0
+Hungary,East Asia/Pacific,2017,1025.0
+Hungary,East Asia/Pacific,2018,1108.0
+Hungary,East Asia/Pacific,2019,1238.0
+Hungary,Europe,2010,38887.0
+Hungary,Europe,2011,40148.0
+Hungary,Europe,2012,42503.0
+Hungary,Europe,2013,42357.0
+Hungary,Europe,2014,44582.0
+Hungary,Europe,2015,46772.0
+Hungary,Europe,2016,51137.0
+Hungary,Europe,2017,52954.0
+Hungary,Europe,2018,55506.0
+Hungary,Europe,2019,59041.0
+Iceland,Americas,2010,65.0
+Iceland,Americas,2011,95.0
+Iceland,Americas,2012,114.0
+Iceland,Americas,2013,144.0
+Iceland,Americas,2014,191.0
+Iceland,Americas,2015,290.0
+Iceland,Americas,2016,498.0
+Iceland,Americas,2017,679.0
+Iceland,Americas,2018,795.0
+Iceland,Americas,2019,534.0
+Iceland,East Asia/Pacific,2010,11.0
+Iceland,East Asia/Pacific,2011,16.0
+Iceland,East Asia/Pacific,2012,24.0
+Iceland,East Asia/Pacific,2013,30.0
+Iceland,East Asia/Pacific,2014,39.0
+Iceland,East Asia/Pacific,2015,64.0
+Iceland,East Asia/Pacific,2016,89.0
+Iceland,East Asia/Pacific,2017,185.0
+Iceland,East Asia/Pacific,2018,218.0
+Iceland,East Asia/Pacific,2019,216.0
+Iceland,Europe,2010,318.0
+Iceland,Europe,2011,355.0
+Iceland,Europe,2012,426.0
+Iceland,Europe,2013,499.0
+Iceland,Europe,2014,597.0
+Iceland,Europe,2015,708.0
+Iceland,Europe,2016,894.0
+Iceland,Europe,2017,1085.0
+Iceland,Europe,2018,1092.0
+Iceland,Europe,2019,1024.0
+Iceland,South Asia,2017,11.0
+Iceland,South Asia,2018,20.0
+Iceland,South Asia,2019,20.0
+Iceland,Others,2010,95.0
+Iceland,Others,2011,99.0
+Iceland,Others,2012,83.0
+Iceland,Others,2013,108.0
+Iceland,Others,2014,142.0
+Iceland,Others,2015,200.0
+Iceland,Others,2016,286.0
+Iceland,Others,2017,235.0
+Iceland,Others,2018,192.0
+Iceland,Others,2019,192.0
+Ireland,Africa,2012,40.0
+Ireland,Africa,2013,38.0
+Ireland,Africa,2014,42.0
+Ireland,Africa,2015,40.0
+Ireland,Africa,2016,47.0
+Ireland,Africa,2017,54.0
+Ireland,Africa,2018,56.0
+Ireland,Africa,2019,59.0
+Ireland,Americas,2010,864.0
+Ireland,Americas,2011,917.0
+Ireland,Americas,2012,988.0
+Ireland,Americas,2013,1092.0
+Ireland,Americas,2014,1208.0
+Ireland,Americas,2015,1357.0
+Ireland,Americas,2016,1539.0
+Ireland,Americas,2017,1792.0
+Ireland,Americas,2018,2057.0
+Ireland,Americas,2019,2000.0
+Ireland,East Asia/Pacific,2012,289.0
+Ireland,East Asia/Pacific,2013,341.0
+Ireland,East Asia/Pacific,2014,358.0
+Ireland,East Asia/Pacific,2015,414.0
+Ireland,East Asia/Pacific,2016,422.0
+Ireland,East Asia/Pacific,2017,476.0
+Ireland,East Asia/Pacific,2018,504.0
+Ireland,East Asia/Pacific,2019,519.0
+Ireland,Europe,2010,5959.0
+Ireland,Europe,2011,6361.0
+Ireland,Europe,2012,6232.0
+Ireland,Europe,2013,6790.0
+Ireland,Europe,2014,7205.0
+Ireland,Europe,2015,7719.0
+Ireland,Europe,2016,8092.0
+Ireland,Europe,2017,8016.0
+Ireland,Europe,2018,8309.0
+Ireland,Europe,2019,8373.0
+Ireland,Others,2010,311.0
+Ireland,Others,2011,352.0
+Italy,Africa,2010,378.0
+Italy,Africa,2011,364.0
+Italy,Africa,2012,279.0
+Italy,Africa,2013,257.0
+Italy,Africa,2014,262.0
+Italy,Africa,2015,281.0
+Italy,Africa,2016,315.0
+Italy,Africa,2017,273.0
+Italy,Africa,2018,222.0
+Italy,Africa,2019,209.0
+Italy,Americas,2010,3969.0
+Italy,Americas,2011,4829.0
+Italy,Americas,2012,4757.0
+Italy,Americas,2013,5405.0
+Italy,Americas,2014,5618.0
+Italy,Americas,2015,6099.0
+Italy,Americas,2016,6052.0
+Italy,Americas,2017,6533.0
+Italy,Americas,2018,7172.0
+Italy,Americas,2019,7755.0
+Italy,East Asia/Pacific,2010,1418.0
+Italy,East Asia/Pacific,2011,1646.0
+Italy,East Asia/Pacific,2012,1657.0
+Italy,East Asia/Pacific,2013,1939.0
+Italy,East Asia/Pacific,2014,1882.0
+Italy,East Asia/Pacific,2015,2040.0
+Italy,East Asia/Pacific,2016,2036.0
+Italy,East Asia/Pacific,2017,2170.0
+Italy,East Asia/Pacific,2018,2192.0
+Italy,East Asia/Pacific,2019,2209.0
+Italy,Europe,2010,66821.0
+Italy,Europe,2011,68357.0
+Italy,Europe,2012,68797.0
+Italy,Europe,2013,68415.0
+Italy,Europe,2014,69146.0
+Italy,Europe,2015,71682.0
+Italy,Europe,2016,75584.0
+Italy,Europe,2017,79996.0
+Italy,Europe,2018,82844.0
+Italy,Europe,2019,84398.0
+Italy,Middle East,2010,348.0
+Italy,Middle East,2011,362.0
+Italy,Middle East,2012,381.0
+Italy,Middle East,2013,414.0
+Italy,Middle East,2014,469.0
+Italy,Middle East,2015,513.0
+Italy,Middle East,2016,520.0
+Italy,Middle East,2017,491.0
+Italy,Middle East,2018,385.0
+Italy,Middle East,2019,463.0
+Italy,South Asia,2010,290.0
+Italy,South Asia,2011,309.0
+Italy,South Asia,2012,422.0
+Italy,South Asia,2013,332.0
+Italy,South Asia,2014,317.0
+Italy,South Asia,2015,453.0
+Italy,South Asia,2016,418.0
+Italy,South Asia,2017,469.0
+Italy,South Asia,2018,412.0
+Italy,South Asia,2019,363.0
+Italy,Others,2010,2.0
+Italy,Others,2011,1.0
+Italy,Others,2013,1.2
+Italy,Others,2014,0.5
+Italy,Others,2015,0.5
+Italy,Others,2016,0.4
+Italy,Others,2017,0.7
+Italy,Others,2018,2.0
+Italy,Others,2019,1.0
+Japan,Africa,2010,19.0
+Japan,Africa,2011,17.0
+Japan,Africa,2012,21.0
+Japan,Africa,2013,23.0
+Japan,Africa,2014,24.0
+Japan,Africa,2015,27.0
+Japan,Africa,2016,29.0
+Japan,Africa,2017,30.0
+Japan,Africa,2018,33.0
+Japan,Africa,2019,49.0
+Japan,Americas,2010,945.0
+Japan,Americas,2011,717.0
+Japan,Americas,2012,927.0
+Japan,Americas,2013,1032.0
+Japan,Americas,2014,1169.0
+Japan,Americas,2015,1385.0
+Japan,Americas,2016,1648.0
+Japan,Americas,2017,1849.0
+Japan,Americas,2018,2045.0
+Japan,Americas,2019,2299.0
+Japan,East Asia/Pacific,2010,6654.0
+Japan,East Asia/Pacific,2011,4796.0
+Japan,East Asia/Pacific,2012,6489.0
+Japan,East Asia/Pacific,2013,8240.0
+Japan,East Asia/Pacific,2014,10962.0
+Japan,East Asia/Pacific,2015,16835.0
+Japan,East Asia/Pacific,2016,20647.0
+Japan,East Asia/Pacific,2017,24962.0
+Japan,East Asia/Pacific,2018,27035.0
+Japan,East Asia/Pacific,2019,27140.0
+Japan,Europe,2010,877.0
+Japan,Europe,2011,583.0
+Japan,Europe,2012,797.0
+Japan,Europe,2013,931.0
+Japan,Europe,2014,1083.0
+Japan,Europe,2015,1285.0
+Japan,Europe,2016,1470.0
+Japan,Europe,2017,1579.0
+Japan,Europe,2018,1781.0
+Japan,Europe,2019,2055.0
+Japan,Middle East,2010,10.0
+Japan,Middle East,2011,7.0
+Japan,Middle East,2012,11.0
+Japan,Middle East,2013,13.0
+Japan,Middle East,2014,24.0
+Japan,Middle East,2015,27.0
+Japan,Middle East,2016,30.0
+Japan,Middle East,2017,31.0
+Japan,Middle East,2018,33.0
+Japan,Middle East,2019,41.0
+Japan,South Asia,2010,105.0
+Japan,South Asia,2011,98.0
+Japan,South Asia,2012,113.0
+Japan,South Asia,2013,125.0
+Japan,South Asia,2014,151.0
+Japan,South Asia,2015,178.0
+Japan,South Asia,2016,214.0
+Japan,South Asia,2017,240.0
+Japan,South Asia,2018,266.0
+Japan,South Asia,2019,298.0
+Japan,Others,2010,1.0
+Japan,Others,2011,1.0
+Japan,Others,2014,1.0
+Japan,Others,2015,1.0
+Japan,Others,2016,1.0
+Japan,Others,2017,1.0
+Japan,Others,2018,1.0
+Japan,Others,2019,1.0
+Luxembourg,Africa,2010,3.0
+Luxembourg,Africa,2011,10.0
+Luxembourg,Africa,2012,14.0
+Luxembourg,Africa,2013,5.0
+Luxembourg,Africa,2014,7.0
+Luxembourg,Africa,2015,6.0
+Luxembourg,Africa,2016,5.0
+Luxembourg,Africa,2017,5.0
+Luxembourg,Africa,2018,4.0
+Luxembourg,Africa,2019,4.0
+Luxembourg,Americas,2010,29.0
+Luxembourg,Americas,2011,38.0
+Luxembourg,Americas,2012,39.0
+Luxembourg,Americas,2013,39.0
+Luxembourg,Americas,2014,45.0
+Luxembourg,Americas,2015,52.0
+Luxembourg,Americas,2016,49.0
+Luxembourg,Americas,2017,48.0
+Luxembourg,Americas,2018,46.0
+Luxembourg,Americas,2019,47.0
+Luxembourg,East Asia/Pacific,2010,35.0
+Luxembourg,East Asia/Pacific,2011,56.0
+Luxembourg,East Asia/Pacific,2012,75.0
+Luxembourg,East Asia/Pacific,2013,60.0
+Luxembourg,East Asia/Pacific,2014,71.0
+Luxembourg,East Asia/Pacific,2015,79.0
+Luxembourg,East Asia/Pacific,2016,70.0
+Luxembourg,East Asia/Pacific,2017,66.0
+Luxembourg,East Asia/Pacific,2018,64.0
+Luxembourg,East Asia/Pacific,2019,63.0
+Luxembourg,Europe,2010,737.0
+Luxembourg,Europe,2011,771.0
+Luxembourg,Europe,2012,822.0
+Luxembourg,Europe,2013,840.0
+Luxembourg,Europe,2014,915.0
+Luxembourg,Europe,2015,953.0
+Luxembourg,Europe,2016,930.0
+Luxembourg,Europe,2017,928.0
+Luxembourg,Europe,2018,904.0
+Luxembourg,Europe,2019,927.0
+Luxembourg,Others,2010,1.0
+Macao,Africa,2010,21.0
+Macao,Africa,2011,23.0
+Macao,Africa,2012,24.0
+Macao,Africa,2013,26.0
+Macao,Africa,2014,32.0
+Macao,Africa,2015,28.0
+Macao,Africa,2016,25.0
+Macao,Africa,2017,24.0
+Macao,Africa,2018,24.0
+Macao,Africa,2019,24.0
+Macao,Americas,2010,297.0
+Macao,Americas,2011,311.0
+Macao,Americas,2012,307.0
+Macao,Americas,2013,289.0
+Macao,Americas,2014,286.0
+Macao,Americas,2015,286.0
+Macao,Americas,2016,300.0
+Macao,Americas,2017,296.0
+Macao,Americas,2018,315.0
+Macao,Americas,2019,315.0
+Macao,East Asia/Pacific,2010,24192.0
+Macao,East Asia/Pacific,2011,27205.0
+Macao,East Asia/Pacific,2012,27292.0
+Macao,East Asia/Pacific,2013,28530.0
+Macao,East Asia/Pacific,2014,30722.0
+Macao,East Asia/Pacific,2015,29927.0
+Macao,East Asia/Pacific,2016,30146.0
+Macao,East Asia/Pacific,2017,31834.0
+Macao,East Asia/Pacific,2018,34997.0
+Macao,East Asia/Pacific,2019,38622.0
+Macao,Europe,2010,267.0
+Macao,Europe,2011,274.0
+Macao,Europe,2012,286.0
+Macao,Europe,2013,296.0
+Macao,Europe,2014,294.0
+Macao,Europe,2015,278.0
+Macao,Europe,2016,292.0
+Macao,Europe,2017,292.0
+Macao,Europe,2018,303.0
+Macao,Europe,2019,301.0
+Macao,Middle East,2010,10.0
+Macao,Middle East,2011,12.0
+Macao,Middle East,2012,14.0
+Macao,Middle East,2013,15.0
+Macao,Middle East,2014,14.0
+Macao,Middle East,2015,15.0
+Macao,Middle East,2016,11.0
+Macao,Middle East,2017,9.0
+Macao,Middle East,2018,9.0
+Macao,Middle East,2019,8.0
+Macao,South Asia,2010,179.0
+Macao,South Asia,2011,177.0
+Macao,South Asia,2012,159.0
+Macao,South Asia,2013,169.0
+Macao,South Asia,2014,178.0
+Macao,South Asia,2015,179.0
+Macao,South Asia,2016,176.0
+Macao,South Asia,2017,156.0
+Macao,South Asia,2018,156.0
+Macao,South Asia,2019,135.0
+Malaysia,Africa,2010,42.0
+Malaysia,Africa,2011,111.0
+Malaysia,Africa,2012,99.0
+Malaysia,Africa,2013,101.0
+Malaysia,Africa,2014,108.0
+Malaysia,Africa,2015,96.0
+Malaysia,Africa,2016,80.0
+Malaysia,Africa,2017,75.0
+Malaysia,Africa,2018,119.0
+Malaysia,Africa,2019,127.0
+Malaysia,Americas,2010,343.0
+Malaysia,Americas,2011,340.0
+Malaysia,Americas,2012,362.0
+Malaysia,Americas,2013,377.0
+Malaysia,Americas,2014,400.0
+Malaysia,Americas,2015,360.0
+Malaysia,Americas,2016,322.0
+Malaysia,Americas,2017,309.0
+Malaysia,Americas,2018,390.0
+Malaysia,Americas,2019,407.0
+Malaysia,East Asia/Pacific,2010,21605.0
+Malaysia,East Asia/Pacific,2011,21667.0
+Malaysia,East Asia/Pacific,2012,21946.0
+Malaysia,East Asia/Pacific,2013,22568.0
+Malaysia,East Asia/Pacific,2014,23846.0
+Malaysia,East Asia/Pacific,2015,22567.0
+Malaysia,East Asia/Pacific,2016,23993.0
+Malaysia,East Asia/Pacific,2017,23384.0
+Malaysia,East Asia/Pacific,2018,22867.0
+Malaysia,East Asia/Pacific,2019,22906.0
+Malaysia,Europe,2010,1133.0
+Malaysia,Europe,2011,1136.0
+Malaysia,Europe,2012,1161.0
+Malaysia,Europe,2013,1227.0
+Malaysia,Europe,2014,1372.0
+Malaysia,Europe,2015,1242.0
+Malaysia,Europe,2016,1130.0
+Malaysia,Europe,2017,1110.0
+Malaysia,Europe,2018,1210.0
+Malaysia,Europe,2019,1218.0
+Malaysia,Middle East,2010,167.0
+Malaysia,Middle East,2011,237.0
+Malaysia,Middle East,2012,266.0
+Malaysia,Middle East,2013,274.0
+Malaysia,Middle East,2014,313.0
+Malaysia,Middle East,2015,279.0
+Malaysia,Middle East,2016,271.0
+Malaysia,Middle East,2017,219.0
+Malaysia,Middle East,2018,281.0
+Malaysia,Middle East,2019,298.0
+Malaysia,South Asia,2010,997.0
+Malaysia,South Asia,2011,1125.0
+Malaysia,South Asia,2012,1185.0
+Malaysia,South Asia,2013,1156.0
+Malaysia,South Asia,2014,1383.0
+Malaysia,South Asia,2015,1163.0
+Malaysia,South Asia,2016,959.0
+Malaysia,South Asia,2017,850.0
+Malaysia,South Asia,2018,964.0
+Malaysia,South Asia,2019,1142.0
+Malaysia,Others,2010,290.0
+Malaysia,Others,2011,98.0
+Malaysia,Others,2012,14.0
+Malaysia,Others,2013,12.0
+Malaysia,Others,2014,15.0
+Malaysia,Others,2015,14.0
+Malaysia,Others,2016,4.0
+Malaysia,Others,2017,1.0
+Malaysia,Others,2018,3.0
+Malaysia,Others,2019,3.0
+Malta,Americas,2010,16.0
+Malta,Americas,2011,16.0
+Malta,Americas,2012,18.0
+Malta,Americas,2013,20.0
+Malta,Americas,2014,22.0
+Malta,Americas,2015,26.0
+Malta,Americas,2016,27.0
+Malta,Americas,2017,36.0
+Malta,Americas,2018,47.0
+Malta,Americas,2019,51.0
+Malta,Europe,2010,1221.0
+Malta,Europe,2011,1304.0
+Malta,Europe,2012,1325.0
+Malta,Europe,2013,1432.0
+Malta,Europe,2014,1527.0
+Malta,Europe,2015,1623.0
+Malta,Europe,2016,1780.0
+Malta,Europe,2017,2054.0
+Malta,Europe,2018,2315.0
+Malta,Europe,2019,2421.0
+Malta,Middle East,2010,16.0
+Malta,Middle East,2011,6.0
+Malta,Middle East,2012,17.0
+Malta,Middle East,2013,35.0
+Malta,Middle East,2014,31.0
+Malta,Middle East,2015,7.0
+Malta,Middle East,2016,3.0
+Malta,Middle East,2017,3.0
+Malta,Middle East,2018,3.0
+Malta,Middle East,2019,3.0
+Malta,Others,2010,85.0
+Malta,Others,2011,88.0
+Malta,Others,2012,83.0
+Malta,Others,2013,96.0
+Malta,Others,2014,110.0
+Malta,Others,2015,128.0
+Malta,Others,2016,157.0
+Malta,Others,2017,181.0
+Malta,Others,2018,234.0
+Malta,Others,2019,279.0
+Netherlands,Africa,2010,103.0
+Netherlands,Africa,2011,114.0
+Netherlands,Africa,2012,112.0
+Netherlands,Africa,2013,121.0
+Netherlands,Africa,2014,135.0
+Netherlands,Africa,2015,130.0
+Netherlands,Africa,2016,137.0
+Netherlands,Africa,2017,152.0
+Netherlands,Africa,2018,156.0
+Netherlands,Africa,2019,187.0
+Netherlands,Americas,2010,1223.0
+Netherlands,Americas,2011,1320.0
+Netherlands,Americas,2012,1323.0
+Netherlands,Americas,2013,1337.0
+Netherlands,Americas,2014,1431.0
+Netherlands,Americas,2015,1508.0
+Netherlands,Americas,2016,1646.0
+Netherlands,Americas,2017,2013.0
+Netherlands,Americas,2018,2072.0
+Netherlands,Americas,2019,2181.0
+Netherlands,East Asia/Pacific,2010,770.0
+Netherlands,East Asia/Pacific,2011,850.0
+Netherlands,East Asia/Pacific,2012,949.0
+Netherlands,East Asia/Pacific,2013,1040.0
+Netherlands,East Asia/Pacific,2014,1164.0
+Netherlands,East Asia/Pacific,2015,1319.0
+Netherlands,East Asia/Pacific,2016,1303.0
+Netherlands,East Asia/Pacific,2017,1608.0
+Netherlands,East Asia/Pacific,2018,1579.0
+Netherlands,East Asia/Pacific,2019,1710.0
+Netherlands,Europe,2010,8787.0
+Netherlands,Europe,2011,9016.0
+Netherlands,Europe,2012,9296.0
+Netherlands,Europe,2013,10286.0
+Netherlands,Europe,2014,11195.0
+Netherlands,Europe,2015,12050.0
+Netherlands,Europe,2016,12742.0
+Netherlands,Europe,2017,14151.0
+Netherlands,Europe,2018,14974.0
+Netherlands,Europe,2019,16052.0
+Norway,Africa,2012,22.0
+Norway,Africa,2013,25.0
+Norway,Africa,2014,26.0
+Norway,Africa,2015,29.0
+Norway,Africa,2016,18.0
+Norway,Africa,2017,35.0
+Norway,Africa,2018,35.0
+Norway,Africa,2019,45.0
+Norway,Americas,2010,160.0
+Norway,Americas,2011,164.0
+Norway,Americas,2012,245.0
+Norway,Americas,2013,262.0
+Norway,Americas,2014,326.0
+Norway,Americas,2015,332.0
+Norway,Americas,2016,369.0
+Norway,Americas,2017,527.0
+Norway,Americas,2018,545.0
+Norway,Americas,2019,619.0
+Norway,East Asia/Pacific,2010,28.0
+Norway,East Asia/Pacific,2011,27.0
+Norway,East Asia/Pacific,2012,378.0
+Norway,East Asia/Pacific,2013,492.0
+Norway,East Asia/Pacific,2014,489.0
+Norway,East Asia/Pacific,2015,654.0
+Norway,East Asia/Pacific,2016,786.0
+Norway,East Asia/Pacific,2017,963.0
+Norway,East Asia/Pacific,2018,664.0
+Norway,East Asia/Pacific,2019,666.0
+Norway,Europe,2010,4313.0
+Norway,Europe,2011,4471.0
+Norway,Europe,2012,3894.0
+Norway,Europe,2013,4000.0
+Norway,Europe,2014,4013.0
+Norway,Europe,2015,4346.0
+Norway,Europe,2016,4787.0
+Norway,Europe,2017,4728.0
+Norway,Europe,2018,4372.0
+Norway,Europe,2019,4462.0
+Norway,Middle East,2018,24.0
+Norway,Middle East,2019,30.0
+Norway,South Asia,2018,49.0
+Norway,South Asia,2019,59.0
+Norway,Others,2010,266.0
+Norway,Others,2011,301.0
+Poland,Africa,2010,20.0
+Poland,Africa,2011,15.0
+Poland,Africa,2012,15.0
+Poland,Africa,2013,15.0
+Poland,Africa,2014,10.0
+Poland,Africa,2015,10.0
+Poland,Africa,2016,15.0
+Poland,Africa,2017,15.0
+Poland,Africa,2018,15.0
+Poland,Africa,2019,20.0
+Poland,Americas,2010,395.0
+Poland,Americas,2011,400.0
+Poland,Americas,2012,425.0
+Poland,Americas,2013,425.0
+Poland,Americas,2014,648.0
+Poland,Americas,2015,703.0
+Poland,Americas,2016,765.0
+Poland,Americas,2017,784.0
+Poland,Americas,2018,825.0
+Poland,Americas,2019,891.0
+Poland,East Asia/Pacific,2010,280.0
+Poland,East Asia/Pacific,2011,300.0
+Poland,East Asia/Pacific,2012,320.0
+Poland,East Asia/Pacific,2013,355.0
+Poland,East Asia/Pacific,2014,344.0
+Poland,East Asia/Pacific,2015,368.0
+Poland,East Asia/Pacific,2016,376.0
+Poland,East Asia/Pacific,2017,446.0
+Poland,East Asia/Pacific,2018,476.0
+Poland,East Asia/Pacific,2019,567.0
+Poland,Europe,2010,57540.0
+Poland,Europe,2011,59950.0
+Poland,Europe,2012,66545.0
+Poland,Europe,2013,71430.0
+Poland,Europe,2014,72661.0
+Poland,Europe,2015,76579.0
+Poland,Europe,2016,79225.0
+Poland,Europe,2017,82470.0
+Poland,Europe,2018,84543.0
+Poland,Europe,2019,86923.0
+Poland,Middle East,2010,15.0
+Poland,Middle East,2011,15.0
+Poland,Middle East,2012,15.0
+Poland,Middle East,2013,15.0
+Poland,Middle East,2014,15.0
+Poland,Middle East,2015,15.0
+Poland,Middle East,2016,15.0
+Poland,Middle East,2017,15.0
+Poland,Middle East,2018,15.0
+Poland,Middle East,2019,20.0
+Poland,South Asia,2010,30.0
+Poland,South Asia,2011,20.0
+Poland,South Asia,2012,20.0
+Poland,South Asia,2013,20.0
+Poland,South Asia,2014,32.0
+Poland,South Asia,2015,39.0
+Poland,South Asia,2016,40.0
+Poland,South Asia,2017,44.0
+Poland,South Asia,2018,42.0
+Poland,South Asia,2019,54.0
+Poland,Others,2010,60.0
+Poland,Others,2011,45.0
+Poland,Others,2012,50.0
+Poland,Others,2013,50.0
+Poland,Others,2014,40.0
+Poland,Others,2015,30.0
+Poland,Others,2016,40.0
+Poland,Others,2017,30.0
+Poland,Others,2018,30.0
+Poland,Others,2019,40.0
+Portugal,Africa,2010,75.0
+Portugal,Africa,2011,84.0
+Portugal,Africa,2012,96.0
+Portugal,Africa,2013,136.0
+Portugal,Africa,2014,165.0
+Portugal,Africa,2015,162.0
+Portugal,Africa,2016,162.0
+Portugal,Africa,2017,190.0
+Portugal,Africa,2018,200.0
+Portugal,Africa,2019,208.0
+Portugal,Americas,2010,760.0
+Portugal,Americas,2011,874.0
+Portugal,Americas,2012,947.0
+Portugal,Americas,2013,1116.0
+Portugal,Americas,2014,1282.0
+Portugal,Americas,2015,1372.0
+Portugal,Americas,2016,1626.0
+Portugal,Americas,2017,2271.0
+Portugal,Americas,2018,2674.0
+Portugal,Americas,2019,3146.0
+Portugal,East Asia/Pacific,2010,229.0
+Portugal,East Asia/Pacific,2011,261.0
+Portugal,East Asia/Pacific,2012,301.0
+Portugal,East Asia/Pacific,2013,446.0
+Portugal,East Asia/Pacific,2014,593.0
+Portugal,East Asia/Pacific,2015,698.0
+Portugal,East Asia/Pacific,2016,825.0
+Portugal,East Asia/Pacific,2017,1075.0
+Portugal,East Asia/Pacific,2018,1177.0
+Portugal,East Asia/Pacific,2019,1082.0
+Portugal,Europe,2010,5692.0
+Portugal,Europe,2011,6044.0
+Portugal,Europe,2012,6159.0
+Portugal,Europe,2013,7480.0
+Portugal,Europe,2014,8456.0
+Portugal,Europe,2015,9492.0
+Portugal,Europe,2016,10746.0
+Portugal,Europe,2017,11896.0
+Portugal,Europe,2018,12135.0
+Portugal,Europe,2019,12669.0
+Portugal,Middle East,2019,54.0
+Portugal,South Asia,2019,100.0
+Portugal,Others,2019,22.0
+Serbia,Africa,2014,11.0
+Serbia,Africa,2015,11.0
+Serbia,Africa,2016,9.0
+Serbia,Africa,2017,11.0
+Serbia,Africa,2018,13.0
+Serbia,Africa,2019,13.0
+Serbia,Americas,2010,19.0
+Serbia,Americas,2011,19.0
+Serbia,Americas,2012,22.0
+Serbia,Americas,2013,24.0
+Serbia,Americas,2014,31.0
+Serbia,Americas,2015,37.0
+Serbia,Americas,2016,41.0
+Serbia,Americas,2017,50.0
+Serbia,Americas,2018,59.0
+Serbia,Americas,2019,64.0
+Serbia,East Asia/Pacific,2010,10.0
+Serbia,East Asia/Pacific,2011,12.0
+Serbia,East Asia/Pacific,2012,15.0
+Serbia,East Asia/Pacific,2013,23.0
+Serbia,East Asia/Pacific,2014,53.0
+Serbia,East Asia/Pacific,2015,73.0
+Serbia,East Asia/Pacific,2016,67.0
+Serbia,East Asia/Pacific,2017,111.0
+Serbia,East Asia/Pacific,2018,159.0
+Serbia,East Asia/Pacific,2019,198.0
+Serbia,Europe,2010,633.0
+Serbia,Europe,2011,711.0
+Serbia,Europe,2012,746.0
+Serbia,Europe,2013,837.0
+Serbia,Europe,2014,932.0
+Serbia,Europe,2015,1011.0
+Serbia,Europe,2016,1158.0
+Serbia,Europe,2017,1320.0
+Serbia,Europe,2018,1440.0
+Serbia,Europe,2019,1556.0
+Serbia,Middle East,2016,6.0
+Serbia,Middle East,2017,5.0
+Serbia,Middle East,2018,6.0
+Serbia,Middle East,2019,5.0
+Serbia,South Asia,2018,35.0
+Serbia,South Asia,2019,10.0
+Serbia,Others,2010,21.0
+Serbia,Others,2011,22.0
+Serbia,Others,2012,27.0
+Serbia,Others,2013,38.0
+Serbia,Others,2014,2.0
+Singapore,Africa,2010,71.0
+Singapore,Africa,2011,69.0
+Singapore,Africa,2012,64.0
+Singapore,Africa,2013,63.0
+Singapore,Africa,2014,62.0
+Singapore,Africa,2015,63.0
+Singapore,Africa,2016,68.0
+Singapore,Africa,2017,73.0
+Singapore,Africa,2018,79.0
+Singapore,Africa,2019,86.0
+Singapore,Americas,2010,525.0
+Singapore,Americas,2011,564.0
+Singapore,Americas,2012,616.0
+Singapore,Americas,2013,642.0
+Singapore,Americas,2014,635.0
+Singapore,Americas,2015,657.0
+Singapore,Americas,2016,681.0
+Singapore,Americas,2017,759.0
+Singapore,Americas,2018,862.0
+Singapore,Americas,2019,963.0
+Singapore,East Asia/Pacific,2010,8475.0
+Singapore,East Asia/Pacific,2011,9887.0
+Singapore,East Asia/Pacific,2012,10988.0
+Singapore,East Asia/Pacific,2013,11920.0
+Singapore,East Asia/Pacific,2014,11406.0
+Singapore,East Asia/Pacific,2015,11427.0
+Singapore,East Asia/Pacific,2016,12348.0
+Singapore,East Asia/Pacific,2017,13001.0
+Singapore,East Asia/Pacific,2018,13590.0
+Singapore,East Asia/Pacific,2019,14047.0
+Singapore,Europe,2010,1386.0
+Singapore,Europe,2011,1414.0
+Singapore,Europe,2012,1551.0
+Singapore,Europe,2013,1606.0
+Singapore,Europe,2014,1633.0
+Singapore,Europe,2015,1652.0
+Singapore,Europe,2016,1762.0
+Singapore,Europe,2017,1874.0
+Singapore,Europe,2018,2086.0
+Singapore,Europe,2019,2157.0
+Singapore,Middle East,2010,102.0
+Singapore,Middle East,2011,113.0
+Singapore,Middle East,2012,118.0
+Singapore,Middle East,2013,135.0
+Singapore,Middle East,2014,147.0
+Singapore,Middle East,2015,142.0
+Singapore,Middle East,2016,144.0
+Singapore,Middle East,2017,134.0
+Singapore,Middle East,2018,132.0
+Singapore,Middle East,2019,142.0
+Singapore,South Asia,2010,1083.0
+Singapore,South Asia,2011,1124.0
+Singapore,South Asia,2012,1151.0
+Singapore,South Asia,2013,1201.0
+Singapore,South Asia,2014,1212.0
+Singapore,South Asia,2015,1290.0
+Singapore,South Asia,2016,1402.0
+Singapore,South Asia,2017,1584.0
+Singapore,South Asia,2018,1759.0
+Singapore,South Asia,2019,1722.0
+Singapore,Others,2012,8.0
+Singapore,Others,2013,1.0
+Slovenia,Africa,2010,4.0
+Slovenia,Africa,2011,5.0
+Slovenia,Africa,2012,6.0
+Slovenia,Africa,2013,7.0
+Slovenia,Africa,2014,6.0
+Slovenia,Africa,2015,8.0
+Slovenia,Africa,2016,9.0
+Slovenia,Africa,2017,11.0
+Slovenia,Africa,2018,13.0
+Slovenia,Africa,2019,13.0
+Slovenia,Americas,2010,72.0
+Slovenia,Americas,2011,78.0
+Slovenia,Americas,2012,88.0
+Slovenia,Americas,2013,103.0
+Slovenia,Americas,2014,113.0
+Slovenia,Americas,2015,134.0
+Slovenia,Americas,2016,147.0
+Slovenia,Americas,2017,174.0
+Slovenia,Americas,2018,208.0
+Slovenia,Americas,2019,227.0
+Slovenia,East Asia/Pacific,2010,107.0
+Slovenia,East Asia/Pacific,2011,120.0
+Slovenia,East Asia/Pacific,2012,152.0
+Slovenia,East Asia/Pacific,2013,168.0
+Slovenia,East Asia/Pacific,2014,248.0
+Slovenia,East Asia/Pacific,2015,308.0
+Slovenia,East Asia/Pacific,2016,344.0
+Slovenia,East Asia/Pacific,2017,427.0
+Slovenia,East Asia/Pacific,2018,478.0
+Slovenia,East Asia/Pacific,2019,513.0
+Slovenia,Europe,2010,1866.0
+Slovenia,Europe,2011,2033.0
+Slovenia,Europe,2012,2131.0
+Slovenia,Europe,2013,2224.0
+Slovenia,Europe,2014,2308.0
+Slovenia,Europe,2015,2573.0
+Slovenia,Europe,2016,2897.0
+Slovenia,Europe,2017,3379.0
+Slovenia,Europe,2018,3726.0
+Slovenia,Europe,2019,3949.0
+Spain,Africa,2010,302.0
+Spain,Africa,2011,509.0
+Spain,Africa,2012,492.0
+Spain,Africa,2013,487.0
+Spain,Africa,2014,552.0
+Spain,Africa,2015,726.0
+Spain,Africa,2016,1243.0
+Spain,Africa,2017,1314.0
+Spain,Africa,2018,1236.0
+Spain,Africa,2019,1340.0
+Spain,Americas,2010,2618.0
+Spain,Americas,2011,2887.0
+Spain,Americas,2012,3123.0
+Spain,Americas,2013,3065.0
+Spain,Americas,2014,3132.0
+Spain,Americas,2015,3638.0
+Spain,Americas,2016,4574.0
+Spain,Americas,2017,5866.0
+Spain,Americas,2018,6371.0
+Spain,Americas,2019,7092.0
+Spain,East Asia/Pacific,2010,962.0
+Spain,East Asia/Pacific,2011,1176.0
+Spain,East Asia/Pacific,2012,1345.0
+Spain,East Asia/Pacific,2013,1531.0
+Spain,East Asia/Pacific,2014,1850.0
+Spain,East Asia/Pacific,2015,1805.0
+Spain,East Asia/Pacific,2016,1905.0
+Spain,East Asia/Pacific,2017,2299.0
+Spain,East Asia/Pacific,2018,2561.0
+Spain,East Asia/Pacific,2019,2977.0
+Spain,Europe,2010,48290.0
+Spain,Europe,2011,51420.0
+Spain,Europe,2012,52243.0
+Spain,Europe,2013,55273.0
+Spain,Europe,2014,59035.0
+Spain,Europe,2015,61667.0
+Spain,Europe,2016,67047.0
+Spain,Europe,2017,71696.0
+Spain,Europe,2018,71904.0
+Spain,Europe,2019,71378.0
+Spain,Middle East,2010,68.0
+Spain,Middle East,2011,110.0
+Spain,Middle East,2012,170.0
+Spain,Middle East,2013,217.0
+Spain,Middle East,2014,251.0
+Spain,Middle East,2015,218.0
+Spain,Middle East,2016,387.0
+Spain,Middle East,2017,466.0
+Spain,Middle East,2018,416.0
+Spain,Middle East,2019,425.0
+Spain,South Asia,2010,30.0
+Spain,South Asia,2011,74.0
+Spain,South Asia,2012,91.0
+Spain,South Asia,2013,102.0
+Spain,South Asia,2014,119.0
+Spain,South Asia,2015,121.0
+Spain,South Asia,2016,159.0
+Spain,South Asia,2017,227.0
+Spain,South Asia,2018,321.0
+Spain,South Asia,2019,298.0
+Spain,Others,2010,407.0
+Spain,Others,2011,1.0
+Sweden,Africa,2010,13.0
+Sweden,Africa,2011,41.0
+Sweden,Africa,2012,35.0
+Sweden,Africa,2013,70.0
+Sweden,Africa,2014,26.0
+Sweden,Africa,2015,31.0
+Sweden,Africa,2016,27.0
+Sweden,Africa,2017,27.0
+Sweden,Africa,2018,31.0
+Sweden,Africa,2019,34.0
+Sweden,Americas,2010,226.0
+Sweden,Americas,2011,671.0
+Sweden,Americas,2012,652.0
+Sweden,Americas,2013,724.0
+Sweden,Americas,2014,314.0
+Sweden,Americas,2015,336.0
+Sweden,Americas,2016,350.0
+Sweden,Americas,2017,486.0
+Sweden,Americas,2018,516.0
+Sweden,Americas,2019,613.0
+Sweden,East Asia/Pacific,2010,174.0
+Sweden,East Asia/Pacific,2011,356.0
+Sweden,East Asia/Pacific,2012,314.0
+Sweden,East Asia/Pacific,2013,363.0
+Sweden,East Asia/Pacific,2014,281.0
+Sweden,East Asia/Pacific,2015,334.0
+Sweden,East Asia/Pacific,2016,390.0
+Sweden,East Asia/Pacific,2017,430.0
+Sweden,East Asia/Pacific,2018,417.0
+Sweden,East Asia/Pacific,2019,468.0
+Sweden,Europe,2010,4470.0
+Sweden,Europe,2011,18249.0
+Sweden,Europe,2012,18922.0
+Sweden,Europe,2013,17531.0
+Sweden,Europe,2014,4410.0
+Sweden,Europe,2015,4980.0
+Sweden,Europe,2016,5108.0
+Sweden,Europe,2017,5143.0
+Sweden,Europe,2018,5304.0
+Sweden,Europe,2019,5689.0
+Sweden,Middle East,2011,33.0
+Sweden,Middle East,2012,44.0
+Sweden,Middle East,2013,39.0
+Sweden,South Asia,2010,26.0
+Sweden,South Asia,2011,56.0
+Sweden,South Asia,2012,45.0
+Sweden,South Asia,2013,77.0
+Sweden,South Asia,2014,77.0
+Sweden,South Asia,2015,92.0
+Sweden,South Asia,2016,88.0
+Sweden,South Asia,2017,109.0
+Sweden,South Asia,2018,110.0
+Sweden,South Asia,2019,118.0
+Sweden,Others,2010,274.0
+Sweden,Others,2014,553.0
+Sweden,Others,2015,710.0
+Sweden,Others,2016,820.0
+Sweden,Others,2017,859.0
+Sweden,Others,2018,1061.0
+Sweden,Others,2019,694.0
+Switzerland,Africa,2010,78.0
+Switzerland,Africa,2011,74.0
+Switzerland,Africa,2012,82.0
+Switzerland,Africa,2013,79.0
+Switzerland,Africa,2014,75.0
+Switzerland,Africa,2015,79.0
+Switzerland,Africa,2016,93.0
+Switzerland,Africa,2017,94.0
+Switzerland,Africa,2018,97.0
+Switzerland,Africa,2019,100.0
+Switzerland,Americas,2010,916.0
+Switzerland,Americas,2011,924.0
+Switzerland,Americas,2012,952.0
+Switzerland,Americas,2013,1004.0
+Switzerland,Americas,2014,1037.0
+Switzerland,Americas,2015,1096.0
+Switzerland,Americas,2016,1202.0
+Switzerland,Americas,2017,1361.0
+Switzerland,Americas,2018,1495.0
+Switzerland,Americas,2019,1616.0
+Switzerland,East Asia/Pacific,2010,1074.0
+Switzerland,East Asia/Pacific,2011,1300.0
+Switzerland,East Asia/Pacific,2012,1491.0
+Switzerland,East Asia/Pacific,2013,1696.0
+Switzerland,East Asia/Pacific,2014,1847.0
+Switzerland,East Asia/Pacific,2015,2242.0
+Switzerland,East Asia/Pacific,2016,2908.0
+Switzerland,East Asia/Pacific,2017,3270.0
+Switzerland,East Asia/Pacific,2018,3414.0
+Switzerland,East Asia/Pacific,2019,3408.0
+Switzerland,Europe,2010,6237.0
+Switzerland,Europe,2011,5868.0
+Switzerland,Europe,2012,5612.0
+Switzerland,Europe,2013,5720.0
+Switzerland,Europe,2014,5676.0
+Switzerland,Europe,2015,5250.0
+Switzerland,Europe,2016,6199.0
+Switzerland,Europe,2017,6409.0
+Switzerland,Europe,2018,6709.0
+Switzerland,Europe,2019,6693.0
+Switzerland,Middle East,2010,157.0
+Switzerland,Middle East,2011,167.0
+Switzerland,Middle East,2012,211.0
+Switzerland,Middle East,2013,256.0
+Switzerland,Middle East,2014,307.0
+Switzerland,Middle East,2015,372.0
+Switzerland,South Asia,2010,166.0
+Switzerland,South Asia,2011,201.0
+Switzerland,South Asia,2012,218.0
+Switzerland,South Asia,2013,213.0
+Switzerland,South Asia,2014,217.0
+Switzerland,South Asia,2015,266.0
+Taiwan,Africa,2010,8.0
+Taiwan,Africa,2011,9.0
+Taiwan,Africa,2012,9.0
+Taiwan,Africa,2013,9.0
+Taiwan,Africa,2014,10.0
+Taiwan,Africa,2015,10.0
+Taiwan,Africa,2016,11.0
+Taiwan,Africa,2017,12.0
+Taiwan,Africa,2018,12.0
+Taiwan,Africa,2019,13.0
+Taiwan,Americas,2010,475.0
+Taiwan,Americas,2011,495.0
+Taiwan,Americas,2012,497.0
+Taiwan,Americas,2013,502.0
+Taiwan,Americas,2014,565.0
+Taiwan,Americas,2015,588.0
+Taiwan,Americas,2016,649.0
+Taiwan,Americas,2017,702.0
+Taiwan,Americas,2018,733.0
+Taiwan,Americas,2019,766.0
+Taiwan,East Asia/Pacific,2010,4818.0
+Taiwan,East Asia/Pacific,2011,5297.0
+Taiwan,East Asia/Pacific,2012,6513.0
+Taiwan,East Asia/Pacific,2013,7179.0
+Taiwan,East Asia/Pacific,2014,9016.0
+Taiwan,East Asia/Pacific,2015,9509.0
+Taiwan,East Asia/Pacific,2016,9670.0
+Taiwan,East Asia/Pacific,2017,9638.0
+Taiwan,East Asia/Pacific,2018,9907.0
+Taiwan,East Asia/Pacific,2019,10632.0
+Taiwan,Europe,2010,203.0
+Taiwan,Europe,2011,212.0
+Taiwan,Europe,2012,218.0
+Taiwan,Europe,2013,223.0
+Taiwan,Europe,2014,265.0
+Taiwan,Europe,2015,274.0
+Taiwan,Europe,2016,300.0
+Taiwan,Europe,2017,330.0
+Taiwan,Europe,2018,350.0
+Taiwan,Europe,2019,387.0
+Taiwan,Middle East,2010,13.0
+Taiwan,Middle East,2011,14.0
+Taiwan,Middle East,2012,13.0
+Taiwan,Middle East,2013,14.0
+Taiwan,Middle East,2014,17.0
+Taiwan,Middle East,2015,19.0
+Taiwan,Middle East,2016,20.0
+Taiwan,Middle East,2017,21.0
+Taiwan,Middle East,2018,22.0
+Taiwan,Middle East,2019,24.0
+Taiwan,South Asia,2010,24.0
+Taiwan,South Asia,2011,24.0
+Taiwan,South Asia,2012,23.0
+Taiwan,South Asia,2013,23.0
+Taiwan,South Asia,2014,30.0
+Taiwan,South Asia,2015,32.0
+Taiwan,South Asia,2016,34.0
+Taiwan,South Asia,2017,35.0
+Taiwan,South Asia,2018,38.0
+Taiwan,South Asia,2019,40.0
+Taiwan,Others,2010,26.0
+Taiwan,Others,2011,36.0
+Taiwan,Others,2012,38.0
+Taiwan,Others,2013,65.0
+Taiwan,Others,2014,7.0
+Taiwan,Others,2015,7.0
+Taiwan,Others,2016,8.0
+Taiwan,Others,2017,2.0
+Taiwan,Others,2018,5.0
+Taiwan,Others,2019,2.0
+Thailand,Africa,2010,122.0
+Thailand,Africa,2011,141.0
+Thailand,Africa,2012,157.0
+Thailand,Africa,2013,163.0
+Thailand,Africa,2014,163.0
+Thailand,Africa,2015,165.0
+Thailand,Africa,2016,173.0
+Thailand,Africa,2017,192.0
+Thailand,Africa,2018,200.0
+Thailand,Africa,2019,197.0
+Thailand,Americas,2010,792.0
+Thailand,Americas,2011,886.0
+Thailand,Americas,2012,1007.0
+Thailand,Americas,2013,1104.0
+Thailand,Americas,2014,1049.0
+Thailand,Americas,2015,1169.0
+Thailand,Americas,2016,1342.0
+Thailand,Americas,2017,1449.0
+Thailand,Americas,2018,1534.0
+Thailand,Americas,2019,1560.0
+Thailand,East Asia/Pacific,2010,9091.0
+Thailand,East Asia/Pacific,2011,11481.0
+Thailand,East Asia/Pacific,2012,13811.0
+Thailand,East Asia/Pacific,2013,17117.0
+Thailand,East Asia/Pacific,2014,15712.0
+Thailand,East Asia/Pacific,2015,21018.0
+Thailand,East Asia/Pacific,2016,22780.0
+Thailand,East Asia/Pacific,2017,25114.0
+Thailand,East Asia/Pacific,2018,27137.0
+Thailand,East Asia/Pacific,2019,28544.0
+Thailand,Europe,2010,4445.0
+Thailand,Europe,2011,5059.0
+Thailand,Europe,2012,5580.0
+Thailand,Europe,2013,6289.0
+Thailand,Europe,2014,6166.0
+Thailand,Europe,2015,5615.0
+Thailand,Europe,2016,6170.0
+Thailand,Europe,2017,6497.0
+Thailand,Europe,2018,6789.0
+Thailand,Europe,2019,6725.0
+Thailand,Middle East,2010,331.0
+Thailand,Middle East,2011,379.0
+Thailand,Middle East,2012,538.0
+Thailand,Middle East,2013,548.0
+Thailand,Middle East,2014,507.0
+Thailand,Middle East,2015,582.0
+Thailand,Middle East,2016,660.0
+Thailand,Middle East,2017,566.0
+Thailand,Middle East,2018,582.0
+Thailand,Middle East,2019,533.0
+Thailand,South Asia,2010,1153.0
+Thailand,South Asia,2011,1285.0
+Thailand,South Asia,2012,1260.0
+Thailand,South Asia,2013,1327.0
+Thailand,South Asia,2014,1214.0
+Thailand,South Asia,2015,1374.0
+Thailand,South Asia,2016,1406.0
+Thailand,South Asia,2017,1774.0
+Thailand,South Asia,2018,1936.0
+Thailand,South Asia,2019,2357.0
+Thailand,Others,2010,1.0
+Turkiye,Africa,2010,247.0
+Turkiye,Africa,2011,301.0
+Turkiye,Africa,2012,372.0
+Turkiye,Africa,2013,420.0
+Turkiye,Africa,2014,491.0
+Turkiye,Africa,2015,535.0
+Turkiye,Africa,2016,493.0
+Turkiye,Africa,2017,590.0
+Turkiye,Africa,2018,817.0
+Turkiye,Africa,2019,998.0
+Turkiye,Americas,2010,550.0
+Turkiye,Americas,2011,660.0
+Turkiye,Americas,2012,714.0
+Turkiye,Americas,2013,790.0
+Turkiye,Americas,2014,846.0
+Turkiye,Americas,2015,936.0
+Turkiye,Americas,2016,593.0
+Turkiye,Americas,2017,574.0
+Turkiye,Americas,2018,827.0
+Turkiye,Americas,2019,1029.0
+Turkiye,East Asia/Pacific,2010,628.0
+Turkiye,East Asia/Pacific,2011,721.0
+Turkiye,East Asia/Pacific,2012,784.0
+Turkiye,East Asia/Pacific,2013,848.0
+Turkiye,East Asia/Pacific,2014,1032.0
+Turkiye,East Asia/Pacific,2015,1074.0
+Turkiye,East Asia/Pacific,2016,620.0
+Turkiye,East Asia/Pacific,2017,813.0
+Turkiye,East Asia/Pacific,2018,1254.0
+Turkiye,East Asia/Pacific,2019,1470.0
+Turkiye,Europe,2010,21666.0
+Turkiye,Europe,2011,23501.0
+Turkiye,Europe,2012,24167.0
+Turkiye,Europe,2013,26157.0
+Turkiye,Europe,2014,27263.0
+Turkiye,Europe,2015,26411.0
+Turkiye,Europe,2016,18761.0
+Turkiye,Europe,2017,23874.0
+Turkiye,Europe,2018,29429.0
+Turkiye,Europe,2019,33517.0
+Turkiye,Middle East,2010,1896.0
+Turkiye,Middle East,2011,2133.0
+Turkiye,Middle East,2012,2377.0
+Turkiye,Middle East,2013,3244.0
+Turkiye,Middle East,2014,3554.0
+Turkiye,Middle East,2015,3663.0
+Turkiye,Middle East,2016,2374.0
+Turkiye,Middle East,2017,3406.0
+Turkiye,Middle East,2018,4391.0
+Turkiye,Middle East,2019,4854.0
+Turkiye,South Asia,2010,1982.0
+Turkiye,South Asia,2011,1992.0
+Turkiye,South Asia,2012,1319.0
+Turkiye,South Asia,2013,1348.0
+Turkiye,South Asia,2014,1787.0
+Turkiye,South Asia,2015,1931.0
+Turkiye,South Asia,2016,1852.0
+Turkiye,South Asia,2017,2727.0
+Turkiye,South Asia,2018,2345.0
+Turkiye,South Asia,2019,2551.0
+Turkiye,Others,2010,4395.0
+Turkiye,Others,2011,5345.0
+Turkiye,Others,2012,5965.0
+Turkiye,Others,2013,4989.0
+Turkiye,Others,2014,4838.0
+Turkiye,Others,2015,4929.0
+Turkiye,Others,2016,5595.0
+Turkiye,Others,2017,5617.0
+Turkiye,Others,2018,6705.0
+Turkiye,Others,2019,6774.0
+United Arab Emirates,Africa,2015,901.0
+United Arab Emirates,Africa,2016,937.0
+United Arab Emirates,Africa,2017,1013.0
+United Arab Emirates,Africa,2018,1196.0
+United Arab Emirates,Africa,2019,1370.0
+United Arab Emirates,Americas,2014,3214.0
+United Arab Emirates,Americas,2015,1175.0
+United Arab Emirates,Americas,2016,1135.0
+United Arab Emirates,Americas,2017,1186.0
+United Arab Emirates,Americas,2018,1208.0
+United Arab Emirates,Americas,2019,1245.0
+United Arab Emirates,East Asia/Pacific,2014,2097.0
+United Arab Emirates,East Asia/Pacific,2015,1766.0
+United Arab Emirates,East Asia/Pacific,2016,1882.0
+United Arab Emirates,East Asia/Pacific,2017,2203.0
+United Arab Emirates,East Asia/Pacific,2018,2263.0
+United Arab Emirates,East Asia/Pacific,2019,2474.0
+United Arab Emirates,Europe,2014,2710.0
+United Arab Emirates,Europe,2015,5006.0
+United Arab Emirates,Europe,2016,5209.0
+United Arab Emirates,Europe,2017,5653.0
+United Arab Emirates,Europe,2018,5943.0
+United Arab Emirates,Europe,2019,6256.0
+United Arab Emirates,Middle East,2014,5391.0
+United Arab Emirates,Middle East,2015,7102.0
+United Arab Emirates,Middle East,2016,8049.0
+United Arab Emirates,Middle East,2017,7598.0
+United Arab Emirates,Middle East,2018,8056.0
+United Arab Emirates,Middle East,2019,9368.0
+United Arab Emirates,South Asia,2014,2407.0
+United Arab Emirates,South Asia,2015,3364.0
+United Arab Emirates,South Asia,2016,3683.0
+United Arab Emirates,South Asia,2017,4152.0
+United Arab Emirates,South Asia,2018,4425.0
+United Arab Emirates,South Asia,2019,4568.0
+United Arab Emirates,Others,2014,413.0
+United Arab Emirates,Others,2015,0.3
+United Arab Emirates,Others,2016,0.3
+United Arab Emirates,Others,2017,0.1
+United Arab Emirates,Others,2018,0.1
+United Arab Emirates,Others,2019,0.0
+United Kingdom,Africa,2010,645.0
+United Kingdom,Africa,2011,605.0
+United Kingdom,Africa,2012,638.0
+United Kingdom,Africa,2013,654.0
+United Kingdom,Africa,2014,639.0
+United Kingdom,Africa,2015,674.0
+United Kingdom,Africa,2016,632.0
+United Kingdom,Africa,2017,732.0
+United Kingdom,Africa,2018,730.0
+United Kingdom,Africa,2019,679.0
+United Kingdom,Americas,2010,3795.0
+United Kingdom,Americas,2011,4234.0
+United Kingdom,Americas,2012,4051.0
+United Kingdom,Americas,2013,4201.0
+United Kingdom,Americas,2014,4387.0
+United Kingdom,Americas,2015,5015.0
+United Kingdom,Americas,2016,5565.0
+United Kingdom,Americas,2017,6490.0
+United Kingdom,Americas,2018,6311.0
+United Kingdom,Americas,2019,6284.0
+United Kingdom,East Asia/Pacific,2010,2427.0
+United Kingdom,East Asia/Pacific,2011,2653.0
+United Kingdom,East Asia/Pacific,2012,2592.0
+United Kingdom,East Asia/Pacific,2013,2904.0
+United Kingdom,East Asia/Pacific,2014,3046.0
+United Kingdom,East Asia/Pacific,2015,3461.0
+United Kingdom,East Asia/Pacific,2016,3759.0
+United Kingdom,East Asia/Pacific,2017,4348.0
+United Kingdom,East Asia/Pacific,2018,4277.0
+United Kingdom,East Asia/Pacific,2019,4211.0
+United Kingdom,Europe,2010,22501.0
+United Kingdom,Europe,2011,23264.0
+United Kingdom,Europe,2012,23794.0
+United Kingdom,Europe,2013,24587.0
+United Kingdom,Europe,2014,25960.0
+United Kingdom,Europe,2015,26239.0
+United Kingdom,Europe,2016,27558.0
+United Kingdom,Europe,2017,27568.0
+United Kingdom,Europe,2018,26972.0
+United Kingdom,Europe,2019,27574.0
+United Kingdom,Middle East,2010,550.0
+United Kingdom,Middle East,2011,641.0
+United Kingdom,Middle East,2012,681.0
+United Kingdom,Middle East,2013,744.0
+United Kingdom,Middle East,2014,802.0
+United Kingdom,Middle East,2015,887.0
+United Kingdom,Middle East,2016,1066.0
+United Kingdom,Middle East,2017,1155.0
+United Kingdom,Middle East,2018,1219.0
+United Kingdom,Middle East,2019,1328.0
+United Kingdom,South Asia,2010,481.0
+United Kingdom,South Asia,2011,490.0
+United Kingdom,South Asia,2012,466.0
+United Kingdom,South Asia,2013,477.0
+United Kingdom,South Asia,2014,503.0
+United Kingdom,South Asia,2015,517.0
+United Kingdom,South Asia,2016,550.0
+United Kingdom,South Asia,2017,787.0
+United Kingdom,South Asia,2018,775.0
+United Kingdom,South Asia,2019,782.0
+United States of America,Africa,2010,311.0
+United States of America,Africa,2011,344.0
+United States of America,Africa,2012,381.0
+United States of America,Africa,2013,468.0
+United States of America,Africa,2014,530.0
+United States of America,Africa,2015,570.0
+United States of America,Africa,2016,574.0
+United States of America,Africa,2017,585.0
+United States of America,Africa,2018,598.0
+United States of America,Africa,2019,567.0
+United States of America,Americas,2010,38859.0
+United States of America,Americas,2011,40591.0
+United States of America,Americas,2012,43168.0
+United States of America,Americas,2013,45402.0
+United States of America,Americas,2014,47898.0
+United States of America,Americas,2015,47329.0
+United States of America,Americas,2016,46459.0
+United States of America,Americas,2017,46676.0
+United States of America,Americas,2018,48966.0
+United States of America,Americas,2019,48062.0
+United States of America,East Asia/Pacific,2010,7369.0
+United States of America,East Asia/Pacific,2011,7956.0
+United States of America,East Asia/Pacific,2012,8942.0
+United States of America,East Asia/Pacific,2013,10037.0
+United States of America,East Asia/Pacific,2014,10262.0
+United States of America,East Asia/Pacific,2015,11358.0
+United States of America,East Asia/Pacific,2016,11765.0
+United States of America,East Asia/Pacific,2017,12261.0
+United States of America,East Asia/Pacific,2018,11953.0
+United States of America,East Asia/Pacific,2019,12184.0
+United States of America,Europe,2010,12432.0
+United States of America,Europe,2011,13408.0
+United States of America,Europe,2012,13138.0
+United States of America,Europe,2013,14125.0
+United States of America,Europe,2014,14849.0
+United States of America,Europe,2015,16439.0
+United States of America,Europe,2016,15506.0
+United States of America,Europe,2017,15633.0
+United States of America,Europe,2018,16083.0
+United States of America,Europe,2019,16382.0
+United States of America,Middle East,2010,296.0
+United States of America,Middle East,2011,386.0
+United States of America,Middle East,2012,486.0
+United States of America,Middle East,2013,572.0
+United States of America,Middle East,2014,684.0
+United States of America,Middle East,2015,731.0
+United States of America,Middle East,2016,681.0
+United States of America,Middle East,2017,550.0
+United States of America,Middle East,2018,576.0
+United States of America,Middle East,2019,577.0
+United States of America,South Asia,2010,738.0
+United States of America,South Asia,2011,792.0
+United States of America,South Asia,2012,852.0
+United States of America,South Asia,2013,1040.0
+United States of America,South Asia,2014,1156.0
+United States of America,South Asia,2015,1346.0
+United States of America,South Asia,2016,1422.0
+United States of America,South Asia,2017,1481.0
+United States of America,South Asia,2018,1570.0
+United States of America,South Asia,2019,1671.0
+United States of America,Others,2010,5.0
+Vietnam,Africa,2016,29.0
+Vietnam,Africa,2017,36.0
+Vietnam,Africa,2018,43.0
+Vietnam,Africa,2019,48.0
+Vietnam,Americas,2010,533.0
+Vietnam,Americas,2011,546.0
+Vietnam,Americas,2012,557.0
+Vietnam,Americas,2013,537.0
+Vietnam,Americas,2014,548.0
+Vietnam,Americas,2015,597.0
+Vietnam,Americas,2016,735.0
+Vietnam,Americas,2017,817.0
+Vietnam,Americas,2018,904.0
+Vietnam,Americas,2019,974.0
+Vietnam,East Asia/Pacific,2010,3498.0
+Vietnam,East Asia/Pacific,2011,4384.0
+Vietnam,East Asia/Pacific,2012,4809.0
+Vietnam,East Asia/Pacific,2013,5461.0
+Vietnam,East Asia/Pacific,2014,5696.0
+Vietnam,East Asia/Pacific,2015,5641.0
+Vietnam,East Asia/Pacific,2016,7632.0
+Vietnam,East Asia/Pacific,2017,10184.0
+Vietnam,East Asia/Pacific,2018,12513.0
+Vietnam,East Asia/Pacific,2019,14650.0
+Vietnam,Europe,2010,757.0
+Vietnam,Europe,2011,812.0
+Vietnam,Europe,2012,927.0
+Vietnam,Europe,2013,1046.0
+Vietnam,Europe,2014,1198.0
+Vietnam,Europe,2015,1199.0
+Vietnam,Europe,2016,1617.0
+Vietnam,Europe,2017,1886.0
+Vietnam,Europe,2018,2038.0
+Vietnam,Europe,2019,2168.0
+Vietnam,South Asia,2019,169.0
+Vietnam,Others,2010,262.0
+Vietnam,Others,2011,272.0
+Vietnam,Others,2012,554.0
+Vietnam,Others,2013,528.0
+Vietnam,Others,2014,432.0
+Vietnam,Others,2015,507.0
+South Korea,Africa,2010,27.0
+South Korea,Africa,2011,30.0
+South Korea,Africa,2012,32.0
+South Korea,Africa,2013,34.0
+South Korea,Africa,2014,35.0
+South Korea,Africa,2015,36.0
+South Korea,Africa,2016,48.0
+South Korea,Africa,2017,40.0
+South Korea,Africa,2018,43.0
+South Korea,Africa,2019,50.0
+South Korea,Americas,2010,814.0
+South Korea,Americas,2011,827.0
+South Korea,Americas,2012,876.0
+South Korea,Americas,2013,916.0
+South Korea,Americas,2014,974.0
+South Korea,Americas,2015,974.0
+South Korea,Americas,2016,1116.0
+South Korea,Americas,2017,1117.0
+South Korea,Americas,2018,1243.0
+South Korea,Americas,2019,1346.0
+South Korea,East Asia/Pacific,2010,6769.0
+South Korea,East Asia/Pacific,2011,7679.0
+South Korea,East Asia/Pacific,2012,8913.0
+South Korea,East Asia/Pacific,2013,9826.0
+South Korea,East Asia/Pacific,2014,11682.0
+South Korea,East Asia/Pacific,2015,10754.0
+South Korea,East Asia/Pacific,2016,14389.0
+South Korea,East Asia/Pacific,2017,10552.0
+South Korea,East Asia/Pacific,2018,12362.0
+South Korea,East Asia/Pacific,2019,14335.0
+South Korea,Europe,2010,709.0
+South Korea,Europe,2011,753.0
+South Korea,Europe,2012,807.0
+South Korea,Europe,2013,864.0
+South Korea,Europe,2014,961.0
+South Korea,Europe,2015,936.0
+South Korea,Europe,2016,1093.0
+South Korea,Europe,2017,1107.0
+South Korea,Europe,2018,1196.0
+South Korea,Europe,2019,1299.0
+South Korea,Middle East,2010,25.0
+South Korea,Middle East,2011,29.0
+South Korea,Middle East,2012,35.0
+South Korea,Middle East,2013,40.0
+South Korea,Middle East,2014,46.0
+South Korea,Middle East,2015,42.0
+South Korea,Middle East,2016,45.0
+South Korea,Middle East,2017,46.0
+South Korea,Middle East,2018,49.0
+South Korea,Middle East,2019,56.0
+South Korea,South Asia,2010,135.0
+South Korea,South Asia,2011,148.0
+South Korea,South Asia,2012,147.0
+South Korea,South Asia,2013,188.0
+South Korea,South Asia,2014,211.0
+South Korea,South Asia,2015,219.0
+South Korea,South Asia,2016,274.0
+South Korea,South Asia,2017,203.0
+South Korea,South Asia,2018,202.0
+South Korea,South Asia,2019,226.0
+South Korea,Others,2010,320.0
+South Korea,Others,2011,329.0
+South Korea,Others,2012,330.0
+South Korea,Others,2013,310.0
+South Korea,Others,2014,293.0
+South Korea,Others,2015,271.0
+South Korea,Others,2016,277.0
+South Korea,Others,2017,270.0
+South Korea,Others,2018,252.0
+South Korea,Others,2019,193.0

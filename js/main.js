@@ -1,11 +1,12 @@
 console.log("let's get started!")
 let geoDataURL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"; // GeoJSON data URL
 let tourismDataURL = "data/tourism_worldbank1.csv"; // Replace with the actual path to your CSV file
+let arrivalRegionData = "data/arrivalByRegions2.csv";
 // initiate global variables
 let michelinCountry = new Set()
 let spiderSelect = new Set();
 let countryColorArray = []
-let mapVis, lineVis, lineVis2, selectVis, barchart, barchart2, travelPurpose, bubbleChart;
+let mapVis, lineVis, lineVis2, selectVis, barchart, barchart2, travelPurpose, bubbleChart, treemapVis;
 let parseYear = d3.timeParse("%Y");
 
 // set up fullpage scrolling
@@ -59,7 +60,8 @@ let promises = [
         return row
     }),
     d3.json(geoDataURL),
-    d3.csv(tourismDataURL)
+    d3.csv(tourismDataURL),
+    d3.csv(arrivalRegionData)
 ];
 Promise.all(promises)
     .then(function (data) {
@@ -141,6 +143,9 @@ function initMainPage(dataArray) {
     // Initialize bubble chart
     bubbleChart = new BubbleChart("michelin_bubble", dataArray[1]);
 
+    // Initialize tree map
+    treemapVis = new Treemap("treemap_container", dataArray[4]);
+
     // create colors per michelin country (coded)
     countryColorAssignment(michelinCountry);
 
@@ -155,6 +160,7 @@ function handleSelectedCountries(selectedCountries) {
 
     // Additional handling for selected countries
     bubbleChart.createSelector();
+    populateDropdown(selectedCountries);
 }
 
 // Connect selectVis to spider chart
@@ -183,5 +189,20 @@ function countryColorAssignment(michelin_data){
         const country = michelinCountryName[i];
         countryColorArray.push({[country]: color});
     }
+}
+
+function populateDropdown(selectedCountries) {
+    const dropdown = d3.select("#country-dropdown");
+    dropdown.selectAll("option")
+        .data(selectedCountries)
+        .enter()
+        .append("option")
+        .text(d => d)
+        .attr("value", d => d);
+
+    dropdown.on("change", function() {
+        const selectedCountry = d3.select(this).property("value");
+        treemapVis.update(selectedCountry);
+    });
 }
 
