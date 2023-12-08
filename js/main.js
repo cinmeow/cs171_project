@@ -6,7 +6,7 @@ let arrivalRegionData = "data/arrivalByRegions2.csv";
 let michelinCountry = new Set()
 let spiderSelect = new Set();
 let countryColorArray = []
-let mapVis, lineVis, lineVis2, selectVis, barchart, barchart2, travelPurpose, bubbleChart, treemapVis, areachart;
+let mapVis, lineVis, lineVis2, selectVis, barchart, barchart2, travelPurpose, bubbleChart, treemapVis, areachart1, areachart2;
 let parseYear = d3.timeParse("%Y");
 
 // set up fullpage scrolling
@@ -133,7 +133,9 @@ function initMainPage(dataArray) {
             barchart2 = new BarChart("chart2", dataArray[1], "cuisine");
         } else{
             // create area chart for accomodations data
-            areachart = new AreaChart('chart1', dataArray[0])
+            areachart1 = new AreaChart('chart1', dataArray[0], "bed");
+            areachart2 = new AreaChart("chart2",  dataArray[0], "lengthOfStay");
+
         }
     });
 

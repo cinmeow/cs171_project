@@ -342,8 +342,10 @@ class MapVis {
                 barchart2.setData(selectedDatabyM, countryName);
             }
 
-            if (areachart){
-                areachart.setData(selectedDataAcc, countryName);
+            if ( areachart1 && areachart2){
+                console.log("acc data", selectedDataAcc)
+                areachart1.setData(selectedDataAcc, countryName);
+                areachart2.setData(selectedDataAcc, countryName);
             }
         }
     }
