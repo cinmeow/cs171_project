@@ -12,21 +12,41 @@ html {
     text-align: center;
 }
 
-#landing_page {
-    background-image: url("/img/temp_background.jpeg");
-    background-size: cover;
+#landing_page{
+    background-color: #fffafb;
 }
 
+/*#landing_page {*/
+/*    background-image: url("/img/temp_background.jpeg");*/
+/*    background-size: cover;*/
+/*}*/
+
+
 #webtitle {
-    background-color: rgba(39, 40, 92, 0.8);
+    border: 10px solid #a1061b;
     border-radius: 20px;
     display: inline-block;
-    padding: 30px;
-    font-family: 'Codystar', sans-serif;
-    font-weight: bold;
-    color: gainsboro;
+    padding: 40px;
+    font-family: 'Monaco';
+    font-weight: bolder;
+    color: #a1061b;
     font-size: 55px;
+    align-items: center;
+    margin-left: 250px;
 }
+
+#bib-title{
+    max-height: 20%;
+    max-width: 20%;
+    display: flex;
+    margin-left: 40px;
+    margin-top: -270px;
+}
+
+/*#webtitle {*/
+/*    vertical-align: middle;*/
+/*    margin-left: 10px; !* Adjust margin as needed for spacing between the image and text *!*/
+/*}*/
 
 #proj_intro {
     padding-top: 10vh;
@@ -42,7 +62,7 @@ html {
 }
 
 body{
-    background-color: white;
+    background-color: #fffafb;
 }
 
 .slide-content {
@@ -163,4 +183,102 @@ h4 {
     margin-left: 20px;
     margin-right: 40px;
     margin-bottom: 20px;
+}
+
+
+.person {
+    position: absolute;
+    width: 150px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.personEstonia {
+    position: absolute;
+    width: 150px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.person img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.personEstonia img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/*.counter-boxFrance {*/
+/*    position: absolute;*/
+/*    top: 410px; !* Adjust the top position as needed *!*/
+/*    left: 80px; !* Adjust the left position as needed *!*/
+/*    width: 80px;*/
+/*    height: 80px;*/
+/*    background-color: gold;*/
+/*    border: 10px black;*/
+/*    text-align: center;*/
+/*    line-height: 30px;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);*/
+/*}*/
+
+/*.counter-boxEstonia {*/
+/*    position: absolute;*/
+/*    top: 410px; !* Adjust the top position as needed *!*/
+/*    left: 1250px; !* Adjust the left position as needed *!*/
+/*    width: 80px;*/
+/*    height: 80px;*/
+/*    background-color: gold;*/
+/*    border: 10px black;*/
+/*    text-align: center;*/
+/*    line-height: 30px;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);*/
+/*}*/
+
+#french-restaurant {
+    position: center;
+    align-content: center;
+}
+#estonia-restaurant {
+    position: center;
+}
+
+.destination-infoFrance {
+    align-content: center;
+    position: absolute;
+    top: 25px; /* Adjust the top position as needed */
+    left: 5%;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    /*background-color: "grey";*/
+}
+
+.destination-infoEstonia {
+    position: absolute;
+    top: 25px; /* Adjust the top position as needed */
+    right: 5%;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    /*background-color: "grey";*/
+}
+
+#restaurant-name{
+    font-family: "Papyrus";
+    font-size: 60px;
+}
+
+#destination-name{
+    font-family: "Georgia";
+    font-size: 20px;
 }
