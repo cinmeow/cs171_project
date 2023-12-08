@@ -28,7 +28,7 @@ class SpiderVis {
 
         // set the size of the svg
 
-        vis.margin = {top: 40, right: 40, bottom: 40, left: 100};
+        vis.margin = {top: 100, right: 40, bottom: 100, left: 50};
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
@@ -54,7 +54,9 @@ class SpiderVis {
                     .attr("cx", vis.width / 2)
                     .attr("cy", vis.height / 2)
                     .attr("fill", "none")
-                    .attr("stroke", "gray")
+                    .attr("stroke", "#a0071b")
+                    .attr("opacity", "0.6")
+                    .attr("stroke-width", "2px")
                     .attr("r", d => vis.radialScale(d))
             );
 
@@ -195,7 +197,7 @@ class SpiderVis {
                 "name": f,
                 "angle": angle,
                 "line_coord": angleToCoordinate(angle, 5.05),
-                "label_coord": angleToCoordinate(angle, 6.5)
+                "label_coord": angleToCoordinate(angle, 6)
             };
         });
 
@@ -222,7 +224,8 @@ class SpiderVis {
                     .attr("y1", vis.height / 2)
                     .attr("x2", d => d.line_coord.x)
                     .attr("y2", d => d.line_coord.y)
-                    .attr("stroke","black")
+                    .attr("stroke","#a0071b")
+                    .attr("stroke-width", "3px")
             );
 
         // draw axis label
@@ -230,9 +233,10 @@ class SpiderVis {
             .data(vis.featureData)
             .join(
                 enter => enter.append("text")
-                    .attr("x", d => d.label_coord.x -30)
+                    .attr("x", d => d.label_coord.x -25)
                     .attr("y", d => d.label_coord.y)
-                    .attr("font-size", "12px")
+                    .attr("font-size", "14px")
+                    .attr("font-family", "'Montserrat', sans-serif")
                     .attr("text-anchor", "right")
                     .text(d => d.name)
                     .on("mouseover", (event, d) => {
@@ -240,12 +244,12 @@ class SpiderVis {
                             .style("opacity", 1)
                             .style("position", "absolute")
                             .style("pointer-events", "none")
-                            .style("background-color", "white")
-                            .style("border", "solid 1px #ccc")
+                            .style("background-color", "#f5f1e6")
+                            .style("border", "solid 1px #a0071b")
                             .style("padding", "10px")
                             .style("border-radius", "5px")
                             .style("text-align", "left")
-                            .style("font-family", "Arial")
+                            .style("font-family", "'Montserrat', sans-serif")
                             .style("font-weight", "normal");
                         vis.tooltip.html(`${vis.description[d.name]}`)
                             .style("left", (event.pageX + 25) + "px")
@@ -356,12 +360,16 @@ class SpiderVis {
         legendItems.append("rect")
             .attr("width", 10)
             .attr("height", 10)
+            .attr("x", -30)
+            .attr("y", -10)
+            .attr("stroke", "black")
+            .attr("stroke-width", "0.5px")
             .attr("fill", country => getColor(country, countryColorArray));
 
         // Add country labels to the legend
         legendItems.append("text")
-            .attr("x", 15) // Adjust the position as needed
-            .attr("y", 8)  // Adjust the position as needed
+            .attr("x", -15) // Adjust the position as needed
+            .attr("font-family", "'Montserrat', sans-serif")
             .text(country => country);
 
         // Adjust the legend position based on the size of the spider chart

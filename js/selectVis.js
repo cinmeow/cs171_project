@@ -11,8 +11,8 @@ class SelectVis {
             .style("opacity", 0)
             .style("position", "absolute")
             .style("pointer-events", "none")
-            .style("background-color", "white")
-            .style("border", "solid 1px #ccc")
+            .style("background-color", "#f5f1e6")
+            .style("border", "solid 1px #a0071b")
             .style("padding", "10px")
             .style("border-radius", "5px")
             .style("text-align", "left");
@@ -78,7 +78,7 @@ class SelectVis {
             .attr("cy", (d, i) => Math.floor(i / 7) * 80 + 30)
             .attr("r", 30)
             .attr("fill", d => `url(#flag-${d.name.replace(/\s/g, '_')})`)
-            .attr("stroke", "black")
+            .attr("stroke", "#a0071b")
             .attr("stroke-width", 1)
             .on("click",
                 function(event, d) {
@@ -89,7 +89,7 @@ class SelectVis {
                         if(spiderSelect.has(d.name)){
                             console.log("unclick", d.name);
                             d3.select(event.currentTarget)
-                                .attr("stroke", "black")
+                                .attr("stroke", "#a0071b")
                                 .attr("stroke-width", 1);
                             addTo_spiderSelect(d.name)
                         }else{
@@ -101,7 +101,7 @@ class SelectVis {
                         if(spiderSelect.has(d.name)){
                             console.log("unclick", d.name);
                             d3.select(event.currentTarget)
-                                .attr("stroke", "black")
+                                .attr("stroke", "#a0071b")
                                 .attr("stroke-width", 1);
                         }else{
                             // if name of country is not in spiderSelect, then the flag will be highlighted (pink)
@@ -116,6 +116,7 @@ class SelectVis {
                     };
             })
             .on("mouseover", function(event, d) {
+                console.log(d.name)
                 vis.tooltip.transition().duration(200).style("opacity", 1);
                 vis.tooltip.html(d.name)
                     .style("left", (event.pageX) + "px")
@@ -173,7 +174,7 @@ class SelectVis {
             addTo_spiderSelect("empty")
         }
         // Reset the appearance of all circles
-        vis.circles.attr("stroke", "black")
+        vis.circles.attr("stroke", "#a0071b")
             .attr("stroke-width", 1)
             .attr("fill", d => `url(#flag-${d.name.replace(/\s/g, '_')})`)
     }
