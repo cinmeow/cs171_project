@@ -126,7 +126,10 @@ class SelectVis {
             });
 
         // Submit button behavior
-        d3.select("#submit-button").on("click", () => vis.submitSelection());
+        d3.select("#submit-button").on("click", () => {
+            vis.submitSelection();
+            scrollToNextPage();
+        });
         d3.select("#clear-button").on("click", () => vis.clearSelection());
 
     }
@@ -174,4 +177,12 @@ class SelectVis {
             .attr("stroke-width", 1)
             .attr("fill", d => `url(#flag-${d.name.replace(/\s/g, '_')})`)
     }
+}
+
+function scrollToNextPage() {
+    // Assuming the next page content is in an element with id "nextPage"
+    var nextPageElement = document.getElementById('tree-page');
+
+    // Scroll to the top of the next page
+    nextPageElement.scrollIntoView({ behavior: 'smooth' });
 }

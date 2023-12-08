@@ -1,4 +1,4 @@
-
+/*html and webpage design (larger containers)*/
 html {
     scroll-behavior: smooth;
 }
@@ -7,19 +7,19 @@ html {
     padding-top: 50px;
 }
 
+body{
+    background-color: #f5f1e6;
+}
+
+/*Landing page styles*/
 .title-container{
     padding-top: 45vh;
     text-align: center;
 }
 
 #landing_page{
-    background-color: #fffafb;
+    background-color: #f5f1e6;
 }
-
-/*#landing_page {*/
-/*    background-image: url("/img/temp_background.jpeg");*/
-/*    background-size: cover;*/
-/*}*/
 
 
 #webtitle {
@@ -27,7 +27,7 @@ html {
     border-radius: 20px;
     display: inline-block;
     padding: 40px;
-    font-family: 'Monaco';
+    font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
     color: #a1061b;
     font-size: 55px;
@@ -43,10 +43,13 @@ html {
     margin-top: -270px;
 }
 
-/*#webtitle {*/
-/*    vertical-align: middle;*/
-/*    margin-left: 10px; !* Adjust margin as needed for spacing between the image and text *!*/
-/*}*/
+#subtitle{
+    text-align: right;
+    margin-right: 10vh;
+    color: #5c5555;
+}
+
+/*Project introduction (page with 2 restaurant animations)*/
 
 #proj_intro {
     padding-top: 10vh;
@@ -59,136 +62,6 @@ html {
 .col-8 img {
     height: 300px;      /* 2/3 of the parent div's height */
     width: auto;         /* To maintain the aspect ratio of the image */
-}
-
-body{
-    background-color: #fffafb;
-}
-
-.slide-content {
-    display: inline-flex;
-    height: 45vh;
-    background-color: rgba(39, 40, 92, 0.8);
-    border-radius: 30px;
-    color: gainsboro;
-    font-family: sans-serif;
-    font-size: 28px;
-    justify-content: center;
-    align-items: center;
-    padding-inline: 90px;
-    margin-top: 10vh;
-
-}
-
-#extra-text {
-    font-size: 23px;
-}
-
-#big-question{
-    background-color: #27285c;
-    border-radius: 50px;
-    margin-right: 50px;
-}
-
-#box1{
-    height: 80px;
-    width: 25px;
-    border: 2px solid black;
-    margin: 20px;
-    padding: 10px;
-    font-family: sans-serif;
-}
-
-#box2{
-    height: 80px;
-    width: 25px;
-    border: 2px solid black;
-    margin: 20px;
-    padding: 25px;
-    font-family: sans-serif;
-}
-
-#fork-spoon{
-    max-height: 50px;
-}
-
-.intro-container {
-    /*background-color: #D5E2F2;*/
-    display: inline-block;
-}
-
-.intro-title{
-    font-family: sans-serif;
-    padding-top: 25vh;
-    text-align: center;
-}
-
-.info {
-    font-family: sans-serif;
-    padding-top: 35px;
-    text-align: center;
-    align-items: center;
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-#cuisinetitle {
-    padding-top: 80px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    display: inline-flex;
-    font-size: 25px;
-    font-family: sans-serif;
-}
-
-h4 {
-    font-size: 20px;
-    font-family: sans-serif;
-}
-
-#michelin-blurb {
-    font-family: sans-serif;
-    font-size: 18px;
-    padding-left: 130px;
-    padding-right: 130px;
-}
-
-#bubbleTooltip {
-    background-color: powderblue;
-    border: powderblue;
-    border-radius: 5px;
-    padding: 20px
-}
-
-#bubbleRest {
-    font-weight: bold;
-    font-family: sans-serif;
-    font-size: 20px;
-}
-
-#bubbleSelector {
-    font-weight: bold;
-    font-family: sans-serif;
-    margin-left: 2%;
-    margin-right: 5%;
-}
-
-.instructions {
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 20px;
-}
-
-#spyder_instruction {
-    margin-left: 20px;
-    margin-right: 40px;
-    margin-bottom: 20px;
-}
-
-.year-display {
-    margin-left: 20px;
-    margin-right: 40px;
-    margin-bottom: 20px;
 }
 
 
@@ -225,6 +98,7 @@ h4 {
     width: 50%;
     text-align: center;
     justify-content: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .counter-boxEstonia {
@@ -234,6 +108,7 @@ h4 {
     left: 5%;
     width: 130%;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #french-restaurant {
@@ -252,7 +127,6 @@ h4 {
     width: 50%;
     text-align: center;
     padding: 10px;
-    /*background-color: "grey";*/
 }
 
 .destination-infoEstonia {
@@ -266,20 +140,20 @@ h4 {
 }
 
 #restaurant-name{
-    font-family: "Papyrus";
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
     font-size: 60px;
 }
 
 #destination-name{
-    font-family: "Georgia";
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
     font-size: 20px;
 }
 
-#michelinreminder {
-}
-
-#boxtitle {
-    padding-top: 50%;
+.carousel-control-next,
+.carousel-control-prev{
+    filter: invert(100%);
 }
 
 .carousel{
@@ -302,7 +176,7 @@ h4 {
     height: 25vh;
     margin: 0;
     justify-content: center;
-    font-family: Georgia;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.2vh;
 }
 #description2{
@@ -314,7 +188,7 @@ h4 {
     height: 22vh;
     margin: 0;
     justify-content: center;
-    font-family: Georgia;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.2vh;
 }
 #description3{
@@ -326,21 +200,148 @@ h4 {
     height: 25vh;
     margin: 0;
     justify-content: center;
-    font-family: Georgia;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2vh;
+}.carousel{
+     border: 5px solid #A0071B;
+     border-radius: 10px;
+     padding: 1vh;
+     margin-left: 40vh;
+     margin-right: 0;
+     margin-top: 1vh;
+     align-items: center;
+     max-width: 160vh;
+     max-height: 30vh;
+ }
+
+#description1{
+    padding: 3%;
+    color: #5C5555;
+    text-align: left;
+    width: 110vh;
+    height: 25vh;
+    margin: 0;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.2vh;
 }
+#description2{
+    padding-top: 0;
+    padding: 1%;
+    color: #5C5555;
+    text-align: left;
+    width: 110vh;
+    height: 22vh;
+    margin: 0;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2vh;
+}
+#description3{
+    padding: 6%;
+    color: #5C5555;
+    text-align: center;
+    font-size: 30px;
+    width: 110vh;
+    height: 25vh;
+    margin: 0;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2vh;
+}
+
+/*Michelin Guide Explanation Page*/
+.intro-container {
+    /*background-color: #D5E2F2;*/
+    display: inline-block;
+}
+
+.intro-title{
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 25vh;
+    text-align: center;
+}
+
+.info {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 35px;
+    text-align: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#cuisinetitle {
+    padding-top: 80px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    display: inline-flex;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h4 {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#michelin-blurb {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    padding-left: 130px;
+    padding-right: 130px;
+}
+
+#bubbleTooltip {
+    background-color: powderblue;
+    border: powderblue;
+    border-radius: 5px;
+    padding: 20px
+}
+
+#bubbleRest {
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+#bubbleSelector {
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 2%;
+    margin-right: 5%;
+}
+
+.instructions {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+#spyder_instruction {
+    margin-left: 20px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+.year-display {
+    margin-left: 20px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+
+
+#michelinreminder {
+}
+
+#boxtitle {
+    padding-top: 50%;
+}
+
 .selected-country {
     stroke: #6495ED; /* Red color for the border */
     stroke-width: 4px; /* Width of the border */
 }
 
-#subtitle{
-    text-align: right;
-    margin-right: 10vh;
-    color: #5c5555;
-}
-
-.carousel-control-next,
-.carousel-control-prev /*, .carousel-indicators */ {
-    filter: invert(100%);
 
