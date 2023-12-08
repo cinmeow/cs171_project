@@ -145,6 +145,9 @@ class BarChart{
         // Filter the data for the selected country
         vis.data = newData.filter(d => d.Country === countryName);
 
+        let title = vis.dataType === "restaurants" ? `${countryName} - Distribution of Michelin Star Ratings` : ` ${countryName} - Top 10 Cuisine Types`;
+        vis.title.text(title);
+
         // Update the display data
         vis.wrangleData();
     }
