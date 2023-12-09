@@ -304,6 +304,16 @@ h4 {
     padding-top: 50%;
 }
 
+.radialtooltip {
+    position: absolute;
+    display: none;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 3px;
+    box-shadow: -3px 3px 15px #888;
+    color: white;
+    padding: 6px;
+}
+
 .selected-country {
     stroke: #6495ED; /* Red color for the border */
     stroke-width: 4px; /* Width of the border */

@@ -31,7 +31,7 @@ class RadialBarChart{
 
         // Tooltip for Radial Bar Chart
         vis.tooltip = d3.select('body').append('div')
-            .attr('class', 'tooltip');
+            .attr('class', 'radialtooltip');
 
         vis.wrangleData();
     }
@@ -92,20 +92,35 @@ class RadialBarChart{
             .data(vis.displayData)
             .enter().append('path')
             .attr('class', 'arc')
-            .style('fill', (d, i) => vis.color(i));
+            .style('fill', (d, i) => d.numArrivals > 0 ? vis.color(i) : "white")
+            .style('opacity', 0.9) // Inline style for arc opacity
+            .style('transition', 'opacity 0.5s');
 
         arcs.transition()
             .delay((d, i) => i * 200)
             .duration(1000)
             .attrTween('d', arcTween);
 
-        arcs.on('mousemove', (event, d) => showTooltip(event, d));
+        arcs.on('mousemove', function(event, d) {
+            // Access the event using the event argument
+            showTooltip(event, d);
+        });
         arcs.on('mouseout', hideTooltip);
+
+        // Hover effect for arcs
+        arcs.on('mouseover', function() {
+            d3.select(this).style('opacity', 0.7);
+        })
+            .on('mouseout', function() {
+                d3.select(this).style('opacity', 0.9);
+            });
 
         function arcTween(d, i) {
             let interpolate = d3.interpolate(0, d.numArrivals);
             return t => arc(interpolate(t), i);
         }
+
+
 
         function showTooltip(event, d) {
             vis.tooltip.style('left', (event.pageX + 10) + 'px')
@@ -114,10 +129,20 @@ class RadialBarChart{
                 .html(`Year: ${d.year}<br>Num Arrivals: ${d.numArrivals}`);
         }
 
-
         function hideTooltip() {
             vis.tooltip.style('display', 'none');
         }
+
+        vis.svg.selectAll('.axis line, .axis circle')
+            .style('stroke', '#cccccc')
+            .style('stroke-width', '1px');
+
+        vis.svg.selectAll('.axis circle')
+            .style('fill', 'none');
+
+        vis.svg.selectAll('.r.axis text')
+            .style('text-anchor', 'end');
+
     }
 
     update(selectedCountry, selectedRegion) {

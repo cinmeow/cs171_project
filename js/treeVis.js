@@ -99,7 +99,7 @@ class Treemap {
         });
 
         // Ensure that click event is also attached to the updated nodes
-        nodes.on('click', d => {
+        nodes.on('click', (event, d) => {
             vis.radialBarChart.update(this.country, d.data.id);
         });
         // ... res
