@@ -1,8 +1,9 @@
 class Treemap {
-    constructor(parentElement, data) {
+    constructor(parentElement, data, radialBarChart) {
         this.parentElement = parentElement;
         this.data = data;
         this.displayData = []; // Will be set in wrangleData
+        this.radialBarChart = radialBarChart;
 
         this.initVis();
     }
@@ -12,8 +13,8 @@ class Treemap {
 
         // Set the dimensions and margins of the graph
         vis.margin = { top: 10, right: 10, bottom: 10, left: 10 };
-        vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width/ 2- vis.margin.left - vis.margin.right;
-        vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height/2 - vis.margin.top - vis.margin.bottom;
+        vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width * 0.8- vis.margin.left - vis.margin.right;
+        vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height * 0.6- vis.margin.top - vis.margin.bottom;
 
         // Append the svg object to the body of the page
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
@@ -30,6 +31,7 @@ class Treemap {
 
     wrangleData(selectedCountry = "France") {
         let vis = this;
+        vis.country = selectedCountry
 
         // Filter data based on selected country
         vis.displayData = vis.data.filter(d => d.country === selectedCountry);
@@ -66,17 +68,18 @@ class Treemap {
 
         vis.colorScale.domain(vis.aggregatedData.map(d => d.name));
 
-        // Bind data to rectangles for each node
         let nodes = vis.svg.selectAll(".node")
             .data(vis.root.leaves());
 
-
-
+        // Exit selection
         nodes.exit().remove();
 
-        nodes.enter().append("rect")
-            .attr("class", "node")
-            .merge(nodes)
+        // Enter selection
+        const nodesEnter = nodes.enter().append("rect")
+            .attr("class", "node");
+
+        // Merge enter and update selections
+        nodesEnter.merge(nodes)
             .transition().duration(1000)
             .attr('x', d => d.x0)
             .attr('y', d => d.y0)
@@ -84,6 +87,29 @@ class Treemap {
             .attr('height', d => d.y1 - d.y0)
             .style("stroke", "black")
             .style("fill", d => vis.colorScale(d.data.id));
+
+        // Attach click event listener
+        nodesEnter.on('click', (event, d) => {
+            console.log("Clicked node data:", d); // Now this should log the correct data
+            if (this.radialBarChart && typeof this.radialBarChart.update === 'function') {
+                this.radialBarChart.update(this.country, d.data.id);
+            } else {
+                console.error('RadialBarChart is not defined or update method is missing');
+            }
+        });
+
+        // Ensure that click event is also attached to the updated nodes
+        nodes.on('click', d => {
+            vis.radialBarChart.update(this.country, d.data.id);
+        });
+        // ... res
+
+        // Append title for tooltip
+        nodesEnter.append("title")
+            .text(d => {
+                // Format the tooltip text
+                return `Country: ${vis.country}\nContinent: ${d.data.id}\nTotal Number of Arrivals: ${d.data.value.toLocaleString()}k`;
+            });
 
         // Bind data to text labels for each node
         let labels = vis.svg.selectAll(".label")

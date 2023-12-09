@@ -204,9 +204,17 @@
 
     <div class="section" data-anchor="tree" id = "tree-page">
         <!-- TOURISM VIZ 1: TREE MAP -->
-        <div class="container-fluid vh-100" id="treemap_container">
-            <select id="country-dropdown">
-            </select>
+
+        <div class="container-fluid vh-100" id="arrivalRegionVis">
+            <div class="row" style="height: 100%">
+                <div class="col-8" id="treemap_container">
+                    <select id="country-dropdown">
+                    </select>
+                </div>
+                <div class="col-4" id="radialVis">
+                    <p>my container for radialbarchart</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -299,6 +307,7 @@
 <script src="js/spiderchart.js"></script>
 <script src="js/bubbleChart.js"></script>
 <script src="js/treeVis.js"></script>
+<script src="js/radialBarChart.js"></script>
 <script src="js/main.js"></script>
 <script src="js/french-restaurant.js"></script>
 <script src="js/estonian-restaurant.js"></script>

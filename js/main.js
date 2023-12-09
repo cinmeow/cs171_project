@@ -6,7 +6,7 @@ let arrivalRegionData = "data/arrivalByRegions2.csv";
 let michelinCountry = new Set()
 let spiderSelect = new Set();
 let countryColorArray = []
-let mapVis, lineVis, lineVis2, selectVis, barchart, barchart2, travelPurpose, bubbleChart, treemapVis, areachart1, areachart2;
+let mapVis, lineVis, lineVis2, selectVis, barchart, barchart2, travelPurpose, bubbleChart, treemapVis, areachart1, areachart2, radialBarChart;
 let parseYear = d3.timeParse("%Y");
 
 // set up fullpage scrolling
@@ -146,7 +146,9 @@ function initMainPage(dataArray) {
     bubbleChart = new BubbleChart("michelin_bubble", dataArray[1]);
 
     // Initialize tree map
-    treemapVis = new Treemap("treemap_container", dataArray[4]);
+    radialBarChart = new RadialBarChart("radialVis", dataArray[4]);
+    treemapVis = new Treemap("treemap_container", dataArray[4], radialBarChart);
+
 
     // create colors per michelin country (coded)
     countryColorAssignment(michelinCountry);
@@ -207,4 +209,5 @@ function populateDropdown(selectedCountries) {
         treemapVis.update(selectedCountry);
     });
 }
+
 
