@@ -14,7 +14,7 @@ svg.append("image")
     .attr("xlink:href", "img/French-rest.png") // Replace with the actual path or URL
     .attr("width", restaurantWidth)
     .attr("height", restaurantHeight)
-    .attr("x", 0)
+    .attr("x", "-3vh")
     .attr("y", 0);
 
 // Function to add a person to the SVG

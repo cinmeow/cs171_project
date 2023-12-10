@@ -174,7 +174,7 @@ body{
     text-align: center;
     width: 110vh;
     height: 20vh;
-    margin-left: 20vh;
+    margin-left: 12%;
     margin-top: 3vh;
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
@@ -185,7 +185,7 @@ body{
     text-align: left;
     width: 110vh;
     height: 18vh;
-    margin-left: 20vh;
+    margin-left: 12%;
     font-family: 'Montserrat', sans-serif;
     font-size: 2.2vh;
 }
@@ -196,7 +196,7 @@ body{
     font-size: 30px;
     width: 110vh;
     height: 15vh;
-    margin-left: 20vh;
+    margin-left: 12%;
     font-family: 'Montserrat', sans-serif;
     font-size: 3vh;
 }

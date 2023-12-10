@@ -14,7 +14,7 @@ svgEstonia.append("image")
     .attr("xlink:href", "img/Est-rest 2.png") // Replace with the actual path or URL
     .attr("width", restaurantWidthEstonia)
     .attr("height", restaurantHeightEstonia)
-    .attr("x", 0)
+    .attr("x", "3vh")
     .attr("y", 0);
 
 // Function to add a person to the SVG

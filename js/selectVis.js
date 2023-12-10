@@ -130,7 +130,11 @@ class SelectVis {
             vis.submitSelection();
             vis.newBox();
         });
-        d3.select("#clear-button").on("click", () => vis.clearSelection());
+        d3.select("#clear-button").on("click", () => {
+            vis.clearSelection();
+            vis.boxforWords.remove();
+            vis.scrolltext.remove();
+        });
 
     }
 
@@ -183,9 +187,9 @@ class SelectVis {
 
         vis.boxforWords = vis.svg.append("rect")
             .attr("class", "scroll-text")
-            .attr("x", 10)
-            .attr("y", 0)
-            .attr("height", 500)
+            .attr("x", 15)
+            .attr("y", -5)
+            .attr("height", 480)
             .attr("width", 550)
             .attr("color", "#fff")
             .style("fill", "black") // Text color
