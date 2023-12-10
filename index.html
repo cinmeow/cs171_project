@@ -152,14 +152,20 @@
         <!-- GLOBAL VIZ 1: DESTINATIONS AND EXPENDITURES / SWITCH / MICHELIN GLOBAL DIST -->
         <div class="container-fluid vh-100" id="global_vis_1">
             <div class="row">
-                <h1> Global Overview </h1>
-                <div class="col-6" id="globe">
-                    <p> We will start by exploring global information regarding tourism, tourism expenditures, accommodations and Michelin restaurants. Drag and turn the globe to select country of interest.
-                        Select the category of interest in the selection box. Note: not all countries have Michelin restaurants. </p>
-                </div>
+                <div class="row globe-title">
+                <h1> Global Overview </h1> </div>
+                <div class="col-6">
+                    <div class="row globe-subtitle">
+                    <p> Drag and turn the globe to select country of interest and explore global tourism, accommodations, and Michelin data</p>
+                    </div>
+                    <div class="row" id="globe">
+
+                    </div>
+
+                    </div>
                 <div class="col-6" id="globe-linked">
-                    <div class="row justify-content-center">
-                    <div class="select-container">
+                    <div class="row justify-content-center ">
+                    <div class="select-container select">
                         <select id="data-selection">
                             <option value="arrivals">Tourism</option>
                             <option value="accommodations">Accommodations</option>
@@ -210,7 +216,6 @@
                     <select id="country-dropdown"></select>
                 </div>
                 <div class="col-4" id="radialVis">
-
                 </div>
             </div>
         </div>

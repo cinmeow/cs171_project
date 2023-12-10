@@ -15,9 +15,9 @@ class MapVis {
         let vis = this;
 
         // Set up dimensions and margins
-        vis.margin = { top: 80, right: 10, bottom: 80, left: 20 };
-        vis.width = 1000 - vis.margin.left - vis.margin.right;
-        vis.height = 800 - vis.margin.top - vis.margin.bottom;
+        vis.margin = { top: 10, right: 80, bottom: 80, left: 100 };
+        vis.width =  document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
+        vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
         // Initialize drawing area
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
@@ -26,34 +26,55 @@ class MapVis {
             .append("g")
             .attr("transform", `translate(${vis.margin.left}, ${vis.margin.top})`);
 
-        vis.svg.append('g')
-            .attr('class', 'title')
-            .attr('id', 'map-title')
-            .append('text')
-            .text('Select Country to View Data')
-            .attr('transform', `translate(${vis.width / 2.7}, -40)`)
-            .attr('text-anchor', 'middle');
 
-        const baseHeight = 650; // Example base height - adjust this as needed
-        const zoom = vis.height / baseHeight;
+        let zoom = 0.5 ;
+
+        let scale = Math.min(vis.width, vis.height) / 1.7;
+        let translate = [vis.width / 2, vis.height * 0.3];
 
         // Initialize projection and path for the map
         vis.projection = d3.geoOrthographic()
-            .translate([vis.width / 2.7, vis.height / 3])
-            // .scale(249.5 * zoom)
-            .scale(230)  // Adjust scale to fit the SVG area
-            .clipAngle(90);  // Clip at the hemisphere
+            .scale(scale)
+            .translate(translate)
+            .clipAngle(90);
+
+
+
 
         vis.path = d3.geoPath()
             .projection(vis.projection);
 
         vis.world = topojson.feature(vis.geoData, vis.geoData.objects.countries).features
 
+
+
+        vis.svg.append("path")
+            .datum({type: "Sphere"})
+            .attr("class", "graticule")
+            .attr('fill', '#ADDEFF')
+            .attr("stroke","rgba(129,129,129,0.35)")
+            .attr("d", vis.path);
+
+
+        let maxScale = 1.8; // This can be adjusted as per your requirement
+
         vis.zoom = d3.zoom()
-            .scaleExtent([1, 8])  // Set the scale extent for zooming
+            .scaleExtent([1, maxScale])
             .on('zoom', (event) => {
-                vis.svg.attr('transform', event.transform);
+                const transform = event.transform;
+                let newScale = transform.k;
+                let newTranslate = [transform.x, transform.y];
+
+                // Adjust translate to keep the zoomed map within bounds
+                newTranslate[0] = Math.min(newTranslate[0], vis.width * (1 - newScale) / 2);
+                newTranslate[1] = Math.min(newTranslate[1], vis.height * (1 - newScale) / 2);
+                newTranslate[0] = Math.max(newTranslate[0], -vis.width * (newScale - 1) / 2);
+                newTranslate[1] = Math.max(newTranslate[1], -vis.height * (newScale - 1) / 2);
+
+                vis.svg.selectAll(".country, .graticule")
+                    .attr('transform', `translate(${newTranslate[0]}, ${newTranslate[1]}) scale(${newScale})`);
             });
+
 
 
         let m0,
@@ -82,16 +103,8 @@ class MapVis {
 
         ).call(vis.zoom);
 
-
-        vis.svg.append("path")
-            .datum({type: "Sphere"})
-            .attr("class", "graticule")
-            .attr('fill', '#ADDEFF')
-            .attr("stroke","rgba(129,129,129,0.35)")
-            .attr("d", vis.path);
-
         // Set up legend dimensions and position
-        vis.legendDimensions = { width: 100, height: 20, position: { x: 100, y: vis.height - 160 } };
+        vis.legendDimensions = { width: 100, height: 20, position: { x: 100, y: vis.height - 100 } };
 
 
         vis.tooltip = d3.select("body").append("div")
@@ -182,7 +195,6 @@ class MapVis {
     updateVis() {
 
         let vis = this;
-        vis.rotateGlobe();
 
         // Draw the countries on the map
         vis.countries = vis.svg.selectAll(".country")
@@ -350,22 +362,7 @@ class MapVis {
         }
     }
 
-    rotateGlobe() {
-        let vis = this;
 
-        // Define the rotation step
-        let rotationStep = 0;
-
-        d3.timer(() => {
-            // Increment the rotation
-            let rotation = vis.projection.rotate();
-            rotation[0] += rotationStep;
-            vis.projection.rotate(rotation);
-
-            // Redraw the countries with the new projection
-            vis.svg.selectAll(".country").attr("d", vis.path);
-        });
-    }
 
     updateColorScale(dataType) {
         let vis = this;
