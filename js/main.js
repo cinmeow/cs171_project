@@ -196,7 +196,17 @@ function countryColorAssignment(michelin_data){
 }
 
 function populateDropdown(selectedCountries) {
-    const dropdown = d3.select("#country-dropdown");
+    let dropdown = d3.select("#country-dropdown");
+
+    // Clear existing options
+    dropdown.selectAll("option").remove();
+
+    // Add a default option (optional)
+    dropdown.append("option")
+        .text("Select a country")
+        .attr("value", "");
+
+    // Populate with new options
     dropdown.selectAll("option")
         .data(selectedCountries)
         .enter()
@@ -205,9 +215,12 @@ function populateDropdown(selectedCountries) {
         .attr("value", d => d);
 
     dropdown.on("change", function() {
-        const selectedCountry = d3.select(this).property("value");
-        treemapVis.update(selectedCountry);
+        let selectedCountry = d3.select(this).property("value");
+        if (selectedCountry) {
+            treemapVis.update(selectedCountry);
+        }
     });
 }
+
 
 

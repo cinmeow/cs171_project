@@ -52,7 +52,8 @@ class Treemap {
             .parentId(function(d) { return d.parent; })
             (stratifyData);
 
-        vis.root.sum(function(d) { return d.value; }); // Compute the numeric value for each entity
+        vis.root.sum(function(d) { return Math.log(d.value + 1); }); // Use log scale for area
+
 
         vis.updateVis();
     }
