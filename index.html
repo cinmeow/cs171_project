@@ -39,66 +39,94 @@
         </div>
     </div>
 
+    <div class="section" data-anchor="backgroundInfo">
+        <!-- background -->
+        <div class="container-fluid vh-100" id="bginfo">
+            <div class="row justify-content-center align-items-center" id="introChatter">
+                <h1 class="scrollText" id="intro1">You are a prospective business owner with ambitious goals of opening a <span class="look">MICHELIN rated restaurant</span>!</h1>
+                <h2 class="scrollText" id="intro2">You are pondering the following questions... </h2>
+                <h3 class="scrollText" id="intro3">● How might tourism impact the popularity of my restaurant? </h3>
+                <h3 class="scrollText" id="intro4">● Where should I open my restaurant? </h3>
+                <h3 class="scrollText" id="intro5">● What cuisine or food should I serve?</h3>
+                <h2 class="scrollText" id="intro6">Let's explore some <span class="look2">data</span> to help you answer these concerns! <span class="lowkey">(Scroll to learn more)</span></h2>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        let allLines = document.querySelectorAll(".scrollText");
+
+                        function appear() {
+                            allLines.forEach((line, i) => {
+                                setTimeout(() => {
+                                    line.classList.add("visible");
+                                }, (i+1) * 1500)
+                            })
+                        }
+
+                        appear();
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+
     <div class="section" data-anchor="intro">
         <!-- PROJECT INTRO INFO -->
         <div class="container-fluid vh-100" id="proj_intro" style="background-color: #f5f1e6">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div id="french-restaurant"></div>
-                        <div class="destination-infoFrance">
-                            <div id = "restaurant-name">Astrance</div>
-                            <div id = "destination-name">📍 Paris, France</div>
-                        </div>
-                        <div class="counter-boxFrance" id="counter-boxFrance">⭐ Number of Ratings: 0</div>
+            <div class="row" style="height: 70%">
+                <div class="col">
+                    <div class="row justify-content-center destination-infoFrance">
+                        <div class = "restaurant-name">Astrance</div>
+                        <div class = "destination-name">📍 Paris, France</div>
                     </div>
-                    <div class="col">
-                        <div class="destination-infoEstonia">
-                            <div id = "restaurant-name">NOA Chef's Hall</div>
-                            <div id = "destination-name">📍 Tallinn, Estonia</div>
-                        </div>
-                        <div class="counter-boxEstonia" id="counter-boxEstonia">⭐ Number of Ratings: 0</div>
-                        <div id="estonia-restaurant"></div>
-                    </div>
+                    <div class="row justify-content-center counter-boxFrance" id="counter-boxFrance">⭐ Number of Ratings: 0</div>
+                    <div class = 'row justify-content-center' id="french-restaurant"></div>
                 </div>
-                <div class="row">
-                    <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <p id = "description1">
-                                    Tourist hotspots often experience higher foot traffic, which translates into more customers…
-                                </p>
-                            </div>
-                            <div class="carousel-item">
-                                <h5 style = "font-size: 20px; margin: 0; color: #5C5555; padding: 0.2%; font-family: 'Montserrat', sans-serif;">
-                                    Take a look at the two restaurants above!
-                                </h5>
-                                <p id = "description2">
-                                    Astrance, located in Paris, France, boasts over 600 ratings on TripAdvisor.com and is located in France, which had over 220 million visitors in 2019. <br>
-                                    <br>
-                                    On the other hand, NOA Chef's Hall, located in Tallinn, Estonia, has just over 50 ratings, whereas Estonia had 6.1 million visitors in 2019,
-                                    which is only a small fraction of France's visitor count.
-                                </p>
-                            </div>
-                            <div class="carousel-item">
-                                <p id = "description3">
-                                    Now that you’ve seen how tourism might impact your customer base,
-                                    let’s explore some data and build your own restaurant!
-                                </p>
-                                <p id = "scroll-label">
-                                    Scroll Down
-                                </p>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+                <div class="col">
+                    <div class="destination-infoEstonia">
+                        <div class = "restaurant-name">NOA Chef's Hall</div>
+                        <div class = "destination-name">📍 Tallinn, Estonia</div>
                     </div>
+                    <div class="counter-boxEstonia" id="counter-boxEstonia">⭐ Number of Ratings: 0</div>
+                    <div id="estonia-restaurant"></div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <p id = "description1">
+                                Tourist hotspots often experience higher foot traffic, which translates into more customers…
+                            </p>
+                        </div>
+                        <div class="carousel-item">
+                            <h5 style = "font-size: 20px; margin: 0; color: #5C5555; padding: 0.2%; font-family: 'Montserrat', sans-serif;">
+                                Take a look at the two restaurants above!
+                            </h5>
+                            <p id = "description2">
+                                Astrance, located in Paris, France, boasts over 600 ratings on TripAdvisor.com and is located in France, which had over 220 million visitors in 2019. <br>
+                                <br>
+                                On the other hand, NOA Chef's Hall, located in Tallinn, Estonia, has just over 50 ratings, whereas Estonia had 6.1 million visitors in 2019,
+                                which is only a small fraction of France's visitor count.
+                            </p>
+                        </div>
+                        <div class="carousel-item">
+                            <p id = "description3">
+                                Now that you’ve seen how tourism might impact your customer base,
+                                let’s explore some data and build your own restaurant!
+                            </p>
+                            <p id = "scroll-label">
+                                Scroll Down
+                            </p>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -109,7 +137,7 @@
         <!-- THE MICHELIN GUIDE, INTRODUCTION -->
         <div class="container-fluid vh-100 intro-container" id="michelin_intro">
             <div class="row justify-content-center intro-title" id="michelin-intro-title">
-                <h1> About the MICHELIN Guide </h1>
+                <h1 style="font-weight: bold"> About the <span class="look2">MICHELIN</span> Guide </h1>
                 <p id="michelin-blurb"> The MICHELIN Guide is an annual publication created by the French tire company, MICHELIN, that dates back to the early 20th century.
                     Each year, the MICHELIN Guide anonymously reviews restaurants around the globe and awards prestigious MICHELIN Star recognition for
                     culinary excellence. The MICHELIN Guide covers over 40 countries and 5000+ restaurants and is one of the most renowned and trusted
@@ -118,31 +146,31 @@
             </div>
             <div class="row justify-content-center info" id="michelin-info">
                 <div class="col" id="one_star">
-                    <img src="img/michelin/one_star.png" style="height:50px"/>
+                    <img src="img/michelin/one_star.png" style="height:50px; padding-bottom: 20px;"/>
                     <h3> 1 Star MICHELIN </h3>
                     <h4> High-quality cooking, worth a stop </h4>
                 </div>
                 <div class="col" id="two_star">
-                    <img src="img/michelin/two_star.png" style="height:50px"/>
+                    <img src="img/michelin/two_star.png" style="height:50px; padding-bottom: 20px;"/>
                     <h3> 2 Star MICHELIN </h3>
                     <h4> Excellent cooking, worth a detour </h4>
 
                 </div>
                 <div class="col" id="three_star">
-                    <img src="img/michelin/three_star.png" style="height:50px"/>
+                    <img src="img/michelin/three_star.png" style="height:50px; padding-bottom: 20px;"/>
                     <h3> 3 Star MICHELIN </h3>
-                    <h4> Exceptional cuisine, worth a special journey </h4>
+                    <h4 class="mich"> Exceptional cuisine, worth a special journey </h4>
 
                 </div>
                 <div class="col" id="bib_gourmand">
-                    <img src="img/michelin/bib_gourmand.jpeg" style="height:50px"/>
+                    <img src="img/michelin/bib_gourmand.jpeg" style="height:50px; padding-bottom: 20px;"/>
                     <h3> Bib Gourmand </h3>
-                    <h4> Exceptionally good food at moderate prices </h4>
+                    <h4 class="mich"> Exceptionally good food at moderate prices </h4>
                 </div>
                 <div class="col" id="green_star">
-                    <img src="img/michelin/green_star.jpeg" style="height:70px"/>
+                    <img src="img/michelin/green_star.jpeg" style="height:70px; padding-bottom: 20px;"/>
                     <h3> MICHELIN Green Star </h3>
-                    <h4> Culinary excellence with outstanding eco-friendly commitments </h4>
+                    <h4 class="mich"> Culinary excellence with outstanding eco-friendly commitments </h4>
                 </div>
             </div>
         </div>

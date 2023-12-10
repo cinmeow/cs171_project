@@ -1,33 +1,34 @@
-const numPeople = 500;
-const restaurantWidth = document.getElementById("french-restaurant").getBoundingClientRect().width;
-const restaurantHeight = 400;
-const doorPosition = { x: restaurantWidth/2.75, y: restaurantHeight/2.25 };
-let counter = 0
+ const numPeople = 500;
+ const restaurantWidth =  1000; //document.getElementById('french-restaurant').getBoundingClientRect().width;
+ const restaurantHeight = 400;
+ const doorPosition = { x: restaurantWidth/2.75, y: restaurantHeight/2.25 };
+ let counter = 0
 
-// Create the SVG container using D3
-const svg = d3.select("#french-restaurant")
-    .append("svg")
-    .attr("width", restaurantWidth)
-    .attr("height", restaurantHeight);
+ // Create the SVG container using D3
+ let svg = d3.select("#french-restaurant")
+     .append("svg")
+     .attr("width", restaurantWidth)
+     .attr("height", restaurantHeight);
 
 svg.append("image")
-    .attr("xlink:href", "img/French-rest.png") // Replace with the actual path or URL
-    .attr("width", restaurantWidth)
-    .attr("height", restaurantHeight)
-    .attr("x", "-3vh")
-    .attr("y", 0);
+     .attr("xlink:href", "img/French-rest.png") // Replace with the actual path or URL
+     .attr("width", restaurantWidth)
+     .attr("height", restaurantHeight)
+     .attr("x", '2vh')
+     .attr("y", 0);
 
-// Function to add a person to the SVG
-function addPerson() {
-    return svg.append("image")
-        .attr("class", "person")
-        .attr("xlink:href", "img/walking_france.png")
-        .attr("width", restaurantWidth)
-        .attr("height", restaurantHeight)
-        .attr("x", restaurantWidth) // Initial x position outside the restaurant
-        .attr("y", restaurantHeight) // Initial y position (center of the restaurant)
-        .attr("opacity", 1);
-}
+ // Function to add a person to the SVG
+ function addPerson() {
+     return svg.append("image")
+         .attr("class", "person")
+         .attr("xlink:href", "img/walking_france.png")
+         .attr("width", restaurantWidth)
+         .attr("height", restaurantHeight)
+         .attr("x", restaurantWidth) // Initial x position outside the restaurant
+         .attr("y", restaurantHeight) // Initial y position (center of the restaurant)
+         .attr("opacity", 1);
+ }
+
 
 // Function to animate a person walking to the door and disappearing
 function animatePerson(person) {
