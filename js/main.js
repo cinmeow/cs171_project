@@ -6,7 +6,8 @@ let arrivalRegionData = "data/arrivalByRegions2.csv";
 let michelinCountry = new Set()
 let spiderSelect = new Set();
 let countryColorArray = []
-let mapVis, lineVis, lineVis2, selectVis, barchart, barchart2, travelPurpose, bubbleChart, treemapVis, areachart1, areachart2, radialBarChart;
+let restVis;
+let mapVis, lineVis, lineVis2, selectVis, barchart, barchart2, bubbleChart, treemapVis, areachart1, areachart2, radialBarChart;
 let parseYear = d3.timeParse("%Y");
 
 // set up fullpage scrolling
@@ -21,13 +22,13 @@ new fullpage('#fullpage', {
     parallax: true,
 
     // dot nav on right
-    anchors: ['landing', 'intro', 'michelin_guide', 'global', 'select_countries', 'treemap', 'bubble', 'call2action', 'credits'],
+    anchors: ['landing', 'backgroundInfo', 'intro', 'michelin_guide', 'global', 'select_countries', 'treemap', 'bubble', 'call2action', 'credits'],
 
     // Navigation
     menu: '#menu',
     navigation: true,
     navigationPosition: 'right',
-    navigationTooltips: ['Welcome', 'Intro', 'Michelin Guide', 'Global', 'Select', 'TreeMap', 'Cuisine', 'Action', 'Credits'],
+    navigationTooltips: ['Welcome', 'Background', 'Intro', 'Michelin Guide', 'Global', 'Select', 'TreeMap', 'Cuisine', 'Action', 'Credits'],
     showActiveTooltip: false,
     slidesNavigation: false,
     slidesNavPosition: 'bottom',
@@ -85,6 +86,7 @@ function initMainPage(dataArray) {
     })
 
     // initialize visualizations
+
     // MAP VISUALIZATION
     mapVis = new MapVis("globe", dataArray[3],dataArray[1], dataArray[0], dataArray[2]);
 

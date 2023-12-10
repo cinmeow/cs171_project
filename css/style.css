@@ -99,6 +99,7 @@ body{
     text-align: center;
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
+    padding-top: 15px;
 }
 
 .counter-boxEstonia {
@@ -109,15 +110,25 @@ body{
     width: 130%;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    padding-top: 15px;
 }
 
 #french-restaurant {
+    /*display: inline-block;*/
     position: absolute;
     align-content: center;
+    align-items: center;
+    padding-top: 50px;
+    /*padding-left: 50px;*/
 }
 
 #estonia-restaurant {
+    /*display: inline-block;*/
     position: absolute;
+    align-content: center;
+    align-items: center ;
+    padding-top: 50px;
+    padding-right: 80px;
 }
 
 .destination-infoFrance {
@@ -140,28 +151,32 @@ body{
     /*background-color: "grey";*/
 }
 
-#restaurant-name{
+.restaurant-name{
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
     font-size: 60px;
+    align-content: center;
+    text-align: center;
 }
 
-#destination-name{
+.destination-name{
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     font-size: 20px;
+    align-content: center;
+    text-align: center;
 }
 
 
 .carousel{
     border: 5px solid #A0071B;
     border-radius: 10px;
-    padding: 1vh;
     margin-right: 0;
-    margin-top: 1vh;
+    margin-left: 50px;
+    padding-top: 6vh;
     align-items: center;
     max-width: 160vh;
-    max-height: 30vh;
+    height: 100%;
 }
 
 .carousel-control-next,
@@ -244,9 +259,15 @@ h4 {
 
 #michelin-blurb {
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    padding-left: 130px;
-    padding-right: 130px;
+    font-size: 22px;
+    padding-left: 20vh;
+    padding-right: 20vh;
+    padding-top: 20px;
+}
+
+#michelin-info{
+    padding-left: 20vh;
+    padding-right: 20vh;
 }
 
 /*spider css*/
@@ -326,6 +347,9 @@ h4 {
         padding-left: 130px;
         padding-right: 130px;
     }
+.mich{
+        font-size: 18px;
+}
 /*global map styling */
 #globe {
     font-family: 'Montserrat', sans-serif;
@@ -387,6 +411,7 @@ h4 {
     outline: none;
     border-color: #555;
 }
+/*spider css*/
 
 .spider-title {
         font-family: 'Montserrat', sans-serif;
@@ -459,5 +484,62 @@ h4 {
         stroke-width: 4px; /* Width of the border */
     }
 
+/*!* testing *!*/
+#introChatter{
+    padding-top: 20vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    font-family: 'Montserrat', sans-serif;
+    color: #332B2C;
+}
+
+.scrollText {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scrollText.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#intro1{
+    font-size: 50px;
+    padding-bottom: 50px;
+    font-weight: bold;
+}
+
+#intro2{
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+#intro3, #intro4, #intro5 {
+    font-size: 35px;
+    margin-left: 50px;
+    color: #473f41;
+    font-weight: normal;
+}
+
+#intro6 {
+    font-size: 40px;
+    padding-top: 50px;
+}
+
+.look{
+    font-size: 60px;
+    color: #A0071B;
+}
+
+.lowkey{
+    color: #d3d3d3;
+    font-style: italic;
+}
+
+.look2{
+    font-size: 45px;
+    color: #A0071B;
+}
 
 

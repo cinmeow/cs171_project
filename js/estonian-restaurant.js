@@ -1,7 +1,7 @@
 const numPeopleEstonia = 50;
-const restaurantWidthEstonia = document.getElementById("estonia-restaurant").getBoundingClientRect().width;
+const restaurantWidthEstonia = 1000 // document.getElementById("estonia-restaurant").getBoundingClientRect().width;
 const restaurantHeightEstonia = 400;
-const doorPositionEstonia = { x: restaurantWidthEstonia/2.75, y: restaurantHeightEstonia/2.25 };
+const doorPositionEstonia = { x: restaurantWidthEstonia/3, y: restaurantHeightEstonia/2.25 };
 console.log(restaurantWidthEstonia)
 let counterEstonia = 0
 // Create the SVG container using D3
@@ -14,7 +14,7 @@ svgEstonia.append("image")
     .attr("xlink:href", "img/Est-rest.png") // Replace with the actual path or URL
     .attr("width", restaurantWidthEstonia)
     .attr("height", restaurantHeightEstonia)
-    .attr("x", "3vh")
+    .attr("x", "-15vh")
     .attr("y", 0);
 
 // Function to add a person to the SVG
