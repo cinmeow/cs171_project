@@ -29,8 +29,8 @@ class MapVis {
 
         let zoom = 0.5 ;
 
-        let scale = Math.min(vis.width, vis.height) / 1.7;
-        let translate = [vis.width / 2, vis.height * 0.3];
+        let scale = Math.min(vis.width, vis.height) / 2.5;
+        let translate = [vis.width / 2, vis.height * 0.4];
 
         // Initialize projection and path for the map
         vis.projection = d3.geoOrthographic()
