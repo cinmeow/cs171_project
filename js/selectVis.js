@@ -1,5 +1,4 @@
 // selectVis.js
-
 class SelectVis {
     constructor(parentElement, countries) {
         this.parentElement = parentElement;
@@ -129,7 +128,7 @@ class SelectVis {
         // Submit button behavior
         d3.select("#submit-button").on("click", () => {
             vis.submitSelection();
-            scrollToNextPage();
+            vis.newBox();
         });
         d3.select("#clear-button").on("click", () => vis.clearSelection());
 
@@ -178,12 +177,32 @@ class SelectVis {
             .attr("stroke-width", 1)
             .attr("fill", d => `url(#flag-${d.name.replace(/\s/g, '_')})`)
     }
-}
 
-function scrollToNextPage() {
-    // Assuming the next page content is in an element with id "nextPage"
-    var nextPageElement = document.getElementById('tree-page');
+    newBox() {
+        let vis = this;
 
-    // Scroll to the top of the next page
-    nextPageElement.scrollIntoView({ behavior: 'smooth' });
+        vis.boxforWords = vis.svg.append("rect")
+            .attr("class", "scroll-text")
+            .attr("x", 10)
+            .attr("y", 0)
+            .attr("height", 500)
+            .attr("width", 550)
+            .attr("color", "#fff")
+            .style("fill", "black") // Text color
+            .style("opacity", "0.1");
+
+        // Add text to the box
+        vis.scrolltext = vis.svg.append("text")
+            .attr("class", "scroll-text")
+            .attr("x", vis.width / 2.5)
+            .attr("y", vis.height / 1.75)
+            .attr("padding", 0)
+            .attr("dy", "-0.5em") // Adjust text position
+            .attr("text-anchor", "middle")
+            .style("fill", "#5C5555") // Text color
+            .style("font-size", "40px")
+            .style("font-family", "'Montserrat', sans-serif;")
+            .text("Scroll down to continue");
+
+    }
 }
