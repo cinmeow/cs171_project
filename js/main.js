@@ -27,7 +27,7 @@ new fullpage('#fullpage', {
     menu: '#menu',
     navigation: true,
     navigationPosition: 'right',
-    navigationTooltips: ['Welcome', 'Intro', 'Michelin Guide', 'Global', 'Select', 'Cuisine', 'Credits'],
+    navigationTooltips: ['Welcome', 'Intro', 'Michelin Guide', 'Global', 'Select', 'TreeMap', 'Cuisine', 'Action', 'Credits'],
     showActiveTooltip: false,
     slidesNavigation: false,
     slidesNavPosition: 'bottom',

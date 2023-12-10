@@ -112,11 +112,12 @@ body{
 }
 
 #french-restaurant {
-    position: center;
+    position: absolute;
     align-content: center;
 }
+
 #estonia-restaurant {
-    position: center;
+    position: absolute;
 }
 
 .destination-infoFrance {
@@ -285,39 +286,119 @@ h4 {
     font-size: 20px;
 }
 
+.intro-container {
+        /*background-color: #D5E2F2;*/
+        display: inline-block;
+    }
+
+.intro-title {
+        font-family: 'Montserrat', sans-serif;
+        padding-top: 25vh;
+        text-align: center;
+    }
+
+.info {
+        font-family: 'Montserrat', sans-serif;
+        padding-top: 35px;
+        text-align: center;
+        align-items: center;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+#cuisinetitle {
+        padding-top: 80px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        display: inline-flex;
+        font-size: 25px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+h4 {
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+#michelin-blurb {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        padding-left: 130px;
+        padding-right: 130px;
+    }
+
+/*spider css*/
+
+.spider-title {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: lighter;
+        margin-top: 3vh;
+        text-align: center;
+    }
+
+#spider-chart {
+        padding: 0;
+        margin-top: 0;
+    }
+
+.spider-sub-title {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: lighter;
+        margin-top: 5vh;
+        text-align: left;
+    }
+
+#flag-container {
+        margin-top: 0;
+    }
+
+#bubbleTooltip {
+        background-color: powderblue;
+        border: powderblue;
+        border-radius: 5px;
+        padding: 20px
+    }
+
+#bubbleRest {
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+    }
+
 #bubbleSelector {
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    margin-left: 2%;
-    margin-right: 5%;
-}
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+        margin-left: 2%;
+        margin-right: 5%;
+    }
 
 .instructions {
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 20px;
-}
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-bottom: 20px;
+    }
 
 #michelinreminder {
-}
+    }
 
 #boxtitle {
-    padding-top: 50%;
-}
+        padding-top: 50%;
+    }
 
 .radialtooltip {
-    position: absolute;
-    display: none;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 3px;
-    box-shadow: -3px 3px 15px #888;
-    color: white;
-    padding: 6px;
-}
+        position: absolute;
+        display: none;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 3px;
+        box-shadow: -3px 3px 15px #888;
+        color: white;
+        padding: 6px;
+    }
 
 .selected-country {
-    stroke: #6495ED; /* Red color for the border */
-    stroke-width: 4px; /* Width of the border */
-}
+        stroke: #6495ED; /* Red color for the border */
+        stroke-width: 4px; /* Width of the border */
+    }
+
 
 

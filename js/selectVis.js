@@ -5,16 +5,16 @@ class SelectVis {
         this.countries = countries;
         this.selectedCountries = new Set();
 
-        this.tooltip = d3.select("body").append("div")
-            .attr("class", "tooltip")
-            .style("opacity", 0)
-            .style("position", "absolute")
-            .style("pointer-events", "none")
-            .style("background-color", "#f5f1e6")
-            .style("border", "solid 1px #a0071b")
-            .style("padding", "10px")
-            .style("border-radius", "5px")
-            .style("text-align", "left");
+        // this.tooltip = d3.select("body").append("div")
+        //     .attr("class", "tooltip")
+        //     .style("opacity", 0)
+        //     .style("position", "absolute")
+        //     .style("pointer-events", "none")
+        //     .style("background-color", "#f5f1e6")
+        //     .style("border", "solid 1px #a0071b")
+        //     .style("padding", "10px")
+        //     .style("border-radius", "5px")
+        //     .style("text-align", "left");
 
         // choose how many select want to select
         this.num_selection = 5

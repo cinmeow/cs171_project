@@ -69,27 +69,27 @@ class BubbleChart {
             .attr("width", 70)
             .attr("height", 80)
             .attr("fill", 'none')
-            .attr("stroke", 'red')
+            .attr("stroke", 'black')
             .attr("stroke-width", 2)
 
         vis.legend.append("circle").attr("cx", 40).attr("cy", 80-5*2).attr("r", 5*2)
             .attr("fill", 'none')
-            .attr("stroke", 'red')
+            .attr("stroke", 'black')
             .attr("stroke-width", 2)
 
         vis.legend.append("circle").attr("cx", 40).attr("cy", 80-8*2).attr("r", 8*2)
             .attr("fill", 'none')
-            .attr("stroke", 'red')
+            .attr("stroke", 'black')
             .attr("stroke-width", 2)
 
         vis.legend.append("circle").attr("cx", 40).attr("cy", 80-10*2).attr("r", 10*2)
             .attr("fill", 'none')
-            .attr("stroke", 'red')
+            .attr("stroke", 'black')
             .attr("stroke-width", 2)
 
         vis.legend.append("circle").attr("cx", 40).attr("cy", 80-18*2).attr("r", 18*2)
             .attr("fill", 'none')
-            .attr("stroke", 'red')
+            .attr("stroke", 'black')
             .attr("stroke-width", 2)
 
         // add line
@@ -97,8 +97,8 @@ class BubbleChart {
         vis.legend.append("line")
             .attr('x1', 40 + 10)
             .attr('x2', 150)
-            .attr('y1', 80-10)
-            .attr('y2', 80-10)
+            .attr('y1', 80-5)
+            .attr('y2', 80-5)
             .attr('stroke', 'black')
             .style('stroke-dasharray', ('2,2'))
 
@@ -113,16 +113,16 @@ class BubbleChart {
         vis.legend.append("line")
             .attr('x1', 40 + 20)
             .attr('x2', 150)
-            .attr('y1', 80-25)
-            .attr('y2', 80-25)
+            .attr('y1', 80-30)
+            .attr('y2', 80-30)
             .attr('stroke', 'black')
             .style('stroke-dasharray', ('2,2'))
 
         vis.legend.append("line")
             .attr('x1', 40 + 36)
             .attr('x2', 150)
-            .attr('y1', 80-36)
-            .attr('y2', 80-36)
+            .attr('y1', 80-45)
+            .attr('y2', 80-45)
             .attr('stroke', 'black')
             .style('stroke-dasharray', ('2,2'))
 
@@ -130,12 +130,12 @@ class BubbleChart {
 
         vis.legend.append("text")
             .attr('x', 150)
-            .attr('y', 80-10)
+            .attr('y', 80-5)
             .text("$")
             .style("font-size", 12)
             .attr('alignment-baseline', 'middle')
-            .attr("stroke", 'red')
-            .attr("stroke-width", 1)
+            .attr("stroke", 'black')
+            .attr("stroke-width", 0.8)
 
         vis.legend.append("text")
             .attr('x', 150)
@@ -143,26 +143,26 @@ class BubbleChart {
             .text("$$")
             .style("font-size", 12)
             .attr('alignment-baseline', 'middle')
-            .attr("stroke", 'red')
-            .attr("stroke-width", 1)
+            .attr("stroke", 'black')
+            .attr("stroke-width", 0.8)
 
         vis.legend.append("text")
             .attr('x', 150)
-            .attr('y', 80-25)
+            .attr('y', 80-30)
             .text("$$$")
             .style("font-size", 12)
             .attr('alignment-baseline', 'middle')
-            .attr("stroke", 'red')
-            .attr("stroke-width", 1)
+            .attr("stroke", 'black')
+            .attr("stroke-width", 0.8)
 
         vis.legend.append("text")
             .attr('x', 150)
-            .attr('y', 80-36)
+            .attr('y', 80-45)
             .text("$$$$")
             .style("font-size", 12)
             .attr('alignment-baseline', 'middle')
-            .attr("stroke", 'red')
-            .attr("stroke-width", 1)
+            .attr("stroke", 'black')
+            .attr("stroke-width", 0.8)
 
 
     }
@@ -306,6 +306,7 @@ class BubbleChart {
                  <p id="bubbeInfo"><strong>Location:</strong> ${d.City}, ${d.Country} </p>   
                  <p id="bubbeInfo"><strong>Price:</strong> ${"$".repeat(d.Price)}</p>                   
              </div>`)
+
                 return vis.tooltip.style("visibility", "visible");
         }).on('mouseout', function() {
 
@@ -375,6 +376,11 @@ class BubbleChart {
             }
         }
 
+        // let getColor = function(country_name, countryColorArray) {
+        //     const colorObject = countryColorArray.find(entry => entry.hasOwnProperty(country_name));
+        //     return colorObject ? colorObject[country_name] : "defaultColor";
+        // }
+
 
         // set colour scale for bubbles
         vis.circleColour = d3.scaleOrdinal(d3.schemePastel1)
@@ -382,6 +388,9 @@ class BubbleChart {
 
         // colour circle by country
         circles.attr("fill", (d) => vis.circleColour(d.Country));
+        // circles.attr("fill", (d) => getColor(d.Country));
+
+
 
         // replaceText
         let replaceText = function(d) {

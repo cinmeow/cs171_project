@@ -11,7 +11,7 @@ const svgEstonia = d3.select("#estonia-restaurant")
     .attr("height", restaurantHeightEstonia);
 
 svgEstonia.append("image")
-    .attr("xlink:href", "img/Est-rest 2.png") // Replace with the actual path or URL
+    .attr("xlink:href", "img/Est-rest.png") // Replace with the actual path or URL
     .attr("width", restaurantWidthEstonia)
     .attr("height", restaurantHeightEstonia)
     .attr("x", "3vh")
