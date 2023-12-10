@@ -35,15 +35,17 @@ class BubbleChart {
             .attr('transform', `translate (${vis.margin.right + vis.margin.left}, ${vis.margin.top})`);
 
 
+        // bubble radius "scale"
+        vis.circleSizes = {
+            0: 2,
+            1: 5,
+            2: 8,
+            3: 10,
+            4: 18
+        }
 
-        // // set scale for bubble radius
-        // vis.circleRad = d3.scaleLinear()
-        //     .domain([0, 4])
-        //     .range([2, 14])
+        vis.makeLegend();
 
-        // append info to cuisine selection
-        // vis.cuisineInfo = d3.select("#cuisineExplained")
-        // vis.cuisineInfo.append("text").text("Select a cuisine to learn more!")
 
         // append info in left column
         vis.michelinInfo = d3.select("#michelinreminder")
@@ -55,6 +57,113 @@ class BubbleChart {
 
         // create custom selector for country subset and trigger filter if selected
         vis.createSelector();
+
+    }
+
+    makeLegend() {
+
+        let vis=this;
+
+        // add legend
+        vis.legend = d3.select("#bubbleLegend").append("svg")
+            .attr("width", 70)
+            .attr("height", 80)
+            .attr("fill", 'none')
+            .attr("stroke", 'red')
+            .attr("stroke-width", 2)
+
+        vis.legend.append("circle").attr("cx", 40).attr("cy", 80-5*2).attr("r", 5*2)
+            .attr("fill", 'none')
+            .attr("stroke", 'red')
+            .attr("stroke-width", 2)
+
+        vis.legend.append("circle").attr("cx", 40).attr("cy", 80-8*2).attr("r", 8*2)
+            .attr("fill", 'none')
+            .attr("stroke", 'red')
+            .attr("stroke-width", 2)
+
+        vis.legend.append("circle").attr("cx", 40).attr("cy", 80-10*2).attr("r", 10*2)
+            .attr("fill", 'none')
+            .attr("stroke", 'red')
+            .attr("stroke-width", 2)
+
+        vis.legend.append("circle").attr("cx", 40).attr("cy", 80-18*2).attr("r", 18*2)
+            .attr("fill", 'none')
+            .attr("stroke", 'red')
+            .attr("stroke-width", 2)
+
+        // add line
+
+        vis.legend.append("line")
+            .attr('x1', 40 + 10)
+            .attr('x2', 150)
+            .attr('y1', 80-10)
+            .attr('y2', 80-10)
+            .attr('stroke', 'black')
+            .style('stroke-dasharray', ('2,2'))
+
+        vis.legend.append("line")
+            .attr('x1', 40 + 16)
+            .attr('x2', 150)
+            .attr('y1', 80-16)
+            .attr('y2', 80-16)
+            .attr('stroke', 'black')
+            .style('stroke-dasharray', ('2,2'))
+
+        vis.legend.append("line")
+            .attr('x1', 40 + 20)
+            .attr('x2', 150)
+            .attr('y1', 80-25)
+            .attr('y2', 80-25)
+            .attr('stroke', 'black')
+            .style('stroke-dasharray', ('2,2'))
+
+        vis.legend.append("line")
+            .attr('x1', 40 + 36)
+            .attr('x2', 150)
+            .attr('y1', 80-36)
+            .attr('y2', 80-36)
+            .attr('stroke', 'black')
+            .style('stroke-dasharray', ('2,2'))
+
+        // ADD label
+
+        vis.legend.append("text")
+            .attr('x', 150)
+            .attr('y', 80-10)
+            .text("$")
+            .style("font-size", 12)
+            .attr('alignment-baseline', 'middle')
+            .attr("stroke", 'red')
+            .attr("stroke-width", 1)
+
+        vis.legend.append("text")
+            .attr('x', 150)
+            .attr('y', 80-16)
+            .text("$$")
+            .style("font-size", 12)
+            .attr('alignment-baseline', 'middle')
+            .attr("stroke", 'red')
+            .attr("stroke-width", 1)
+
+        vis.legend.append("text")
+            .attr('x', 150)
+            .attr('y', 80-25)
+            .text("$$$")
+            .style("font-size", 12)
+            .attr('alignment-baseline', 'middle')
+            .attr("stroke", 'red')
+            .attr("stroke-width", 1)
+
+        vis.legend.append("text")
+            .attr('x', 150)
+            .attr('y', 80-36)
+            .text("$$$$")
+            .style("font-size", 12)
+            .attr('alignment-baseline', 'middle')
+            .attr("stroke", 'red')
+            .attr("stroke-width", 1)
+
 
     }
 
@@ -154,31 +263,22 @@ class BubbleChart {
 
         // create groups and their centers
         vis.stars = {
-            "bib": {x: 80 + vis.width/5.5, y: vis.height/4, title:"Bib Gourmand"},
-            "green": {x: 80 + vis.width/5.5*2, y: vis.height/4, title:"MICHELIN Green Star"},
-            "one": {x: 80 + vis.width/5.5, y: vis.height/1.5, title: "1 Star MICHELIN"},
-            "two": {x: 80 + vis.width/5.5*2, y: vis.height/1.5, title: "2 Stars MICHELIN"},
-            "three": {x: 80 + vis.width/5.5*3, y: vis.height/1.5, title: "3 Stars MICHELIN"},
+            "bib": {x: 80 + vis.width/5.5, y: vis.height/3.5, title:"Bib Gourmand"},
+            "green": {x: 80 + vis.width/5.5*2.5, y: vis.height/3.5, title:"Green Star"},
+            "one": {x: 80 + vis.width/5.5, y: vis.height/1.5, title: "1 Star"},
+            "two": {x: 80 + vis.width/5.5*2, y: vis.height/1.5, title: "2 Stars"},
+            "three": {x: 80 + vis.width/5.5*3, y: vis.height/1.5, title: "3 Stars"},
         }
 
         vis.svg.selectAll("circle").remove();
 
-        console.log("DEBUG CIRCLES")
-
-        let circleSizes = {
-            0: 2,
-            1: 5,
-            2: 8,
-            3: 10,
-            4: 18
-        }
 
         // draw circles
         let circles = vis.svg.selectAll("circle")
             .data(vis.displayData)
             .enter()
             .append("circle")
-            .attr("r", (d) => circleSizes[d.Price]) // vis.circleRad(d['Price'])
+            .attr("r", (d) => vis.circleSizes[d.Price]) // vis.circleRad(d['Price'])
             .attr("stroke", "black")  // Set the outline color to black
             .attr("stroke-width", 1)
             .on('mouseover', function(event, d) {
@@ -192,7 +292,6 @@ class BubbleChart {
 
                 // drop and rewrite title
                 vis.moveTitle(d.Award);
-
 
                 // display tool tip
                 vis.tooltip
@@ -229,18 +328,14 @@ class BubbleChart {
 
         // force simulations to space out the circles
         let forces = d3.forceSimulation(vis.displayData)
-            .force("charge", d3.forceManyBody().strength([-18]))
+            .force("charge", d3.forceManyBody().strength([-15]))
             .force("center", (d) => d3.forceCenter(groupForceX(d), groupForceY(d)))
             .force("x", d3.forceX(groupForceX))
             .force("y", d3.forceY(groupForceY))
-            .force("collide", d3.forceCollide().radius(function (d) {
-                return d.radius;
-            }))
             .on("tick", function() {
                 circles.attr("cx", function(d) {
                     return d.x
                 }).attr("cy", function(d) {
-
                     return d.y
                 })
 
@@ -368,14 +463,18 @@ class BubbleChart {
             let ycoord = vis.groupYCoord.find((d) => d.category === rating).meanValue;
 
             let switched = vis.ratingSwitcher(rating)
+            let newTitle = vis.stars[switched].title
 
             vis.svg.append("text")
                 .attr("x", xcoord)
                 .attr("y", ycoord)
                 .attr("text-anchor", "middle")
-                .style("font-size", "20px")
+                .attr("fill", 'black')
+                .attr('stroke', 'black')
+                .attr('stroke-width', 2)
+                .style("font-size", "25px")
                 .attr("class", "bubbleTitle" + switched)
-                .text(rating)
+                .text(newTitle)
 
             index++;
         }
@@ -400,7 +499,10 @@ class BubbleChart {
                 .attr("x", xcoord)
                 .attr("y", ycoord + 50)
                 .attr("text-anchor", "middle")
-                .style("font-size", "20px")
+                .attr("fill", 'black')
+                .attr('stroke', 'black')
+                .attr('stroke-width', 2)
+                .style("font-size", "25px")
                 .attr("class", "bubbleTitle" + switched)
                 .text(rating)
 
