@@ -1,5 +1,5 @@
 const numPeopleEstonia = 50;
-const restaurantWidthEstonia = 1000 // document.getElementById("estonia-restaurant").getBoundingClientRect().width;
+const restaurantWidthEstonia = 500 // document.getElementById("estonia-restaurant").getBoundingClientRect().width;
 const restaurantHeightEstonia = 400;
 const doorPositionEstonia = { x: restaurantWidthEstonia/3, y: restaurantHeightEstonia/2.25 };
 console.log(restaurantWidthEstonia)
@@ -14,7 +14,7 @@ svgEstonia.append("image")
     .attr("xlink:href", "img/Est-rest.png") // Replace with the actual path or URL
     .attr("width", restaurantWidthEstonia)
     .attr("height", restaurantHeightEstonia)
-    .attr("x", "-15vh")
+    .attr("x", 0)
     .attr("y", 0);
 
 // Function to add a person to the SVG
