@@ -174,10 +174,14 @@ body{
     border-radius: 10px;
     margin-right: 0;
     margin-left: 50px;
-    padding-top: 6vh;
+    padding-top: 1vh;
     align-items: center;
-    max-width: 160vh;
-    height: 100%;
+    max-width: 75%;
+    height: 60%;
+}
+
+.carousel-inner{
+
 }
 
 .carousel-control-next,
@@ -186,21 +190,21 @@ body{
 }
 
 #description1{
-    padding: 1.5%;
+    padding-top: 1vh;
     color: #5C5555;
     text-align: center;
-    width: 110vh;
-    height: 20vh;
+    width: 55vw;
+    height: 18vh;
     margin-left: 12%;
-    margin-top: 3vh;
+    margin-top: 2vh;
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: 4.2vh;
+    font-size: 4vh;
 }
 #description2{
     color: #5C5555;
-    text-align: left;
-    width: 110vh;
+    text-align: center;
+    width: 55vw;
     height: 18vh;
     margin-left: 12%;
     font-family: 'Montserrat', sans-serif;
@@ -211,7 +215,7 @@ body{
     color: #5C5555;
     text-align: center;
     font-size: 30px;
-    width: 110vh;
+    width: 55vw;
     height: 15vh;
     margin-left: 12%;
     font-family: 'Montserrat', sans-serif;
