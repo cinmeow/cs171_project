@@ -3,7 +3,9 @@
 ## URL
 https://cinmeow.github.io/cs171_project/
 
-## How to: 
+## How to Run: 
+Run index.html to start the website locally. The website consists of the following pages: 
+
 1. landing page
 2. introduction 1 : informs you of what type of data you will be looking at and what questions you should be asking
 3. introduction 2 : explains why tourism/travel data is important when opening michelin restaurant
@@ -12,7 +14,7 @@ https://cinmeow.github.io/cs171_project/
 6. Spider chart and selection, choose up to 5 countries and see how they rank against each other in the categories from the map visualization. Once you click submit, you will be prompted to scroll down.
 7. Tree Diagram shows which regions the travelers come from. Selection box on left allows you to select one of the 5 countries you selected earlier, and click on a region to see the number arrivals into the country from the region between 2010 and 2019.
 8. Bubbles show the individual restaurants in the differetn award categories. Select the cuisine on the left and hover over the dots to look at restaurant description. Size of bubbles represents price, and color is specific to country.
-9. Call to action....
+9. Call to action
 10. Team page
 
 ## Packages Used: 
@@ -37,3 +39,5 @@ https://data.worldbank.org/indicator/ST.INT.XPND.CD, https://data.worldbank.org/
 * _Est-rest.png_ and _French-rest.png_ : https://www.vecteezy.com/vector-art/13612676-french-cuisine-restaurant-with-various-traditional-or-national-food-dish-of-france-on-flat-style-cartoon-hand-drawn-templates-illustration
 * _bib.png_ : https://guide.michelin.com/en
 * _walking_estonia.png_ and _walking_france.png_: https://pngtree.com/free-png-vectors/walking
+* _Michelin images_: Google Images
+* _bibApprove.png_: Google images 
