@@ -432,6 +432,7 @@ class BubbleChart {
         let vis = this;
 
         vis.legend.selectAll('.legendCircle').remove();
+        vis.legend.selectAll('.colorBubText').remove();
 
         vis.countries.forEach(
             function(d, i){
@@ -452,6 +453,7 @@ class BubbleChart {
                     .attr("y", 135+ i*(20))
                     .attr("fill", 'black')
                     .attr("stroke-width", 0)
+                    .attr("class", "colorBubText")
                     .text(d)
                     .style("font-family", "Montserrat, san serif");
             }

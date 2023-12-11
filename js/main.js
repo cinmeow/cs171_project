@@ -23,7 +23,7 @@ new fullpage('#fullpage', {
     parallax: true,
 
     // dot nav on right
-    anchors: ['landing', 'backgroundInfo', 'intro', 'michelin_guide', 'global', 'preSelect', 'select_countries', 'treemap', 'bubble', 'call2action', 'credits'],
+    anchors: ['landing', 'backgroundInfo', 'intro', 'michelin_guide', 'global', 'presel', 'select_countries', 'treemap', 'bubble', 'call2action', 'credits'],
 
     // Navigation
     menu: '#menu',
@@ -37,7 +37,8 @@ new fullpage('#fullpage', {
     // other settings
     touchSensitivity: 205,
     scrollOverflow: true,
-    scrollingSpeed: 1000,
+    scrollingSpeed: 1500,
+    easing: 'easeInOutCubic'
 
 });
 
