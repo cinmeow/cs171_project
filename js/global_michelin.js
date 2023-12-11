@@ -109,7 +109,7 @@ class BarChart{
             .attr("y", d => vis.y(d.category))
             .attr("height", vis.y.bandwidth() - 5)
             .attr("width", d => vis.x(d.value))
-            .attr("fill", "#7CB8DB");
+            .attr("fill", "#A0071B");
 
         bar.enter()
             .append("rect")
@@ -120,8 +120,8 @@ class BarChart{
             .transition()
             .duration(750)
             .attr("width", (d) => vis.x(d.value))
-            .attr("fill", "#7CB8DB")
-            .attr("class", "barChart-" + vis.barname)
+            .attr("fill", "#A0071B")
+            .attr("class", "barChart-" + vis.barname + " bar-hover");
 
         // add axes
         // vis.svg.selectAll(".axis").remove();

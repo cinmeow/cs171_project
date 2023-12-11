@@ -11,7 +11,7 @@ class AreaChart {
     initVis() {
         let vis = this;
 
-        vis.margin = { top: 40, right: 40, bottom: 80, left: 60 };
+        vis.margin = { top: 70, right: 60, bottom: 80, left: 60 };
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
@@ -43,6 +43,14 @@ class AreaChart {
             .style("font-style", "'Montserrat', sans-serif")
             .style("font-size", "18px");
 
+        let legendY = vis.height + vis.margin.bottom - 50;
+
+        if (vis.width < 300) {
+            // For smaller screens, adjust position
+            legendY = 150;
+        }
+
+
         // Add legend
         let legend = vis.svg.append("g")
             .attr("class", "legend")
@@ -51,14 +59,14 @@ class AreaChart {
         // Legend for total beds
         legend.append("rect")
             .attr("x", 150)
-            .attr("y", 170)
+            .attr("y", legendY)
             .attr("width", 18)
             .attr("height", 18)
-            .attr("fill", "#3f408c");
+            .attr("fill", "#5E171C");
 
         legend.append("text")
             .attr("x", 175)
-            .attr("y", 180)
+            .attr("y", legendY + 10)
             .attr("dy", ".35em")
             .style("text-anchor", "start")
             .style("font-style", "'Montserrat', sans-serif")
@@ -67,14 +75,14 @@ class AreaChart {
         // Legend for occupied beds
         legend.append("rect")
             .attr("x", 375)
-            .attr("y", 170)
+            .attr("y", legendY)
             .attr("width", 18)
             .attr("height", 18)
-            .attr("fill", "#bdc9fb");
+            .attr("fill", "#A1061B");
 
         legend.append("text")
             .attr("x", 400)
-            .attr("y", 180)
+            .attr("y", legendY+10)
             .attr("dy", ".35em")
             .style("text-anchor", "start")
             .style("font-style", "'Montserrat', sans-serif")
@@ -136,8 +144,8 @@ class AreaChart {
             vis.y.domain([0, d3.max(vis.newData, d => Math.max(d.numRooms, d.numOccupied))]);
 
             // Define and update areas for bed data
-            vis.updateAreaPaths(vis.newData, vis.areaTotal, "#3f408c", "total-beds", d => vis.y(d.numRooms));
-            vis.updateAreaPaths(vis.newData, vis.areaOccupied, "#bdc9fb", "occupied-beds", d => vis.y(d.numOccupied));
+            vis.updateAreaPaths(vis.newData, vis.areaTotal, "#5E171C", "total-beds", d => vis.y(d.numRooms));
+            vis.updateAreaPaths(vis.newData, vis.areaOccupied, "#A1061B", "occupied-beds", d => vis.y(d.numOccupied));
 
             // Update title
             vis.updateTitle(`Accommodations and Occupancy Over Time - ${vis.countryName}`);
@@ -150,7 +158,7 @@ class AreaChart {
             vis.y.domain([0, d3.max(vis.avgLengthStayData, d => d.avgLengthStay)]);
 
             // Define and update area for length of stay data
-            vis.updateAreaPaths(vis.avgLengthStayData, vis.areaAvgLengthStay, "#69b3a2", "avg-length-stay", d => vis.y(d.avgLengthStay));
+            vis.updateAreaPaths(vis.avgLengthStayData, vis.areaAvgLengthStay, "#94414C", "avg-length-stay", d => vis.y(d.avgLengthStay));
 
             // Update title
             vis.updateTitle(`Average Length of Stay Over Time - ${vis.countryName}`);
@@ -184,6 +192,8 @@ class AreaChart {
             .transition().duration(1000)
             .attr("d", areaGenerator)
             .attr("fill", fillColor);
+
+
     }
 
     updateTitle(titleText) {

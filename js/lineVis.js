@@ -12,7 +12,7 @@ class LineVis {
         let vis = this;
 
         // Set up dimensions and margins
-        vis.margin = {top: 70, right: 60, bottom: 20, left: 40};
+        vis.margin = {top: 70, right: 100, bottom: 20, left: 40};
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
@@ -108,8 +108,8 @@ class LineVis {
             .merge(path)
             .attr("class", "line")
             .attr("fill", "none")
-            .attr("stroke", "darkblue")
-            .attr("stroke-width", "2px")
+            .attr("stroke", "#A1061B")
+            .attr("stroke-width", "3px")
             .attr("d", line)
             .attr("stroke-dasharray", function() {
                 const length = this.getTotalLength();
@@ -129,15 +129,15 @@ class LineVis {
             .attr("class", "dot")
             .attr("cx", d => vis.x(d.year))
             .attr("cy", d => vis.y(d[vis.dataType]))
-            .attr("r", 5)
-            .attr("fill", "steelblue");
+            .attr("r", 6)
+            .attr("fill", "#5E171C");
 
         // Labels for the dots
         vis.svg.selectAll(".dot-label")
             .data(vis.data)
             .join("text")
             .attr("class", "dot-label")
-            .attr("x", d => vis.x(d.year) + 15)
+            .attr("x", d => vis.x(d.year) + 17)
             .attr("y", d => vis.y(d[vis.dataType]) - 10) // Adjust label position above the dot
             .text(d => formatLabel(d[vis.dataType]))
             .attr("text-anchor", "middle")

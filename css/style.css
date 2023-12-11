@@ -455,6 +455,17 @@ h4 {
     font-family: 'Montserrat', sans-serif;
 }
 
+/*hover over effect for area charts*/
+.area:hover {
+    opacity: 0.6; /* Adjust the opacity level as needed */
+    transition: opacity 0.3s; /* Smooth transition for the opacity change */
+}
+
+/*hover effect for bar charts*/
+.bar-hover:hover {
+    opacity: 0.6; /* Adjust the opacity level as needed */
+    transition: opacity 0.3s; /* Smooth transition for the opacity change */
+}
 
 /*spider css*/
 
