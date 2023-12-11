@@ -364,7 +364,7 @@ h4 {
 .globe-subtitle {
     font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
-    margin-top: 2vh;
+    margin-top: 3vh;
     margin-left: 3vh;
     margin-right: 3vh;
     text-align: center;
@@ -378,7 +378,7 @@ h4 {
 }
 
 #data-selection {
-    margin-top: 7vh;
+    margin-top: 3vh;
     width: 100%;
     padding: 10px;
     padding-right: 20px;
@@ -411,6 +411,15 @@ h4 {
     outline: none;
     border-color: #555;
 }
+
+/* highlight the selected countries boundaries */
+.selected-country {
+    stroke: #3C6A85; /* Red color for the border */
+    stroke-width: 3px; /* Width of the border */
+}
+
+
+
 /*spider css*/
 
 .spider-title {
@@ -479,10 +488,6 @@ h4 {
         padding: 6px;
     }
 
-.selected-country {
-        stroke: #6495ED; /* Red color for the border */
-        stroke-width: 4px; /* Width of the border */
-    }
 
 /*!* testing *!*/
 #introChatter{

@@ -29,8 +29,8 @@ class MapVis {
 
         let zoom = 0.5 ;
 
-        let scale = Math.min(vis.width, vis.height) / 2.5;
-        let translate = [vis.width / 2, vis.height * 0.4];
+        let scale = Math.min(vis.width, vis.height) / 2.7;
+        let translate = [vis.width / 2, vis.height * 0.35];
 
         // Initialize projection and path for the map
         vis.projection = d3.geoOrthographic()
@@ -51,7 +51,7 @@ class MapVis {
         vis.svg.append("path")
             .datum({type: "Sphere"})
             .attr("class", "graticule")
-            .attr('fill', '#ADDEFF')
+            .attr('fill', '#63AFDB')
             .attr("stroke","rgba(129,129,129,0.35)")
             .attr("d", vis.path);
 
@@ -104,7 +104,7 @@ class MapVis {
         ).call(vis.zoom);
 
         // Set up legend dimensions and position
-        vis.legendDimensions = { width: 100, height: 20, position: { x: 100, y: vis.height - 100 } };
+        vis.legendDimensions = { width: 100, height: 20, position: { x: 70, y: vis.height - 100 } };
 
 
         vis.tooltip = d3.select("body").append("div")
@@ -330,6 +330,26 @@ class MapVis {
             .attr("y", vis.legendDimensions.height + 40) // Below the axis
             .style("text-anchor", "middle")
             .text("Average Number of Arrivals"); // Replace with your desired label text
+
+        // Add gray legend for missing data
+        let grayLegendX = vis.legendDimensions.width / 2 + 180; // Adjust the position as needed
+        let grayLegendY = 0;
+
+        // Append gray rectangle to the legend
+        vis.legend.append("rect")
+            .attr("x", grayLegendX)
+            .attr("y", grayLegendY)
+            .attr("width", 20) // Width of the gray rectangle
+            .attr("height", vis.legendDimensions.height)
+            .style("fill", "#ccc"); // Gray color for missing data
+
+        // Append label for gray rectangle
+        vis.legend.append("text")
+            .attr("x", grayLegendX + 25) // Position label to the right of the rectangle
+            .attr("y", grayLegendY + vis.legendDimensions.height / 2)
+            .style("text-anchor", "start")
+            .attr("alignment-baseline", "middle")
+            .text("Data Unavailable");
 
 
 
