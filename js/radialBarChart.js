@@ -15,19 +15,19 @@ class RadialBarChart{
         let vis = this;
 
         // Set dimensions and margins
-        vis.margin = { top: 30, right: 10, bottom: 10, left: 10 };
+        vis.margin = { top: 10, right: 10, bottom: 10, left: 10 };
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width  - vis.margin.left - vis.margin.right;
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
-        vis.chartRadius = vis.height / 4 - 10;
+        vis.chartRadius = vis.width / 3 - 10;
 
         // Create SVG for Radial Bar Chart
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
             .attr("width", vis.width + vis.margin.left + vis.margin.right)
             .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
             .append("g")
-            .attr("transform", "translate(" + (vis.chartRadius + vis.margin.left) + "," + (vis.chartRadius + vis.margin.top) + ")");
+            .attr("transform", "translate(" + (vis.chartRadius + vis.margin.left + 80) + "," + (vis.chartRadius + vis.margin.top + 150) + ")");
 
-        vis.color = d3.scaleOrdinal(d3.schemeCategory10);
+        vis.color = d3.scaleOrdinal(d3.schemeSet1);
 
         // Tooltip for Radial Bar Chart
         vis.tooltip = d3.select('body').append('div')
@@ -93,7 +93,8 @@ class RadialBarChart{
             .attr('x', vis.chartRadius + 10)
             .style('text-anchor', d => (scale(d) >= Math.PI && scale(d) < 2 * Math.PI ? 'end' : null))
             .attr('transform', d => 'rotate(' + (90 - rad2deg(scale(d))) + ',' + (vis.chartRadius + 15) + ',0)')
-            .text(d => d);
+            .text(d => d)
+            .style("font-size", "8px");
 
 
         // Data arcs
@@ -141,6 +142,52 @@ class RadialBarChart{
             .attr('y', (d, i) => -getOuterRadius(i) + arcWidth / 2 ) // Adjust y position
             .text(d => d.year)
             .style("font-size", "10px");
+
+        vis.svg.append("text")
+            .attr("class", "radialchart-title")
+            .attr("x", -20)  // Adjust the position based on your layout
+            .attr("y", 0 - (vis.margin.top*10+ vis.chartRadius ))  // Position above the chart
+            .attr("text-anchor", "middle")
+            .style("font-size", "20px")
+            .style("color", "#332D2C")
+            .text(`Number of Arrivals Over the Years From`);
+
+
+        vis.svg.append("text")
+            .attr("class", "radialchart-title")
+            .attr("x",  -20)  // Adjust the position based on your layout
+            .attr("y", 0 - (vis.margin.top*13+ vis.chartRadius ))  // Position above the chart
+            .attr("text-anchor", "middle")
+            .style("font-size", "23px")
+            .style("font-weight", "bold")
+            .style("fill", " #A0071B")
+            .text(`${vis.selectedCountry}:`);
+
+
+        vis.svg.append("text")
+            .attr("class", "radialchart-title")
+            .attr("x", -20)  // Adjust the position based on your layout
+            .attr("y", 0 - (vis.margin.top*7+ vis.chartRadius ))  // Position above the chart
+            .attr("text-anchor", "middle")
+            .style("font-size", "23px")
+            .style("font-weight", "bold")
+            .style("fill", " #A0071B")
+            .text(vis.selectedRegion);
+
+
+        // vis.svg.append("text")
+        //     .attr("class", "radialchart-title")
+        //     .attr("x", -80)  // Adjust the position based on your layout
+        //     .attr("y", 0 - (vis.margin.top*6+ vis.chartRadius ))  // Position above the chart
+        //     .attr("text-anchor", "middle")
+        //     .style("font-size", "20px")
+        //     .style("color", "#332D2C")
+        //     .text(`Over Time`);
+
+
+
+
+
 
 
         function arcTween(d, i) {

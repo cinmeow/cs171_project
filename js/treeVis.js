@@ -12,7 +12,7 @@ class Treemap {
         let vis = this;
 
         // Set the dimensions and margins of the graph
-        vis.margin = {top: 10, right: 10, bottom: 30, left: 60 };
+        vis.margin = {top: 10, right: 10, bottom: 10, left: 60 };
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width * 0.8- vis.margin.left - vis.margin.right;
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height * 0.6- vis.margin.top - vis.margin.bottom;
 

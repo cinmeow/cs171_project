@@ -674,7 +674,7 @@ h4 {
     transition-duration: 0.4s; /* Smooth transition for hover effect */
 }
 
-#cleaar-button:hover {
+#clear-button:hover {
 
     background-color: #6E1A25; /* Darker shade of green on hover */
 }
@@ -824,3 +824,18 @@ h4 {
     padding-top: 3%;
     padding-bottom: 2%;
 }
+
+/*styling for radial bar chart*/
+#radialVis {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.radial-subtitle{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    margin-top: 10vh;
+    margin-left: -10vh;
+    text-align: center;
+}
+
