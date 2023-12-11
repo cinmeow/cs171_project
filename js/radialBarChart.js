@@ -6,7 +6,8 @@ class RadialBarChart{
 
         this.selectedCountry = 'France'; // Default selected country
         this.selectedRegion = 'Europe'; // Default selected region
-        console.log("radialdata", data)
+        console.log("radialdata", data);
+        this.counter = 0;
 
         this.initVis();
     }
@@ -143,6 +144,53 @@ class RadialBarChart{
             .text(d => d.year)
             .style("font-size", "10px");
 
+        if (vis.counter === 0){
+            vis.svg.append("text")
+                .attr("class", "radialchart-title")
+                .attr("x",  -20)  // Adjust the position based on your layout
+                .attr("y", 0 - (vis.margin.top*13+ vis.chartRadius ))  // Position above the chart
+                .attr("text-anchor", "middle")
+                .style("font-size", "23px")
+                .style("font-weight", "bold")
+                .style("fill", " #A0071B")
+                .text(`Country:`);
+
+
+            vis.svg.append("text")
+                .attr("class", "radialchart-title")
+                .attr("x", -20)  // Adjust the position based on your layout
+                .attr("y", 0 - (vis.margin.top*7+ vis.chartRadius ))  // Position above the chart
+                .attr("text-anchor", "middle")
+                .style("font-size", "23px")
+                .style("font-weight", "bold")
+                .style("fill", " #A0071B")
+                .text(`Regions`);
+
+            vis.counter = 1;
+
+        } else {
+            vis.svg.append("text")
+                .attr("class", "radialchart-title")
+                .attr("x",  -20)  // Adjust the position based on your layout
+                .attr("y", 0 - (vis.margin.top*13+ vis.chartRadius ))  // Position above the chart
+                .attr("text-anchor", "middle")
+                .style("font-size", "23px")
+                .style("font-weight", "bold")
+                .style("fill", " #A0071B")
+                .text(`${vis.selectedCountry}:`);
+
+
+            vis.svg.append("text")
+                .attr("class", "radialchart-title")
+                .attr("x", -20)  // Adjust the position based on your layout
+                .attr("y", 0 - (vis.margin.top*7+ vis.chartRadius ))  // Position above the chart
+                .attr("text-anchor", "middle")
+                .style("font-size", "23px")
+                .style("font-weight", "bold")
+                .style("fill", " #A0071B")
+                .text(vis.selectedRegion);
+        }
+
         vis.svg.append("text")
             .attr("class", "radialchart-title")
             .attr("x", -20)  // Adjust the position based on your layout
@@ -151,42 +199,6 @@ class RadialBarChart{
             .style("font-size", "20px")
             .style("color", "#332D2C")
             .text(`Number of Arrivals Over the Years From`);
-
-
-        vis.svg.append("text")
-            .attr("class", "radialchart-title")
-            .attr("x",  -20)  // Adjust the position based on your layout
-            .attr("y", 0 - (vis.margin.top*13+ vis.chartRadius ))  // Position above the chart
-            .attr("text-anchor", "middle")
-            .style("font-size", "23px")
-            .style("font-weight", "bold")
-            .style("fill", " #A0071B")
-            .text(`${vis.selectedCountry}:`);
-
-
-        vis.svg.append("text")
-            .attr("class", "radialchart-title")
-            .attr("x", -20)  // Adjust the position based on your layout
-            .attr("y", 0 - (vis.margin.top*7+ vis.chartRadius ))  // Position above the chart
-            .attr("text-anchor", "middle")
-            .style("font-size", "23px")
-            .style("font-weight", "bold")
-            .style("fill", " #A0071B")
-            .text(vis.selectedRegion);
-
-
-        // vis.svg.append("text")
-        //     .attr("class", "radialchart-title")
-        //     .attr("x", -80)  // Adjust the position based on your layout
-        //     .attr("y", 0 - (vis.margin.top*6+ vis.chartRadius ))  // Position above the chart
-        //     .attr("text-anchor", "middle")
-        //     .style("font-size", "20px")
-        //     .style("color", "#332D2C")
-        //     .text(`Over Time`);
-
-
-
-
 
 
 
