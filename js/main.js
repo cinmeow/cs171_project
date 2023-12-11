@@ -198,27 +198,50 @@ function countryColorAssignment(michelin_data){
     }
 }
 
+// function populateDropdown(selectedCountries) {
+//     let dropdown = d3.select("#country-dropdown");
+//
+//     // Clear existing options
+//     dropdown.selectAll("option").remove();
+//
+//     // Add a default option (optional)
+//     dropdown.append("option")
+//         .text("Select a country")
+//         .attr("value", "");
+//
+//
+//
+//     // Append new options for each country
+//     selectedCountries.forEach(country => {
+//         dropdown.append("option")
+//             .text(country)
+//             .attr("value", country);
+//     });
+//
+//     // Event listener for dropdown change
+//     dropdown.on("change", function() {
+//         let selectedCountry = d3.select(this).property("value");
+//         if (selectedCountry) {
+//             treemapVis.update(selectedCountry);
+//         }
+//     });
+// }
+
 function populateDropdown(selectedCountries) {
     let dropdown = d3.select("#country-dropdown");
 
-    // Clear existing options
     dropdown.selectAll("option").remove();
 
-    // Add a default option (optional)
     dropdown.append("option")
         .text("Select a country")
         .attr("value", "");
 
-
-
-    // Append new options for each country
     selectedCountries.forEach(country => {
         dropdown.append("option")
             .text(country)
             .attr("value", country);
     });
 
-    // Event listener for dropdown change
     dropdown.on("change", function() {
         let selectedCountry = d3.select(this).property("value");
         if (selectedCountry) {
