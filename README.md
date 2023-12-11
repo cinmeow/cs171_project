@@ -23,7 +23,9 @@ https://cinmeow.github.io/cs171_project/
 ## Data
 * _Travel_data2.csv_ and _arrivalByRegions2.csv_ : https://www.unwto.org/tourism-statistics/key-tourism-statistics
 * _michelin2.csv_ : https://www.kaggle.com/datasets/ngshiheng/michelin-guide-restaurants-2021
-* _tourism_worldbank2.csv_ : https://data.worldbank.org/indicator/ST.INT.ARVL
+* _tourism_worldbank2.csv_ : https://data.worldbank.org/indicator/ST.INT.ARVL, https://data.worldbank.org/indicator/ST.INT.RCPT.CD,
+https://data.worldbank.org/indicator/ST.INT.XPND.CD, https://data.worldbank.org/indicator/ST.INT.DPRT
+
 
 ## Files/Folders
 1. _css_ : stylesheet
