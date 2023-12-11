@@ -14,3 +14,19 @@ https://cinmeow.github.io/cs171_project/
 8. Bubbles show the individual restaurants in the differetn award categories. Select the cuisine on the left and hover over the dots to look at restaurant description. Size of bubbles represents price, and color is specific to country.
 9. Call to action....
 10. Team page
+
+## Packages Used: 
+1. fullpage.js
+2. Bootstrap
+3. Google Font
+
+## Data
+* _Travel_data2.csv_ and _arrivalByRegions2.csv_ : https://www.unwto.org/tourism-statistics/key-tourism-statistics
+* _michelin2.csv_ : https://www.kaggle.com/datasets/ngshiheng/michelin-guide-restaurants-2021
+* _tourism_worldbank2.csv_ : https://data.worldbank.org/indicator/ST.INT.ARVL
+
+## Files
+1. _css_ : stylesheet
+2. _img_ : where we store the icons used and other images used in website
+3. _js_ : where all of the javascript code is
+4. _index.html_ : the structure of the website
