@@ -52,7 +52,8 @@
                 <h3 class="scrollText" id="intro3">● How might tourism impact the popularity of my restaurant? </h3>
                 <h3 class="scrollText" id="intro4">● Where should I open my restaurant? </h3>
                 <h3 class="scrollText" id="intro5">● What cuisine or food should I serve?</h3>
-                <h2 class="scrollText" id="intro6">Let's explore some <span class="look2">data</span> to help you answer these concerns! <span class="lowkey">(Scroll to learn more)</span></h2>
+                <h2 class="scrollText" id="intro6">Let's explore some <span class="look2">data</span> to help you answer these concerns!</h2>
+                <h2 class="scrollText lowkey">Scroll to learn more</h2>
 
                 <script>
                     document.addEventListener("DOMContentLoaded", function() {
@@ -277,20 +278,18 @@
                     </div>
                     <div class="row justify-content-center">
                         <p id="cuisineExplained">
-                            Select a cuisine below to learn more! Hover over bubbles to learn more about <span class="look4">MICHELIN
+                            Explore different cuisines and hit confirm once you've made a decision! Hover over bubbles to learn more about <span class="look4">MICHELIN
                             restaurants</span> at different MICHELIN award ratings.
                         </p>
-                    </div>
-                    <div class="row">
-                        <select id='bubbleSelector' class="form-control" style="width: 90%"></select>
-                    </div>
-                    <div class="row" id="bubbleLegend"></div>
-                    <div class="row">
-                        <div id="boxtitle"> MICHELIN Restaurants </div>
                         <div id="michelinreminder">
-                            <p>The Michelin Guide has five different culinary distinction awards. Hover over bubbles in a category to review what each award means.</p>
+                            <p>The Michelin Guide has five different culinary distinction awards.</p>
                         </div>
                     </div>
+                    <div class="row">
+                        <select id='bubbleSelector' class="form-select" style="width: 90%"></select>
+                    </div>
+                    <button id="confirm-cuisine" onclick="confirmCuisine()">Confirm Cuisine Selection</button>
+                    <div class="row" id="bubbleLegend"></div>
                 </div>
                 <div class="col-8" id="michelin_bubble"></div>
             </div>
@@ -300,6 +299,14 @@
     <div class="section" data-anchor="call2action">
         <!-- TOURISM VIZ 1: TREE MAP -->
         <div class="container-fluid vh-100" id="action">
+            <div class="row">
+                <h1 class="c2a_title"> Congrats, your restaurant is MICHELIN Bound!</h1>
+            </div>
+            <div class="row">
+                <div class="col-3" id="finalLoc"> col 1</div>
+                <div class="col-6" id="finalRest"> col 2</div>
+                <div class="col-3" id="finalCuis"> col 3</div>
+            </div>
 
         </div>
     </div>
@@ -361,5 +368,6 @@
 <script src="js/main.js"></script>
 <script src="js/french-restaurant.js"></script>
 <script src="js/estonian-restaurant.js"></script>
+<script src="js/action.js"></script>
 </body>
 </html>
