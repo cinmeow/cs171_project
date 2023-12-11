@@ -530,13 +530,17 @@ h4 {
     padding-left: 1vw;
 }
 
-#boxtitle {
-        padding-left: 1vw;
-        padding-top: 30px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-        font-size: 22px;
-    }
+/*#boxtitle {*/
+/*        padding-left: 1vw;*/
+/*        padding-top: 30px;*/
+/*        font-family: 'Montserrat', sans-serif;*/
+/*        font-weight: bold;*/
+/*        font-size: 22px;*/
+/*    }*/
+
+#bubbleLegend {
+    padding-top:50px;
+}
 
 
 .radialtooltip {
@@ -675,4 +679,25 @@ h4 {
     background-color: #6E1A25; /* Darker shade of green on hover */
 }
 
+#confirm-cuisine{
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 8px;
+    background-color: #f5f1e6;
+    border-width: 2px;
+    border-color: #613E43;
+    color:#613E43;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 0.5vw;
+}
+
+.c2a_title{
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #A0071B;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
 
