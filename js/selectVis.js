@@ -6,15 +6,16 @@ class SelectVis {
         this.selectedCountries = new Set();
 
         this.tooltip = d3.select("body").append("div")
-            .attr("class", "tooltip")
+            .attr("class", "selecttooltip")
             .style("opacity", 0)
             .style("position", "absolute")
             .style("pointer-events", "none")
-            .style("background-color", "#f5f1e6")
+            .style("background-color", "rgba(245, 241, 230, 0.8)")
             .style("border", "solid 1px #a0071b")
             .style("padding", "10px")
-            .style("border-radius", "5px")
-            .style("text-align", "left");
+            .style("border-radius", "8px")
+            .style("text-align", "left")
+            .style("font-family", "'Montserrat', sans-serif");
 
         // choose how many select want to select
         this.num_selection = 5

@@ -27,7 +27,7 @@ class RadialBarChart{
             .append("g")
             .attr("transform", "translate(" + (vis.chartRadius + vis.margin.left + 80) + "," + (vis.chartRadius + vis.margin.top + 150) + ")");
 
-        vis.color = d3.scaleOrdinal(d3.schemeSet1);
+        vis.color = d3.scaleOrdinal(d3.schemeTableau10);
 
         // Tooltip for Radial Bar Chart
         vis.tooltip = d3.select('body').append('div')
