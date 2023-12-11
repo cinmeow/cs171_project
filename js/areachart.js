@@ -104,6 +104,7 @@ class AreaChart {
                 ),
                 ([key, value]) => ({ Year: key, numRooms: value })
             );
+            // calculate occupancy data (originally percentage)
             vis.occupancyData = Array.from(
                 d3.rollup(
                     vis.displayData,
@@ -112,6 +113,7 @@ class AreaChart {
                 ),
                 ([key, value]) => ({ Year: key, numOccupied: value })
             );
+            // create new data array for accomodations
             vis.newData = vis.numRoomData.map((d1) => {
                 let matchingItem = vis.occupancyData.find((d2) => d2.Year === d1.Year);
                 return {
@@ -196,11 +198,13 @@ class AreaChart {
 
     }
 
+    // update title for different graphs
     updateTitle(titleText) {
         let vis = this;
         vis.svg.selectAll(".areachart-title").text(titleText);
     }
 
+    // update legend for different graphs
     updateLegend(showLegend) {
         let vis = this;
         if (showLegend) {

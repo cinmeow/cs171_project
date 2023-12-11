@@ -128,6 +128,7 @@ class SelectVis {
         // Submit button behavior
         d3.select("#submit-button").on("click", () => {
             vis.submitSelection();
+            // add overlay prompting scroll
             vis.newBox();
         });
         d3.select("#clear-button").on("click", () => {
@@ -204,6 +205,10 @@ class SelectVis {
 
         // Clear the selected countries
         spiderSelect.clear();
+        // prompt spider chart to clear
+        if(spiderSelect.size === 0){
+            spiderChart.emptyAll(1)
+        }
         // Reset the appearance of all circles and remove overlays
         vis.circles.attr("stroke", "black")
             .attr("stroke-width", 1)
@@ -214,6 +219,7 @@ class SelectVis {
     newBox() {
         let vis = this;
 
+        // create box over flags
         vis.boxforWords = vis.svg.append("rect")
             .attr("class", "scroll-text")
             .attr("x", 15)
