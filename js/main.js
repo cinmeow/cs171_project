@@ -23,13 +23,13 @@ new fullpage('#fullpage', {
     parallax: true,
 
     // dot nav on right
-    anchors: ['landing', 'backgroundInfo', 'intro', 'michelin_guide', 'global', 'select_countries', 'treemap', 'bubble', 'call2action', 'credits'],
+    anchors: ['landing', 'backgroundInfo', 'intro', 'michelin_guide', 'global', 'presel', 'select_countries', 'treemap', 'bubble', 'call2action', 'credits'],
 
     // Navigation
     menu: '#menu',
     navigation: true,
     navigationPosition: 'right',
-    navigationTooltips: ['Welcome', 'Background', 'Intro', 'Michelin Guide', 'Global', 'Select', 'TreeMap', 'Cuisine', 'Action', 'Credits'],
+    navigationTooltips: ['Welcome', 'Background', 'Intro', 'Michelin Guide', 'Global', 'Pre', 'Select', 'TreeMap', 'Cuisine', 'Action', 'Credits'],
     showActiveTooltip: false,
     slidesNavigation: false,
     slidesNavPosition: 'bottom',
@@ -37,7 +37,8 @@ new fullpage('#fullpage', {
     // other settings
     touchSensitivity: 205,
     scrollOverflow: true,
-    scrollingSpeed: 1000,
+    scrollingSpeed: 1500,
+    easing: 'easeInOutCubic'
 
 });
 

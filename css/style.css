@@ -245,7 +245,7 @@ body{
 }
 
 #cuisinetitle {
-    padding-top: 10px;
+    margin-top: 2vh;
     margin-left: 1vw;
     display: inline-flex;
     font-size: 25px;
@@ -522,16 +522,16 @@ h4 {
 
 #michelinreminder {
     font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
+    font-size: 15px;
     padding-left: 1vw;
 }
 
 #boxtitle {
         padding-left: 1vw;
-        padding-top: 10px;
+        padding-top: 30px;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 22px;
     }
 
 
@@ -570,6 +570,23 @@ h4 {
     font-size: 50px;
     padding-bottom: 50px;
     font-weight: bold;
+}
+
+.preSel{
+    align-content: center;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 18%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 50px;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif
+}
+
+.few {
+    font-style: italic;
+    color: #d3d3d3;
 }
 
 #intro2{
@@ -629,7 +646,7 @@ h4 {
 }
 
 #submit-button:hover {
-    background-color: #8F2840; /* Darker shade of green on hover */
+    background-color: #6E1A25; /* Darker shade of green on hover */
 }
 #clear-button {
     font-weight: bold;
@@ -651,7 +668,7 @@ h4 {
 
 #cleaar-button:hover {
 
-    background-color: #8F2840; /* Darker shade of green on hover */
+    background-color: #6E1A25; /* Darker shade of green on hover */
 }
 
 

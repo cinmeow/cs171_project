@@ -103,7 +103,7 @@ class Treemap {
         nodes.on('click', (event, d) => {
             vis.radialBarChart.update(this.country, d.data.id);
         });
-        // ... res
+
 
         // Append title for tooltip
         nodesEnter.append("title")
@@ -138,9 +138,9 @@ class Treemap {
         nodesText.enter().append("text")
             .attr("class", "node-text")
             .merge(nodesText) // Merge with update selection
-            .attr("x", d => d.x0 + 5) // Adjust as necessary
-            .attr("y", d => d.y0 + 40) // Adjust as necessary
-            .text(d => d.data.value)
+            .attr("x", d => d.x0 + 5)
+            .attr("y", d => d.y0 + 40)
+            .text(d =>  Math.round(d.data.value))
             .attr("font-size", d => Math.min(10, 0.08 * Math.sqrt((d.x1 - d.x0) * (d.y1 - d.y0))) + "px")
             .attr("fill", "white");
 

@@ -33,6 +33,5 @@ https://cinmeow.github.io/cs171_project/
 
 ## Images
 * _Est-rest.png_ and _French-rest.png_ : https://www.vecteezy.com/vector-art/13612676-french-cuisine-restaurant-with-various-traditional-or-national-food-dish-of-france-on-flat-style-cartoon-hand-drawn-templates-illustration
-* bib.png : https://guide.michelin.com/en
-* non_select.png :
+* _bib.png_ : https://guide.michelin.com/en
 * _walking_estonia.png_ and _walking_france.png_: https://pngtree.com/free-png-vectors/walking
