@@ -204,6 +204,9 @@ class SelectVis {
 
         // Clear the selected countries
         spiderSelect.clear();
+        if(spiderSelect.size === 0){
+            spiderChart.emptyAll(1)
+        }
         // Reset the appearance of all circles and remove overlays
         vis.circles.attr("stroke", "black")
             .attr("stroke-width", 1)

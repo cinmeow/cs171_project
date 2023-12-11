@@ -395,6 +395,7 @@ class SpiderVis {
     // clear all area paths upon clear button pressed
     emptyAll(selection){
         let vis = this;
+
         if(selection === 1){
             vis.area.remove().exit()
             vis.svg.selectAll(".legend-item").remove();
