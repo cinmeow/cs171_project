@@ -308,7 +308,17 @@ class SpiderVis {
 
                         // Show tooltip
                         vis.tooltip
-                            .style("opacity", 1);
+                            .style("opacity", 1)
+                            .style("position", "absolute")
+                            .style("pointer-events", "none")
+                            .style("background-color", "#f5f1e6")
+                            .style("border", "solid 1px #a0071b")
+                            .style("padding", "10px")
+                            .style("border-radius", "5px")
+                            .style("text-align", "left")
+                            .style("font-family", "'Montserrat', sans-serif")
+                            .style("font-weight", "normal");
+                        
                         vis.tooltip.html(`<strong>${d.Country}<br/></strong>`)
                             .style("left", (event.pageX + 5) + "px")
                             .style("top", (event.pageY - 28) + "px");
