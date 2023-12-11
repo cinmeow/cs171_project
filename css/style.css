@@ -120,7 +120,7 @@ body{
     align-items: center;
     padding-top: 50px;
     margin-left: 0;
-    padding-left: 80px;
+    padding-left: 7vw;
 }
 
 #estonia-restaurant {
@@ -129,7 +129,7 @@ body{
     align-content: center;
     align-items: center ;
     padding-top: 50px;
-    padding-right: 80px;
+    padding-left: 7vw;
 }
 
 .destination-infoFrance {
@@ -235,7 +235,7 @@ body{
 
 .intro-title{
     font-family: 'Montserrat', sans-serif;
-    padding-top: 25vh;
+    padding-top: 15vh;
     text-align: center;
 }
 
@@ -821,9 +821,91 @@ h4 {
     font-weight: bold;
     color: #A0071B;
     text-align: center;
-    padding-top: 3%;
-    padding-bottom: 2%;
+    padding-top: 5%;
+    padding-bottom: 3%;
 }
+
+#finalRest{
+    align-items: center;
+}
+
+#finalRestImage{
+    width: 100%;
+}
+
+#finalLoc, #finalCuis{
+    align-content: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 10%;
+}
+
+#locDes {
+    font-size: 27px;
+    font-weight: bold;
+    color: #332B2C;
+    margin-left: 5%;
+    padding-right: 2%;
+}
+
+#cuisDes {
+    font-size: 27px;
+    font-weight: bold;
+    color: #332B2C;
+    padding-left: 2%;
+    margin-right: 8%;
+}
+
+
+.loclist, .cuisineF {
+    font-size: 24px;
+    text-align: center;
+    padding-left: 10%;
+    align-content: center;
+    color: #332B2C;
+}
+
+#bibapprove{
+    padding-top: 5%;
+    width: 110%;
+}
+
+.sources {
+    align-content: center;
+    margin-left: 10%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-bottom: 2%
+}
+
+.sources2 {
+    align-content: center;
+    margin-left: 10%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-bottom: 2%
+}
+
+.ack {
+    align-content: center;
+    margin-left: 10%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.sourcetitle{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.name {
+    padding-top: 20px;
+    /*padding-bottom: 20px;*/
+}
+
+
+
+
 
 /*styling for radial bar chart*/
 #radialVis {

@@ -18,8 +18,8 @@ class BubbleChart {
     initVis() {
         let vis = this;
 
-        console.log("bubble")
-        console.log(vis.data);
+        // console.log("bubble")
+        // console.log(vis.data);
 
         // dynamic svg canvas
         vis.margin = {top: 80, right: 40, bottom: 20, left: 40};
@@ -213,8 +213,6 @@ class BubbleChart {
 
         // top 10 cuisine
         let top10 = cuisinegroup.slice(0, 10)
-        console.log("new top 10")
-        console.log(top10)
 
         // remove previous
         d3.select('#bubbleSelector').selectAll("option").remove();
@@ -236,8 +234,6 @@ class BubbleChart {
             vis.cuisine = d3.select(this).property("value")
             vis.displayData = vis.countryData
 
-            console.log("CHANGED")
-            console.log(vis.cuisine)
             vis.wrangleData();
         })
 
@@ -249,16 +245,11 @@ class BubbleChart {
     wrangleData() {
         let vis = this;
 
-        console.log("before filter")
-        console.log(vis.displayData)
-
         // filter for cuisine
         vis.displayData = vis.displayData.filter(function(d) {
             return d.Cuisine === vis.cuisine;
         })
 
-        console.log('final display data')
-        console.log(vis.displayData)
 
         vis.updateVis();
     }
@@ -547,8 +538,6 @@ class BubbleChart {
         let xcoord = vis.groupXCoord.find((d) => d.category === rating).meanValue;
         let ycoord = vis.groupYCoord.find((d) => d.category === rating).maxValue;
 
-        console.log("MOVE TITLE")
-        console.log(ycoord)
 
         vis.svg.append("text")
                 .attr("x", xcoord)

@@ -96,7 +96,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
+                <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel" data-wrap="false" data-interval="false">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <p id = "description1">
@@ -106,10 +106,8 @@
                         <div class="carousel-item">
                             <p id = "description2">
                                 <strong>Take a look at the two 1-star Michelin restaurants above!</strong>
-                                <br>
-                                Astrance, located in Paris, France, boasts over 600 ratings on TripAdvisor.com and is located in France, which had over 220 million visitors in 2019. <br>
-                                <n>
-                                On the other hand, NOA Chef's Hall, located in Tallinn, Estonia, has just over 50 ratings, whereas Estonia had 6.1 million visitors in 2019,
+                                <br>● Astrance, located in Paris, France, boasts over 600 ratings on TripAdvisor.com and is located in France, which had over 220 million visitors in 2019.
+                                <br>● On the other hand, NOA Chef's Hall, located in Tallinn, Estonia, has just over 50 ratings, whereas Estonia had 6.1 million visitors in 2019,
                                 which is only a small fraction of France's visitor count.
                             </p>
                         </div>
@@ -321,15 +319,26 @@
     </div>
 
     <div class="section" data-anchor="call2action">
-        <!-- TOURISM VIZ 1: TREE MAP -->
+        <!-- Call 2 Action -->
         <div class="container-fluid vh-100" id="action">
             <div class="row">
                 <h1 class="c2a_title"> Congrats, your restaurant is MICHELIN Bound!</h1>
             </div>
             <div class="row">
-                <div class="col-3" id="finalLoc"> col 1</div>
-                <div class="col-6" id="finalRest"> col 2</div>
-                <div class="col-3" id="finalCuis"> col 3</div>
+                <div class="col-3" id="finalLoc">
+                    <div id="locDes"> Your restaurant will be in one of the following locations </div>
+                </div>
+                <div class="col-6" id="finalRest">
+                    <img src="img/final_rest.png" id="finalRestImage">
+                </div>
+                <div class="col-3" id="finalCuis">
+                    <div class="row" id="finalCuisRow">
+                        <div id="cuisDes"> Your restaurant will serve </div>
+                    </div>
+                    <div class="row">
+                        <img src="img/bibApprove.png" id="bibapprove">
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -340,28 +349,54 @@
         <!--CREDITS AND ABOUT THE TEAM -->
         <div class="container-fluid vh-100 intro-container" id="team_outro">
             <div class="row justify-content-center intro-title" id="team-intro">
-                <h1> About the Team </h1>
+                <h1 style="font-weight: bold"> About the Team </h1>
                 <h2> Data Visualization @ Harvard University </h2>
             </div>
             <div class="row justify-content-center info" id="team-info">
                 <div class="col" id="cassie">
                     <img src="img/michelin/bib_gourmand.png" style="height:50px"/>
-                    <h3> Cassie Dai </h3>
+                    <h3 class="name"> Cassie Dai </h3>
                     <h4> MS Data Science </h4>
                 </div>
                 <div class="col" id="cindy">
                     <img src="img/michelin/bib_gourmand.png" style="height:50px"/>
-                    <h3> Cindy Lin </h3>
+                    <h3 class="name"> Cindy Lin </h3>
                     <h4> MS Health Data Science </h4>
                 </div>
                 <div class="col" id="erica">
                     <img src="img/michelin/bib_gourmand.png" style="height:50px"/>
-                    <h3> Erica Ma </h3>
+                    <h3 class="name"> Erica Ma </h3>
                     <h4> MS Biostatistics </h4>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="section" data-anchor="source">
+        <div class="container" style="height: 50vh">
             <div class="row justify-content-center">
-                CREDITS: data source, knowledge source (trip advisor, wikipedia), shoutout to Jakob
+                <div class="col">
+                    <div class="row sources">
+                        <h4 class="sourcetitle">Data Sources </h4>
+                        <div> ● Michelin Guide Restaurants (<a href="https://www.kaggle.com/datasets/ngshiheng/michelin-guide-restaurants-2021" target="_blank">Kaggle</a>) </div>
+                        <div> ● 145 Key Tourism Statistics (<a href="https://www.unwto.org/tourism-statistics/key-tourism-statistics" target="_blank">UNWTO</a>) </div>
+                        <div> ● Yearbook of Tourism Statistics (<a href="https://data.worldbank.org/indicator/ST.INT.XPND.CD" target="_blank">The World Bank</a>) </div>
+                    </div>
+                    <div class="row sources2">
+                        <h4 class="sourcetitle">Other Sources </h4>
+                        <div> ● Astrance Ratings (<a href="https://www.tripadvisor.com/Restaurant_Review-g187147-d718133-Reviews-Astrance-Paris_Ile_de_France.html" target="_blank">Trip Advisor</a>) </div>
+                        <div> ● NOA Chef's Hall (<a href="https://www.tripadvisor.com/Restaurant_Review-g274958-d13936637-Reviews-NOA_Chef_s_Hall-Tallinn_Harju_County.html" target="_blank">Trip Advisor</a>) </div>
+                        <div> ● MICHELIN Guide Details (<a href="https://guide.michelin.com/us/en" target="_blank">MICHELIN Guide</a>) </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row ack">
+                        <h4 class="sourcetitle">Acknowledgements </h4>
+                        <div> ● Thank you to Professor Hanspeter Pfister & Johanna Beyer </div>
+                        <div> ● Thank you to the entire CS171 Staff </div>
+                        <div> ● Special Thanks to our Teaching Fellow, Jakob Troidl </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

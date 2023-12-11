@@ -23,40 +23,46 @@ class ActionPage{
     initVis() {
         let vis = this;
 
-        // dynamic svg canvas
-        vis.margin = {top: 80, right: 40, bottom: 20, left: 40};
-        vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
-        vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
+        // svg canvas
+        vis.margin = {top: 40, right: 20, bottom: 20, left: 20};
+
 
         // initialize svg drawing areas
-        vis.locPanel = d3.select("#finalLoc")
-            .append("svg")
-            .attr("width", vis.width + vis.margin.left + vis.margin.right)
-            .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
-            .append('g')
-            .attr('transform', `translate (${vis.margin.right + vis.margin.left}, ${vis.margin.top})`);
 
-        vis.imagePanel = d3.select("#finalRest")
+        vis.locwidth = document.getElementById('finalLoc').getBoundingClientRect().width
+        vis.locheight = document.getElementById('finalLoc').getBoundingClientRect().height
+        vis.locPanel =  d3.select("#finalLoc")
             .append("svg")
-            .attr("width", vis.width + vis.margin.left + vis.margin.right)
-            .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
-            .append('g')
-            .attr('transform', `translate (${vis.margin.right + vis.margin.left}, ${vis.margin.top})`);
+            .attr("width", vis.locwidth)
+            .attr("height", vis.locheight)
 
-        vis.cuisPanel = d3.select("#finalCuis")
+        vis.countries.forEach(function(d, i){
+            vis.locPanel.append("text")
+                .text(d)
+                .attr("x", vis.locwidth/2)
+                .attr("y", 32 * (i+1))
+                .attr("fill", 'black')
+                .attr("text-anchor", "middle")
+                .attr("class", "loclist")
+        })
+
+
+        vis.cuiswidth = document.getElementById('finalCuisRow').getBoundingClientRect().width
+        vis.cuisheight = document.getElementById('finalCuisRow').getBoundingClientRect().height
+        vis.cuisPanel = d3.select("#finalCuisRow")
             .append("svg")
-            .attr("width", vis.width + vis.margin.left + vis.margin.right)
-            .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
-            .append('g')
-            .attr('transform', `translate (${vis.margin.right + vis.margin.left}, ${vis.margin.top})`);
+            .attr("width", vis.cuiswidth)
+            .attr("height", vis.cuisheight);
 
-        // append image of restaurant
-        vis.imagePanel.append("image")
-            .attr("xlink:href", "img/French-rest.png")
-            .attr("width", 600)
-            .attr('height', 800)
-            .attr("x", 10)
-            .attr("y", 10);
+        vis.cuisPanel.append("text")
+            .text(vis.cuisine)
+            .attr("x", vis.cuiswidth/2)
+            .attr("y", 32)
+            .attr("fill", 'black')
+            .attr("text-anchor", "middle")
+            .attr("class", "cuisineF")
+
+
 
 
     }

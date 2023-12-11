@@ -23,13 +23,13 @@ new fullpage('#fullpage', {
     parallax: true,
 
     // dot nav on right
-    anchors: ['landing', 'backgroundInfo', 'intro', 'michelin_guide', 'global', 'presel', 'select_countries', 'treemap', 'bubble', 'call2action', 'credits'],
+    anchors: ['landing', 'backgroundInfo', 'intro', 'michelin_guide', 'global', 'presel', 'select_countries', 'treemap', 'bubble', 'call2action', 'credits', 'source'],
 
     // Navigation
     menu: '#menu',
     navigation: true,
     navigationPosition: 'right',
-    navigationTooltips: ['Welcome', 'Background', 'Intro', 'Michelin Guide', 'Global', 'Pre', 'Select', 'TreeMap', 'Cuisine', 'Action', 'Credits'],
+    navigationTooltips: ['Welcome', 'Background', 'Intro', 'Michelin Guide', 'Global', 'Pre', 'Select', 'TreeMap', 'Cuisine', 'Action', 'Credits', 'Sources'],
     showActiveTooltip: false,
     slidesNavigation: false,
     slidesNavPosition: 'bottom',
