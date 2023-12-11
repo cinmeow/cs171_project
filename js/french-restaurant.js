@@ -15,7 +15,7 @@ svg.append("image")
      .attr("xlink:href", "img/French-rest.png")
      .attr("width", restaurantWidth)
      .attr("height", restaurantHeight)
-     .attr("x", 50)
+     .attr("x", 0)
      .attr("y", 0);
 
  // Function to add a person to the SVG

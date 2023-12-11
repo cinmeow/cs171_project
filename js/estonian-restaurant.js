@@ -1,7 +1,7 @@
 const numPeopleEstonia = 50;
 const restaurantWidthEstonia = 500
 const restaurantHeightEstonia = 400;
-const doorPositionEstonia = { x: restaurantWidthEstonia/3, y: restaurantHeightEstonia/2.25 };
+const doorPositionEstonia = { x: restaurantWidthEstonia/4, y: restaurantHeightEstonia/2.25 };
 console.log(restaurantWidthEstonia)
 let counterEstonia = 0
 
