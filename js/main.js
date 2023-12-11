@@ -175,11 +175,7 @@ function handleSelectedCountries(selectedCountries) {
 
 // Connect selectVis to spider chart
 function addTo_spiderSelect(selectedCountry){
-    // if clear button pressed, then selectedCouontry == empty
-    // if(selectedCountry === "empty"){
-    //     // call new function
-    //     spiderChart.emptyAll(1);
-    // }else ;
+    // if country already in set, then remove, if country not in set then add
     if(spiderSelect.has(selectedCountry)){
         spiderSelect.delete(selectedCountry);
     }else{

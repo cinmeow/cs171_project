@@ -204,6 +204,7 @@ class SelectVis {
 
         // Clear the selected countries
         spiderSelect.clear();
+        // prompt spider chart to clear
         if(spiderSelect.size === 0){
             spiderChart.emptyAll(1)
         }
