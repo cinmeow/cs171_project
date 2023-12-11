@@ -601,4 +601,49 @@ h4 {
     font-size: 12px;
 }
 
+/*select flags styling*/
+#submit-button {
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F5A6B9; /* Green background */
+    color: white; /* White text */
+    padding: 15px 32px; /* Top and bottom padding of 15px, left and right padding of 32px */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline from text */
+    display: inline-block; /* Align the button correctly */
+    font-size: 16px; /* Increase font size */
+    margin: 10px 13vh; /* Margin around the button */
+    cursor: pointer; /* Change mouse cursor on hover */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add a shadow for depth */
+    transition-duration: 0.4s; /* Smooth transition for hover effect */
+}
+
+#submit-button:hover {
+    background-color: #8F2840; /* Darker shade of green on hover */
+}
+#clear-button {
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F5A6B9;
+    color: white; /* White text */
+    padding: 15px 32px; /* Top and bottom padding of 15px, left and right padding of 32px */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline from text */
+    display: inline-block; /* Align the button correctly */
+    font-size: 16px; /* Increase font size */
+    margin: 20px 3px; /* Margin around the button */
+    cursor: pointer; /* Change mouse cursor on hover */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add a shadow for depth */
+    transition-duration: 0.4s; /* Smooth transition for hover effect */
+}
+
+#cleaar-button:hover {
+
+    background-color: #8F2840; /* Darker shade of green on hover */
+}
+
 

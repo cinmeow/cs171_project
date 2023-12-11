@@ -5,16 +5,16 @@ class SelectVis {
         this.countries = countries;
         this.selectedCountries = new Set();
 
-        // this.tooltip = d3.select("body").append("div")
-        //     .attr("class", "tooltip")
-        //     .style("opacity", 0)
-        //     .style("position", "absolute")
-        //     .style("pointer-events", "none")
-        //     .style("background-color", "#f5f1e6")
-        //     .style("border", "solid 1px #a0071b")
-        //     .style("padding", "10px")
-        //     .style("border-radius", "5px")
-        //     .style("text-align", "left");
+        this.tooltip = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0)
+            .style("position", "absolute")
+            .style("pointer-events", "none")
+            .style("background-color", "#f5f1e6")
+            .style("border", "solid 1px #a0071b")
+            .style("padding", "10px")
+            .style("border-radius", "5px")
+            .style("text-align", "left");
 
         // choose how many select want to select
         this.num_selection = 5
@@ -138,48 +138,77 @@ class SelectVis {
 
     }
 
+    // submitSelection() {
+    //     let vis = this;
+    //
+    //     // set vis.selectedCountries to global variable spiderSelect
+    //     vis.selectedCountries = spiderSelect
+    //
+    //
+    //     if (vis.selectedCountries.size <= vis.num_selection) {
+    //         vis.circles.each(function(d) {
+    //             let flag = d3.select(this);
+    //             if (vis.selectedCountries.has(d.name)) {
+    //
+    //                 // If selected, keep the original flag
+    //                 flag.transition().duration(500)
+    //                     .attr("fill", d => `url(#flag-${d.name.replace(/\s/g, '_')})`)
+    //             } else {
+    //                 // If not selected, set the fill to gray with reduced opacity
+    //                 flag.transition().duration(500)
+    //                     .attr("fill", "url(#non-selected-pattern)");
+    //             }
+    //         });
+    //
+    //         // Handle the selected countries (e.g., trigger an update in another component)
+    //         handleSelectedCountries(Array.from(vis.selectedCountries));
+    //     } else {
+    //         // Optionally, you can provide feedback to the user (e.g., alert or message on the page)
+    //         alert(`Please select up to ${vis.num_selection} countries before submitting.`);
+    //     }
+    // }
     submitSelection() {
         let vis = this;
 
-        // set vis.selectedCountries to global variable spiderSelect
-        vis.selectedCountries = spiderSelect
-
+        // Set vis.selectedCountries to global variable spiderSelect
+        vis.selectedCountries = spiderSelect;
 
         if (vis.selectedCountries.size <= vis.num_selection) {
             vis.circles.each(function(d) {
-                let flag = d3.select(this);
-                if (vis.selectedCountries.has(d.name)) {
-
-                    // If selected, keep the original flag
-                    flag.transition().duration(500)
-                        .attr("fill", d => `url(#flag-${d.name.replace(/\s/g, '_')})`)
-                } else {
-                    // If not selected, set the fill to gray with reduced opacity
-                    flag.transition().duration(500)
-                        .attr("fill", "url(#non-selected-pattern)");
+                let circle = d3.select(this);
+                if (!vis.selectedCountries.has(d.name)) {
+                    // Append an overlay circle
+                    d3.select(circle.node().parentNode)
+                        .append('circle')
+                        .attr('cx', circle.attr('cx'))
+                        .attr('cy', circle.attr('cy'))
+                        .attr('r', circle.attr('r'))
+                        .attr('fill', 'white')
+                        .attr('opacity', 0.86)
+                        .attr('class', 'overlay');
                 }
             });
 
-            // Handle the selected countries (e.g., trigger an update in another component)
+            // Handle the selected countries
             handleSelectedCountries(Array.from(vis.selectedCountries));
         } else {
-            // Optionally, you can provide feedback to the user (e.g., alert or message on the page)
             alert(`Please select up to ${vis.num_selection} countries before submitting.`);
         }
     }
+
+
+
     //
     clearSelection() {
         let vis = this;
 
         // Clear the selected countries
         spiderSelect.clear();
-        if(spiderSelect.size === 0){
-            addTo_spiderSelect("empty")
-        }
-        // Reset the appearance of all circles
-        vis.circles.attr("stroke", "#a0071b")
+        // Reset the appearance of all circles and remove overlays
+        vis.circles.attr("stroke", "black")
             .attr("stroke-width", 1)
-            .attr("fill", d => `url(#flag-${d.name.replace(/\s/g, '_')})`)
+            .attr("fill", d => `url(#flag-${d.name.replace(/\s/g, '_')})`);
+        vis.svg.selectAll('.overlay').remove(); // Remove overlay circles
     }
 
     newBox() {
@@ -201,9 +230,9 @@ class SelectVis {
             .attr("x", vis.width / 2.5)
             .attr("y", vis.height / 1.75)
             .attr("padding", 0)
-            .attr("dy", "-0.5em") // Adjust text position
+            .attr("dy", "-0.1em") // Adjust text position
             .attr("text-anchor", "middle")
-            .style("fill", "#5C5555") // Text color
+            .style("fill", "black") // Text color
             .style("font-size", "40px")
             .style("font-family", "'Montserrat', sans-serif;")
             .text("Scroll down to continue");
