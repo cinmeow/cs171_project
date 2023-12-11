@@ -55,9 +55,6 @@ class BubbleChart {
             .attr('class', "tooltip")
 
 
-
-            //.attr('id', 'bubbleTooltip')
-
         // create custom selector for country subset and trigger filter if selected
         vis.createSelector();
 
@@ -330,9 +327,7 @@ class BubbleChart {
             vis.addTitle();
 
             // revert text
-            vis.michelinInfo.text("The Michelin Guide has five different culinary distinction awards: " +
-                "Bib Gourmand, MICHELIN Green Star, 1 Star MICHELIN, 2 Star MICHELIN and 3 Star MICHELIN. " +
-                "Hover over bubbles in a category to review what each award means.")
+            vis.michelinInfo.text("The Michelin Guide has five different culinary distinction awards. Hover over bubbles in a category to review what each award means.")
 
             return vis.tooltip.style("visibility", "hidden")
             })
@@ -402,25 +397,33 @@ class BubbleChart {
 
         // replaceText
         let replaceText = function(d) {
-            let newText;
+            let newText, highlight;
             switch (d.Award) {
                 case '1 Star MICHELIN':
-                    newText = "1 Star MICHELIN: High-quality cooking, worth a stop";
+                    highlight = "1 Star MICHELIN"
+                    newText = " : High-quality cooking, worth a stop";
                     break;
                 case '2 Stars MICHELIN':
-                    newText = "2 Stars MICHELIN: Excellent cooking, worth a detour";
+                    highlight = "2 Stars MICHELIN"
+                    newText = " : Excellent cooking, worth a detour";
                     break;
                 case '3 Stars MICHELIN':
-                    newText = "3 Stars MICHELIN: Exceptional cuisine, worth a special journey";
+                    highlight = "3 Stars MICHELIN"
+                    newText = " : Exceptional cuisine, worth a special journey";
                     break;
                 case 'Bib Gourmand':
-                    newText = "Bib Gourmand: Exceptionally good food at moderate prices";
+                    highlight = "Bib Gourmand"
+                    newText = " : Exceptionally good food at moderate prices";
                     break;
                 case 'MICHELIN Green Star':
-                    newText = "MICHELIN Green Star: Culinary excellence with outstanding eco-friendly commitments"
+                    highlight = "MICHELIN Green Star"
+                    newText = " : Culinary excellence with outstanding eco-friendly commitments"
             }
 
-            vis.michelinInfo.text(newText);
+            vis.michelinInfo.text("")
+            vis.michelinInfo.append("tspan").text(highlight).attr("class", 'look4');
+            vis.michelinInfo.append("tspan").text(newText);
+
         }
 
     }
