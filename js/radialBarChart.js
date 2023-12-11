@@ -48,6 +48,7 @@ class RadialBarChart{
 
     updateVis() {
         let vis = this;
+        vis.displayData.sort((a, b) => b.year - a.year);
 
         // Clear the existing SVG elements
         vis.svg.selectAll("*").remove();
@@ -61,7 +62,7 @@ class RadialBarChart{
             .range([0, 2 * Math.PI]);
 
         let arcMinRadius = 10;
-        let arcPadding = 10;
+        let arcPadding = 6;
         let numArcs = keys.length;
         let arcWidth = (vis.chartRadius - arcMinRadius - numArcs * arcPadding) / numArcs;
         let numTicks = 10;

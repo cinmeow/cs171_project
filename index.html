@@ -244,8 +244,20 @@
         <!-- TOURISM VIZ 1: TREE MAP -->
         <div class="container-fluid vh-100" id="arrivalRegionVis">
             <div class="row" style="height: 100%">
-                <div class="col-6" id="treemap_container">
-                    <select id="country-dropdown"></select>
+                <div class="col-6" >
+                    <div class="row">
+                        <div class="row globe-subtitle">
+                            <h2> Where travelers are coming from may impact their taste and preferences. Let’s explore the countries of origin of your potential customers.
+                            </h2>
+                        </div>
+                    <select id="country-dropdown" style="width: 30%; margin-top: 3vh; margin-left: 3vh">
+                        <option value="arrivals">Select a country</option>
+
+                    </select>
+                </div>
+                    <div class="row" id="treemap_container" style="height: 100%">
+
+                    </div>
                 </div>
                 <div class="col-6" id="radialVis">
                 </div>

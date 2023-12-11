@@ -206,11 +206,6 @@ function populateDropdown(selectedCountries) {
     // Clear existing options
     dropdown.selectAll("option").remove();
 
-    // Add a default option (optional)
-    dropdown.append("option")
-        .text("Select a country")
-        .attr("value", "");
-
     // Populate with new options
     dropdown.selectAll("option")
         .data(selectedCountries)
