@@ -11,7 +11,7 @@ class AreaChart {
     initVis() {
         let vis = this;
 
-        vis.margin = { top: 40, right: 40, bottom: 70, left: 60 };
+        vis.margin = { top: 40, right: 40, bottom: 80, left: 60 };
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
@@ -40,42 +40,45 @@ class AreaChart {
             .attr("x", (vis.width / 2))
             .attr("y", 0 - (vis.margin.top / 2))
             .attr("text-anchor", "middle")
-            .style("font-size", "16px");
+            .style("font-style", "'Montserrat', sans-serif")
+            .style("font-size", "18px");
 
         // Add legend
         let legend = vis.svg.append("g")
             .attr("class", "legend")
-            .attr("transform", "translate(" + (vis.width - 500) + ",220)");
-
+            // .attr("transform", "translate(" + (vis.width - 500) + ",220)");
+            .attr("transform", "translate(0, 0)")
         // Legend for total beds
         legend.append("rect")
-            .attr("x", 0)
-            .attr("y", 15)
+            .attr("x", 150)
+            .attr("y", 170)
             .attr("width", 18)
             .attr("height", 18)
             .attr("fill", "#3f408c");
 
         legend.append("text")
-            .attr("x", 25)
-            .attr("y", 25)
+            .attr("x", 175)
+            .attr("y", 180)
             .attr("dy", ".35em")
             .style("text-anchor", "start")
-            .text("Total Beds");
+            .style("font-style", "'Montserrat', sans-serif")
+            .text("Total Rooms");
 
         // Legend for occupied beds
         legend.append("rect")
-            .attr("x", 225)
-            .attr("y", 15)
+            .attr("x", 375)
+            .attr("y", 170)
             .attr("width", 18)
             .attr("height", 18)
             .attr("fill", "#bdc9fb");
 
         legend.append("text")
-            .attr("x", 250)
-            .attr("y", 25)
+            .attr("x", 400)
+            .attr("y", 180)
             .attr("dy", ".35em")
             .style("text-anchor", "start")
-            .text("Occupied Beds");
+            .style("font-style", "'Montserrat', sans-serif")
+            .text("Occupied Rooms");
 
         vis.wrangleData();
     }
