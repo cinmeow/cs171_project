@@ -85,7 +85,7 @@ class LineVis {
         vis.yAxis.transition().duration(1000).call(d3.axisLeft(vis.y).tickFormat(customYAxisFormatTick));
 
         // Update chart title
-        let titleText = vis.currentCountry ? `${vis.currentCountry}: ${vis.formatDataType(vis.dataType)} Over Time` : `France: ${vis.formatDataType(vis.dataType)} Over Time`;
+        let titleText = vis.currentCountry ? `${vis.currentCountry}: ${vis.formatDataType(vis.dataType)} Over Time` : `Global: ${vis.formatDataType(vis.dataType)} Over Time`;
         vis.title.text(titleText);
 
         // Update y-axis label

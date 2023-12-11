@@ -108,14 +108,12 @@ class MapVis {
 
 
         vis.tooltip = d3.select("body").append("div")
-            .attr("class", "tooltip")
+            .attr("class", "maptooltip")
             .style("opacity", 0)
             .style("position", "absolute")
             .style("pointer-events", "none")
-            .style("background-color", "white")
-            .style("border", "solid 1px #ccc")
             .style("padding", "10px")
-            .style("border-radius", "5px")
+            .style("border-radius", "8px")
             .style("text-align", "left");
 
 
@@ -264,19 +262,12 @@ class MapVis {
             })
             .on("click", function(event, d) {
                 let selectedCountryName = d.properties.name;
-                // Check if the country is already selected
-                if (vis.selectedCountry === selectedCountryName) {
-                    // Clear the selection
-                    vis.selectedCountry = null;
-                    d3.selectAll(".country").classed("selected-country", false);
-                } else {
-                    // Update the selected country
-                    vis.selectedCountry = selectedCountryName;
-                    // Clear previous selections
-                    d3.selectAll(".country").classed("selected-country", false);
-                    // Highlight the clicked country
-                    d3.select(this).classed("selected-country", true);
-                }
+                // Update the selected country
+                vis.selectedCountry = selectedCountryName;
+                // Clear previous selections
+                d3.selectAll(".country").classed("selected-country", false);
+                // Highlight the clicked country
+                d3.select(this).classed("selected-country", true);
 
                 // Handle the click event for the selected country
                 vis.handleCountryClick(selectedCountryName);
@@ -431,6 +422,11 @@ class MapVis {
                 .tickFormat(d3.format(".2s")));
 
         vis.svg.select(".legend-label").text(vis.legendTitles[dataType]);
+    }
+    unselect() {
+        let vis = this;
+        vis.selectedCountry = null;
+        d3.selectAll(".country").classed("selected-country", false);
     }
 
 }

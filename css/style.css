@@ -401,13 +401,18 @@ h4 {
     color: #332D2C;
 }
 
+#globe-linked {
+    font-family: 'Montserrat', sans-serif;
+    color: #332D2C;
+}
+
 #data-selection {
     margin-top: 3vh;
     width: 100%;
     padding: 10px;
     padding-right: 20px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #3D171C;
     background-color: #fff;
     font-size: 16px;
     color: #333;
@@ -433,7 +438,7 @@ h4 {
 /* Styles for the dropdown: focus state */
 #data-selection:focus {
     outline: none;
-    border-color: #555;
+    border-color:  #332D2C;;
 }
 
 /* highlight the selected countries boundaries */
@@ -442,6 +447,12 @@ h4 {
     stroke-width: 3px; /* Width of the border */
 }
 
+/*maptool tip*/
+.maptooltip {
+    background-color: #f5f1e6;
+    border: #d3d3d3 solid 2px;
+    font-family: 'Montserrat', sans-serif;
+}
 
 
 /*spider css*/

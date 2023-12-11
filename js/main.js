@@ -1,6 +1,7 @@
 console.log("let's get started!")
 let geoDataURL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"; // GeoJSON data URL
 let tourismDataURL = "data/tourism_worldbank1.csv"; // Replace with the actual path to your CSV file
+let tourismDataURL2 = "data/tourism_worldbank2.csv";
 let arrivalRegionData = "data/arrivalByRegions2.csv";
 // initiate global variables
 let michelinCountry = new Set()
@@ -62,7 +63,8 @@ let promises = [
     }),
     d3.json(geoDataURL),
     d3.csv(tourismDataURL),
-    d3.csv(arrivalRegionData)
+    d3.csv(arrivalRegionData),
+    d3.csv(tourismDataURL2)
 ];
 Promise.all(promises)
     .then(function (data) {
@@ -90,16 +92,16 @@ function initMainPage(dataArray) {
     // MAP VISUALIZATION
     mapVis = new MapVis("globe", dataArray[3],dataArray[1], dataArray[0], dataArray[2]);
 
-    let france = dataArray[3].filter(d => d['Country Name'] === "France");
+    let global = dataArray[5].filter(d => d['Country Name'] === "Global");
 
     // LINE GRAPH 1 VISUALIZATION
     // Prepare data for LineVis
-    let lineData1 = france.map(d => ({
+    let lineData1 = global.map(d => ({
         year: +d['Year'],
         arrivals: +d['Number of Arrivals']
     }));
 
-    let lineData2 = france.map(d => ({
+    let lineData2 = global.map(d => ({
         year: +d['Year'],
         expenditures: +d['Expenditures (current US$)']
     }));
@@ -123,6 +125,7 @@ function initMainPage(dataArray) {
 
         // Update the map visualization
         mapVis.updateColorScale(selectedValue);
+        mapVis.unselect();
 
         // Update the chart based on the selection
         if (selectedValue === "arrivals") {
