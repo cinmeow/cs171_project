@@ -89,8 +89,6 @@ class SpiderVis {
 
         // filter tourism data to obtain only data from countries we selected and from the year 2019
         let filteredTourismData = vis.tourismData.filter((d) => {
-            // if(vis.selection.has(d["Country Name"])){
-            // }
             let c1 = vis.selection.has(d["Country Name"]);
             let c2 = parseYear(d.Year).getFullYear() === 2019;
             return c1 && c2;
@@ -318,7 +316,7 @@ class SpiderVis {
                             .style("text-align", "left")
                             .style("font-family", "'Montserrat', sans-serif")
                             .style("font-weight", "normal");
-                        
+
                         vis.tooltip.html(`<strong>${d.Country}<br/></strong>`)
                             .style("left", (event.pageX + 5) + "px")
                             .style("top", (event.pageY - 28) + "px");
