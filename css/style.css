@@ -518,7 +518,7 @@ h4 {
 
 /*!* testing *!*/
 #introChatter{
-    padding-top: 20vh;
+    padding-top: 10vh;
     margin-left: 10vh;
     margin-right: 10vh;
     font-family: 'Montserrat', sans-serif;
@@ -572,6 +572,11 @@ h4 {
 .look2{
     font-size: 45px;
     color: #A0071B;
+}
+
+.disclaimer {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
 }
 
 

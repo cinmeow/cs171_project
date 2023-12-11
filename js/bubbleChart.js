@@ -69,8 +69,8 @@ class BubbleChart {
 
         // add legend
         vis.legend = d3.select("#bubbleLegend").append("svg")
-            .attr("width", 70)
-            .attr("height", 80)
+            .attr("width", 100)
+            .attr("height", 120)
             .attr("fill", 'none')
             .attr("stroke", 'black')
             .attr("stroke-width", 2)
@@ -108,24 +108,24 @@ class BubbleChart {
         vis.legend.append("line")
             .attr('x1', 40 + 16)
             .attr('x2', 150)
-            .attr('y1', 80-16)
-            .attr('y2', 80-16)
+            .attr('y1', 80-20)
+            .attr('y2', 80-20)
             .attr('stroke', 'black')
             .style('stroke-dasharray', ('2,2'))
 
         vis.legend.append("line")
-            .attr('x1', 40 + 20)
+            .attr('x1', 40 + 12)
             .attr('x2', 150)
-            .attr('y1', 80-30)
-            .attr('y2', 80-30)
+            .attr('y1', 80-35)
+            .attr('y2', 80-35)
             .attr('stroke', 'black')
             .style('stroke-dasharray', ('2,2'))
 
         vis.legend.append("line")
-            .attr('x1', 40 + 36)
+            .attr('x1', 40 + 30)
             .attr('x2', 150)
-            .attr('y1', 80-45)
-            .attr('y2', 80-45)
+            .attr('y1', 80-55)
+            .attr('y2', 80-55)
             .attr('stroke', 'black')
             .style('stroke-dasharray', ('2,2'))
 
@@ -142,7 +142,7 @@ class BubbleChart {
 
         vis.legend.append("text")
             .attr('x', 150)
-            .attr('y', 80-16)
+            .attr('y', 80-20)
             .text("$$")
             .style("font-size", 14)
             .attr('alignment-baseline', 'middle')
@@ -151,7 +151,7 @@ class BubbleChart {
 
         vis.legend.append("text")
             .attr('x', 150)
-            .attr('y', 80-30)
+            .attr('y', 80-35)
             .text("$$$")
             .style("font-size", 14)
             .attr('alignment-baseline', 'middle')
@@ -160,13 +160,21 @@ class BubbleChart {
 
         vis.legend.append("text")
             .attr('x', 150)
-            .attr('y', 80-45)
+            .attr('y', 80-55)
             .text("$$$$")
             .style("font-size", 14)
             .attr('alignment-baseline', 'middle')
             .attr("fill", 'black')
             .attr("stroke-width", 0)
 
+        // add disclaimer
+        vis.legend.append("text")
+            .attr('x', 10)
+            .attr('y', 105)
+            .attr("class", "disclaimer")
+            .attr('fill', 'black')
+            .text("*Legend not to scale, bubble relative size indicates price")
+            .attr("stroke-width", 0)
 
     }
 
@@ -287,7 +295,7 @@ class BubbleChart {
             .on('mouseover', function(event, d) {
                 // set hover color
                 let myCircle = d3.select(this);
-                myCircle.attr("stroke", "red");
+                myCircle.attr("stroke", "#A0071B");
                 myCircle.attr("stroke-width", 5)
 
                 // change michelin info text
@@ -481,10 +489,11 @@ class BubbleChart {
                 .attr("x", xcoord)
                 .attr("y", ycoord)
                 .attr("text-anchor", "middle")
-                .attr("fill", 'black')
-                .attr('stroke', 'black')
+                .style("font-family", "Super Foods, sans-serif")
+                .attr("fill", '#A0071B')
+                .attr('stroke', 'white')
                 .attr('stroke-width', 2)
-                .style("font-size", "25px")
+                .style("font-size", "35px")
                 .attr("class", "bubbleTitle" + switched)
                 .text(newTitle)
 
