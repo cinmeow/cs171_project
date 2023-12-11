@@ -1,17 +1,18 @@
  const numPeople = 500;
- const restaurantWidth =  500; //document.getElementById('french-restaurant').getBoundingClientRect().width;
+ const restaurantWidth =  500;
  const restaurantHeight = 400;
  const doorPosition = { x: restaurantWidth/2, y: restaurantHeight/2.25 };
  let counter = 0
 
- // Create the SVG container using D3
+ // Create the SVG
  let svg = d3.select("#french-restaurant")
      .append("svg")
      .attr("width", restaurantWidth)
      .attr("height", restaurantHeight);
 
+ // add image of restaurant in
 svg.append("image")
-     .attr("xlink:href", "img/French-rest.png") // Replace with the actual path or URL
+     .attr("xlink:href", "img/French-rest.png")
      .attr("width", restaurantWidth)
      .attr("height", restaurantHeight)
      .attr("x", 50)
@@ -24,8 +25,8 @@ svg.append("image")
          .attr("xlink:href", "img/walking_france.png")
          .attr("width", restaurantWidth)
          .attr("height", restaurantHeight)
-         .attr("x", restaurantWidth) // Initial x position outside the restaurant
-         .attr("y", restaurantHeight) // Initial y position (center of the restaurant)
+         .attr("x", restaurantWidth)
+         .attr("y", restaurantHeight)
          .attr("opacity", 1);
  }
 
@@ -44,7 +45,7 @@ function animatePerson(person) {
             // Fade out the person
             d3.select(this).transition().duration(300).attr("opacity", 0);
 
-            // Remove the person from the DOM after the animation ends
+            // Remove the person after person completes path
             d3.select(this).transition().delay(300).remove();
         });
 }
@@ -63,7 +64,7 @@ function animatePeople() {
 animatePeople();
 
 // Call the animatePeople function at regular intervals to create a continuous loop
-setInterval(animatePeople, 32000); // 11000 milliseconds (10s for animation + 1s delay before starting the next animation)
+setInterval(animatePeople, 32000);
 
 // Function to update the counter
 function updateCounter() {
@@ -73,7 +74,7 @@ function updateCounter() {
     }
 }
 
-// Update the counter every second (adjust the interval as needed)
+// Update the counter
 setTimeout(function () {
     setInterval(updateCounter, 40);
 }, 8000);

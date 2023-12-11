@@ -128,6 +128,7 @@ class SelectVis {
         // Submit button behavior
         d3.select("#submit-button").on("click", () => {
             vis.submitSelection();
+            // add overlay prompting scroll
             vis.newBox();
         });
         d3.select("#clear-button").on("click", () => {
@@ -218,6 +219,7 @@ class SelectVis {
     newBox() {
         let vis = this;
 
+        // create box over flags
         vis.boxforWords = vis.svg.append("rect")
             .attr("class", "scroll-text")
             .attr("x", 15)
