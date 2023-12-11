@@ -245,9 +245,8 @@ body{
 }
 
 #cuisinetitle {
-    padding-top: 80px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+    padding-top: 10px;
+    margin-left: 1vw;
     display: inline-flex;
     font-size: 25px;
     font-family: 'Montserrat', sans-serif;
@@ -331,7 +330,7 @@ h4 {
     }
 
 #cuisinetitle {
-        padding-top: 80px;
+        padding-top: 10px;
         padding-bottom: 20px;
         display: inline-block;
         font-size: 25px;
@@ -351,6 +350,7 @@ h4 {
 #cuisineExplained {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
+    margin-left: 1vw;
 }
 
 .look4{
@@ -509,7 +509,7 @@ h4 {
         font-weight: bold;
         font-family: 'Montserrat', sans-serif;
         margin-top: 2%;
-        margin-left: 2%;
+        margin-left: 1vw;
         margin-right: 5%;
         margin-bottom: 3%;
     }
@@ -521,11 +521,19 @@ h4 {
     }
 
 #michelinreminder {
-    }
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    padding-left: 1vw;
+}
 
 #boxtitle {
-        padding-top: 50%;
+        padding-left: 1vw;
+        padding-top: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
     }
+
 
 .radialtooltip {
         position: absolute;
@@ -541,8 +549,8 @@ h4 {
 /*!* testing *!*/
 #introChatter{
     padding-top: 10vh;
-    margin-left: 10vh;
-    margin-right: 10vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
     font-family: 'Montserrat', sans-serif;
     color: #332B2C;
 }

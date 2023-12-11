@@ -70,7 +70,7 @@ class BubbleChart {
         // add legend
         vis.legend = d3.select("#bubbleLegend").append("svg")
             .attr("width", 100)
-            .attr("height", 120)
+            .attr("height", 230)
             .attr("fill", 'none')
             .attr("stroke", 'black')
             .attr("stroke-width", 2)
@@ -387,11 +387,6 @@ class BubbleChart {
             }
         }
 
-        // let getColor = function(country_name, countryColorArray) {
-        //     const colorObject = countryColorArray.find(entry => entry.hasOwnProperty(country_name));
-        //     return colorObject ? colorObject[country_name] : "defaultColor";
-        // }
-
 
         // set colour scale for bubbles
         vis.circleColour = d3.scaleOrdinal(d3.schemePastel1)
@@ -399,8 +394,10 @@ class BubbleChart {
 
         // colour circle by country
         circles.attr("fill", (d) => vis.circleColour(d.Country));
-        // circles.attr("fill", (d) => getColor(d.Country));
 
+        if (vis.countries.length <= 5) {
+            vis.addColorLegend();
+        }
 
 
         // replaceText
@@ -425,6 +422,38 @@ class BubbleChart {
 
             vis.michelinInfo.text(newText);
         }
+
+    }
+
+    addColorLegend(){
+        let vis = this;
+
+        vis.legend.selectAll('.legendCircle').remove();
+
+        vis.countries.forEach(
+            function(d, i){
+                let color = vis.circleColour(d)
+
+                // add colors to legend
+                vis.legend.append("circle")
+                    .attr("class", "legendCircle")
+                    .attr("cx", 15)
+                    .attr("cy", 130+ i*(20))
+                    .attr("r", 8)
+                    .attr("fill", color)
+                    .attr("stroke-width", 0.5);
+
+                // add label to color
+                vis.legend.append("text")
+                    .attr("x", 28)
+                    .attr("y", 135+ i*(20))
+                    .attr("fill", 'black')
+                    .attr("stroke-width", 0)
+                    .text(d)
+                    .style("font-family", "Montserrat, san serif");
+            }
+        )
+
 
     }
 
@@ -520,12 +549,14 @@ class BubbleChart {
                 .attr("x", xcoord)
                 .attr("y", ycoord + 50)
                 .attr("text-anchor", "middle")
-                .attr("fill", 'black')
-                .attr('stroke', 'black')
+                .style("font-family", "Super Foods, sans-serif")
+                .attr("fill", '#A0071B')
+                .attr('stroke', 'white')
                 .attr('stroke-width', 2)
-                .style("font-size", "25px")
+                .style("font-size", "35px")
                 .attr("class", "bubbleTitle" + switched)
                 .text(rating)
+
 
         }
 }
