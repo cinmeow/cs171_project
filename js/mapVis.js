@@ -142,7 +142,7 @@ class MapVis {
             d => d['Country']);
 
         vis.bedPlacesDataByCountry = d3.rollup(vis.travelData,
-                v => d3.mean(v, d => d['numBedPlaces']),
+                v => d3.mean(v, d => d['numRooms']),
                 d => d['Country']);
 
         // console.log("m:",vis.michelinDataByCountry);
@@ -184,7 +184,7 @@ class MapVis {
         vis.legendTitles = {
             'arrivals': 'Average Number of Arrivals',
             'michelin': 'Number of Michelin Restaurants',
-            'accommodations': 'Average Number of Bed Places'
+            'accommodations': 'Average Number of Rooms'
         };
 
         vis.updateVis();
@@ -226,7 +226,7 @@ class MapVis {
                         `<strong>Country:</strong> ${d.properties.name}<br>
                         <strong>Avg Arrivals:</strong> ${countryData.mean_arrivals || 'N/A'}<br>
                         <strong>Avg Expenditures:</strong> ${countryData.mean_expenditure || 'N/A'}<br>
-                         <strong>Avg Number of Bed Places:</strong> ${avgbedplaces || 'N/A'}<br>
+                         <strong>Avg Number of Rooms:</strong> ${avgbedplaces || 'N/A'}<br>
                         <strong>Michelin Restaurants:</strong> ${michelinRestaurants}`
                         
                     );
