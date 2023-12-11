@@ -25,8 +25,15 @@ https://cinmeow.github.io/cs171_project/
 * _michelin2.csv_ : https://www.kaggle.com/datasets/ngshiheng/michelin-guide-restaurants-2021
 * _tourism_worldbank2.csv_ : https://data.worldbank.org/indicator/ST.INT.ARVL
 
-## Files
+## Files/Folders
 1. _css_ : stylesheet
 2. _img_ : where we store the icons used and other images used in website
 3. _js_ : where all of the javascript code is
 4. _index.html_ : the structure of the website
+
+## Images
+* _Est-rest.png_ and _French-rest.png_ : https://www.vecteezy.com/vector-art/13612676-french-cuisine-restaurant-with-various-traditional-or-national-food-dish-of-france-on-flat-style-cartoon-hand-drawn-templates-illustration
+* bib.png : https://guide.michelin.com/en
+* bubble.jpeg :
+* non_select.png :
+* _walking_estonia.png_ and _walking_france.png_: https://pngtree.com/free-png-vectors/walking
