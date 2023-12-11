@@ -671,4 +671,66 @@ h4 {
     background-color: #6E1A25; /* Darker shade of green on hover */
 }
 
+/*styling for tree map*/
+
+.tree-title {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 5vh;
+    text-align: left;
+    color: #332D2C;
+    margin-left: 3vh;
+    font-size: 25px
+}
+
+
+.tree-subtitle{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    margin-top: 3vh;
+    text-align: center;
+}
+
+#treemap_container {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#country-dropdown {
+    margin-top: 3vh;
+    width: 100%;
+    padding: 10px;
+    padding-right: 20px;
+    border-radius: 5px;
+    border: 1px solid #3D171C;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    box-sizing: border-box;
+
+}
+
+.select-container2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    position: relative;
+    margin: 10px;
+    border-radius: 5px;
+    overflow: hidden; /* Ensures the border-radius applies to the dropdown */
+}
+
+
+/* Styles for the dropdown: hover state */
+#country-dropdown:hover {
+    border-color: #888;
+}
+
+/* Styles for the dropdown: focus state */
+#country-dropdown:focus {
+    outline: none;
+    border-color:  #332D2C;;
+}
+
+
+
 

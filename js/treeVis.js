@@ -12,7 +12,7 @@ class Treemap {
         let vis = this;
 
         // Set the dimensions and margins of the graph
-        vis.margin = { top: 10, right: 10, bottom: 10, left: 10 };
+        vis.margin = {top: 10, right: 10, bottom: 30, left: 60 };
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width * 0.8- vis.margin.left - vis.margin.right;
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height * 0.6- vis.margin.top - vis.margin.bottom;
 
@@ -88,10 +88,22 @@ class Treemap {
             .attr('height', d => d.y1 - d.y0)
             .style("stroke", "black")
             .style("fill", d => vis.colorScale(d.data.id));
+        nodesEnter.on('mouseover',function(event, d) {
+                d3.select(this)
+                    .transition()
+                    .duration(100)
+                    .style("opacity", 0.7);  // Reduce opacity on hover
+            })
+            .on('mouseout', function(event, d) {
+                d3.select(this)
+                    .transition()
+                    .duration(100)
+                    .style("opacity", 1);  // Reset opacity when not hovered
+            });
 
         // Attach click event listener
         nodesEnter.on('click', (event, d) => {
-            console.log("Clicked node data:", d); // Now this should log the correct data
+            console.log("Clicked node data:", d);
             if (this.radialBarChart && typeof this.radialBarChart.update === 'function') {
                 this.radialBarChart.update(this.country, d.data.id);
             } else {
@@ -105,12 +117,6 @@ class Treemap {
         });
 
 
-        // Append title for tooltip
-        nodesEnter.append("title")
-            .text(d => {
-                // Format the tooltip text
-                return `Country: ${vis.country}\nContinent: ${d.data.id}\nTotal Number of Arrivals: ${d.data.value.toLocaleString()}k`;
-            });
 
         // Bind data to text labels for each node
         let labels = vis.svg.selectAll(".label")
@@ -125,7 +131,7 @@ class Treemap {
             .attr("x", d => d.x0 + 5)
             .attr("y", d => d.y0 + 20)
             .text(d => d.data.id)
-            .attr("font-size", d => Math.min(20, 0.1 * Math.sqrt((d.x1 - d.x0) * (d.y1 - d.y0))) + "px")
+            .attr("font-size", d => Math.min(13, 0.1 * Math.sqrt((d.x1 - d.x0) * (d.y1 - d.y0))) + "px")
             .attr("fill", "white");
 
         let nodesText = vis.svg.selectAll(".node-text")
@@ -140,8 +146,8 @@ class Treemap {
             .merge(nodesText) // Merge with update selection
             .attr("x", d => d.x0 + 5)
             .attr("y", d => d.y0 + 40)
-            .text(d =>  Math.round(d.data.value))
-            .attr("font-size", d => Math.min(10, 0.08 * Math.sqrt((d.x1 - d.x0) * (d.y1 - d.y0))) + "px")
+            .text(d => `${Math.round(d.data.value)}k`)
+            .attr("font-size", d => Math.min(12, 0.08 * Math.sqrt((d.x1 - d.x0) * (d.y1 - d.y0))) + "px")
             .attr("fill", "white");
 
         // Add legend
@@ -151,7 +157,7 @@ class Treemap {
         // Bind legend items and position them
         let legendItem = legend.enter().append("g")
             .attr("class", "legend")
-            .attr("transform", (d, i) => `translate(${i * 80}, ${vis.height - 30})`);
+            .attr("transform", (d, i) => `translate(${i * (vis.width / 7) }, ${vis.height - 30})`);
 
         // Append rectangles to legend items
         legendItem.append("rect")

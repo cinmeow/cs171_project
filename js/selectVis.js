@@ -139,35 +139,7 @@ class SelectVis {
 
     }
 
-    // submitSelection() {
-    //     let vis = this;
-    //
-    //     // set vis.selectedCountries to global variable spiderSelect
-    //     vis.selectedCountries = spiderSelect
-    //
-    //
-    //     if (vis.selectedCountries.size <= vis.num_selection) {
-    //         vis.circles.each(function(d) {
-    //             let flag = d3.select(this);
-    //             if (vis.selectedCountries.has(d.name)) {
-    //
-    //                 // If selected, keep the original flag
-    //                 flag.transition().duration(500)
-    //                     .attr("fill", d => `url(#flag-${d.name.replace(/\s/g, '_')})`)
-    //             } else {
-    //                 // If not selected, set the fill to gray with reduced opacity
-    //                 flag.transition().duration(500)
-    //                     .attr("fill", "url(#non-selected-pattern)");
-    //             }
-    //         });
-    //
-    //         // Handle the selected countries (e.g., trigger an update in another component)
-    //         handleSelectedCountries(Array.from(vis.selectedCountries));
-    //     } else {
-    //         // Optionally, you can provide feedback to the user (e.g., alert or message on the page)
-    //         alert(`Please select up to ${vis.num_selection} countries before submitting.`);
-    //     }
-    // }
+
     submitSelection() {
         let vis = this;
 

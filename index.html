@@ -258,22 +258,29 @@
         <!-- TOURISM VIZ 1: TREE MAP -->
         <div class="container-fluid vh-100" id="arrivalRegionVis">
             <div class="row" style="height: 100%">
-                <div class="col-6" >
-                    <div class="row">
-                        <div class="row globe-subtitle">
-                            <h2> Where travelers are coming from may impact their taste and preferences. Let’s explore the countries of origin of your potential customers.
-                            </h2>
+                <div class="col-7" >
+                    <div class="row tree-title">
+                        <h2> Where travelers are coming from may impact <br> their taste and preferences.
+
+                        </h2>
+
+
+                        <h2>Let’s explore the origins of your potential <br> customers!    </h2>
+                    </div>
+                        <div class="row tree-subtitle">
+                            <p> Select a country to see total number of arrivals by regions over the last 10 years <br>  and click on different regions to explore further!</p>
                         </div>
-                    <select id="country-dropdown" style="width: 30%; margin-top: 3vh; margin-left: 3vh">
+                    <div class="select-container2 select">
+                    <select id="country-dropdown" style="width: 30%; margin-top: 3vh; margin-left: 8vh">
                         <option value="arrivals">Select a country</option>
 
                     </select>
-                </div>
+                    </div>
                     <div class="row" id="treemap_container" style="height: 100%">
 
                     </div>
                 </div>
-                <div class="col-6" id="radialVis">
+                <div class="col-5" id="radialVis">
                 </div>
             </div>
         </div>
