@@ -209,14 +209,16 @@ function populateDropdown(selectedCountries) {
         .text("Select a country")
         .attr("value", "");
 
-    // Populate with new options
-    dropdown.selectAll("option")
-        .data(selectedCountries)
-        .enter()
-        .append("option")
-        .text(d => d)
-        .attr("value", d => d);
 
+
+    // Append new options for each country
+    selectedCountries.forEach(country => {
+        dropdown.append("option")
+            .text(country)
+            .attr("value", country);
+    });
+
+    // Event listener for dropdown change
     dropdown.on("change", function() {
         let selectedCountry = d3.select(this).property("value");
         if (selectedCountry) {
