@@ -174,10 +174,14 @@ body{
     border-radius: 10px;
     margin-right: 0;
     margin-left: 50px;
-    padding-top: 6vh;
+    padding-top: 1vh;
     align-items: center;
-    max-width: 160vh;
-    height: 100%;
+    max-width: 75%;
+    height: 60%;
+}
+
+.carousel-inner{
+
 }
 
 .carousel-control-next,
@@ -186,21 +190,21 @@ body{
 }
 
 #description1{
-    padding: 1.5%;
+    padding-top: 1vh;
     color: #5C5555;
     text-align: center;
-    width: 110vh;
-    height: 20vh;
+    width: 55vw;
+    height: 18vh;
     margin-left: 12%;
-    margin-top: 3vh;
+    margin-top: 2vh;
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: 4.2vh;
+    font-size: 4vh;
 }
 #description2{
     color: #5C5555;
-    text-align: left;
-    width: 110vh;
+    text-align: center;
+    width: 55vw;
     height: 18vh;
     margin-left: 12%;
     font-family: 'Montserrat', sans-serif;
@@ -211,7 +215,7 @@ body{
     color: #5C5555;
     text-align: center;
     font-size: 30px;
-    width: 110vh;
+    width: 55vw;
     height: 15vh;
     margin-left: 12%;
     font-family: 'Montserrat', sans-serif;
@@ -526,13 +530,17 @@ h4 {
     padding-left: 1vw;
 }
 
-#boxtitle {
-        padding-left: 1vw;
-        padding-top: 30px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-        font-size: 22px;
-    }
+/*#boxtitle {*/
+/*        padding-left: 1vw;*/
+/*        padding-top: 30px;*/
+/*        font-family: 'Montserrat', sans-serif;*/
+/*        font-weight: bold;*/
+/*        font-size: 22px;*/
+/*    }*/
+
+#bubbleLegend {
+    padding-top:50px;
+}
 
 
 .radialtooltip {
@@ -733,4 +741,86 @@ h4 {
 
 
 
+/*styling for tree map*/
 
+.tree-title {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 5vh;
+    text-align: left;
+    color: #332D2C;
+    margin-left: 3vh;
+    font-size: 25px
+}
+
+
+.tree-subtitle{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    margin-top: 3vh;
+    text-align: center;
+}
+
+#treemap_container {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#country-dropdown {
+    margin-top: 3vh;
+    width: 100%;
+    padding: 10px;
+    padding-right: 20px;
+    border-radius: 5px;
+    border: 1px solid #3D171C;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    box-sizing: border-box;
+
+}
+
+.select-container2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    position: relative;
+    margin: 10px;
+    border-radius: 5px;
+    overflow: hidden; /* Ensures the border-radius applies to the dropdown */
+}
+
+
+/* Styles for the dropdown: hover state */
+#country-dropdown:hover {
+    border-color: #888;
+}
+
+/* Styles for the dropdown: focus state */
+#country-dropdown:focus {
+    outline: none;
+    border-color:  #332D2C;;
+}
+
+
+
+#confirm-cuisine{
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 8px;
+    background-color: #f5f1e6;
+    border-width: 2px;
+    border-color: #613E43;
+    color:#613E43;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 0.5vw;
+}
+
+.c2a_title{
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #A0071B;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 2%;
+}

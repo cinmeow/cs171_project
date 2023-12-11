@@ -167,7 +167,7 @@ class BubbleChart {
         // add disclaimer
         vis.legend.append("text")
             .attr('x', 10)
-            .attr('y', 105)
+            .attr('y', 108)
             .attr("class", "disclaimer")
             .attr('fill', 'black')
             .text("*Legend not to scale, bubble relative size indicates price")
@@ -327,7 +327,7 @@ class BubbleChart {
             vis.addTitle();
 
             // revert text
-            vis.michelinInfo.text("The Michelin Guide has five different culinary distinction awards. Hover over bubbles in a category to review what each award means.")
+            vis.michelinInfo.text("The Michelin Guide has five different culinary distinction awards.")
 
             return vis.tooltip.style("visibility", "hidden")
             })
