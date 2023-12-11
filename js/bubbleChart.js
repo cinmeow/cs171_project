@@ -53,7 +53,10 @@ class BubbleChart {
         // append tooltip
         vis.tooltip = d3.select("body").append('div')
             .attr('class', "tooltip")
-            .attr('id', 'bubbleTooltip')
+
+
+
+            //.attr('id', 'bubbleTooltip')
 
         // create custom selector for country subset and trigger filter if selected
         vis.createSelector();
@@ -132,37 +135,37 @@ class BubbleChart {
             .attr('x', 150)
             .attr('y', 80-5)
             .text("$")
-            .style("font-size", 12)
+            .style("font-size", 14)
             .attr('alignment-baseline', 'middle')
-            .attr("stroke", 'black')
-            .attr("stroke-width", 0.8)
+            .attr("fill", 'black')
+            .attr("stroke-width", 0)
 
         vis.legend.append("text")
             .attr('x', 150)
             .attr('y', 80-16)
             .text("$$")
-            .style("font-size", 12)
+            .style("font-size", 14)
             .attr('alignment-baseline', 'middle')
-            .attr("stroke", 'black')
-            .attr("stroke-width", 0.8)
+            .attr("fill", 'black')
+            .attr("stroke-width", 0)
 
         vis.legend.append("text")
             .attr('x', 150)
             .attr('y', 80-30)
             .text("$$$")
-            .style("font-size", 12)
+            .style("font-size", 14)
             .attr('alignment-baseline', 'middle')
-            .attr("stroke", 'black')
-            .attr("stroke-width", 0.8)
+            .attr("fill", 'black')
+            .attr("stroke-width", 0)
 
         vis.legend.append("text")
             .attr('x', 150)
             .attr('y', 80-45)
             .text("$$$$")
-            .style("font-size", 12)
+            .style("font-size", 14)
             .attr('alignment-baseline', 'middle')
-            .attr("stroke", 'black')
-            .attr("stroke-width", 0.8)
+            .attr("fill", 'black')
+            .attr("stroke-width", 0)
 
 
     }

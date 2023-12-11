@@ -294,17 +294,19 @@ h4 {
     margin-top: 0;
 }
 
-#bubbleTooltip {
-    background-color: powderblue;
-    border: powderblue;
-    border-radius: 5px;
+.bubbleTooltip {
+    background-color: #f5f1e6;
+    border: #d3d3d3 solid 2px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
     padding: 20px
 }
 
 #bubbleRest {
-    font-weight: bold;
+    font-weight: bolder;
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 24px;
+    color: #A0071B;
 }
 
 .intro-container {
@@ -329,12 +331,34 @@ h4 {
 
 #cuisinetitle {
         padding-top: 80px;
-        padding-bottom: 0px;
-        margin-bottom: 0px;
-        display: inline-flex;
+        padding-bottom: 20px;
+        display: inline-block;
         font-size: 25px;
         font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        color: #332B2C;
+        vertical-align: middle;
     }
+
+.look3{
+    color: #A0071B;
+    font-size: 28px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#cuisineExplained {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.look4{
+    color: #A0071B;
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bolder;
+}
 
 h4 {
         font-size: 20px;
@@ -461,8 +485,10 @@ h4 {
 #bubbleSelector {
         font-weight: bold;
         font-family: 'Montserrat', sans-serif;
+        margin-top: 2%;
         margin-left: 2%;
         margin-right: 5%;
+        margin-bottom: 3%;
     }
 
 .instructions {
